@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-table-custom/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/react-table-custom/static/js/main.e13c0d92.chunk.js",
+    "main.js.map": "/react-table-custom/static/js/main.e13c0d92.chunk.js.map",
+    "runtime-main.js": "/react-table-custom/static/js/runtime-main.4d81aeac.js",
+    "runtime-main.js.map": "/react-table-custom/static/js/runtime-main.4d81aeac.js.map",
+    "static/js/2.aa6fcb6a.chunk.js": "/react-table-custom/static/js/2.aa6fcb6a.chunk.js",
+    "static/js/2.aa6fcb6a.chunk.js.map": "/react-table-custom/static/js/2.aa6fcb6a.chunk.js.map",
+    "index.html": "/react-table-custom/index.html",
+    "precache-manifest.44d6b65c158029042d6451a66e095fc5.js": "/react-table-custom/precache-manifest.44d6b65c158029042d6451a66e095fc5.js",
+    "service-worker.js": "/react-table-custom/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/react-table-custom/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.aa6fcb6a.chunk.js.LICENSE.txt": "/react-table-custom/static/js/2.aa6fcb6a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d81aeac.js",
+    "static/js/2.aa6fcb6a.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.e13c0d92.chunk.js"
+  ]
+}
