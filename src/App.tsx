@@ -16,15 +16,15 @@ export function App() {
 const tableData = [
   {
     col1: "Hello",
-    col2: "World",
+    col2: 30,
   },
   {
     col1: "react-table",
-    col2: "rocks",
+    col2: 20,
   },
   {
     col1: "whatever",
-    col2: "you want",
+    col2: 100,
   },
 ];
 

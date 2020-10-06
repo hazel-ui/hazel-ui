@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { useTable } from "react-table";
+import { useTable, Column, useSortBy } from "react-table";
 
 type TableProps = {
-  data: { col1: string; col2: string }[];
-  columns?: { Header: string; accessor: string }[];
+  data: Array<any>;
+  columns: Array<Column>;
 };
 
 export function Table(props: TableProps) {
@@ -24,9 +24,7 @@ export function Table(props: TableProps) {
     headerGroups,
     rows,
     prepareRow,
-    // https://github.com/tannerlinsley/react-table/discussions/2664
-    // @ts-ignore
-  } = useTable({ columns, data });
+  } = useTable({ columns, data }, useSortBy);
 
   return (
     // apply the table props
@@ -41,11 +39,19 @@ export function Table(props: TableProps) {
                 // Loop over the headers in each row
                 headerGroup.headers.map((column: any) => (
                   // Apply the header cell props
-                  <Th {...column.getHeaderProps()}>
+                  <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
                     {
                       // Render the header
                       column.render("Header")
                     }
+                    {/* Add a sort direction indicator */}
+                    <span>
+                      {column.isSorted
+                        ? column.isSortedDesc
+                          ? " 🔽"
+                          : " 🔼"
+                        : ""}
+                    </span>
                   </Th>
                 ))
               }
