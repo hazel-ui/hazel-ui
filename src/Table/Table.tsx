@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useTable, Column, useSortBy } from "react-table";
+import { useTable, Column, useSortBy, useExpanded } from "react-table";
 
 type TableProps = {
   data: Array<any>;
@@ -24,7 +24,7 @@ export function Table(props: TableProps) {
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ columns, data }, useSortBy);
+  } = useTable({ columns, data }, useSortBy, useExpanded);
 
   return (
     // apply the table props
