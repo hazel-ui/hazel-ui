@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Table } from "./Table";
+import { Table } from "./components/Table";
 
 export function App() {
   return (
     <>
       <header>
         <p>Custom React table component</p>
-        <Table data={tableData} columns={tableColumns} />
+        <Table data={tableData} columns={tableColumns} enableSorting />
       </header>
     </>
   );
@@ -16,11 +16,11 @@ export function App() {
 const tableData = [
   {
     col1: "Hello",
-    col2: 30,
+    col2: 30.1,
     subRows: [
       {
         col1: "Jan",
-        col2: 5,
+        col2: 5.2,
       },
       {
         col1: "Feb",

@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { useTable, Column, useSortBy, useExpanded } from "react-table";
+import { Color, MediaQuery, Theme } from "../../foundation";
+
+import { processColumns } from "./utils";
 
 type TableProps = {
   data: Array<any>;
   columns: Array<Column>;
+  enableSorting?: boolean;
 };
 
 export function Table(props: TableProps) {
@@ -16,7 +20,10 @@ export function Table(props: TableProps) {
    */
 
   const data = React.useMemo(() => props.data, [props.data]);
-  const columns = React.useMemo(() => props.columns, [props.columns]);
+  const columns = React.useMemo(
+    () => processColumns(props.columns, props.data),
+    [props.columns, props.data]
+  );
 
   const {
     getTableProps,
@@ -24,7 +31,12 @@ export function Table(props: TableProps) {
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ columns, data }, useSortBy, useExpanded);
+  } = useTable(
+    // @ts-ignore
+    { columns, data, disableSortBy: !props.enableSorting },
+    useSortBy,
+    useExpanded
+  );
 
   return (
     // apply the table props
@@ -69,7 +81,7 @@ export function Table(props: TableProps) {
             prepareRow(row);
             return (
               // Apply the row props
-              <tr {...row.getRowProps()}>
+              <Tr {...row.getRowProps()}>
                 {
                   // Loop over the rows cells
                   row.cells.map((cell: any) => {
@@ -84,7 +96,7 @@ export function Table(props: TableProps) {
                     );
                   })
                 }
-              </tr>
+              </Tr>
             );
           })
         }
@@ -93,19 +105,82 @@ export function Table(props: TableProps) {
   );
 }
 
+Table.defaultProps = { enableSorting: false };
+
+// <table>
 const TableContainer = styled.table`
-  border: 1px solid olive;
+  /* enable scroll on small width */
+  display: block;
+  overflow: auto;
+
+  ::-webkit-scrollbar {
+    /* Remove table scrollbar on webkit browsers */
+    /* height: 0px;
+    width: 0px; */
+  }
 `;
 
 const Th = styled.th`
-  border-bottom: 3px solid maroon;
-  background: aliceblue;
-  color: black;
-  font-weight: bold;
+  font-family: ${Theme.font.sansSerif};
+  font-weight: ${Theme.fontWeight.semiBold};
+  line-height: 1.29;
+
+  height: 100px;
+  min-width: 142px;
+  padding: 0px 27px;
+  background-color: ${Color.lightCyan};
+
+  font-size: 0.9rem;
+  text-align: right;
+
+  &:nth-of-type(1) {
+    font-size: 1.125rem;
+    text-align: left;
+
+    /* make first column header sticky */
+    left: 0;
+    position: sticky;
+  }
+
+  ${MediaQuery.maxWidth.tablet} {
+    &:nth-of-type(1) {
+      box-shadow: 6px 0px 25px 0px ${Color.floralWhite};
+    }
+  }
 `;
 
 const Td = styled.td`
-  padding: 10px;
-  border: 1px solid DarkBlue;
-  background: PapayaWhip;
+  font-family: ${Theme.font.sansSerif};
+  color: ${Color.midnightBlue};
+
+  padding: 20px 27px;
+
+  font-weight: ${Theme.fontWeight.medium};
+  text-align: right;
+
+  &:nth-of-type(1) {
+    font-weight: ${Theme.fontWeight.semiBold};
+    text-align: left;
+
+    /* make first column body sticky */
+    left: 0;
+    position: sticky;
+  }
+
+  ${MediaQuery.maxWidth.tablet} {
+    &:nth-of-type(1) {
+      box-shadow: 6px 0px 25px 0px ${Color.floralWhite};
+      clip-path: inset(0px -30px 0px 0px);
+    }
+  }
+`;
+
+const Tr = styled.tr`
+  &:nth-of-type(odd) td {
+    background-color: ${Color.honeyDew};
+  }
+
+  &:nth-of-type(even) td {
+    background-color: ${Color.azure};
+  }
 `;
