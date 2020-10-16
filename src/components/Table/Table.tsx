@@ -60,9 +60,9 @@ export function Table(props: TableProps) {
                     <span>
                       {column.isSorted
                         ? column.isSortedDesc
-                          ? " 🔽"
-                          : " 🔼"
-                        : ""}
+                          ? "  ↓"
+                          : "  ↑"
+                        : "  ⮃"}
                     </span>
                   </Th>
                 ))
