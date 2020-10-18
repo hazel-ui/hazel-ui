@@ -5,7 +5,7 @@ import { Color, MediaQuery, Theme } from "../../foundation";
 
 import { processColumns } from "./utils";
 
-type TableProps = {
+export type TableProps = {
   data: Array<any>;
   columns: Array<Column>;
   enableSorting?: boolean;
@@ -122,7 +122,7 @@ const TableContainer = styled.table`
 
 const Th = styled.th`
   font-family: ${Theme.font.sansSerif};
-  font-weight: ${Theme.fontWeight.semiBold};
+  font-weight: ${Theme.fontWeight.bold};
   line-height: 1.29;
 
   height: 100px;
@@ -155,11 +155,11 @@ const Td = styled.td`
 
   padding: 20px 27px;
 
-  font-weight: ${Theme.fontWeight.medium};
+  font-weight: ${Theme.fontWeight.regular};
   text-align: right;
 
   &:nth-of-type(1) {
-    font-weight: ${Theme.fontWeight.semiBold};
+    font-weight: ${Theme.fontWeight.bold};
     text-align: left;
 
     /* make first column body sticky */

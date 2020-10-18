@@ -8,13 +8,13 @@ function createMediaQuery(type: MediaQueryType, width: number) {
 
 export const MediaQuery = {
   minWidth: {
-    mobileLarge: createMediaQuery("min", breakpoints.mobileLarge),
+    mobile: createMediaQuery("min", breakpoints.mobile),
     tablet: createMediaQuery("min", breakpoints.tablet),
     desktop: createMediaQuery("min", breakpoints.desktop),
     desktopLarge: createMediaQuery("min", breakpoints.desktopLarge),
   },
   maxWidth: {
-    mobileSmall: createMediaQuery("max", breakpoints.mobileLarge - 1),
+    mobileSmall: createMediaQuery("max", breakpoints.mobile - 1),
     mobileLarge: createMediaQuery("max", breakpoints.tablet - 1),
     tablet: createMediaQuery("max", breakpoints.desktop - 1),
     desktop: createMediaQuery("max", breakpoints.desktopLarge - 1),
