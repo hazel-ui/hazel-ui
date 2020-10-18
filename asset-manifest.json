@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-table-custom/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/react-table-custom/static/js/main.b1cd64a7.chunk.js",
-    "main.js.map": "/react-table-custom/static/js/main.b1cd64a7.chunk.js.map",
+    "main.js": "/react-table-custom/static/js/main.c732adb3.chunk.js",
+    "main.js.map": "/react-table-custom/static/js/main.c732adb3.chunk.js.map",
     "runtime-main.js": "/react-table-custom/static/js/runtime-main.4d81aeac.js",
     "runtime-main.js.map": "/react-table-custom/static/js/runtime-main.4d81aeac.js.map",
-    "static/js/2.b1e5830b.chunk.js": "/react-table-custom/static/js/2.b1e5830b.chunk.js",
-    "static/js/2.b1e5830b.chunk.js.map": "/react-table-custom/static/js/2.b1e5830b.chunk.js.map",
+    "static/js/2.6e07b34e.chunk.js": "/react-table-custom/static/js/2.6e07b34e.chunk.js",
+    "static/js/2.6e07b34e.chunk.js.map": "/react-table-custom/static/js/2.6e07b34e.chunk.js.map",
     "index.html": "/react-table-custom/index.html",
-    "precache-manifest.effc3e2feb3827129ec7ddd12149bda8.js": "/react-table-custom/precache-manifest.effc3e2feb3827129ec7ddd12149bda8.js",
+    "precache-manifest.7c37cebef057b8435fe03cec9504f0ea.js": "/react-table-custom/precache-manifest.7c37cebef057b8435fe03cec9504f0ea.js",
     "service-worker.js": "/react-table-custom/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/react-table-custom/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.b1e5830b.chunk.js.LICENSE.txt": "/react-table-custom/static/js/2.b1e5830b.chunk.js.LICENSE.txt"
+    "static/js/2.6e07b34e.chunk.js.LICENSE.txt": "/react-table-custom/static/js/2.6e07b34e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4d81aeac.js",
-    "static/js/2.b1e5830b.chunk.js",
+    "static/js/2.6e07b34e.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.b1cd64a7.chunk.js"
+    "static/js/main.c732adb3.chunk.js"
   ]
 }
