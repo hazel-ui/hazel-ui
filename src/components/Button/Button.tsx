@@ -1,48 +1,44 @@
-import React from 'react';
-import './button.css';
+import React, { ReactNode } from "react";
+import styled from "styled-components";
+import { compose, color, ColorProps } from "styled-system";
 
-export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
+import { Theme } from "../../foundation";
+
+import { ButtonSizeType, ButtonType } from "./types";
+import { applyButtonVariant, applyButtonSize } from "./utils";
+
+export interface ButtonProps extends ColorProps {
+  variant?: ButtonType;
+  size?: ButtonSizeType;
+  children?: ReactNode;
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+const styledSystemStyles = compose(color);
+
+export function Button({
+  variant = "primary",
+  size = "medium",
+  children,
+  ...rest
+}: ButtonProps) {
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <StyledButton variant={variant} size={size} {...rest}>
+      {children}
+    </StyledButton>
   );
-};
+}
+
+const StyledButton = styled.button<ButtonProps>`
+  ${(props) => props.variant && applyButtonVariant(props.variant)};
+  ${(props) => props.size && applyButtonSize(props.size)};
+  ${styledSystemStyles};
+
+  font-family: ${Theme.font.sansSerif};
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+`;

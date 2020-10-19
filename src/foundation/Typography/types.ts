@@ -1,4 +1,4 @@
-export type TextType =
+export type TypographyType =
   | "display"
   | "h1"
   | "h2"
@@ -8,7 +8,8 @@ export type TextType =
   | "h6"
   | "p"
   | "caption"
-  | "label";
+  | "label"
+  | "none";
 
 export enum TextTag {
   display = "h1",
@@ -21,4 +22,5 @@ export enum TextTag {
   p = "p",
   caption = "p",
   label = "div",
+  none = "div",
 }

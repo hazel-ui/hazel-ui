@@ -17,9 +17,9 @@ import { MediaQuery } from "../MediaQuery";
 import { Theme } from "../Theme";
 
 import { letterSpacing } from "./responsive";
-import { TextType } from "./types";
+import { TypographyType } from "./types";
 
-export function applyTextVariant(variant: TextType) {
+export function applyTypographyVariant(variant: TypographyType) {
   switch (variant) {
     case "display":
       return css`
@@ -89,7 +89,7 @@ export function applyTextVariant(variant: TextType) {
         font-family: ${Theme.font.sansSerif};
         font-weight: ${Theme.fontWeight.regular};
         ${getBrevier(latin)};
-        /* ${applyTextMediaQueries("label")}; */
+        /* ${applyTypographyMediaQueries("label")}; */
       `;
 
     default:
@@ -97,7 +97,7 @@ export function applyTextVariant(variant: TextType) {
   }
 }
 
-function applyTextMediaQueries(variant: TextType) {
+function applyTypographyMediaQueries(variant: TypographyType) {
   return `
     letter-spacing: ${letterSpacing[variant].mobileSmall};
 

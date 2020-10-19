@@ -18,8 +18,8 @@ import {
   TypographyProps as StyledSystemTypographyProps,
 } from "styled-system";
 
-import { TextTag, TextType } from "./types";
-import { applyTextVariant } from "./utils";
+import { TextTag, TypographyType } from "./types";
+import { applyTypographyVariant } from "./utils";
 
 export interface TypographyProps
   extends BackgroundProps,
@@ -29,7 +29,7 @@ export interface TypographyProps
     LayoutProps,
     SpaceProps,
     StyledSystemTypographyProps {
-  variant: TextType;
+  variant?: TypographyType;
   children?: ReactNode;
 }
 
@@ -43,17 +43,21 @@ const styledSystemStyles = compose(
   typography
 );
 
-const StyledText = styled.div<TypographyProps>`
-  ${(props) => props.variant && applyTextVariant(props.variant)};
-  ${styledSystemStyles};
-`;
-
-export function Typography({ variant, children, ...rest }: TypographyProps) {
+export function Typography({
+  variant = "p",
+  children,
+  ...rest
+}: TypographyProps) {
   return (
-    <StyledText variant={variant} as={TextTag[variant] as any} {...rest}>
+    <StyledDiv variant={variant} as={TextTag[variant] as any} {...rest}>
       {children}
-    </StyledText>
+    </StyledDiv>
   );
 }
+
+const StyledDiv = styled.div<TypographyProps>`
+  ${(props) => props.variant && applyTypographyVariant(props.variant)};
+  ${styledSystemStyles};
+`;
 
 // https://www.bbc.co.uk/gel/guidelines/typography
