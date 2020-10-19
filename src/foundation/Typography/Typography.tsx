@@ -15,20 +15,20 @@ import {
   space,
   SpaceProps,
   typography,
-  TypographyProps,
+  TypographyProps as StyledSystemTypographyProps,
 } from "styled-system";
 
 import { TextTag, TextType } from "./types";
 import { applyTextVariant } from "./utils";
 
-interface TypographyPropsType
+export interface TypographyProps
   extends BackgroundProps,
     BorderProps,
     ColorProps,
     DisplayProps,
     LayoutProps,
     SpaceProps,
-    TypographyProps {
+    StyledSystemTypographyProps {
   variant: TextType;
   children?: ReactNode;
 }
@@ -43,16 +43,12 @@ const styledSystemStyles = compose(
   typography
 );
 
-const StyledText = styled.div<TypographyPropsType>`
+const StyledText = styled.div<TypographyProps>`
   ${(props) => props.variant && applyTextVariant(props.variant)};
   ${styledSystemStyles};
 `;
 
-export function Typography({
-  variant,
-  children,
-  ...rest
-}: TypographyPropsType) {
+export function Typography({ variant, children, ...rest }: TypographyProps) {
   return (
     <StyledText variant={variant} as={TextTag[variant] as any} {...rest}>
       {children}

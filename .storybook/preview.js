@@ -1,3 +1,4 @@
+import React from "react";
 import { GlobalStyles } from "../src/foundation";
 
 export const decorators = [

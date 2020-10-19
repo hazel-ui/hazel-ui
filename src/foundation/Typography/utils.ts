@@ -1,6 +1,17 @@
 import { css } from "styled-components";
 import { latin } from "@bbc/gel-foundations/scripts";
-import { getRoyal } from "@bbc/gel-foundations/typography";
+import {
+  getFoolscap,
+  getCanon,
+  getTrafalgar,
+  getParagon,
+  getDoublePica,
+  getGreatPrimer,
+  getPica,
+  getBodyCopy,
+  getLongPrimer,
+  getBrevier,
+} from "@bbc/gel-foundations/typography";
 
 import { MediaQuery } from "../MediaQuery";
 import { Theme } from "../Theme";
@@ -10,33 +21,75 @@ import { TextType } from "./types";
 
 export function applyTextVariant(variant: TextType) {
   switch (variant) {
+    case "display":
+      return css`
+        font-family: ${Theme.font.serif};
+        font-weight: ${Theme.fontWeight.regular};
+        ${getFoolscap(latin)};
+      `;
+
     case "h1":
       return css`
         font-family: ${Theme.font.serif};
         font-weight: ${Theme.fontWeight.regular};
-        ${applyTextMediaQueries("h1")};
+        ${getCanon(latin)};
       `;
 
     case "h2":
       return css`
         font-family: ${Theme.font.serif};
         font-weight: ${Theme.fontWeight.regular};
-        ${getRoyal(latin)};
-        ${applyTextMediaQueries("h2")};
+        ${getTrafalgar(latin)};
       `;
 
     case "h3":
       return css`
         font-family: ${Theme.font.serif};
         font-weight: ${Theme.fontWeight.regular};
-        ${applyTextMediaQueries("h3")};
+        ${getParagon(latin)};
       `;
 
-    case "tag":
+    case "h4":
+      return css`
+        font-family: ${Theme.font.serif};
+        font-weight: ${Theme.fontWeight.regular};
+        ${getDoublePica(latin)};
+      `;
+
+    case "h5":
+      return css`
+        font-family: ${Theme.font.serif};
+        font-weight: ${Theme.fontWeight.regular};
+        ${getGreatPrimer(latin)};
+      `;
+
+    case "h6":
+      return css`
+        font-family: ${Theme.font.serif};
+        font-weight: ${Theme.fontWeight.regular};
+        ${getPica(latin)};
+      `;
+
+    case "p":
       return css`
         font-family: ${Theme.font.sansSerif};
         font-weight: ${Theme.fontWeight.regular};
-        ${applyTextMediaQueries("tag")};
+        ${getBodyCopy(latin)};
+      `;
+
+    case "caption":
+      return css`
+        font-family: ${Theme.font.sansSerif};
+        font-weight: ${Theme.fontWeight.regular};
+        ${getLongPrimer(latin)};
+      `;
+
+    case "label":
+      return css`
+        font-family: ${Theme.font.sansSerif};
+        font-weight: ${Theme.fontWeight.regular};
+        ${getBrevier(latin)};
+        /* ${applyTextMediaQueries("label")}; */
       `;
 
     default:

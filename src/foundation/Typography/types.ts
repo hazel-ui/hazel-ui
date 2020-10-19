@@ -1,9 +1,24 @@
-export type TextType = "h1" | "h2" | "h3" | "tag";
+export type TextType =
+  | "display"
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "h6"
+  | "p"
+  | "caption"
+  | "label";
 
 export enum TextTag {
+  display = "h1",
   h1 = "h1",
   h2 = "h2",
   h3 = "h3",
+  h4 = "h4",
+  h5 = "h5",
+  h6 = "h6",
   p = "p",
-  tag = "h6",
+  caption = "p",
+  label = "div",
 }
