@@ -2,7 +2,7 @@
   "name": "hazel-ui",
   "version": "0.0.1",
   "private": false,
-  "homepage": "https://absingh.com/react-table-custom",
+  "homepage": "https://hazel-ui.github.io/hazel-ui",
   "scripts": {
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d dist",
