@@ -1,5 +1,7 @@
 import { css } from "styled-components";
 
+import { Color, Theme } from "../../foundation";
+
 import { ButtonSizeType, ButtonType } from "./types";
 
 export function applyButtonVariant(variant: ButtonType) {
@@ -7,14 +9,13 @@ export function applyButtonVariant(variant: ButtonType) {
     case "primary":
       return css`
         color: white;
-        background-color: #1ea7fd;
+        background-color: ${Color.royalBlue};
       `;
 
     case "secondary":
       return css`
         color: #333;
         background-color: transparent;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
       `;
 
     default:
@@ -26,20 +27,23 @@ export function applyButtonSize(size: ButtonSizeType) {
   switch (size) {
     case "small":
       return css`
-        font-size: 12px;
-        padding: 10px 16px;
+        font-size: 13px;
+        padding: 6px 12px;
+        font-weight: ${Theme.fontWeight.light};
       `;
 
     case "medium":
       return css`
         font-size: 14px;
         padding: 11px 20px;
+        font-weight: ${Theme.fontWeight.semiBold};
       `;
 
     case "large":
       return css`
         font-size: 16px;
         padding: 12px 24px;
+        font-weight: ${Theme.fontWeight.bold};
       `;
 
     default:

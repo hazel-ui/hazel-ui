@@ -98,7 +98,9 @@ export function applyTypographyVariant(variant: TypographyType) {
 }
 
 function applyTypographyMediaQueries(variant: TypographyType) {
-  return `
+  if (variant === "none") return null;
+
+  return css`
     letter-spacing: ${letterSpacing[variant].mobileSmall};
 
     ${MediaQuery.minWidth.mobile} {

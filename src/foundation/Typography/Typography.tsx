@@ -19,7 +19,7 @@ import {
 } from "styled-system";
 
 import { TextTag, TypographyType } from "./types";
-import { applyTypographyVariant } from "./utils";
+import { applyTypographyVariant } from "./styles";
 
 export interface TypographyProps
   extends BackgroundProps,

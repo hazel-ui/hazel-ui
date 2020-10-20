@@ -1,16 +1,20 @@
 import React from "react";
-import styled from "styled-components";
 
-import { Typography } from "./foundation";
+import { Button } from "./components";
 
 export function App() {
   return (
     <>
       <header>
         <p>Custom React table component</p>
-        <Typography variant="h2">
-          Could a computer ever create better art than a human?
-        </Typography>
+        <Button
+          onClick={() => {
+            alert("Hey!");
+          }}
+        >
+          Button
+        </Button>
+        <Button variant="secondary">Button</Button>
       </header>
     </>
   );

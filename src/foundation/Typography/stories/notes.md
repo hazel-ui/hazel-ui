@@ -22,11 +22,24 @@ The Typography component includes [styled-system](https://styled-system.com/api/
 
 ## Fonts
 
-`Regular`, `Regular italic`, `Bold`, and `Bold italic` versions of:
-
-- Serif: [Lora](https://fonts.google.com/specimen/Lora)
-- Sans-Serif: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+| Type       | Name           | Variant          | Usage      |
+| ---------- | -------------- | ---------------- | ---------- |
+| Serif      | [Lora][1]      | Regular          | Typography |
+|            |                | Regular italic   | x          |
+|            |                | Bold             | x          |
+|            |                | Bold italic      | x          |
+| Sans-Serif | [Open Sans][2] | Light            | Button     |
+|            |                | Light italic     | x          |
+|            |                | Regular          | Typography |
+|            |                | Regular italic   | x          |
+|            |                | Semi-bold        | Button     |
+|            |                | Semi-bold italic | x          |
+|            |                | Bold             | Button     |
+|            |                | Bold italic      | x          |
 
 ## Responsiveness
 
 All Typography variants are responsive and will change size based on screen width.
+
+[1]: https://fonts.google.com/specimen/Lora
+[2]: https://fonts.google.com/specimen/Open+Sans

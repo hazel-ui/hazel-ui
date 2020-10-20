@@ -23,13 +23,17 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: "secondary",
-  children: "Button",
+  children: "Click me",
+  onClick: () => {
+    alert("Hey, good looking!");
+  },
 };
 
 export const Small = Template.bind({});
 Small.args = {
+  variant: "secondary",
   size: "small",
-  children: "Button",
+  children: "Follow",
 };
 
 export const Large = Template.bind({});
