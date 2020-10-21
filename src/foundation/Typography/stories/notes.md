@@ -2,7 +2,7 @@
 
 The Typography in this project is inspired by the [BBC GEL Guidelines](https://www.bbc.co.uk/gel/guidelines/typography).
 
-## Props
+## Optional Props
 
 The Typography component includes [styled-system](https://styled-system.com/api/) and all the props from the Background, Border, Color, Display, Layout, Space, and Typography utilities can be used with the component.
 

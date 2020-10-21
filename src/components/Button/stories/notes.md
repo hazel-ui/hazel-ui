@@ -1,0 +1,16 @@
+## Button
+
+## Optional Props
+
+The Button component includes [styled-system][1] and all the props from the Color utility can be used with the component.
+
+| Prop                | CSS Property     | Example |
+| ------------------- | ---------------- | ------- |
+| color               | color            | "blue"  |
+| backgroundColor, bg | background-color | "blue"  |
+
+## Responsiveness
+
+The Button variants are not responsive and will maintain size on every screen width.
+
+[1]: https://styled-system.com/api/
