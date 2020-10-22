@@ -3,7 +3,7 @@ import { breakpoints } from "./breakpoints";
 type MediaQueryType = "min" | "max";
 
 function createMediaQuery(type: MediaQueryType, width: number) {
-  return `@media (${type}-width): ${width}px`;
+  return `@media (${type}-width: ${width}px)`;
 }
 
 export const MediaQuery = {
