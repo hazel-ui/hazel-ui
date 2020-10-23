@@ -2,38 +2,38 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { compose, color, ColorProps } from "styled-system";
 
-import { Color, Theme } from "../../foundation";
+import { Theme } from "../../foundation";
 
 import { ButtonSizeType, ButtonType } from "./types";
 import { applyButtonVariant, applyButtonSize } from "./styles";
 
 export interface ButtonProps extends ColorProps {
-  variant?: ButtonType;
-  size?: ButtonSizeType;
   children?: ReactNode;
   onClick?: () => void;
+  size?: ButtonSizeType;
+  variant?: ButtonType;
+  variantColor?: string;
 }
 
 const styledSystemStyles = compose(color);
 
 export function Button({
-  variant = "primary",
   size = "medium",
+  variant = "primary",
   children,
   ...rest
 }: ButtonProps) {
   return (
-    <StyledButton variant={variant} size={size} as={"button" as any} {...rest}>
+    <StyledButton size={size} variant={variant} as={"button" as any} {...rest}>
       {children}
     </StyledButton>
   );
 }
 
 const StyledButton = styled.button<ButtonProps>`
-  ${(props) => props.variant && applyButtonVariant(props.variant)};
-  ${(props) => props.size && applyButtonSize(props.size)};
+  ${(props) => applyButtonVariant(props.variant!, props.variantColor)};
+  ${(props) => applyButtonSize(props.size!)};
   font-family: ${Theme.font.sansSerif};
-  border: 1px solid ${Color.gainsboro};
 
   display: flex;
   border-radius: 0.5rem;

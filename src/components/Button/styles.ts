@@ -4,18 +4,23 @@ import { Color, Theme } from "../../foundation";
 
 import { ButtonSizeType, ButtonType } from "./types";
 
-export function applyButtonVariant(variant: ButtonType) {
+export function applyButtonVariant(
+  variant: ButtonType,
+  variantColor: string = Color.royalBlue
+) {
   switch (variant) {
     case "primary":
       return css`
         color: white;
-        background-color: ${Color.royalBlue};
+        background-color: ${variantColor};
+        border: 1px solid transparent;
       `;
 
     case "secondary":
       return css`
-        color: #333;
+        color: ${variantColor};
         background-color: transparent;
+        border: 1px solid ${variantColor};
       `;
 
     default:

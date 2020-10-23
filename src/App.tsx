@@ -7,14 +7,12 @@ export function App() {
     <>
       <header>
         <p>Custom React table component</p>
-        <Button
-          onClick={() => {
-            alert("Hey!");
-          }}
-        >
+        <Button variantColor="red" variant="primary">
           Button
         </Button>
-        <Button variant="secondary">Button</Button>
+        <Button variantColor="red" variant="secondary">
+          Button
+        </Button>
       </header>
     </>
   );

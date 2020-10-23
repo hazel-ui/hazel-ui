@@ -1,6 +1,6 @@
-# react-custom-components
+# hazel-ui
 
-Examples of reusable React components
+Hazel UI is a flexible React component library that lets you quickly build web elements the way you want. It is built with the goal to allow maximum possible customization and speed of development.
 
 ## Install
 
