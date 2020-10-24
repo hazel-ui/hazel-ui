@@ -10,8 +10,15 @@ export function App() {
         <Button variantColor="red" variant="primary">
           Button
         </Button>
-        <Button variantColor="red" variant="secondary">
-          Button
+        <Button
+          size="large"
+          color="white"
+          backgroundColor="black"
+          variantColor="red"
+          variant="primary"
+          border="3px solid LightGreen"
+        >
+          Awesome
         </Button>
       </header>
     </>

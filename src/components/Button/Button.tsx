@@ -1,13 +1,13 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
-import { compose, color, ColorProps } from "styled-system";
+import { compose, border, BorderProps, color, ColorProps } from "styled-system";
 
 import { Theme } from "../../foundation";
 
 import { ButtonSizeType, ButtonType } from "./types";
 import { applyButtonVariant, applyButtonSize } from "./styles";
 
-export interface ButtonProps extends ColorProps {
+export interface ButtonProps extends BorderProps, ColorProps {
   children?: ReactNode;
   onClick?: () => void;
   size?: ButtonSizeType;
@@ -15,7 +15,7 @@ export interface ButtonProps extends ColorProps {
   variantColor?: string;
 }
 
-const styledSystemStyles = compose(color);
+const styledSystemStyles = compose(border, color);
 
 export function Button({
   size = "medium",
