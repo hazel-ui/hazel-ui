@@ -1,13 +1,13 @@
 import React from "react";
-import { useTable, Column, useSortBy, useExpanded } from "react-table";
-
-import { TableContainer, TrHead, Tr, Th, Td } from "./styles";
+import { Column, useExpanded, useSortBy, useTable } from "react-table";
+import { TableContainer, Td, Th, Tr, TrHead } from "./styles";
 import { processColumns } from "./utils";
 
 export type TableProps = {
   data: Array<any>;
   columns: Array<Column>;
   enableSorting?: boolean;
+  hideHeaders?: boolean;
 };
 
 export function Table(props: TableProps) {
@@ -40,38 +40,42 @@ export function Table(props: TableProps) {
   return (
     // apply the table props
     <TableContainer {...getTableProps()}>
-      <thead>
-        {
-          // Loop over the header rows
-          headerGroups.map((headerGroup: any) => (
-            // Apply the header row props
-            <TrHead {...headerGroup.getHeaderGroupProps()}>
-              {
-                // Loop over the headers in each row
-                headerGroup.headers.map((column: any) => (
-                  // Apply the header cell props
-                  <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                    {
-                      // Render the header
-                      column.render("Header")
-                    }
-                    {/* Add a sort direction indicator */}
-                    <span>
-                      {props.enableSorting
-                        ? column.isSorted
-                          ? column.isSortedDesc
-                            ? "  ↓"
-                            : "  ↑"
-                          : "  ⮃"
-                        : null}
-                    </span>
-                  </Th>
-                ))
-              }
-            </TrHead>
-          ))
-        }
-      </thead>
+      {!props.hideHeaders && (
+        <thead>
+          {
+            // Loop over the header rows
+            headerGroups.map((headerGroup: any) => (
+              // Apply the header row props
+              <TrHead {...headerGroup.getHeaderGroupProps()}>
+                {
+                  // Loop over the headers in each row
+                  headerGroup.headers.map((column: any) => (
+                    // Apply the header cell props
+                    <Th
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                    >
+                      {
+                        // Render the header
+                        column.render("Header")
+                      }
+                      {/* Add a sort direction indicator */}
+                      <span>
+                        {props.enableSorting
+                          ? column.isSorted
+                            ? column.isSortedDesc
+                              ? "  ↓"
+                              : "  ↑"
+                            : "  ⮃"
+                          : null}
+                      </span>
+                    </Th>
+                  ))
+                }
+              </TrHead>
+            ))
+          }
+        </thead>
+      )}
 
       {/* Apply the table body props */}
       <tbody {...getTableBodyProps()}>
@@ -106,4 +110,4 @@ export function Table(props: TableProps) {
   );
 }
 
-Table.defaultProps = { enableSorting: false };
+Table.defaultProps = { enableSorting: false, hideHeaders: false };
