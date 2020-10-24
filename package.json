@@ -5,14 +5,15 @@
   "bugs": "https://github.com/hazel-ui/hazel-ui/issues",
   "homepage": "https://hazel-ui.github.io/hazel-ui",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d dist",
     "storybook": "start-storybook -p 6006 -s public",
-    "build": "build-storybook -s public -o ./dist",
+    "build-storybook": "build-storybook -s public -o ./dist",
     "serve-storybook": "npx http-server ./dist",
     "prettier": "prettier --check \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
     "prettier:fix": "prettier --write \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
