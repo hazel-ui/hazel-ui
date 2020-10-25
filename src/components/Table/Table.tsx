@@ -1,5 +1,6 @@
 import React from "react";
 import { Column, useExpanded, useSortBy, useTable } from "react-table";
+import { Icon } from "../../foundation/Icon";
 import { TableContainer, Td, Th, Tr, TrHead } from "./styles";
 import { processColumns } from "./utils";
 
@@ -63,9 +64,9 @@ export function Table(props: TableProps) {
                         {props.enableSorting
                           ? column.isSorted
                             ? column.isSortedDesc
-                              ? "  ↓"
-                              : "  ↑"
-                            : "  ⮃"
+                              ? Icon.ChironDown
+                              : Icon.ChironUp
+                            : Icon.Sort
                           : null}
                       </span>
                     </Th>
