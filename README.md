@@ -3,18 +3,17 @@
 # Hazel UI
 
 [![npm version](https://img.shields.io/npm/v/hazel-ui.svg?style=flat)](https://www.npmjs.com/package/hazel-ui)
+[![npm downloads](https://img.shields.io/npm/dw/hazel-ui)](https://www.npmjs.com/package/hazel-ui)
 [![build](https://github.com/hazel-ui/hazel-ui/workflows/build/badge.svg)](https://github.com/hazel-ui/hazel-ui/actions)
 [![website](https://img.shields.io/website-up-down-green-red/https/hazel-ui.github.io.svg)](https://hazel-ui.github.io)
-[![tested-with](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://jestjs.io/)
 
 [![pull-requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![issues](https://img.shields.io/github/issues/hazel-ui/hazel-ui.svg)](https://github.com/hazel-ui/hazel-ui/issues)
 [![code-style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
-[![typescript](https://badges.frapsoft.com/typescript/code/typescript.png?v=103)](https://www.typescriptlang.org/)
 
-[![open source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/hazel-ui/hazel-ui)
+[![typescript](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://www.typescriptlang.org/)
+[![tested-with](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://jestjs.io/)
 [![license](https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000)](LICENSE)
-[![npm downloads](https://img.shields.io/npm/dt/hazel-ui.svg?style=flat)](https://www.npmjs.com/package/hazel-ui)
 
 </div>
 
