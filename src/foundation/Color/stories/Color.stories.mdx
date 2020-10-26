@@ -1,0 +1,32 @@
+import { Meta } from "@storybook/addon-docs/dist/blocks";
+import { Color } from "../Color";
+import { ColorBlock, ColorBlockContainer } from "./ColorBlock";
+import { enumKeys } from "./utils";
+
+<Meta title="Foundation/Color" component={ColorBlock} />
+
+# Color
+
+`Color` is an enum that provides us with all available colors used throughout the project.
+
+## Usage
+
+```tsx
+import { Color } from "hazel-ui";
+
+<p style={{ color: Color.royalBlue }}>My text</p>;
+```
+
+## Available Colors
+
+Click on a color to copy its hex code.
+
+<ColorBlockContainer>
+  {enumKeys(Color).map((colorName) => (
+    <ColorBlock
+      cardColor={Color[colorName]}
+      title={colorName}
+      key={colorName}
+    />
+  ))}
+</ColorBlockContainer>
