@@ -4,6 +4,11 @@
   "private": false,
   "bugs": "https://github.com/hazel-ui/hazel-ui/issues",
   "homepage": "https://hazel-ui.github.io/hazel-ui",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hazel-ui/hazel-ui.git"
+  },
   "scripts": {
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d dist",
