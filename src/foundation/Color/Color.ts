@@ -7,10 +7,10 @@ export enum Color {
   ivory = "#FFFFF0",
   floralWhite = "#FFFAF0",
 
+  honeyDew = "#F0FFF0",
+
   azure = "#F0FFFF",
   lightCyan = "#E0FFFF",
-
-  honeyDew = "#F0FFF0",
   lavender = "#E6E6FA",
 
   gainsboro = "#DCDCDC",
