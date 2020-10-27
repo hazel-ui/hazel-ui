@@ -10,8 +10,6 @@
     "url": "https://github.com/hazel-ui/hazel-ui.git"
   },
   "scripts": {
-    "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d dist -r https://github.com/hazel-ui/hazel-ui",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public -o ./dist",
     "serve-storybook": "npx http-server ./dist",
@@ -20,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@bbc/gel-foundations": "^5.0.1",
