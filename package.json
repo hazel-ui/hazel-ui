@@ -1,6 +1,6 @@
 {
   "name": "hazel-ui",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
   "bugs": "https://github.com/hazel-ui/hazel-ui/issues",
   "homepage": "https://hazel-ui.github.io/hazel-ui",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -r https://github.com/hazel-ui/hazel-ui",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public -o ./dist",
     "serve-storybook": "npx http-server ./dist",
