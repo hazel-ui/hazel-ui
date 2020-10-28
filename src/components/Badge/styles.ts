@@ -2,9 +2,7 @@ import { css } from "styled-components";
 
 import { BadgeSizeType, BadgeType } from "./types";
 
-export function applyBadgeVariant(
-  variant: BadgeType,
-) {
+export function applyBadgeVariant(variant: BadgeType) {
   switch (variant) {
     case "info":
       return css`
@@ -26,7 +24,7 @@ export function applyBadgeVariant(
 
     default:
       return css`
-      background-color: #2c3e50;
+        background-color: #2c3e50;
       `;
   }
 }
