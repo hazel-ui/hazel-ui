@@ -18,7 +18,7 @@ const styledSystemStyles = compose(border, color);
 
 export const Badge = ({
   size = "medium",
-  variant = "info",
+  variant = "primary",
   children,
   ...rest
 }: BadgeProps) => {
@@ -30,8 +30,6 @@ export const Badge = ({
 };
 
 const StyledBadge = styled.span<BadgeProps>`
-  ${(props) => applyBadgeVariant(props.variant!)};
-  ${(props) => applyBadgeSize(props.size!)};
   font-family: ${Theme.font.sansSerif};
   &:hover {
     box-shadow: 0px 4px 20px -2px rgba(18, 22, 33, 0.12);
@@ -49,5 +47,8 @@ const StyledBadge = styled.span<BadgeProps>`
 
   line-height: inherit;
 
+  ${(props) => applyBadgeVariant(props.variant!)};
+  ${(props) => applyBadgeSize(props.size!)};
+  
   ${styledSystemStyles};
 `;

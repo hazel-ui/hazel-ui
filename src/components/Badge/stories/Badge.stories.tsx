@@ -23,6 +23,22 @@ export default {
 
 const Template: Story<BadgeProps> = (args) => <Badge {...args} />;
 
+export const Primary = Template.bind({});
+Primary.args = {
+  children: "Badge",
+  variant: "primary",
+};
+
+export const Tip = Template.bind({});
+Tip.args = {
+  children: "Tip",
+  variant: "primary",
+  size: "small",
+  backgroundColor: "#E7FDD8",
+  borderRadius: "1em",
+  color: "#66BF3C",
+};
+
 export const Info = Template.bind({});
 Info.args = {
   children: "Badge",
@@ -51,7 +67,6 @@ LargeSuccess.args = {
 export const Custom = Template.bind({});
 Custom.args = {
   backgroundColor: Color.gainsboro,
-  border: "3px solid LightGreen",
   borderRadius: "30px",
   children: "Awesome",
   color: Color.midnightBlue,

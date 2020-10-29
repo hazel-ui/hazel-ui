@@ -4,11 +4,16 @@ import { BadgeSizeType, BadgeType } from "./types";
 
 export function applyBadgeVariant(variant: BadgeType) {
   switch (variant) {
+    case "primary":
+      return css`
+        background-color: #777;
+        border-radius: 0;
+        font-weight: 700;
+      `;
     case "info":
       return css`
         background-color: #3498db;
       `;
-
     case "warning":
       return css`
         background-color: #f1c40f;
