@@ -49,6 +49,6 @@ const StyledBadge = styled.span<BadgeProps>`
 
   ${(props) => applyBadgeVariant(props.variant!)};
   ${(props) => applyBadgeSize(props.size!)};
-  
+
   ${styledSystemStyles};
 `;
