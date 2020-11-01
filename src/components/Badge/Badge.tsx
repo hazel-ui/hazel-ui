@@ -1,11 +1,9 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
-import { compose, border, BorderProps, color, ColorProps } from "styled-system";
-
+import { border, BorderProps, color, ColorProps, compose } from "styled-system";
 import { Theme } from "../../foundation";
-
+import { applyBadgeSize, applyBadgeVariant } from "./styles";
 import { BadgeSizeType, BadgeType } from "./types";
-import { applyBadgeVariant, applyBadgeSize } from "./styles";
 
 export interface BadgeProps extends BorderProps, ColorProps {
   children?: ReactNode;
@@ -23,7 +21,7 @@ export const Badge = ({
   ...rest
 }: BadgeProps) => {
   return (
-    <StyledBadge size={size} variant={variant} as={"badge" as any} {...rest}>
+    <StyledBadge size={size} variant={variant} as={"span" as any} {...rest}>
       {children}
     </StyledBadge>
   );
