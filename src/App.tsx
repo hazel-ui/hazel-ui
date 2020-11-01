@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { OptionType, Search } from "./components";
+import { Icon } from "./foundation";
 
 export function App() {
   const [selectedEntry, setSelectedEntry] = useState<OptionType>({
@@ -11,6 +12,8 @@ export function App() {
     <div style={{ margin: "10px" }}>
       <Search onChange={setSelectedEntry} options={mockOptions} />
       Selected: {selectedEntry?.label}
+      <Icon.Search height="1.3rem" transform="rotate(45)" />
+      <Icon.ArrowUp height="1.3rem" />
     </div>
   );
 }

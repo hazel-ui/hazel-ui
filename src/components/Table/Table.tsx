@@ -61,13 +61,17 @@ export function Table(props: TableProps) {
                       }
                       {/* Add a sort direction indicator */}
                       <span>
-                        {props.enableSorting
-                          ? column.isSorted
-                            ? column.isSortedDesc
-                              ? Icon.ChironDown
-                              : Icon.ChironUp
-                            : Icon.Sort
-                          : null}
+                        {props.enableSorting ? (
+                          column.isSorted ? (
+                            column.isSortedDesc ? (
+                              <Icon.ArrowDown height="1rem" width="1rem" />
+                            ) : (
+                              <Icon.ArrowUp height="1rem" width="1rem" />
+                            )
+                          ) : (
+                            <Icon.Sort height="1rem" />
+                          )
+                        ) : null}
                       </span>
                     </Th>
                   ))
