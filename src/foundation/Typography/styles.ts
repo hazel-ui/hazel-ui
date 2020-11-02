@@ -1,21 +1,19 @@
-import { css } from "styled-components";
 import { latin } from "@bbc/gel-foundations/scripts";
 import {
-  getFoolscap,
-  getCanon,
-  getTrafalgar,
-  getParagon,
-  getDoublePica,
-  getGreatPrimer,
-  getPica,
   getBodyCopy,
-  getLongPrimer,
   getBrevier,
+  getCanon,
+  getDoublePica,
+  getFoolscap,
+  getGreatPrimer,
+  getLongPrimer,
+  getParagon,
+  getPica,
+  getTrafalgar,
 } from "@bbc/gel-foundations/typography";
-
+import { css } from "styled-components";
 import { MediaQuery } from "../MediaQuery";
 import { Theme } from "../Theme";
-
 import { letterSpacing } from "./responsive";
 import { TypographyType } from "./types";
 

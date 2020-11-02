@@ -1,11 +1,9 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
-import { compose, border, BorderProps, color, ColorProps } from "styled-system";
-
+import { border, BorderProps, color, ColorProps, compose } from "styled-system";
 import { Theme } from "../../foundation";
-
+import { applyButtonSize, applyButtonVariant } from "./styles";
 import { ButtonSizeType, ButtonType } from "./types";
-import { applyButtonVariant, applyButtonSize } from "./styles";
 
 export interface ButtonProps extends BorderProps, ColorProps {
   children?: ReactNode;
@@ -44,7 +42,7 @@ const StyledButton = styled.button<ButtonProps>`
   box-shadow: 0px 2px 8px -1px rgba(18, 22, 33, 0.04);
   &:hover {
     box-shadow: 0px 4px 20px -2px rgba(18, 22, 33, 0.12);
-    transform: translate(0, -0.2rem);
+    transform: translate(0, -0.1rem);
   }
 
   ${styledSystemStyles};
