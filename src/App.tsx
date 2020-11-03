@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Card, OptionType, Search } from "./components";
-import { Color, Icon, Typography } from "./foundation";
+import { OptionType, Search } from "./package";
 
 export function App() {
   const [selectedEntry, setSelectedEntry] = useState<OptionType>({
@@ -12,64 +11,6 @@ export function App() {
     <div style={{ margin: "10px" }}>
       <Search onChange={setSelectedEntry} options={mockOptions} />
       <div>Selected: {selectedEntry?.label}</div>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px" color={Color.royalBlue}>
-          {"<Icon.Search />"}
-        </Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
-      <Card textAlign="center" width="10rem">
-        <Icon.Search height="1.3rem" />
-        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
-      </Card>
     </div>
   );
 }
@@ -80,4 +21,5 @@ const mockOptions = [
   { value: "entry3", label: "Third Entry" },
   { value: "entry4", label: "Fourth Entry" },
   { value: "entry5", label: "Fifth Entry" },
+  { value: "entry6", label: "Sixth Entry" },
 ];

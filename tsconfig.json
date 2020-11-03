@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "declaration": true, // add type declarations when compiling
+    "outDir": "dist", // output directory for compiled files
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
