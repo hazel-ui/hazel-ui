@@ -7,8 +7,6 @@ export function applyBadgeVariant(variant: BadgeType) {
     case "primary":
       return css`
         background-color: #777;
-        border-radius: 0;
-        font-weight: 700;
       `;
     case "info":
       return css`
@@ -38,26 +36,26 @@ export function applyBadgeSize(size: BadgeSizeType) {
   switch (size) {
     case "small":
       return css`
-        font-size: 0.7rem;
-        padding: 0.05rem 0.4rem 0.15rem;
+        font-size: 1rem;
+        padding: 0.2rem 0.6rem;
       `;
 
     case "medium":
       return css`
-        font-size: 1.2rem;
-        padding: 0.1rem 0.65rem 0.2rem;
+        font-size: 1.4rem;
+        padding: 0.4rem 0.8rem;
       `;
 
     case "large":
       return css`
-        font-size: 1.6rem;
-        padding: 0.05rem 0.8rem 0.1rem;
+        font-size: 1.8rem;
+        padding: 0.4rem 1rem;
       `;
 
     default:
       return css`
         font-size: 1.6rem;
-        padding: 0.05rem 0.8rem 0.1rem;
+        padding: 0.6rem 0.8rem;
       `;
   }
 }

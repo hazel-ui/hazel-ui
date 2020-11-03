@@ -41,7 +41,7 @@ const StyledBadge = styled.span<BadgeProps>`
   border-radius: 3rem;
   text-align: center;
 
-  font-weight: 400;
+  font-weight: 700;
 
   line-height: inherit;
 
