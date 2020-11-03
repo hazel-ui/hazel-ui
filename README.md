@@ -10,10 +10,11 @@
 [![pull-requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![issues](https://img.shields.io/github/issues/hazel-ui/hazel-ui.svg)](https://github.com/hazel-ui/hazel-ui/issues)
 [![code-style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+[![license](https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000)](LICENSE)
 
 [![typescript](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://www.typescriptlang.org/)
 [![tested-with](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://jestjs.io/)
-[![license](https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000)](LICENSE)
+[![chromatic](https://badgen.net/badge/tested%20with/chromatic/fc521f)](https://chromatic.com/library?appId=5f9856a52896dc002243924e&branch=main)
 
 </div>
 

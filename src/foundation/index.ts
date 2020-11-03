@@ -1,5 +1,7 @@
 export { Color } from "./Color";
-export { GlobalStyles } from "./GlobalStyles";
+export { Icon } from "./Icon";
+export { Layout } from "./Layout";
 export { MediaQuery } from "./MediaQuery";
-export { Theme } from "./Theme";
+export { Shadow } from "./Shadow";
+export { GlobalStyles, Theme } from "./Theme";
 export { Typography } from "./Typography";
