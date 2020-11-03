@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { OptionType, Search } from "./components";
-import { Icon } from "./foundation";
+import { Card, OptionType, Search } from "./components";
+import { Color, Icon, Typography } from "./foundation";
 
 export function App() {
   const [selectedEntry, setSelectedEntry] = useState<OptionType>({
@@ -11,9 +11,65 @@ export function App() {
   return (
     <div style={{ margin: "10px" }}>
       <Search onChange={setSelectedEntry} options={mockOptions} />
-      Selected: {selectedEntry?.label}
-      <Icon.Search height="1.3rem" transform="rotate(45)" />
-      <Icon.ArrowUp height="1.3rem" />
+      <div>Selected: {selectedEntry?.label}</div>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px" color={Color.royalBlue}>
+          {"<Icon.Search />"}
+        </Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
+      <Card textAlign="center" width="10rem">
+        <Icon.Search height="1.3rem" />
+        <Typography marginBottom="0px">{"<Icon.Search />"}</Typography>
+      </Card>
     </div>
   );
 }

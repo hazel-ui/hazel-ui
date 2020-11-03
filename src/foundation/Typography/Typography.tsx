@@ -1,13 +1,13 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 import {
-  compose,
   background,
   BackgroundProps,
   border,
   BorderProps,
   color,
   ColorProps,
+  compose,
   display,
   DisplayProps,
   layout,
@@ -15,11 +15,10 @@ import {
   space,
   SpaceProps,
   typography,
-  TypographyProps as StyledSystemTypographyProps,
+  TypographyProps as SSTypographyProps,
 } from "styled-system";
-
-import { TextTag, TypographyType } from "./types";
 import { applyTypographyVariant } from "./styles";
+import { TextTag, TypographyType } from "./types";
 
 export interface TypographyProps
   extends BackgroundProps,
@@ -28,7 +27,7 @@ export interface TypographyProps
     DisplayProps,
     LayoutProps,
     SpaceProps,
-    StyledSystemTypographyProps {
+    SSTypographyProps {
   variant?: TypographyType;
   children?: ReactNode;
 }

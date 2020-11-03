@@ -1,0 +1,40 @@
+import { Meta } from "@storybook/addon-docs/dist/blocks";
+import { Card } from "../../../components";
+import { Color } from "../../Color";
+import { Icon } from "../../Icon";
+import { Typography } from "../../Typography";
+import { iconsList } from "./iconsList";
+
+<Meta title="Foundation/Icon" component={Icon} />
+
+# Icon
+
+The `Icon` object provides us with all available icons used
+throughout the project rendered as an `<svg>` element. All HTML
+[SVG attributes][1] can be passed as props to this component.
+
+## Usage
+
+```tsx
+import { Icon } from "hazel-ui";
+
+<Icon.ArrowUp height="1.3rem" />;
+```
+
+## Available icons
+
+<div>
+  {iconsList.map((iconName) => {
+    const IconComponent = Icon[iconName];
+    return (
+      <Card textAlign="center" width="10rem">
+        <IconComponent height="1.3rem" width="1.3rem" />
+        <Typography marginBottom="0px" color={Color.royalBlue}>
+          {`<Icon.${iconName} />`}
+        </Typography>
+      </Card>
+    );
+  })}
+</div>
+
+[1]: https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
