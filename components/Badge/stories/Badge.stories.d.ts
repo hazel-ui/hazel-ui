@@ -1,0 +1,11 @@
+import { Story, Meta } from "@storybook/react";
+import { BadgeProps } from "../Badge";
+declare const _default: Meta<import("@storybook/react").Args>;
+export default _default;
+export declare const Primary: Story<BadgeProps>;
+export declare const Tip: Story<BadgeProps>;
+export declare const Info: Story<BadgeProps>;
+export declare const Warning: Story<BadgeProps>;
+export declare const SmallDanger: Story<BadgeProps>;
+export declare const LargeSuccess: Story<BadgeProps>;
+export declare const Custom: Story<BadgeProps>;
