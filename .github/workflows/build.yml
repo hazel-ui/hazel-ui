@@ -29,11 +29,14 @@ jobs:
       - name: Install dependencies
         run: npm i
 
+      - name: Evaluate code quality
+        run: npm run prettier
+
       - name: Run tests
         run: npm test
 
-      - name: Create Build
+      - name: Create project build
         run: npm run build --if-present
 
-      - name: Evaluate Code Quality
-        run: npm run prettier
+      - name: Create package build
+        run: npm run build:package

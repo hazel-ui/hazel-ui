@@ -17,9 +17,10 @@
     "prettier": "prettier --check \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
     "prettier:fix": "prettier --write \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
     "start": "react-scripts start",
-    "build": "rm -rf dist && mkdir dist && cd src/package && tsc",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "prepublishOnly": "npm run build",
+    "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
+    "prepublishOnly": "npm run build:package",
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d dist"
   },
