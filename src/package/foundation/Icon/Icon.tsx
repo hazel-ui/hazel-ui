@@ -1,9 +1,7 @@
 import React from "react";
-import { ReactComponent as ArrowUp } from "./svg/ArrowUp.svg";
+import { ArrowUp } from "./icons";
 
-export { ReactComponent as Close } from "./svg/Close.svg";
-export { ReactComponent as Search } from "./svg/Search.svg";
-export { ReactComponent as Sort } from "./svg/Sort.svg";
+export { Close, Search, Sort } from "./icons";
 export { ArrowUp };
 
 // Derived icons
