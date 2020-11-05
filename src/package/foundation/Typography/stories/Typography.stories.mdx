@@ -1,0 +1,116 @@
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Typography } from "../Typography";
+import notes from "./notes.md";
+
+<Meta
+  title="Foundation/Typography"
+  component={Typography}
+  parameters={{ notes: notes }}
+/>
+
+# Typography
+
+This component can be used to render all text-based elements on
+a page such as headings, paragraphs, captions, and labels.
+
+## Usage
+
+```tsx
+import { Typography } from "hazel-ui";
+
+function Component() {
+  return (
+    <Typography variant="display">
+      Could a computer ever create better art than a human?
+    </Typography>
+  );
+}
+```
+
+## Props
+
+<ArgsTable of={Typography} />
+
+## Variants
+
+[]()
+
+### Display
+
+<Canvas>
+  <Typography variant="display">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Heading 1
+
+<Canvas>
+  <Typography variant="h1">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Heading 2
+
+<Canvas>
+  <Typography variant="h2">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Heading 3
+
+<Canvas>
+  <Typography variant="h3">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Heading 4
+
+<Canvas>
+  <Typography variant="h4">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Heading 5
+
+<Canvas>
+  <Typography variant="h5">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Heading 6
+
+<Canvas>
+  <Typography variant="h6">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Paragraph
+
+<Canvas>
+  <Typography variant="p">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Caption
+
+<Canvas>
+  <Typography variant="caption">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>
+
+### Label
+
+<Canvas>
+  <Typography variant="label">
+    Could a computer ever create better art than a human?
+  </Typography>
+</Canvas>

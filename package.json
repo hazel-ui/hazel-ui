@@ -2,6 +2,9 @@
   "name": "hazel-ui",
   "version": "0.0.13",
   "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "private": false,
   "bugs": "https://github.com/hazel-ui/hazel-ui/issues",
   "homepage": "https://hazel-ui.github.io/hazel-ui",
@@ -22,7 +25,7 @@
     "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
     "prepublishOnly": "npm run build:package",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d ./dist-storybook"
   },
   "dependencies": {
     "@bbc/gel-foundations": "^5.0.1",
