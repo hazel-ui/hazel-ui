@@ -18,7 +18,9 @@ throughout the project rendered as an `<svg>` element. All HTML
 ```tsx
 import { Icon } from "hazel-ui";
 
-<Icon.ArrowUp height="1.3rem" />;
+function Component() {
+  return <Icon.ArrowUp height="1.3rem" />;
+}
 ```
 
 ## Available icons
@@ -27,7 +29,7 @@ import { Icon } from "hazel-ui";
   {iconsList.map((iconName) => {
     const IconComponent = Icon[iconName];
     return (
-      <Card textAlign="center" width="10rem">
+      <Card textAlign="center" width="10rem" key="iconName">
         <IconComponent height="1.3rem" />
         <Typography marginBottom="0px" color={Color.royalBlue}>
           {`<Icon.${iconName} />`}

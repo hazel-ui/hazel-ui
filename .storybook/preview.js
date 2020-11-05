@@ -12,4 +12,13 @@ export const decorators = [
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  previewTabs: {
+    canvas: {
+      title: "Canvas",
+      hidden: true,
+    },
+    docs: {
+      hidden: false,
+    },
+  },
 };
