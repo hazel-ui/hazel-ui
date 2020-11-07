@@ -31,7 +31,7 @@ export function App() {
       />
       <div>Selected: {selectedEntry?.label}</div>
       <div>MultiSelected: {JSON.stringify(selectedEntry2)}</div>
-      <Icon.ArrowRight height="1.3rem" />
+      <Icon.SortUp size="1.3rem" />
     </div>
   );
 }

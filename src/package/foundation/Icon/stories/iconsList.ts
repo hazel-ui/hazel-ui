@@ -1,9 +1,1 @@
-export const iconsList = [
-  "ArrowUp",
-  "ArrowRight",
-  "ArrowDown",
-  "ArrowLeft",
-  "Close",
-  "Search",
-  "Sort",
-];
+export const iconsList = ["X", "Search", "Sort", "SortDown", "SortUp"];

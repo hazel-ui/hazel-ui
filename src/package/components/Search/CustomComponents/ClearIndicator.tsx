@@ -8,7 +8,7 @@ export function ClearIndicator(props: any) {
   }
 
   const {
-    children = <Icon.Close height="10px" />,
+    children = <Icon.X size="1.3rem" />,
     getStyles,
     innerProps: { ref, onMouseDown, onTouchEnd, ...restInnerProps },
   } = props;
@@ -21,9 +21,7 @@ export function ClearIndicator(props: any) {
       onMouseDown={clearValue}
       onTouchEnd={clearValue}
     >
-      <div style={{ padding: "5px 5px 0px 0px", cursor: "pointer" }}>
-        {children}
-      </div>
+      <div style={{ cursor: "pointer" }}>{children}</div>
     </div>
   );
 }
