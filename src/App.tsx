@@ -1,16 +1,36 @@
 import React, { useState } from "react";
-import { Icon, OptionType, Search } from "./package";
+import { Icon, Search, SearchOptionType, SearchValueType } from "./package";
 
 export function App() {
-  const [selectedEntry, setSelectedEntry] = useState<OptionType>({
-    value: null,
+  const [selectedEntry, setSelectedEntry] = useState<SearchOptionType>({
+    value: "",
     label: "",
   });
 
+  const [selectedEntry2, setSelectedEntry2] = useState<SearchOptionType[]>([
+    {
+      value: "",
+      label: "",
+    },
+  ]);
+
   return (
     <div style={{ margin: "10px" }}>
-      <Search onChange={setSelectedEntry} options={mockOptions} />
+      <Search
+        onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
+          setSelectedEntry(selectedOption as SearchOptionType);
+        }}
+        options={mockOptions}
+      />
+      <Search
+        onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
+          setSelectedEntry2(selectedOption as SearchOptionType[]);
+        }}
+        options={mockOptions}
+        isMulti
+      />
       <div>Selected: {selectedEntry?.label}</div>
+      <div>MultiSelected: {JSON.stringify(selectedEntry2)}</div>
       <Icon.ArrowRight height="1.3rem" />
     </div>
   );

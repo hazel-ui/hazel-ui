@@ -21,4 +21,5 @@ export const parameters = {
       hidden: false,
     },
   },
+  viewMode: "docs",
 };

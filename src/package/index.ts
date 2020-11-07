@@ -1,5 +1,5 @@
 export { Badge, Button, Card, Search, Table } from "./components";
-export type { OptionType } from "./components";
+export type { SearchOptionType, SearchValueType } from "./components";
 export {
   Color,
   GlobalStyles,

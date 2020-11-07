@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import ReactSelect, { ValueType } from "react-select";
+import ReactSelect, { Props } from "react-select";
 import {
   ClearIndicator,
   Control,
@@ -9,23 +9,21 @@ import {
 } from "./CustomComponents";
 import { controlStyles, menuListStyles, optionStyles } from "./styles";
 
-export type OptionType = {
-  value: string | null;
-  label: string;
-};
+export interface SearchProps extends Props {}
 
-type SearchProps = {
-  options: OptionType[];
-  onChange: React.Dispatch<React.SetStateAction<OptionType>>;
-};
-
-export function Search(props: SearchProps) {
+export function Search({
+  autoFocus = false,
+  backspaceRemovesValue = true,
+  captureMenuScroll = false,
+  hideSelectedOptions = true,
+  isClearable = true,
+  isLoading = false,
+  isSearchable = true,
+  placeholder = "",
+  ...rest
+}: SearchProps) {
   return (
     <ReactSelect
-      options={props.options}
-      onChange={(event: ValueType<OptionType>) => {
-        props.onChange(event as OptionType);
-      }}
       components={{
         ClearIndicator,
         Control,
@@ -33,15 +31,6 @@ export function Search(props: SearchProps) {
         NoOptionsMessage,
         Option,
       }}
-      // defaultValue={props.options[0]}
-      autoFocus={false}
-      backspaceRemovesValue={true}
-      hideSelectedOptions={true}
-      isLoading={false}
-      isSearchable={true}
-      isClearable={true}
-      captureMenuScroll={false}
-      placeholder=""
       theme={(theme: any) => ({
         ...theme,
         borderRadius: 0,
@@ -89,6 +78,15 @@ export function Search(props: SearchProps) {
 
         // indicatorSeparator: () => ({}), // remove separator
       }}
+      autoFocus={autoFocus}
+      backspaceRemovesValue={backspaceRemovesValue}
+      captureMenuScroll={captureMenuScroll}
+      hideSelectedOptions={hideSelectedOptions}
+      isClearable={isClearable}
+      isLoading={isLoading}
+      isSearchable={isSearchable}
+      placeholder={placeholder}
+      {...rest}
     />
   );
 }
