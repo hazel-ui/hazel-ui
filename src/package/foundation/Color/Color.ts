@@ -15,7 +15,10 @@ export enum Color {
 
   gainsboro = "#DCDCDC",
   silver = "#C0C0C0",
+  grey = "#808080",
   midnightBlue = "#191970",
+
+  crimson = "#DC143C",
 
   // custom
   royalBlue = "#275EFE",

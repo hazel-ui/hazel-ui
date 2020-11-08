@@ -1,35 +1,52 @@
 import React from "react";
 import { components } from "react-select";
 import styled from "styled-components";
-import { Layout } from "../../../foundation";
+import { Color, Icon, Layout, Theme } from "../../../foundation";
 
-export function Control({ children, ...props }: any) {
+export function Control({
+  selectProps: { floatingLabel, invalidSearch },
+  children,
+  ...props
+}: any) {
   return (
-    <Layout display="inline-flex">
-      <Label isFloating={props.isFocused || props.hasValue}>Select</Label>
+    <components.Control {...props}>
+      <Layout margin="0rem 0.1rem">
+        <components.DropdownIndicator {...props}>
+          <Icon.Search
+            size="1.3rem"
+            color={invalidSearch ? Color.crimson : "none"}
+          />
+        </components.DropdownIndicator>
+      </Layout>
 
-      <components.Control {...props}>
-        <Layout display="flex">
-          <components.DropdownIndicator {...props} />
-          <components.IndicatorSeparator {...props} />
-        </Layout>
-        {children}
-      </components.Control>
-    </Layout>
+      <StyledIndicatorSeparator {...props} />
+
+      <Label isFloating={props.isFocused || props.hasValue} theme={props.theme}>
+        {floatingLabel}
+      </Label>
+
+      {children}
+    </components.Control>
   );
 }
 
-const Label = styled.label<{ isFloating?: boolean }>`
-  left: 50px;
-  pointer-events: none;
-  font-family: sans-serif;
-  font-style: italic;
+const StyledIndicatorSeparator = styled(components.IndicatorSeparator)`
+  height: 1.1rem;
+  align-self: center;
+`;
+
+const Label = styled.label<{ isFloating?: boolean; theme: any }>`
   position: absolute;
+  left: 3.3rem;
+
+  pointer-events: none;
+  font-family: ${Theme.font.sansSerif};
+
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 
-  top: ${(props) => (props.isFloating ? `5px` : `35%`)};
-  color: ${(props) => (props.isFloating ? `red` : `blue`)};
+  color: ${(props) => props.theme.colors.neutral50};
+  top: ${(props) => (props.isFloating ? `10%` : `30%`)};
   font-size: ${(props) => (props.isFloating ? `0.5rem` : `1rem`)};
 `;

@@ -1,8 +1,7 @@
+import { Meta, Story } from "@storybook/react";
 import React from "react";
-import { Story, Meta } from "@storybook/react";
-
+import { Icon } from "../../../foundation";
 import { Table, TableProps } from "../Table";
-
 import notes from "./notes.md";
 
 export default {
@@ -106,7 +105,12 @@ ExpandableRows.args = {
               style: {},
             })}
           >
-            {props.row.isExpanded ? "👇" : "👉"} &nbsp;{props.value}
+            {props.row.isExpanded ? (
+              <Icon.ChevronDown size="1.3rem" />
+            ) : (
+              <Icon.ChevronRight size="1.3rem" />
+            )}{" "}
+            &nbsp;{props.value}
           </span>
         ) : (
           <span

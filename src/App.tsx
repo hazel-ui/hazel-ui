@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Icon, Search, SearchOptionType, SearchValueType } from "./package";
+import { Search, SearchOptionType, SearchValueType } from "./package";
 
 export function App() {
   const [selectedEntry, setSelectedEntry] = useState<SearchOptionType>({
@@ -22,16 +22,16 @@ export function App() {
         }}
         options={mockOptions}
       />
+      <div>Selected: {selectedEntry?.label}</div>
       <Search
         onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
           setSelectedEntry2(selectedOption as SearchOptionType[]);
         }}
         options={mockOptions}
         isMulti
+        closeMenuOnSelect={false}
       />
-      <div>Selected: {selectedEntry?.label}</div>
       <div>MultiSelected: {JSON.stringify(selectedEntry2)}</div>
-      <Icon.SortUp size="1.3rem" />
     </div>
   );
 }

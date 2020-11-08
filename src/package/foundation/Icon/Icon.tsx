@@ -1,4 +1,6 @@
 export {
+  ChevronDown,
+  ChevronRight,
   Search,
   Sort,
   SortDown,

@@ -31,10 +31,17 @@ function Component() {
 
 <Canvas>
   <Card width="10rem">
-    <Layout textAlign="center">Title</Layout>
+    <Layout textAlign="center">
+      <img
+        src="https://pokeres.bastionbot.org/images/pokemon/25.png"
+        alt="Pikachu"
+        width={100}
+      />
+      <div style={{ fontWeight: "bold" }}>Pikachu</div>
+    </Layout>
     <Layout display="flex" justifyContent="space-between" marginTop="1rem">
-      <div>Label 1</div>
-      <div>Value 1</div>
+      <div>Type</div>
+      <div>Electric</div>
     </Layout>
   </Card>
 </Canvas>
