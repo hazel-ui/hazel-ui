@@ -1,13 +1,14 @@
 import React from "react";
+import { Icon } from "../../../foundation";
 
-export const ClearIndicator = (props: any) => {
-  const clearValue = () => {
+export function ClearIndicator(props: any) {
+  function clearValue() {
     props.clearValue();
     props.selectProps.onClear && props.selectProps.onClear();
-  };
+  }
 
   const {
-    children = <>clear</>,
+    children = <Icon.X size="1.3rem" />,
     getStyles,
     innerProps: { ref, onMouseDown, onTouchEnd, ...restInnerProps },
   } = props;
@@ -20,7 +21,7 @@ export const ClearIndicator = (props: any) => {
       onMouseDown={clearValue}
       onTouchEnd={clearValue}
     >
-      <div style={{ padding: "0px 5px" }}>{children}</div>
+      <div style={{ cursor: "pointer" }}>{children}</div>
     </div>
   );
-};
+}

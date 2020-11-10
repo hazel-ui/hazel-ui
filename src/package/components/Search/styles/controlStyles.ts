@@ -1,20 +1,18 @@
 import { CSSProperties } from "react";
 import { ControlProps } from "react-select";
+import { Color, Shadow } from "../../../foundation";
 
 export const controlStyles = (
   base: CSSProperties,
   state: ControlProps<{}>
 ) => ({
   ...base,
-  border: "1px solid aqua", // control border
-  boxShadow: "none",
-  display: "inline-flex", // to align everything in custom control to one line
-  height: "3rem",
-  width: "20rem", // width of control
-  margin: "0 auto", // center the control element to drop-down
-  justifyContent: "center",
-  alignItems: "center",
-  placeItems: "center",
-  backgroundColor: "rgba(0,0,0,0)", // transparent, so CustomControl can define it
-  borderRadius: "10px",
+  height: "3.2rem",
+
+  border: `0.1rem solid ${state.theme.colors.neutral30}`, // control border
+  borderRadius: "0.3rem",
+  backgroundColor: state.isFocused ? Color.white : state.theme.colors.neutral0,
+  boxShadow: state.isFocused ? Shadow.xs : "none",
+
+  cursor: "pointer",
 });

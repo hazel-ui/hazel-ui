@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { Color, MediaQuery, Theme } from "../../foundation";
 
 // <table>
@@ -11,27 +10,26 @@ export const TableContainer = styled.table`
 
   /* width */
   ::-webkit-scrollbar {
-    height: 12px;
+    height: 0.6rem;
   }
 
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
     background: ${Color.white};
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: ${Color.lavender};
+    background: ${Color.gainsboro};
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
-    background: ${Color.gainsboro};
+    background: ${Color.silver};
   }
 `;
 
@@ -60,7 +58,7 @@ export const Th = styled.th`
 
   ${MediaQuery.maxWidth.tablet} {
     &:nth-of-type(1) {
-      box-shadow: 6px 0px 25px 0px ${Color.lavender};
+      box-shadow: 6px 0px 25px 0px ${Color.gainsboro};
     }
   }
 `;
@@ -83,7 +81,7 @@ export const Td = styled.td`
 
   ${MediaQuery.maxWidth.tablet} {
     &:nth-of-type(1) {
-      box-shadow: 6px 0px 25px 0px ${Color.lavender};
+      box-shadow: 6px 0px 25px 0px ${Color.gainsboro};
       clip-path: inset(0px -30px 0px 0px);
     }
   }

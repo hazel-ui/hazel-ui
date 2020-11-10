@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs/dist/blocks";
+import { ArgsTable, Canvas, Meta } from "@storybook/addon-docs/dist/blocks";
 import { Card } from "../../../components";
 import { Color } from "../../Color";
 import { Icon } from "../../Icon";
@@ -19,7 +19,7 @@ throughout the project rendered as an `<svg>` element. All HTML
 import { Icon } from "hazel-ui";
 
 function Component() {
-  return <Icon.ArrowUp height="1.3rem" />;
+  return <Icon.ArrowUp size="1.3rem" />;
 }
 ```
 
@@ -29,8 +29,8 @@ function Component() {
   {iconsList.map((iconName) => {
     const IconComponent = Icon[iconName];
     return (
-      <Card textAlign="center" width="10rem" key="iconName">
-        <IconComponent height="1.3rem" />
+      <Card textAlign="center" width="11rem" key="iconName">
+        <IconComponent size="1.3rem" />
         <Typography marginBottom="0px" color={Color.royalBlue}>
           {`<Icon.${iconName} />`}
         </Typography>

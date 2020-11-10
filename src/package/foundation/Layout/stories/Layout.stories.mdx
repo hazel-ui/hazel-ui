@@ -1,0 +1,31 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { Layout } from "../Layout";
+
+<Meta title="Foundation/Layout" component={Layout} />
+
+# Layout
+
+This component can be used as a wrapper to define the layout for
+children components. It includes the Flexbox, Layout, Space, and
+Typography utilities from [styled-system][1].
+
+## Usage
+
+```tsx
+import { Layout } from "hazel-ui";
+
+function Component() {
+  return (
+    <Layout display="flex" justifyContent="space-between">
+      <div>1</div>
+      <div>2</div>
+    </Layout>
+  );
+}
+```
+
+## Props
+
+<ArgsTable of={Layout} />
+
+[1]: https://styled-system.com/api/

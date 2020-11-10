@@ -1,0 +1,49 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { Card } from "../Card";
+import { Layout } from "../../../foundation";
+
+<Meta title="Atoms/Card" component={Card} />
+
+# Card
+
+This is a simple container with a shadow that can be used to
+create card-like elements. It includes the Flexbox, Layout, Space, and
+Typography utilities from [styled-system][1].
+
+![]()
+
+## Usage
+
+```tsx
+import { Card } from "hazel-ui";
+
+function Component() {
+  return (
+    <Card display="flex" justifyContent="space-between">
+      <div>1</div>
+      <div>2</div>
+    </Card>
+  );
+}
+```
+
+## Example
+
+<Canvas>
+  <Card width="10rem">
+    <Layout textAlign="center">
+      <img
+        src="https://pokeres.bastionbot.org/images/pokemon/25.png"
+        alt="Pikachu"
+        width={100}
+      />
+      <div style={{ fontWeight: "bold" }}>Pikachu</div>
+    </Layout>
+    <Layout display="flex" justifyContent="space-between" marginTop="1rem">
+      <div>Type</div>
+      <div>Electric</div>
+    </Layout>
+  </Card>
+</Canvas>
+
+[1]: https://styled-system.com/api/

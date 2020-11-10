@@ -1,0 +1,168 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { Color } from "../../../foundation";
+import { Toast, showToast } from "../../Toast";
+import { Search, SearchProps } from "../Search";
+import { SearchOptionType, SearchValueType } from "../types";
+import notes from "./notes.md";
+
+<Meta title="Atoms/Search" component={Search} parameters={{ notes: notes }} />
+
+# Search
+
+This component can be used to render a `<select>` like element styled as a
+search box to present the user with a list of options to choose from a
+dropdown menu.
+
+![]()
+
+## Props
+
+The following props are available in addition to [react-select props][1].
+
+<ArgsTable of={Search} />
+
+## Examples
+
+[]()
+
+### Single select
+
+```tsx
+import { Search, SearchOptionType, SearchValueType } from "hazel-ui";
+
+function Component() {
+  const defaultEntry = { value: "", label: "" };
+  const [selectedEntry, setSelectedEntry] = useState<SearchOptionType>(
+    defaultEntry
+  );
+
+  return (
+    <Search
+      options={[
+        { value: "entry1", label: "First Entry" },
+        { value: "entry2", label: "Second Entry" },
+        { value: "entry3", label: "Third Entry" },
+      ]}
+      onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
+        if (selectedOption) {
+          setSelectedEntry(selectedOption as SearchOptionType);
+        } else setSelectedEntry(defaultEntry);
+      }}
+    />
+  );
+}
+```
+
+<Search
+  options={[
+    { value: "entry1", label: "First Entry" },
+    { value: "entry2", label: "Second Entry" },
+    {
+      value: "entry3",
+      label:
+        "Third Entry is a very very long entry that demonstrate text truncations in case of overflow. Decrease screen width to view truncation.",
+    },
+  ]}
+  onChange={(selectedOption) => {
+    if (selectedOption) showToast("Selected: " + selectedOption.label);
+    else showToast("Cleared");
+  }}
+/>
+
+<Toast />
+
+![]()
+
+![]()
+
+### Multi select
+
+```tsx
+function Component() {
+  const defaultEntry = [];
+  const [selectedEntry, setSelectedEntry] = useState<SearchOptionType[]>(
+    defaultEntry
+  );
+
+  return (
+    <Search
+      options={[
+        { value: "entry1", label: "First Entry" },
+        { value: "entry2", label: "Second Entry" },
+        { value: "entry3", label: "Third Entry" },
+      ]}
+      onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
+        if (selectedOption) {
+          setSelectedEntry(selectedOption as SearchOptionType[]);
+        } else setSelectedEntry(defaultEntry);
+      }}
+      isMulti
+      closeMenuOnSelect={false}
+    />
+  );
+}
+```
+
+<Search
+  options={[
+    { value: "entry1", label: "First Entry" },
+    { value: "entry2", label: "Second Entry" },
+    { value: "entry3", label: "Third Entry" },
+  ]}
+  isMulti
+  closeMenuOnSelect={false}
+/>
+
+![]()
+
+![]()
+
+### Theming
+
+```tsx
+<Search
+  theme={(theme: any) => ({
+    ...theme,
+    colors: {
+      ...theme.colors,
+      neutral0: Color.whiteSmoke,
+      neutral5: Color.white,
+      neutral20: Color.silver,
+      neutral30: Color.gainsboro,
+      neutral50: Color.grey,
+      primary: Color.white,
+      primary25: Color.royalBlue,
+    },
+  })}
+/>
+```
+
+<Search
+  options={[
+    { value: "entry1", label: "First Entry" },
+    { value: "entry2", label: "Second Entry" },
+    { value: "entry3", label: "Third Entry" },
+    { value: "entry4", label: "Fourth Entry" },
+    { value: "entry5", label: "Fifth Entry" },
+    { value: "entry6", label: "Sixth Entry" },
+  ]}
+  onChange={(selectedOption) => {
+    if (selectedOption) showToast("Selected: " + selectedOption.label);
+    else showToast("Cleared");
+  }}
+  theme={(theme) => ({
+    ...theme,
+    colors: {
+      ...theme.colors,
+      neutral0: Color.whiteSmoke,
+      neutral5: Color.white,
+      neutral20: Color.silver,
+      neutral30: Color.gainsboro,
+      neutral50: Color.grey,
+      primary: Color.white,
+      primary25: Color.royalBlue,
+    },
+  })}
+/>
+
+[1]: https://react-select.com/props

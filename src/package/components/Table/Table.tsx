@@ -64,9 +64,9 @@ export function Table(props: TableProps) {
                         {props.enableSorting ? (
                           column.isSorted ? (
                             column.isSortedDesc ? (
-                              <Icon.ArrowDown height="1rem" width="1rem" />
+                              <Icon.SortDown size="1rem" />
                             ) : (
-                              <Icon.ArrowUp height="1rem" width="1rem" />
+                              <Icon.SortUp size="1rem" />
                             )
                           ) : (
                             <Icon.Sort height="1rem" />

@@ -15,10 +15,11 @@ export const parameters = {
   previewTabs: {
     canvas: {
       title: "Canvas",
-      hidden: true,
+      hidden: false,
     },
     docs: {
       hidden: false,
     },
   },
+  viewMode: "docs",
 };
