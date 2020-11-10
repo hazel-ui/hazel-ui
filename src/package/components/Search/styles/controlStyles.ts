@@ -14,5 +14,5 @@ export const controlStyles = (
   backgroundColor: state.isFocused ? Color.white : state.theme.colors.neutral0,
   boxShadow: state.isFocused ? Shadow.xs : "none",
 
-  cursor: "text",
+  cursor: "pointer",
 });

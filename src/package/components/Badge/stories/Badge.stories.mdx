@@ -1,0 +1,67 @@
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Color, Theme } from "../../../foundation";
+import { Badge } from "../Badge";
+import notes from "./notes.md";
+
+<Meta
+  title="Atoms/Badge"
+  component={Badge}
+  argTypes={{
+    color: { control: "color" },
+    backgroundColor: { control: "color" },
+  }}
+  parameters={{ notes: { notes } }}
+/>
+
+# Badge
+
+This component can be used to render badge like elements on a page
+such as labels, categories, and tags. It renders as a `<span>` tag
+by default.
+
+export const Template = (args) => <Badge {...args} />;
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      size: "m",
+      fontWeight: Theme.fontWeight.regular,
+      children: "Engineering",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Overview" />
+
+## Examples
+
+[]()
+
+### Small
+
+<Canvas>
+  <Badge backgroundColor={Color.yellow}>Cloud</Badge>
+  <Badge
+    backgroundColor={Color.mintGreen}
+    borderRadius="1rem"
+    color={Color.yellowGreen}
+  >
+    Tip
+  </Badge>
+  <Badge
+    backgroundColor={Color.paleTurquoise}
+    borderRadius="1rem"
+    fontWeight={Theme.fontWeight.semiBold}
+  >
+    enhancement
+  </Badge>
+</Canvas>
+
+### Large
+
+<Canvas>
+  <Badge size="l">TITLE</Badge>
+</Canvas>

@@ -48,5 +48,5 @@ const Label = styled.label<{ isFloating?: boolean; theme: any }>`
 
   color: ${(props) => props.theme.colors.neutral50};
   top: ${(props) => (props.isFloating ? `10%` : `30%`)};
-  font-size: ${(props) => (props.isFloating ? `0.5rem` : `1rem`)};
+  font-size: ${(props) => (props.isFloating ? `0.6rem` : `1rem`)};
 `;
