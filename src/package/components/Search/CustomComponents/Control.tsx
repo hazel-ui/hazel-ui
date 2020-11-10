@@ -32,7 +32,8 @@ export function Control({
 
 const StyledIndicatorSeparator = styled(components.IndicatorSeparator)`
   height: 1.1rem;
-  align-self: center;
+  position: relative;
+  top: 14%;
 `;
 
 const Label = styled.label<{ isFloating?: boolean; theme: any }>`

@@ -1,4 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { Color } from "../../../foundation";
 import { Toast, showToast } from "../../Toast";
 import { Search, SearchProps } from "../Search";
 import { SearchOptionType, SearchValueType } from "../types";
@@ -77,8 +78,6 @@ function Component() {
 ### Multi select
 
 ```tsx
-import { Search, SearchOptionType, SearchValueType } from "hazel-ui";
-
 function Component() {
   const defaultEntry = [];
   const [selectedEntry, setSelectedEntry] = useState<SearchOptionType[]>(
@@ -121,7 +120,15 @@ function Component() {
 ### Theming
 
 ```tsx
-// coming soon
+<Search
+  theme={(theme: any) => ({
+    ...theme,
+    colors: {
+      ...theme.colors,
+      primary25: Color.crimson,
+    },
+  })}
+/>
 ```
 
 <Search
@@ -137,6 +144,13 @@ function Component() {
     if (selectedOption) showToast("Selected: " + selectedOption.label);
     else showToast("Cleared");
   }}
+  theme={(theme) => ({
+    ...theme,
+    colors: {
+      ...theme.colors,
+      primary25: Color.royalBlue,
+    },
+  })}
 />
 
 [1]: https://react-select.com/props

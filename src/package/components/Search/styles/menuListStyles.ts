@@ -1,11 +1,7 @@
 import { CSSProperties } from "react";
-import { MenuListComponentProps } from "react-select";
 import { Color } from "../../../foundation";
 
-export const menuListStyles = (
-  base: CSSProperties,
-  state: MenuListComponentProps<{}>
-) => ({
+export const menuListStyles = (base: CSSProperties, state: any) => ({
   ...base,
   maxHeight: "15rem",
   padding: "0px",
@@ -20,7 +16,7 @@ export const menuListStyles = (
     borderRadius: "1rem",
   },
   "::-webkit-scrollbar-thumb": {
-    background: Color.gainsboro,
+    background: state.theme.colors.primary25,
     borderRadius: "1rem",
     boxShadow: "inset 0 0 0.6rem rgba(0, 0, 0, 0.2)",
   },
