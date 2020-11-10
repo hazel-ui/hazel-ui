@@ -10,8 +10,10 @@ import {
 import {
   controlStyles,
   menuListStyles,
+  noOptionsMessageStyles,
   optionStyles,
   placeholderStyles,
+  valueContainerStyles,
 } from "./styles";
 
 export interface SearchProps extends Props {
@@ -64,8 +66,10 @@ export function Search({
       styles={{
         control: controlStyles,
         menuList: menuListStyles,
+        noOptionsMessage: noOptionsMessageStyles,
         option: optionStyles,
         placeholder: placeholderStyles,
+        valueContainer: valueContainerStyles,
       }}
       // in-built props
       autoFocus={autoFocus}
@@ -77,6 +81,7 @@ export function Search({
       isSearchable={isSearchable}
       noOptionsMessage={noOptionsMessage}
       placeholder={placeholder}
+      // menuIsOpen={true} // useful for development
       {...rest}
     />
   );

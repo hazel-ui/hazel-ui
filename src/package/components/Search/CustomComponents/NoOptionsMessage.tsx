@@ -15,7 +15,12 @@ export function NoOptionsMessage<OptionType extends OptionTypeBase>(
 
   return (
     <>
-      <Typography variant="h6" fontWeight="bold" marginLeft="2rem">
+      <Typography
+        variant="h5"
+        fontWeight="bold"
+        textAlign="center"
+        margin="1rem 0 0 0"
+      >
         {noOptionsTitle}
       </Typography>
       <components.NoOptionsMessage {...props} />

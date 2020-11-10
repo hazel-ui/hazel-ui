@@ -109,12 +109,34 @@ function Component() {
     { value: "entry1", label: "First Entry" },
     { value: "entry2", label: "Second Entry" },
     { value: "entry3", label: "Third Entry" },
-    { value: "entry4", label: "Fourth Entry" },
   ]}
   isMulti
   closeMenuOnSelect={false}
 />
 
+![]()
+
+![]()
+
 ### Theming
+
+```tsx
+// coming soon
+```
+
+<Search
+  options={[
+    { value: "entry1", label: "First Entry" },
+    { value: "entry2", label: "Second Entry" },
+    { value: "entry3", label: "Third Entry" },
+    { value: "entry4", label: "Fourth Entry" },
+    { value: "entry5", label: "Fifth Entry" },
+    { value: "entry6", label: "Sixth Entry" },
+  ]}
+  onChange={(selectedOption) => {
+    if (selectedOption) showToast("Selected: " + selectedOption.label);
+    else showToast("Cleared");
+  }}
+/>
 
 [1]: https://react-select.com/props
