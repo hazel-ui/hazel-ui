@@ -10,7 +10,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  validation:
     runs-on: ubuntu-latest
 
     strategy:

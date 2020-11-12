@@ -1,6 +1,6 @@
 {
   "name": "hazel-ui",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public -o ./dist-storybook",
+    "build-storybook": "build-storybook -s public -o ./dist-storybook --quiet",
     "serve-storybook": "npx http-server ./dist-storybook",
     "prettier": "prettier --check \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
     "prettier:fix": "prettier --write \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
