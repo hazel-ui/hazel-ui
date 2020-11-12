@@ -35,7 +35,9 @@ jobs:
       - name: Configure author
         run: |
           git config --global user.email "abhijeetsinghemail@gmail.com"
-          git config --global user.name "Hazel UI"
+          git config --global user.name "Abhijeet Singh"
 
       - name: Publish storybook
-        run: gh-pages -d ./dist-storybook
+        run: |
+          npm install -g gh-pages --save-dev
+          gh-pages -d ./dist-storybook
