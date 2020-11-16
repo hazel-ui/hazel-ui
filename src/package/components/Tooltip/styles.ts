@@ -1,8 +1,7 @@
 import { css } from "styled-components";
-import { Color } from "../../foundation";
 import { PlaceType } from "./types.";
 
-export function applyTooltipPlace(place: PlaceType) {
+export function applyTooltipPlace(place: PlaceType, tooltipBackground: string) {
   switch (place) {
     case "top":
       return css`
@@ -22,7 +21,7 @@ export function applyTooltipPlace(place: PlaceType) {
           border-width: 0.4rem; // same value as margin-top
 
           border-style: solid;
-          border-color: ${Color.black} transparent transparent transparent;
+          border-color: ${tooltipBackground} transparent transparent transparent;
         }
       `;
 
@@ -43,7 +42,7 @@ export function applyTooltipPlace(place: PlaceType) {
           border-width: 0.4rem; // same value as margin-top
 
           border-style: solid;
-          border-color: transparent ${Color.black} transparent transparent;
+          border-color: transparent ${tooltipBackground} transparent transparent;
         }
       `;
 
@@ -62,10 +61,10 @@ export function applyTooltipPlace(place: PlaceType) {
           left: 50%;
 
           margin-left: -0.4rem;
-          border-width: 0.4rem; // same value as margin-top
+          border-width: 0.4rem; // same value as margin-left
 
           border-style: solid;
-          border-color: transparent transparent ${Color.black} transparent;
+          border-color: transparent transparent ${tooltipBackground} transparent;
         }
       `;
 
@@ -86,7 +85,7 @@ export function applyTooltipPlace(place: PlaceType) {
           border-width: 0.4rem; // same value as margin-top
 
           border-style: solid;
-          border-color: transparent transparent transparent ${Color.black};
+          border-color: transparent transparent transparent ${tooltipBackground};
         }
       `;
 

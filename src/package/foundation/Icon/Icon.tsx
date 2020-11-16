@@ -1,6 +1,7 @@
 export {
   ChevronDown,
   ChevronRight,
+  InfoCircle,
   Search,
   Sort,
   SortDown,

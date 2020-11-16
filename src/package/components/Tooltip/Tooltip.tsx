@@ -1,14 +1,17 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
-import { Color, Theme } from "../../foundation";
+import { Theme } from "../../foundation";
 import { applyTooltipPlace } from "./styles";
-import { PlaceType } from "./types.";
+import { PlaceType, TooltipContentType } from "./types.";
 
 type TooltipProps = {
   children?: ReactNode;
   content?: ReactNode;
   open?: boolean;
   place?: PlaceType;
+  tooltipBackground?: string;
+  tooltipColor?: string;
+  width?: string;
 };
 
 export function Tooltip({
@@ -16,11 +19,20 @@ export function Tooltip({
   content = "",
   open = false,
   place = "right",
+  tooltipBackground = "#2F3545",
+  tooltipColor = "#FFFFFF",
+  width = "8rem",
 }: TooltipProps) {
   return (
     <Container>
       {children}
-      <TooltipContent open={open} place={place}>
+      <TooltipContent
+        tooltipBackground={tooltipBackground}
+        tooltipColor={tooltipColor}
+        open={open}
+        place={place}
+        width={width}
+      >
         {content}
       </TooltipContent>
     </Container>
@@ -39,18 +51,19 @@ const Container = styled.div`
   }
 `;
 
-const TooltipContent = styled.span<{ open: boolean; place: PlaceType }>`
+const TooltipContent = styled.span<TooltipContentType>`
   position: absolute;
   padding: 0.5rem 0;
 
-  text-align: center;
   border-radius: 0.3rem;
+  text-align: center;
+  z-index: 1;
 
-  background-color: ${Color.black};
-  color: ${Color.white};
   font-family: ${Theme.font.serif};
-  width: 8rem;
-  ${(props) => applyTooltipPlace(props.place)}
+  background-color: ${(props) => props.tooltipBackground};
+  color: ${(props) => props.tooltipColor};
+  width: ${(props) => props.width};
+  ${(props) => applyTooltipPlace(props.place, props.tooltipBackground)}
 
   visibility: ${(props) => (props.open ? "visible" : "hidden")};
   opacity: ${(props) => (props.open ? 1 : 0)};

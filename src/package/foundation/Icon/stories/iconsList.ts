@@ -1,9 +1,10 @@
 export const iconsList = [
   "ChevronDown",
   "ChevronRight",
-  "X",
+  "InfoCircle",
   "Search",
   "Sort",
   "SortDown",
   "SortUp",
+  "X",
 ];
