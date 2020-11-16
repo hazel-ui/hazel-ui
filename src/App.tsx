@@ -11,7 +11,12 @@ export function App() {
         <Tooltip content="Hello from the other side!" place="right">
           Right
         </Tooltip>
-        <Tooltip content="Hello from the other side!" place="bottom">
+        <Tooltip
+          content="Hello from the other side!"
+          place="bottom"
+          width="10rem"
+          open
+        >
           Bottom
         </Tooltip>
         <Tooltip content="Hello from the other side!" place="left">

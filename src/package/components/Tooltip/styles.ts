@@ -1,14 +1,18 @@
 import { css } from "styled-components";
 import { PlaceType } from "./types.";
 
-export function applyTooltipPlace(place: PlaceType, tooltipBackground: string) {
+export function applyTooltipPlace(
+  place: PlaceType,
+  tooltipBackground: string,
+  width: string
+) {
   switch (place) {
     case "top":
       return css`
         bottom: 105%;
         margin-bottom: 0.6rem;
         left: 50%;
-        margin-left: -4rem; // half of width
+        margin-left: calc(${width} / -2); // half of width
 
         /* bottom arrow */
         &::after {
@@ -51,7 +55,7 @@ export function applyTooltipPlace(place: PlaceType, tooltipBackground: string) {
         top: 105%;
         margin-top: 0.6rem;
         left: 50%;
-        margin-left: -4rem; // half of width
+        margin-left: calc(${width} / -2); // half of width
 
         /* top arrow */
         &::after {

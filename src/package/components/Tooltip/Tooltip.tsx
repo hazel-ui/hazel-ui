@@ -53,7 +53,7 @@ const Container = styled.div`
 
 const TooltipContent = styled.span<TooltipContentType>`
   position: absolute;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.3rem;
 
   border-radius: 0.3rem;
   text-align: center;
@@ -63,7 +63,8 @@ const TooltipContent = styled.span<TooltipContentType>`
   background-color: ${(props) => props.tooltipBackground};
   color: ${(props) => props.tooltipColor};
   width: ${(props) => props.width};
-  ${(props) => applyTooltipPlace(props.place, props.tooltipBackground)}
+  ${(props) =>
+    applyTooltipPlace(props.place, props.tooltipBackground, props.width)}
 
   visibility: ${(props) => (props.open ? "visible" : "hidden")};
   opacity: ${(props) => (props.open ? 1 : 0)};
