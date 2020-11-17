@@ -1,9 +1,10 @@
-export type PlaceType = "top" | "right" | "bottom" | "left";
+export type DirectionType = "top" | "right" | "bottom" | "left";
 
 export type TooltipContentType = {
+  arrowSize: string;
   open: boolean;
-  place: PlaceType;
+  direction: DirectionType;
   tooltipBackground: string;
   tooltipColor: string;
-  width: string;
+  width?: string;
 };

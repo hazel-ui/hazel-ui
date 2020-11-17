@@ -1,95 +1,64 @@
 import { css } from "styled-components";
-import { PlaceType } from "./types.";
+import { DirectionType } from "./types.";
 
 export function applyTooltipPlace(
-  place: PlaceType,
-  tooltipBackground: string,
-  width: string
+  arrowSize: string,
+  direction: DirectionType,
+  tooltipBackground: string
 ) {
-  switch (place) {
+  const tooltipMargin = "2.6rem";
+  switch (direction) {
     case "top":
       return css`
-        bottom: 105%;
-        margin-bottom: 0.6rem;
-        left: 50%;
-        margin-left: calc(${width} / -2); // half of width
+        top: calc(${tooltipMargin} * -1);
 
         /* bottom arrow */
-        &::after {
-          content: "";
-          position: absolute;
+        &::before {
           top: 100%;
-          left: 50%;
-
-          margin-left: -0.4rem;
-          border-width: 0.4rem; // same value as margin-top
-
-          border-style: solid;
-          border-color: ${tooltipBackground} transparent transparent transparent;
+          border-top-color: ${tooltipBackground};
         }
       `;
 
     case "right":
       return css`
-        left: 105%;
-        margin-left: 0.6rem;
-        top: -0.5rem; // same value as top padding
+        left: calc(100% + ${tooltipMargin} / 2);
+        top: 50%;
+        transform: translateX(0) translateY(-50%);
 
         /* left arrow */
-        &::after {
-          content: "";
-          position: absolute;
+        &::before {
+          left: calc(${arrowSize} * -1);
           top: 50%;
-          right: 100%;
-
-          margin-top: -0.4rem;
-          border-width: 0.4rem; // same value as margin-top
-
-          border-style: solid;
-          border-color: transparent ${tooltipBackground} transparent transparent;
+          transform: translateX(0) translateY(-50%);
+          border-right-color: ${tooltipBackground};
         }
       `;
 
     case "bottom":
       return css`
-        top: 105%;
-        margin-top: 0.6rem;
-        left: 50%;
-        margin-left: calc(${width} / -2); // half of width
+        bottom: calc(${tooltipMargin} * -1.3);
 
         /* top arrow */
-        &::after {
-          content: "";
-          position: absolute;
+        &::before {
           bottom: 100%;
-          left: 50%;
-
-          margin-left: -0.4rem;
-          border-width: 0.4rem; // same value as margin-left
-
-          border-style: solid;
-          border-color: transparent transparent ${tooltipBackground} transparent;
+          border-bottom-color: ${tooltipBackground};
         }
       `;
 
     case "left":
       return css`
-        right: 105%;
-        margin-right: 0.6rem;
-        top: -0.5rem; // same value as top padding
+        left: auto;
+        right: calc(100% + ${tooltipMargin} / 2);
+        top: 50%;
+        transform: translateX(0) translateY(-50%);
 
         /* right arrow */
-        &::after {
-          content: "";
-          position: absolute;
+        &::before {
+          left: auto;
+          right: calc(${arrowSize} * -2);
           top: 50%;
-          left: 100%;
-
-          margin-top: -0.4rem;
-          border-width: 0.4rem; // same value as margin-top
-
-          border-style: solid;
-          border-color: transparent transparent transparent ${tooltipBackground};
+          transform: translateX(0) translateY(-50%);
+          border-left-color: ${tooltipBackground};
         }
       `;
 

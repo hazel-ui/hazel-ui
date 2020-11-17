@@ -39,16 +39,16 @@ The tooltip text can be placed in 4 ways.
 
 <Canvas>
   <Layout display="flex" justifyContent="space-between" margin="2rem">
-    <Tooltip content="Hello from the other side!" place="top">
+    <Tooltip content="Hello from the other side!" direction="top">
       Top
     </Tooltip>
-    <Tooltip content="Hello from the other side!" place="right">
+    <Tooltip content="Hello from the other side!" direction="right">
       Right
     </Tooltip>
-    <Tooltip content="Hello from the other side!" place="bottom">
+    <Tooltip content="Hello from the other side!" direction="bottom">
       Bottom
     </Tooltip>
-    <Tooltip content="Hello from the other side!" place="left">
+    <Tooltip content="Hello from the other side!" direction="left">
       Left
     </Tooltip>
   </Layout>
@@ -67,7 +67,9 @@ The tooltip text can be placed in 4 ways.
       }
       place="bottom"
       tooltipBackground={Color.crimson}
+      tooltipColor={Color.white}
       width="10rem"
+      open
     >
       <Icon.InfoCircle size="1.3rem" />
     </Tooltip>
