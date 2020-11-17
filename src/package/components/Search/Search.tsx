@@ -10,6 +10,7 @@ import {
 import {
   controlStyles,
   menuListStyles,
+  menuStyles,
   noOptionsMessageStyles,
   optionStyles,
   placeholderStyles,
@@ -65,6 +66,7 @@ export function Search({
       })}
       styles={{
         control: controlStyles,
+        menu: menuStyles,
         menuList: menuListStyles,
         noOptionsMessage: noOptionsMessageStyles,
         option: optionStyles,

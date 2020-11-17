@@ -47,3 +47,11 @@ You can install them by adding the following code inside the `<head>` of your pr
   rel="stylesheet"
 />
 ```
+
+## Alternatives
+
+We'd be happy to incorporate any new functionality that you feel might not be possible with Hazel UI. But if you're looking for a completely different flavour of UI then you might want to check out these great alternatives:
+
+- [Chakra UI](https://github.com/chakra-ui/chakra-ui)
+- [Fluent UI](https://github.com/microsoft/fluentui) _by Microsoft_
+- [Forma 36](https://github.com/contentful/forma-36) _by Contentful_
