@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 import { DirectionType } from "./types.";
 
-export function applyTooltipPlace(
+export function applyTooltipDirection(
   arrowSize: string,
   direction: DirectionType,
   tooltipBackground: string

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { Shadow, Theme } from "../../foundation";
-import { applyTooltipPlace } from "./styles";
+import { applyTooltipDirection } from "./styles";
 import { DirectionType, TooltipContentType } from "./types.";
 
 type TooltipProps = {
@@ -91,7 +91,7 @@ const TooltipContent = styled.span<TooltipContentType>`
 
   ${(props) => props.width && `width: ${props.width};`};
   ${(props) =>
-    applyTooltipPlace(
+    applyTooltipDirection(
       props.arrowSize,
       props.direction,
       props.tooltipBackground
