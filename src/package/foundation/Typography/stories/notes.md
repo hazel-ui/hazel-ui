@@ -22,20 +22,20 @@ The Typography component includes [styled-system](https://styled-system.com/api/
 
 ## Fonts
 
-| Type       | Name           | Variant          | Usage      |
-| ---------- | -------------- | ---------------- | ---------- |
-| Serif      | [Lora][1]      | Regular          | Typography |
-|            |                | Regular italic   | x          |
-|            |                | Bold             | x          |
-|            |                | Bold italic      | x          |
-| Sans-Serif | [Open Sans][2] | Light            | Button     |
-|            |                | Light italic     | x          |
-|            |                | Regular          | Typography |
-|            |                | Regular italic   | x          |
-|            |                | Semi-bold        | Button     |
-|            |                | Semi-bold italic | x          |
-|            |                | Bold             | Button     |
-|            |                | Bold italic      | x          |
+| Type       | Name           | Variant          | Usage          |
+| ---------- | -------------- | ---------------- | -------------- |
+| Serif      | [Lora][1]      | Regular          | Typography     |
+|            |                | Regular italic   | x              |
+|            |                | Bold             | x              |
+|            |                | Bold italic      | x              |
+| Sans-Serif | [Open Sans][2] | Light            | Button (Small) |
+|            |                | Light italic     | x              |
+|            |                | Regular          | Typography     |
+|            |                | Regular italic   | x              |
+|            |                | Semi-bold        | Button         |
+|            |                | Semi-bold italic | x              |
+|            |                | Bold             | Button         |
+|            |                | Bold italic      | x              |
 
 ## Responsiveness
 

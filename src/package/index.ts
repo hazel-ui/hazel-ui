@@ -11,7 +11,6 @@ export {
 export type { SearchOptionType, SearchValueType } from "./components";
 export {
   Color,
-  GlobalStyles,
   Icon,
   Layout,
   MediaQuery,
