@@ -24,6 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
+    "postbuild:package": "copyfiles -u 3 \"src/package/static/**/*\" dist",
     "prepublishOnly": "npm run build:package",
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d ./dist-storybook"
