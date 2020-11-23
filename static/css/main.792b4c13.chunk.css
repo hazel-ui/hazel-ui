@@ -1,0 +1,100 @@
+@font-face{font-family:Lora;font-style:normal;font-weight:400;src:local(""),url(../../static/media/lora-v16-latin-regular.0c03a1fa.woff2) format("woff2"),url(../../static/media/lora-v16-latin-regular.fc9db879.woff) format("woff")}@font-face{font-family:Lora;font-style:normal;font-weight:700;src:local(""),url(../../static/media/lora-v16-latin-700.64ab7291.woff2) format("woff2"),url(../../static/media/lora-v16-latin-700.39283f31.woff) format("woff")}@font-face{font-family:Lora;font-style:italic;font-weight:400;src:local(""),url(../../static/media/lora-v16-latin-italic.7d320a84.woff2) format("woff2"),url(../../static/media/lora-v16-latin-italic.10563500.woff) format("woff")}@font-face{font-family:Lora;font-style:italic;font-weight:700;src:local(""),url(../../static/media/lora-v16-latin-700italic.780f76a7.woff2) format("woff2"),url(../../static/media/lora-v16-latin-700italic.dceed95b.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:normal;font-weight:300;src:local(""),url(../../static/media/open-sans-v18-latin-300.b871ad6e.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-300.38bcfba2.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:italic;font-weight:300;src:local(""),url(../../static/media/open-sans-v18-latin-300italic.b45d9997.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-300italic.3ab0502d.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:normal;font-weight:400;src:local(""),url(../../static/media/open-sans-v18-latin-regular.f57a62e9.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-regular.347639ec.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:italic;font-weight:400;src:local(""),url(../../static/media/open-sans-v18-latin-italic.bb915319.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-italic.56bdf847.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:normal;font-weight:600;src:local(""),url(../../static/media/open-sans-v18-latin-600.95264708.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-600.7e06644b.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:italic;font-weight:600;src:local(""),url(../../static/media/open-sans-v18-latin-600italic.cc4bf5b2.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-600italic.8d513ad9.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;src:local(""),url(../../static/media/open-sans-v18-latin-700.92425c62.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-700.f24f4bce.woff) format("woff")}@font-face{font-family:"Open Sans";font-style:italic;font-weight:700;src:local(""),url(../../static/media/open-sans-v18-latin-700italic.2a0783bd.woff2) format("woff2"),url(../../static/media/open-sans-v18-latin-700italic.e961bdb4.woff) format("woff")}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+.wrapper {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+  margin: 6px 0 6px 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+section {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 48px 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #333;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1;
+  margin: 0 0 4px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1ea7fd;
+}
+
+ul {
+  padding-left: 30px;
+  margin: 1em 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.tip {
+  display: inline-block;
+  border-radius: 1em;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 700;
+  background: #e7fdd8;
+  color: #66bf3c;
+  padding: 4px 12px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.tip-wrapper {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.tip-wrapper svg {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-right: 4px;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+.tip-wrapper svg path {
+  fill: #1ea7fd;
+}
+
+
+/*# sourceMappingURL=main.792b4c13.chunk.css.map*/
