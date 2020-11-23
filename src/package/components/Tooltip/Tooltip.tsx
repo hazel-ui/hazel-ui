@@ -46,7 +46,7 @@ const Container = styled.div`
   position: relative;
   display: inline-block;
 
-  cursor: pointer;
+  cursor: default;
 
   &:hover > span {
     visibility: visible;
