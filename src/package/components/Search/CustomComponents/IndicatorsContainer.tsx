@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import { Children } from "react";
 import { components } from "react-select";
 
 export function IndicatorsContainer({ children, ...props }: any) {

@@ -1,4 +1,3 @@
-import React from "react";
 import { Icon } from "../../../foundation";
 
 export function ClearIndicator(props: any) {

@@ -1,8 +1,6 @@
-import React from "react";
-import { Story, Meta } from "@storybook/react/";
-
-import { Page, PageProps } from "./Page";
+import { Meta, Story } from "@storybook/react/";
 import * as HeaderStories from "../Header/Header.stories";
+import { Page, PageProps } from "./Page";
 
 export default {
   title: "Molecules/Page",

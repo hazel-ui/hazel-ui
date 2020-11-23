@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography } from "./package";
 import "./package/static/styles.css";
 

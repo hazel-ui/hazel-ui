@@ -1,4 +1,3 @@
-import React from "react";
 import "../src/package/static/styles.css";
 
 export const decorators = [

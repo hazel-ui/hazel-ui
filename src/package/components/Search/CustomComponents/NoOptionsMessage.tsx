@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { components, OptionTypeBase } from "react-select";
 import { NoticeProps } from "react-select/src/components/Menu";
 import { Typography } from "../../../foundation";
@@ -8,7 +8,7 @@ export function NoOptionsMessage<OptionType extends OptionTypeBase>(
 ) {
   const { noOptionsTitle, setInvalidSearch } = props.selectProps;
 
-  React.useEffect(() => {
+  useEffect(() => {
     setInvalidSearch(true);
     return () => setInvalidSearch(false);
   }, [setInvalidSearch]);

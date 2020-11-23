@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * If data in a column is numeric and no custom Cell render function
  * is provided then add a custom Cell render function to format the numbers

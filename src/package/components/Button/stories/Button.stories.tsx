@@ -1,5 +1,4 @@
 import { Meta, Story } from "@storybook/react";
-import React from "react";
 import { Color } from "../../../foundation";
 import { Button, ButtonProps } from "../Button";
 import notes from "./notes.md";
