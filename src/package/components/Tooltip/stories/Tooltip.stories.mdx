@@ -1,0 +1,76 @@
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Color, Icon, Layout, Theme } from "../../../foundation";
+import { Tooltip } from "../Tooltip";
+
+<Meta
+  title="Atoms/Tooltip"
+  component={Tooltip}
+  argTypes={{
+    tooltipBackground: { control: "color" },
+    tooltipColor: { control: "color" },
+  }}
+/>
+
+# Tooltip
+
+This component can be used to render a pop-up message that appears on
+hovering a JSX element. This is useful for displaying additional details
+or helpful messages.
+
+export const Template = (args) => <Tooltip {...args} />;
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      children: "Hover to see tooltip",
+      content: "Tooltip text",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Overview" />
+
+## Direction
+
+The tooltip text can be placed in 4 ways.
+
+<Canvas>
+  <Layout display="flex" justifyContent="space-between" margin="2rem">
+    <Tooltip content="Hello from the other side!" direction="top">
+      Top
+    </Tooltip>
+    <Tooltip content="Hello from the other side!" direction="right">
+      Right
+    </Tooltip>
+    <Tooltip content="Hello from the other side!" direction="bottom">
+      Bottom
+    </Tooltip>
+    <Tooltip content="Hello from the other side!" direction="left">
+      Left
+    </Tooltip>
+  </Layout>
+</Canvas>
+
+### Example
+
+<Canvas>
+  <Layout marginLeft="4rem" marginBottom="6rem">
+    <Tooltip
+      content={
+        <>
+          <h4>Example title</h4>
+          <p>More information</p>
+        </>
+      }
+      place="bottom"
+      tooltipBackground={Color.crimson}
+      tooltipColor={Color.white}
+      width="10rem"
+    >
+      <Icon.InfoCircle size="1.3rem" />
+    </Tooltip>
+  </Layout>
+</Canvas>

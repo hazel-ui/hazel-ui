@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import ReactSelect, { Props } from "react-select";
 import { Color } from "../../foundation";
 import {
@@ -10,6 +10,7 @@ import {
 import {
   controlStyles,
   menuListStyles,
+  menuStyles,
   noOptionsMessageStyles,
   optionStyles,
   placeholderStyles,
@@ -35,7 +36,7 @@ export function Search({
   placeholder = "",
   ...rest
 }: SearchProps) {
-  const [invalidSearch, setInvalidSearch] = React.useState(false);
+  const [invalidSearch, setInvalidSearch] = useState(false);
   return (
     <ReactSelect
       // custom props
@@ -65,6 +66,7 @@ export function Search({
       })}
       styles={{
         control: controlStyles,
+        menu: menuStyles,
         menuList: menuListStyles,
         noOptionsMessage: noOptionsMessageStyles,
         option: optionStyles,

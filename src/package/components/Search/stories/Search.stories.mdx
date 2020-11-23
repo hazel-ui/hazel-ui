@@ -23,11 +23,15 @@ The following props are available in addition to [react-select props][1].
 
 ## Examples
 
-[]()
+- [Single select](#single-select)
+- [Multi select](#multi-select)
+- [Theming](#theming)
+- [Filtering](#filtering)
 
 ### Single select
 
 ```tsx
+import { useState } from "react";
 import { Search, SearchOptionType, SearchValueType } from "hazel-ui";
 
 function Component() {
@@ -73,8 +77,6 @@ function Component() {
 
 ![]()
 
-![]()
-
 ### Multi select
 
 ```tsx
@@ -112,8 +114,6 @@ function Component() {
   isMulti
   closeMenuOnSelect={false}
 />
-
-![]()
 
 ![]()
 
@@ -163,6 +163,54 @@ function Component() {
       primary25: Color.royalBlue,
     },
   })}
+/>
+
+![]()
+
+### Filtering
+
+You can modify the logic used to filter search results by passing
+a custom filtering function. For example, the below function will
+search for the input value from the starting of the words in available
+options and not from in-between them which is the default behaviour.
+
+```tsx
+<Search
+  filterOption={(option: SearchOptionType, inputValue: string) => {
+    const label = option.label.toLowerCase();
+    const inputLength = inputValue.length;
+    if (label.slice(0, inputLength) === inputValue.toLowerCase()) return true;
+
+    const labelWords = label.split(" ");
+    for (const word of labelWords.slice(1)) {
+      if (word.slice(0, inputLength) === inputValue.toLowerCase()) return true;
+    }
+
+    return false;
+  }}
+/>
+```
+
+<Search
+  filterOption={(option, inputValue) => {
+    const label = option.label.toLowerCase();
+    const inputLength = inputValue.length;
+    if (label.slice(0, inputLength) === inputValue.toLowerCase()) return true;
+    const labelWords = label.split(" ");
+    for (const word of labelWords.slice(1)) {
+      if (word.slice(0, inputLength) === inputValue.toLowerCase()) return true;
+    }
+    return false;
+  }}
+  options={[
+    { value: "entry1", label: "First Entry" },
+    { value: "entry2", label: "Second Entry" },
+    { value: "entry3", label: "Third Entry" },
+  ]}
+  onChange={(selectedOption) => {
+    if (selectedOption) showToast("Selected: " + selectedOption.label);
+    else showToast("Cleared");
+  }}
 />
 
 [1]: https://react-select.com/props

@@ -6,11 +6,11 @@ export {
   showToast,
   Table,
   Toast,
+  Tooltip,
 } from "./components";
 export type { SearchOptionType, SearchValueType } from "./components";
 export {
   Color,
-  GlobalStyles,
   Icon,
   Layout,
   MediaQuery,

@@ -1,4 +1,4 @@
-import React from "react";
+import { useMemo } from "react";
 import { Column, useExpanded, useSortBy, useTable } from "react-table";
 import { Icon } from "../../foundation/Icon";
 import { TableContainer, Td, Th, Tr, TrHead } from "./styles";
@@ -19,11 +19,11 @@ export function Table(props: TableProps) {
    * time. Not cool!
    */
 
-  const data = React.useMemo(() => props.data, [props.data]);
-  const columns = React.useMemo(
-    () => processColumns(props.columns, props.data),
-    [props.columns, props.data]
-  );
+  const data = useMemo(() => props.data, [props.data]);
+  const columns = useMemo(() => processColumns(props.columns, props.data), [
+    props.columns,
+    props.data,
+  ]);
 
   const {
     getTableProps,
