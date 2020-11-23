@@ -18,6 +18,7 @@ The below table explains why certain dependencies are required by the project in
 | ------------ | ------------------------------------------------------ |
 | @types/node  | Required by [@storybook/react][1]                      |
 | babel-loader | Required by [@storybook/react][1] & [react-scripts][2] |
+| copyfiles    | Copies static files in `postbuild:package` script      |
 
 [1]: https://www.npmjs.com/package/@storybook/react
 [2]: https://www.npmjs.com/package/react-scripts
