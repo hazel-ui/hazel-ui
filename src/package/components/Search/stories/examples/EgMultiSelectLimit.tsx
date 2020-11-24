@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Search, SearchOptionType, SearchValueType } from "./package";
-import "./package/static/styles.css";
+import { Search } from "../../Search";
+import { SearchOptionType, SearchValueType } from "../../types";
 
-export function App() {
+export function EgMultiSelectLimit() {
   const defaultEntry: SearchOptionType[] = [];
   const [selectedEntry, setSelectedEntry] = useState<SearchOptionType[]>(
     defaultEntry

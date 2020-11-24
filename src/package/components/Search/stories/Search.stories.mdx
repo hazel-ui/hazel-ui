@@ -3,6 +3,7 @@ import { Color } from "../../../foundation";
 import { Toast, showToast } from "../../Toast";
 import { Search, SearchProps } from "../Search";
 import { SearchOptionType, SearchValueType } from "../types";
+import { EgMultiSelectLimit } from "./examples";
 import notes from "./notes.md";
 
 <Meta title="Atoms/Search" component={Search} parameters={{ notes: notes }} />
@@ -25,6 +26,7 @@ The following props are available in addition to [react-select props][1].
 
 - [Single select](#single-select)
 - [Multi select](#multi-select)
+- [Multi select with choice limit](#multi-select-with-choice-limit)
 - [Theming](#theming)
 - [Filtering](#filtering)
 
@@ -81,7 +83,7 @@ function Component() {
 
 ```tsx
 function Component() {
-  const defaultEntry = [];
+  const defaultEntry: SearchOptionType[] = [];
   const [selectedEntry, setSelectedEntry] = useState<SearchOptionType[]>(
     defaultEntry
   );
@@ -114,6 +116,32 @@ function Component() {
   isMulti
   closeMenuOnSelect={false}
 />
+
+![]()
+
+### Multi select with choice limit
+
+It's possible to set a limit on the number of options the user is allowed to choose.
+
+```tsx
+function Component() {
+  return (
+    <Search
+      options={
+        selectedEntry.length > 1
+          ? []
+          : [
+              { value: "entry1", label: "First Entry" },
+              { value: "entry2", label: "Second Entry" },
+              { value: "entry3", label: "Third Entry" },
+            ]
+      }
+    />
+  );
+}
+```
+
+<EgMultiSelectLimit />
 
 ![]()
 
