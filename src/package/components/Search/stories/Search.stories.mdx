@@ -3,6 +3,13 @@ import { Color } from "../../../foundation";
 import { Toast, showToast } from "../../Toast";
 import { Search, SearchProps } from "../Search";
 import { SearchOptionType, SearchValueType } from "../types";
+import {
+  EgFiltering,
+  EgMultiSelect,
+  EgMultiSelectLimit,
+  EgSingleSelect,
+  EgTheming,
+} from "./examples";
 import notes from "./notes.md";
 
 <Meta title="Atoms/Search" component={Search} parameters={{ notes: notes }} />
@@ -25,6 +32,7 @@ The following props are available in addition to [react-select props][1].
 
 - [Single select](#single-select)
 - [Multi select](#multi-select)
+- [Multi select with choice limit](#multi-select-with-choice-limit)
 - [Theming](#theming)
 - [Filtering](#filtering)
 
@@ -57,21 +65,7 @@ function Component() {
 }
 ```
 
-<Search
-  options={[
-    { value: "entry1", label: "First Entry" },
-    { value: "entry2", label: "Second Entry" },
-    {
-      value: "entry3",
-      label:
-        "Third Entry is a very very long entry that demonstrate text truncations in case of overflow. Decrease screen width to view truncation.",
-    },
-  ]}
-  onChange={(selectedOption) => {
-    if (selectedOption) showToast("Selected: " + selectedOption.label);
-    else showToast("Cleared");
-  }}
-/>
+<EgSingleSelect />
 
 <Toast />
 
@@ -81,7 +75,7 @@ function Component() {
 
 ```tsx
 function Component() {
-  const defaultEntry = [];
+  const defaultEntry: SearchOptionType[] = [];
   const [selectedEntry, setSelectedEntry] = useState<SearchOptionType[]>(
     defaultEntry
   );
@@ -105,15 +99,33 @@ function Component() {
 }
 ```
 
-<Search
-  options={[
-    { value: "entry1", label: "First Entry" },
-    { value: "entry2", label: "Second Entry" },
-    { value: "entry3", label: "Third Entry" },
-  ]}
-  isMulti
-  closeMenuOnSelect={false}
-/>
+<EgMultiSelect />
+
+![]()
+
+### Multi select with choice limit
+
+It's possible to set a limit on the number of options the user is allowed to choose.
+
+```tsx
+function Component() {
+  return (
+    <Search
+      options={
+        selectedEntry.length > 1
+          ? []
+          : [
+              { value: "entry1", label: "First Entry" },
+              { value: "entry2", label: "Second Entry" },
+              { value: "entry3", label: "Third Entry" },
+            ]
+      }
+    />
+  );
+}
+```
+
+<EgMultiSelectLimit />
 
 ![]()
 
@@ -137,33 +149,7 @@ function Component() {
 />
 ```
 
-<Search
-  options={[
-    { value: "entry1", label: "First Entry" },
-    { value: "entry2", label: "Second Entry" },
-    { value: "entry3", label: "Third Entry" },
-    { value: "entry4", label: "Fourth Entry" },
-    { value: "entry5", label: "Fifth Entry" },
-    { value: "entry6", label: "Sixth Entry" },
-  ]}
-  onChange={(selectedOption) => {
-    if (selectedOption) showToast("Selected: " + selectedOption.label);
-    else showToast("Cleared");
-  }}
-  theme={(theme) => ({
-    ...theme,
-    colors: {
-      ...theme.colors,
-      neutral0: Color.whiteSmoke,
-      neutral5: Color.white,
-      neutral20: Color.silver,
-      neutral30: Color.gainsboro,
-      neutral50: Color.grey,
-      primary: Color.white,
-      primary25: Color.royalBlue,
-    },
-  })}
-/>
+<EgTheming />
 
 ![]()
 
@@ -179,11 +165,12 @@ options and not from in-between them which is the default behaviour.
   filterOption={(option: SearchOptionType, inputValue: string) => {
     const label = option.label.toLowerCase();
     const inputLength = inputValue.length;
-    if (label.slice(0, inputLength) === inputValue.toLowerCase()) return true;
+    inputValue = inputValue.toLowerCase();
+    if (label.slice(0, inputLength) === inputValue) return true;
 
     const labelWords = label.split(" ");
     for (const word of labelWords.slice(1)) {
-      if (word.slice(0, inputLength) === inputValue.toLowerCase()) return true;
+      if (word.slice(0, inputLength) === inputValue) return true;
     }
 
     return false;
@@ -191,26 +178,6 @@ options and not from in-between them which is the default behaviour.
 />
 ```
 
-<Search
-  filterOption={(option, inputValue) => {
-    const label = option.label.toLowerCase();
-    const inputLength = inputValue.length;
-    if (label.slice(0, inputLength) === inputValue.toLowerCase()) return true;
-    const labelWords = label.split(" ");
-    for (const word of labelWords.slice(1)) {
-      if (word.slice(0, inputLength) === inputValue.toLowerCase()) return true;
-    }
-    return false;
-  }}
-  options={[
-    { value: "entry1", label: "First Entry" },
-    { value: "entry2", label: "Second Entry" },
-    { value: "entry3", label: "Third Entry" },
-  ]}
-  onChange={(selectedOption) => {
-    if (selectedOption) showToast("Selected: " + selectedOption.label);
-    else showToast("Cleared");
-  }}
-/>
+<EgFiltering />
 
 [1]: https://react-select.com/props
