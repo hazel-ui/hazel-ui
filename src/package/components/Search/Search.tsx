@@ -16,14 +16,15 @@ import {
   placeholderStyles,
   valueContainerStyles,
 } from "./styles";
-import { SearchOptionType } from "./types";
+import { SearchOptionType, SearchValueType } from "./types";
 
-export interface SearchProps extends Props<SearchOptionType, boolean> {
+export interface SearchProps<IsMulti extends boolean>
+  extends Props<SearchOptionType, IsMulti> {
   floatingLabel?: string;
   noOptionsTitle?: string;
 }
 
-export function Search({
+export function Search<IsMulti extends boolean>({
   floatingLabel = "Search",
   noOptionsTitle = "Invalid search",
   autoFocus = false,
@@ -35,8 +36,9 @@ export function Search({
   isSearchable = true,
   noOptionsMessage = () => "No results found for this search",
   placeholder = "",
+  defaultValue,
   ...rest
-}: SearchProps) {
+}: SearchProps<IsMulti>) {
   const [invalidSearch, setInvalidSearch] = useState(false);
   return (
     <ReactSelect
@@ -85,6 +87,9 @@ export function Search({
       noOptionsMessage={noOptionsMessage}
       placeholder={placeholder}
       // menuIsOpen={true} // useful for development
+      // This next line can be removed once
+      // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/49908 is released
+      defaultValue={defaultValue as any}
       {...rest}
     />
   );
