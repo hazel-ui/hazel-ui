@@ -56,7 +56,7 @@ export const Th = styled.th`
     position: sticky;
   }
 
-  ${MediaQuery.maxWidth.tablet} {
+  ${MediaQuery.maxWidth.mobile} {
     &:nth-of-type(1) {
       box-shadow: 6px 0px 25px 0px ${Color.gainsboro};
     }
@@ -79,7 +79,7 @@ export const Td = styled.td`
     position: sticky;
   }
 
-  ${MediaQuery.maxWidth.tablet} {
+  ${MediaQuery.maxWidth.mobile} {
     &:nth-of-type(1) {
       box-shadow: 6px 0px 25px 0px ${Color.gainsboro};
       clip-path: inset(0px -30px 0px 0px);
