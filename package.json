@@ -32,7 +32,7 @@
   "dependencies": {
     "@bbc/gel-foundations": "^5.0.1",
     "@styled-icons/boxicons-regular": "^10.18.0",
-    "react-select": "^3.1.0",
+    "react-select": "^3.1.1",
     "react-table": "^7.5.2",
     "react-toastify": "^6.1.0",
     "styled-components": "^5.2.0",
