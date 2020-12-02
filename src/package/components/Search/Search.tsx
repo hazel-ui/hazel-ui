@@ -16,8 +16,9 @@ import {
   placeholderStyles,
   valueContainerStyles,
 } from "./styles";
+import { SearchOptionType } from "./types";
 
-export interface SearchProps extends Props {
+export interface SearchProps extends Props<SearchOptionType, boolean> {
   floatingLabel?: string;
   noOptionsTitle?: string;
 }

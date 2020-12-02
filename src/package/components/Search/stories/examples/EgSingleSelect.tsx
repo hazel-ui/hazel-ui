@@ -14,7 +14,9 @@ export function EgSingleSelect() {
             "Third Entry is a very very long entry that demonstrate text truncations in case of overflow. Decrease screen width to view truncation.",
         },
       ]}
-      onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
+      onChange={(
+        selectedOption: SearchValueType<SearchOptionType, boolean>
+      ) => {
         if (selectedOption)
           showToast("Selected: " + (selectedOption as SearchOptionType).label);
         else showToast("Cleared");

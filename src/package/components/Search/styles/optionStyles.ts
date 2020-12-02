@@ -2,7 +2,10 @@ import { CSSProperties } from "react";
 import { OptionProps } from "react-select";
 import { Color, Theme } from "../../../foundation";
 
-export const optionStyles = (base: CSSProperties, state: OptionProps<{}>) => ({
+export const optionStyles = (
+  base: CSSProperties,
+  state: OptionProps<{}, boolean>
+) => ({
   ...base,
   color: Color.black,
   fontSize: "1rem",

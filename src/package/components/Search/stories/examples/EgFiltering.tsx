@@ -11,7 +11,9 @@ export function EgFiltering() {
         { value: "entry2", label: "Second Entry" },
         { value: "entry3", label: "Third Entry" },
       ]}
-      onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
+      onChange={(
+        selectedOption: SearchValueType<SearchOptionType, boolean>
+      ) => {
         if (selectedOption)
           showToast("Selected: " + (selectedOption as SearchOptionType).label);
         else showToast("Cleared");

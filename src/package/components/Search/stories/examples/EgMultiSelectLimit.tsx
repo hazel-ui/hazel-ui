@@ -19,7 +19,9 @@ export function EgMultiSelectLimit() {
               { value: "entry3", label: "Third Entry" },
             ]
       }
-      onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
+      onChange={(
+        selectedOption: SearchValueType<SearchOptionType, boolean>
+      ) => {
         if (selectedOption) {
           setSelectedEntry(selectedOption as SearchOptionType[]);
         } else setSelectedEntry(defaultEntry);
