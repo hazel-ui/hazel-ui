@@ -16,6 +16,7 @@ The below table explains why certain dependencies are required by the project in
 
 | Package name | Purpose                                                |
 | ------------ | ------------------------------------------------------ |
+| @types/jest  | Required for `expect()` in tests                       |
 | @types/node  | Required by [@storybook/react][1]                      |
 | babel-loader | Required by [@storybook/react][1] & [react-scripts][2] |
 | copyfiles    | Copies static files in `postbuild:package` script      |
