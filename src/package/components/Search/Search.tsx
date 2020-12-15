@@ -87,9 +87,6 @@ export function Search<IsMulti extends boolean>({
       noOptionsMessage={noOptionsMessage}
       placeholder={placeholder}
       // menuIsOpen={true} // useful for development
-      // This next line can be removed once
-      // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/49908 is released
-      defaultValue={defaultValue as any}
       {...rest}
     />
   );
