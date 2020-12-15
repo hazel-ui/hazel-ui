@@ -4,9 +4,9 @@ import "./package/static/styles.css";
 
 export function App() {
   const defaultEntry: SearchOptionType[] = [];
-  const [selectedEntry, setSelectedEntry] = useState<SearchOptionType[]>(
-    defaultEntry
-  );
+  const [selectedEntry, setSelectedEntry] = useState<
+    readonly SearchOptionType[]
+  >(defaultEntry);
 
   return (
     <>
@@ -16,11 +16,9 @@ export function App() {
           { value: "entry2", label: "Second Entry" },
           { value: "entry3", label: "Third Entry" },
         ]}
-        onChange={(
-          selectedOption: SearchValueType<SearchOptionType, boolean>
-        ) => {
+        onChange={(selectedOption: SearchValueType<SearchOptionType, true>) => {
           if (selectedOption) {
-            setSelectedEntry(selectedOption as SearchOptionType[]);
+            setSelectedEntry(selectedOption);
           } else setSelectedEntry(defaultEntry);
         }}
         isMulti
