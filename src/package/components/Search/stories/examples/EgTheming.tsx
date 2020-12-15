@@ -14,9 +14,8 @@ export function EgTheming() {
         { value: "entry5", label: "Fifth Entry" },
         { value: "entry6", label: "Sixth Entry" },
       ]}
-      onChange={(selectedOption: SearchValueType<SearchOptionType>) => {
-        if (selectedOption)
-          showToast("Selected: " + (selectedOption as SearchOptionType).label);
+      onChange={(selectedOption: SearchValueType<SearchOptionType, false>) => {
+        if (selectedOption) showToast("Selected: " + selectedOption.label);
         else showToast("Cleared");
       }}
       theme={(theme) => ({

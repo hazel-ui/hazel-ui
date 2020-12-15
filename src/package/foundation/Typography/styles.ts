@@ -112,9 +112,5 @@ function applyTypographyMediaQueries(variant: TypographyType) {
     ${MediaQuery.minWidth.desktop} {
       letter-spacing: ${letterSpacing[variant].desktop};
     }
-
-    ${MediaQuery.minWidth.desktopLarge} {
-      letter-spacing: ${letterSpacing[variant].desktopLarge};
-    }
   `;
 }

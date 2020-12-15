@@ -3,9 +3,10 @@ import { components, OptionTypeBase } from "react-select";
 import { NoticeProps } from "react-select/src/components/Menu";
 import { Typography } from "../../../foundation";
 
-export function NoOptionsMessage<OptionType extends OptionTypeBase>(
-  props: NoticeProps<OptionType>
-) {
+export function NoOptionsMessage<
+  OptionType extends OptionTypeBase,
+  IsMulti extends boolean
+>(props: NoticeProps<OptionType, IsMulti>) {
   const { noOptionsTitle, setInvalidSearch } = props.selectProps;
 
   useEffect(() => {

@@ -4,11 +4,13 @@
 
 [![npm version](https://img.shields.io/npm/v/hazel-ui.svg?style=flat)](https://www.npmjs.com/package/hazel-ui)
 [![npm downloads](https://img.shields.io/npm/dw/hazel-ui)](https://www.npmjs.com/package/hazel-ui)
+[![issues](https://img.shields.io/github/issues/hazel-ui/hazel-ui.svg)](https://github.com/hazel-ui/hazel-ui/issues)
+
 [![build](https://github.com/hazel-ui/hazel-ui/workflows/build/badge.svg)](https://github.com/hazel-ui/hazel-ui/actions)
 [![website](https://img.shields.io/website-up-down-green-red/https/hazel-ui.github.io.svg)](https://hazel-ui.github.io)
+[![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/hazel-ui/hazel-ui/branches/main/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/hazel-ui/hazel-ui/branches/main)
 
 [![pull-requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![issues](https://img.shields.io/github/issues/hazel-ui/hazel-ui.svg)](https://github.com/hazel-ui/hazel-ui/issues)
 [![code-style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![license](https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000)](LICENSE)
 

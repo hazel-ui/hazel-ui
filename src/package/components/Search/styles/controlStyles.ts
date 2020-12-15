@@ -4,7 +4,7 @@ import { Color, Shadow } from "../../../foundation";
 
 export const controlStyles = (
   base: CSSProperties,
-  state: ControlProps<{}>
+  state: ControlProps<{}, boolean>
 ) => ({
   ...base,
   height: "3.2rem",

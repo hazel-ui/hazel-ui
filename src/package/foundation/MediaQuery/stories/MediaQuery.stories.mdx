@@ -1,0 +1,113 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { MediaQuery } from "../MediaQuery";
+import { EgMobileFirst, EgDesktopFirst, EgTouch } from "./examples";
+
+<Meta title="Foundation/MediaQuery" component={MediaQuery} />
+
+# MediaQuery
+
+A helper utility for writing uniform media queries. This utility can be used to
+write media queries for either a "mobile-first" or a "desktop-first" approach. It
+also has utilities for adding styles specifically for mobile or desktop devices.
+
+![]()
+
+## Breakpoints
+
+| Name        | Viewport Size (px)   | Description               |
+| ----------- | -------------------- | ------------------------- |
+| mobileSmall | Up to 359px          | Small phones              |
+| mobile      | 360px to 767px       | Large phones              |
+| tablet      | 768px to 1439px      | Tablet devices            |
+| desktop     | Starting from 1440px | Desktop or laptop screens |
+
+## Examples
+
+[]()
+
+### Mobile-first
+
+```tsx
+import styled from "styled-components";
+import { MediaQuery } from "hazel-ui";
+
+export function Component() {
+  return <Container>Lorem ipsum</Container>;
+}
+
+const Container = styled.div`
+  color: red;
+
+  ${MediaQuery.minWidth.mobile} {
+    color: green;
+  }
+
+  ${MediaQuery.minWidth.tablet} {
+    color: blue;
+  }
+
+  ${MediaQuery.minWidth.desktop} {
+    color: yellow;
+  }
+`;
+```
+
+<EgMobileFirst />
+
+### Desktop-first
+
+```tsx
+import styled from "styled-components";
+import { MediaQuery } from "hazel-ui";
+
+export function Component() {
+  return <Container>Lorem ipsum</Container>;
+}
+
+const Container = styled.div`
+  color: red;
+
+  ${MediaQuery.maxWidth.tablet} {
+    color: green;
+  }
+
+  ${MediaQuery.maxWidth.mobile} {
+    color: blue;
+  }
+
+  ${MediaQuery.maxWidth.mobileSmall} {
+    color: yellow;
+  }
+`;
+```
+
+<EgDesktopFirst />
+
+### Touch
+
+```tsx
+import styled from "styled-components";
+import { MediaQuery } from "hazel-ui";
+
+export function Component() {
+  return <Container>Lorem ipsum</Container>;
+}
+
+const Container = styled.div`
+  color: red;
+
+  ${MediaQuery.maxWidth.tablet} {
+    color: green;
+  }
+
+  ${MediaQuery.maxWidth.mobile} {
+    color: blue;
+  }
+
+  ${MediaQuery.maxWidth.mobileSmall} {
+    color: yellow;
+  }
+`;
+```
+
+<EgTouch />
