@@ -16,7 +16,7 @@ import {
   placeholderStyles,
   valueContainerStyles,
 } from "./styles";
-import { SearchOptionType, SearchValueType } from "./types";
+import { SearchOptionType } from "./types";
 
 export interface SearchProps<IsMulti extends boolean>
   extends Props<SearchOptionType, IsMulti> {
