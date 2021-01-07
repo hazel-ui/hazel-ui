@@ -48,7 +48,7 @@ const StyledDiv = styled.div<ColorBlockProps>`
 
   display: flex;
   justify-content: center;
-  min-width: 258px;
+  min-width: 264px;
   flex: 0 0 25%;
   flex-direction: row;
 

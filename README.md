@@ -26,9 +26,7 @@ Hazel UI is a flexible React component library that lets you quickly build web e
 
 ## Install
 
-```sh
-npm i hazel-ui
-```
+[![hazel-ui](https://nodei.co/npm/hazel-ui.png)](https://npmjs.org/package/hazel-ui)
 
 ## Setup
 

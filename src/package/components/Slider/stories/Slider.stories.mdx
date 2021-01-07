@@ -1,0 +1,48 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { Slider, SliderProps } from "../Slider";
+import { EgSingleHandle } from "./examples";
+
+<Meta title="Atoms/Slider" component={Slider} />
+
+# Slider
+
+A numerical range input slider for interactive tables, calculators and
+forms.
+
+![]()
+
+## Props
+
+The following props are available in addition to [rc-slider props][1].
+
+<ArgsTable of={Slider} />
+
+## Examples
+
+- [Single handle](#single-handle)
+
+### Single handle
+
+```tsx
+import { useState } from "react";
+import { Layout, Slider } from "hazel-ui";
+
+export function Component() {
+  const [rangeVal, setRangeVal] = useState<number>(0);
+  return (
+    <Layout display="flex">
+      <Layout marginRight="2rem">{rangeVal}</Layout>
+      <Slider
+        onChange={(value: number) => setRangeVal(value)}
+        min={10}
+        max={20}
+        width="200px"
+      />
+    </Layout>
+  );
+}
+```
+
+<EgSingleHandle />
+
+[1]: https://github.com/react-component/slider#common-api

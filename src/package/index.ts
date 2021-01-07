@@ -4,6 +4,7 @@ export {
   Card,
   Search,
   showToast,
+  Slider,
   Table,
   Toast,
   Tooltip,
