@@ -20,8 +20,8 @@ export function Slider({
         handle={(handleProps: any) => {
           return (
             <Handle {...handleProps}>
-              <Layout display="flex" justifyContent="center" marginTop="8px">
-                <PauseIcon width="10px" />
+              <Layout display="flex" justifyContent="center" marginTop="10px">
+                <PauseIcon width="8px" />
               </Layout>
             </Handle>
           );
@@ -30,10 +30,10 @@ export function Slider({
           borderColor: "white",
           height: 32,
           width: 32,
-          marginTop: -13,
+          marginTop: -14,
           boxShadow: "0 2px 6px 0 rgba(0, 0, 0, 0.28)",
         }}
-        trackStyle={{ backgroundColor: "black", width: "100px" }}
+        trackStyle={{ backgroundColor: "black" }}
         min={min}
         max={max}
         {...rest}
