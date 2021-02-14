@@ -29,7 +29,7 @@ function Component() {
   {iconsList.map((iconName) => {
     const IconComponent = Icon[iconName];
     return (
-      <Card textAlign="center" width="11rem" key="iconName">
+      <Card textAlign="center" width="13rem" key="iconName">
         <IconComponent size="1.3rem" />
         <Typography marginBottom="0px" color={Color.royalBlue}>
           {`<Icon.${iconName} />`}
