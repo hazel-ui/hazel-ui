@@ -8,6 +8,6 @@ updates:
     schedule:
       interval: "monthly"
     assignees: # Add assignees to pull requests
-      - "cseas"
+      - ""
     reviewers: # Add reviewers to pull requests
       - "cseas"
