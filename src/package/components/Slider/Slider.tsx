@@ -17,9 +17,9 @@ export function Slider({
     <Styles>
       <Container width={width}>
         <RCSlider
-          handle={(handleProps: any) => {
+          handle={({ dragging, ...restProps }: any) => {
             return (
-              <Handle {...handleProps}>
+              <Handle dragging={dragging.toString()} {...restProps}>
                 <Box display="flex" justifyContent="center" marginTop="10px">
                   <PauseIcon width="8px" />
                 </Box>
