@@ -1,6 +1,6 @@
 import RCSlider, { Handle, SliderProps as RCSliderProps } from "rc-slider";
 import styled from "styled-components";
-import { Layout } from "../../foundation";
+import { Box } from "../../foundation";
 import { ReactComponent as PauseIcon } from "./pause.svg";
 
 interface SliderProps extends RCSliderProps {
@@ -20,9 +20,9 @@ export function Slider({
           handle={(handleProps: any) => {
             return (
               <Handle {...handleProps}>
-                <Layout display="flex" justifyContent="center" marginTop="10px">
+                <Box display="flex" justifyContent="center" marginTop="10px">
                   <PauseIcon width="8px" />
-                </Layout>
+                </Box>
               </Handle>
             );
           }}

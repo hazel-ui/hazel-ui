@@ -1,6 +1,6 @@
 import { components } from "react-select";
 import styled from "styled-components";
-import { Color, Icon, Layout, Theme } from "../../../foundation";
+import { Box, Color, Icon, Theme } from "../../../foundation";
 
 export function Control({
   selectProps: { floatingLabel, invalidSearch },
@@ -9,14 +9,14 @@ export function Control({
 }: any) {
   return (
     <components.Control {...props}>
-      <Layout margin="0rem 0.1rem">
+      <Box margin="0rem 0.1rem">
         <components.DropdownIndicator {...props}>
           <Icon.Search
             size="1.3rem"
             color={invalidSearch ? Color.crimson : "none"}
           />
         </components.DropdownIndicator>
-      </Layout>
+      </Box>
 
       <StyledIndicatorSeparator {...props} />
 
