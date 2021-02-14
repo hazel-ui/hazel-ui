@@ -7,4 +7,5 @@ export const iconsList = [
   "SortDown",
   "SortUp",
   "X",
+  "Circle",
 ];

@@ -12,6 +12,7 @@
 /build
 /dist
 /dist-storybook
+/src/dist
 
 # misc
 .DS_Store

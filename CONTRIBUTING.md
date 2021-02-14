@@ -1,4 +1,4 @@
-# CONTRIBUTION GUIDELINES
+# Contribution Guidelines
 
 ## Index
 
@@ -42,12 +42,16 @@ This will start the storybook server at <http://localhost:6006/>
 
 ## Maintenance
 
+- **Icons:** If you want to add any new icons to the package, check if the icon you're looking for is already present in the `@styled-icons` packages that we use. If you want to use a custom SVG, use the [hazel-ui/svg-to-tsx][1] utility to generate React components from SVG files.
+
 ### Dependency check
 
-`depcheck`
+Dependencies are updated regularly through Dependabot. For manually checking which dependencies are out of date, use `depcheck`.
 
 ---
 
 ## Testing
 
-`jest` and `@testing-library/react`
+We use `jest` and `@testing-library/react` to test the components.
+
+[1]: https://github.com/hazel-ui/svg-to-tsx
