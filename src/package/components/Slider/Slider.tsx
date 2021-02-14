@@ -1,7 +1,6 @@
 import RCSlider, { Handle, SliderProps as RCSliderProps } from "rc-slider";
 import styled from "styled-components";
-import { Box } from "../../foundation";
-import { ReactComponent as PauseIcon } from "./pause.svg";
+import { Box, Icon } from "../../foundation";
 
 interface SliderProps extends RCSliderProps {
   width?: string;
@@ -21,7 +20,7 @@ export function Slider({
             return (
               <Handle dragging={dragging.toString()} {...restProps}>
                 <Box display="flex" justifyContent="center" marginTop="10px">
-                  <PauseIcon width="8px" />
+                  <Icon.Circle width="8px" />
                 </Box>
               </Handle>
             );

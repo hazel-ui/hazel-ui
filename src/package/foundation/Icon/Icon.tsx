@@ -8,3 +8,4 @@ export {
   SortUp,
   X,
 } from "@styled-icons/boxicons-regular";
+export { Circle } from "@styled-icons/boxicons-solid";
