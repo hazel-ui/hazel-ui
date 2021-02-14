@@ -5,16 +5,16 @@ import {
   flexbox,
   FlexboxProps,
   layout,
-  LayoutProps as SSLayoutProps,
+  LayoutProps,
   space,
   SpaceProps as SSSpaceProps,
   typography,
   TypographyProps as SSTypographyProps,
 } from "styled-system";
 
-export interface LayoutProps
+export interface BoxProps
   extends FlexboxProps,
-    SSLayoutProps,
+    LayoutProps,
     SSSpaceProps,
     SSTypographyProps {
   children?: ReactNode;
@@ -22,6 +22,6 @@ export interface LayoutProps
 
 const styledSystemStyles = compose(flexbox, layout, space, typography);
 
-export const Layout = styled.div<LayoutProps>`
+export const Box = styled.div<BoxProps>`
   ${styledSystemStyles}
 `;

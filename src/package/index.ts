@@ -11,11 +11,12 @@ export {
 } from "./components";
 export type { SearchOptionType, SearchValueType } from "./components";
 export {
+  Box,
   Color,
   Icon,
-  Layout,
   MediaQuery,
   Shadow,
   Theme,
   Typography,
 } from "./foundation";
+export type { BoxProps } from "./foundation";
