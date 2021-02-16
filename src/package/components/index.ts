@@ -1,4 +1,7 @@
+export { Anchor } from "./Anchor";
+export type { AnchorProps } from "./Anchor";
 export { Badge } from "./Badge";
+export type { BadgeProps } from "./Badge";
 export { Button } from "./Button";
 export { Card } from "./Card";
 export { Search } from "./Search";

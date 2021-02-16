@@ -1,6 +1,5 @@
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 import { Typography } from "../Typography";
-import notes from "./notes.md";
 
 <Meta
   title="Foundation/Typography"
@@ -10,8 +9,17 @@ import notes from "./notes.md";
 
 # Typography
 
-This component can be used to render all text-based elements on
-a page such as headings, paragraphs, captions, and labels.
+This component can be used to render all text-based elements
+on a page such as headings, paragraphs, captions, and labels.
+The Typography in this project is inspired by the
+[BBC GEL Guidelines][3].
+
+## Index
+
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [Responsiveness](#responsiveness)
 
 ## Usage
 
@@ -28,6 +36,10 @@ function Component() {
 ```
 
 ## Props
+
+The following props are available in addition to Background,
+Border, Color, Display, Layout, Space, and Typography utilities
+from [styled-system][4].
 
 <ArgsTable of={Typography} />
 
@@ -114,3 +126,27 @@ function Component() {
     Could a computer ever create better art than a human?
   </Typography>
 </Canvas>
+
+<!-- End Variants -->
+
+## Responsiveness
+
+The responsive nature of all variants is defined by the size
+they're mapped to as defined by the GEL guidelines.
+
+| Variant | HTML tag | font-family | Size (GEL)  |
+| ------- | -------- | ----------- | ----------- |
+| h1      | h1       | Lora        | Canon       |
+| h2      | h2       | Lora        | Trafalgar   |
+| h3      | h3       | Lora        | Paragon     |
+| h4      | h4       | Lora        | DoublePica  |
+| h5      | h5       | Lora        | GreatPrimer |
+| h6      | h6       | Lora        | Pica        |
+| p       | p        | Open Sans   | BodyCopy    |
+| caption | p        | Open Sans   | LongPrimer  |
+| label   | div      | Open Sans   | Brevier     |
+
+[1]: https://fonts.google.com/specimen/Lora
+[2]: https://fonts.google.com/specimen/Open+Sans
+[3]: https://www.bbc.co.uk/gel/guidelines/typography
+[4]: https://styled-system.com/api/

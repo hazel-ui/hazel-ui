@@ -1,6 +1,6 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { Card } from "../Card";
-import { Layout } from "../../../foundation";
+import { Box } from "../../../foundation";
 
 <Meta title="Atoms/Card" component={Card} />
 
@@ -31,18 +31,18 @@ function Component() {
 
 <Canvas>
   <Card width="10rem">
-    <Layout textAlign="center">
+    <Box textAlign="center">
       <img
         src="https://pokeres.bastionbot.org/images/pokemon/25.png"
         alt="Pikachu"
         width={100}
       />
       <div style={{ fontWeight: "bold" }}>Pikachu</div>
-    </Layout>
-    <Layout display="flex" justifyContent="space-between" marginTop="1rem">
+    </Box>
+    <Box display="flex" justifyContent="space-between" marginTop="1rem">
       <div>Type</div>
       <div>Electric</div>
-    </Layout>
+    </Box>
   </Card>
 </Canvas>
 
