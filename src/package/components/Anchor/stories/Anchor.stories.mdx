@@ -1,5 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
-import { Typography } from "../../../foundation";
+import { Color, Typography } from "../../../foundation";
 import { Anchor } from "../Anchor";
 
 <Meta title="Atoms/Anchor" component={Anchor} />
@@ -29,9 +29,16 @@ function Component() {
 
 <Canvas>
   <Typography variant="p">
-    The link at the end of this sentence takes you to the GitHub page of{" "}
-    <Anchor href="https://github.com/hazel-ui/hazel-ui">hazel-ui</Anchor>. The
-    link will appear a different color if you've already visited the page.
+    The link at the end of this sentence takes you to the GitHub page of
+    <Anchor href="https://github.com/hazel-ui/hazel-ui"> hazel-ui</Anchor>. The link
+    will appear a different color if you've already visited the page.
+  </Typography>
+  <Typography variant="p">
+    You can also use a custom color like this link to{" "}
+    <Anchor color={Color.crimson} href="https://hazel-ui.github.io/hazel-ui/">
+      hazel-ui storybook
+    </Anchor>
+    .
   </Typography>
 </Canvas>
 
