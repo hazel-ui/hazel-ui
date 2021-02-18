@@ -15,6 +15,7 @@ export enum Color {
   lightCyan = "#E0FFFF",
   paleTurquoise = "#AFEEEE",
   lavender = "#E6E6FA",
+  blueViolet = "#8A2BE2",
   midnightBlue = "#191970",
 
   crimson = "#DC143C",
@@ -25,6 +26,7 @@ export enum Color {
 
   yellow = "#FFF100",
 
+  dodgerBlue = "#0070f3",
   royalBlue = "#275EFE",
   black = "#2F3545",
 }

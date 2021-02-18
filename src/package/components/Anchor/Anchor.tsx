@@ -1,14 +1,17 @@
 import { HTMLProps } from "react";
 import styled from "styled-components";
+import { Color } from "../../foundation";
 
-export interface AnchorProps extends HTMLProps<HTMLAnchorElement> {}
+export interface AnchorProps extends HTMLProps<HTMLAnchorElement> {
+  color?: string;
+}
 
 export const Anchor = styled.a<AnchorProps>`
-  color: #0070f3;
+  color: ${(props) => props.color || Color.dodgerBlue};
   text-decoration: none;
 
   &:visited {
-    color: blueviolet;
+    color: ${(props) => props.color || Color.blueViolet};
   }
 
   &:hover {
