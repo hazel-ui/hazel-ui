@@ -18,9 +18,11 @@ export enum Color {
   blueViolet = "#8A2BE2",
   midnightBlue = "#191970",
 
-  crimson = "#DC143C",
+  antiqueWhite = "#FAEBD7",
 
   // custom
+  crimson = "#c2185b",
+
   mintGreen = "#E7FDD8",
   yellowGreen = "#66BF3C",
 
