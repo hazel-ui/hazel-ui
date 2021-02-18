@@ -1,5 +1,5 @@
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
-import { Color, Icon, Layout, Theme } from "../../../foundation";
+import { Color, Icon, Box, Theme } from "../../../foundation";
 import { Tooltip } from "../Tooltip";
 
 <Meta
@@ -38,7 +38,7 @@ export const Template = (args) => <Tooltip {...args} />;
 The tooltip text can be placed in 4 ways.
 
 <Canvas>
-  <Layout display="flex" justifyContent="space-between" margin="2rem">
+  <Box display="flex" justifyContent="space-between" margin="2rem">
     <Tooltip content="Hello from the other side!" direction="top">
       Top
     </Tooltip>
@@ -51,13 +51,13 @@ The tooltip text can be placed in 4 ways.
     <Tooltip content="Hello from the other side!" direction="left">
       Left
     </Tooltip>
-  </Layout>
+  </Box>
 </Canvas>
 
 ### Example
 
 <Canvas>
-  <Layout marginLeft="4rem" marginBottom="6rem">
+  <Box marginLeft="4rem" marginBottom="6rem">
     <Tooltip
       content={
         <>
@@ -72,5 +72,5 @@ The tooltip text can be placed in 4 ways.
     >
       <Icon.InfoCircle size="1.3rem" />
     </Tooltip>
-  </Layout>
+  </Box>
 </Canvas>

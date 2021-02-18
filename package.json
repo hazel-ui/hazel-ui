@@ -1,6 +1,6 @@
 {
   "name": "hazel-ui",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -53,7 +53,7 @@
     "@types/jest": "^26.0.16",
     "@types/node": "^14.14.27",
     "@types/react": "^17.0.2",
-    "@types/react-dom": "^16.9.8",
+    "@types/react-dom": "^17.0.1",
     "@types/react-select": "^3.0.28",
     "@types/react-table": "^7.0.24",
     "@types/styled-components": "^5.1.3",

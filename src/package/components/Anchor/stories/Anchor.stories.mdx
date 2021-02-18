@@ -1,0 +1,38 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { Typography } from "../../../foundation";
+import { Anchor } from "../Anchor";
+
+<Meta title="Atoms/Anchor" component={Anchor} />
+
+# Anchor
+
+Generic link component for rendering styled `<a>` tags. All [HTML
+attributes][1] supported by the `<a>` tag can be passed as props.
+
+![]()
+
+## Usage
+
+```tsx
+import { Anchor } from "hazel-ui";
+
+function Component() {
+  return (
+    <p>
+      The link at the end of this sentence takes you to the GitHub page of
+      <Anchor href="https://github.com/hazel-ui/hazel-ui">hazel-ui</Anchor>. The
+      link will appear a different color if you've already visited the page.
+    </p>
+  );
+}
+```
+
+<Canvas>
+  <Typography variant="p">
+    The link at the end of this sentence takes you to the GitHub page of{" "}
+    <Anchor href="https://github.com/hazel-ui/hazel-ui">hazel-ui</Anchor>. The
+    link will appear a different color if you've already visited the page.
+  </Typography>
+</Canvas>
+
+[1]: https://www.w3schools.com/tags/tag_a.asp

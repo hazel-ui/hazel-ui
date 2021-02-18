@@ -1,4 +1,5 @@
 export {
+  Anchor,
   Badge,
   Button,
   Card,
@@ -9,7 +10,12 @@ export {
   Toast,
   Tooltip,
 } from "./components";
-export type { SearchOptionType, SearchValueType } from "./components";
+export type {
+  AnchorProps,
+  BadgeProps,
+  SearchOptionType,
+  SearchValueType,
+} from "./components";
 export {
   Box,
   Color,
@@ -19,4 +25,4 @@ export {
   Theme,
   Typography,
 } from "./foundation";
-export type { BoxProps } from "./foundation";
+export type { BoxProps, TypographyProps } from "./foundation";
