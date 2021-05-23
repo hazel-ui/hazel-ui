@@ -4,13 +4,20 @@ export function copyToClipboard(newClip: string) {
   navigator.clipboard.writeText(newClip);
 }
 
-export function getContrastColor(hexColor: string = Color.white) {
+export function getContrastColor(hexColor: string = Color.gray5) {
   hexColor = hexColor.replace("#", "");
   const r = parseInt(hexColor.substr(0, 2), 16);
   const g = parseInt(hexColor.substr(2, 2), 16);
   const b = parseInt(hexColor.substr(4, 2), 16);
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-  return yiq > 149 ? Color.black : Color.white;
+  return yiq > 149 ? Color.gray90 : Color.gray5;
+}
+
+export function getHexFromCss(value: Color | undefined) {
+  if (!value) return "";
+  return getComputedStyle(document.documentElement).getPropertyValue(
+    value.slice(4, value.length - 1)
+  );
 }
 
 /**
