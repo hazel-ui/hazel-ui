@@ -1,10 +1,10 @@
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 import { Color, Icon, Box, Theme } from "../../../foundation";
-import { Tooltip } from "../Tooltip";
+import { Tooltip as TooltipComponent } from "../Tooltip";
 
 <Meta
   title="Atoms/Tooltip"
-  component={Tooltip}
+  component={TooltipComponent}
   argTypes={{
     tooltipBackground: { control: "color" },
     tooltipColor: { control: "color" },
@@ -21,7 +21,7 @@ export const Template = (args) => <Tooltip {...args} />;
 
 <Canvas>
   <Story
-    name="Overview"
+    name="Tooltip"
     args={{
       children: "Hover to see tooltip",
       content: "Tooltip text",
@@ -31,7 +31,7 @@ export const Template = (args) => <Tooltip {...args} />;
   </Story>
 </Canvas>
 
-<ArgsTable story="Overview" />
+<ArgsTable story="Tooltip" />
 
 ## Direction
 
