@@ -15,7 +15,7 @@ export const TableContainer = styled.table`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${Color.white};
+    background: ${Color.gray5};
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
@@ -24,12 +24,12 @@ export const TableContainer = styled.table`
   ::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: ${Color.gainsboro};
+    background: ${Color.gray20};
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: ${Color.silver};
+    background: ${Color.gray30};
   }
 `;
 
@@ -41,7 +41,7 @@ export const Th = styled.th`
   height: 100px;
   min-width: 142px;
   padding: 0px 27px;
-  background-color: ${Color.whiteSmoke};
+  background-color: ${Color.gray40};
   border-bottom: 1px solid rgba(230, 230, 250, 0.7);
 
   font-size: 0.9rem;
@@ -58,7 +58,7 @@ export const Th = styled.th`
 
   ${MediaQuery.maxWidth.mobile} {
     &:nth-of-type(1) {
-      box-shadow: 6px 0px 25px 0px ${Color.gainsboro};
+      box-shadow: 6px 0px 25px 0px ${Color.gray10};
     }
   }
 `;
@@ -81,7 +81,7 @@ export const Td = styled.td`
 
   ${MediaQuery.maxWidth.mobile} {
     &:nth-of-type(1) {
-      box-shadow: 6px 0px 25px 0px ${Color.gainsboro};
+      box-shadow: 6px 0px 25px 0px ${Color.gray10};
       clip-path: inset(0px -30px 0px 0px);
     }
   }
@@ -89,11 +89,11 @@ export const Td = styled.td`
 
 export const Tr = styled.tr`
   &:nth-of-type(odd) td {
-    background-color: ${Color.ghostWhite};
+    background-color: ${Color.gray10};
   }
 
   &:nth-of-type(even) td {
-    background-color: ${Color.whiteSmoke};
+    background-color: ${Color.gray20};
   }
 `;
 
