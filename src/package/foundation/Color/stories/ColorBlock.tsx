@@ -7,7 +7,7 @@ import { copyToClipboard, getContrastColor, getHexFromCss } from "./utils";
 interface ColorBlockProps {
   cardColor?: Color;
   title?: string;
-};
+}
 
 export function ColorBlock({
   cardColor = Color.gray5,
@@ -32,7 +32,11 @@ export function ColorBlock({
         changeText("Copied!", hex);
       }}
     >
-      <Typography variant="p">{`Color.${title}: ${cardColor}`}<br/>{text}</Typography>
+      <Typography variant="p">
+        {`Color.${title}: ${cardColor}`}
+        <br />
+        {text}
+      </Typography>
     </StyledDiv>
   );
 }
