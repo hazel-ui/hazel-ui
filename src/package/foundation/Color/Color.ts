@@ -43,6 +43,17 @@ export enum Color {
   pink80 = "var(--color-pink-80)",
   pink90 = "var(--color-pink-90)",
 
+  purple5 = "var(--color-purple-5)",
+  purple10 = "var(--color-purple-10)",
+  purple20 = "var(--color-purple-20)",
+  purple30 = "var(--color-purple-30)",
+  purple40 = "var(--color-purple-40)",
+  purple50 = "var(--color-purple-50)",
+  purple60 = "var(--color-purple-60)",
+  purple70 = "var(--color-purple-70)",
+  purple80 = "var(--color-purple-80)",
+  purple90 = "var(--color-purple-90)",
+
   red5 = "var(--color-red-5)",
   red10 = "var(--color-red-10)",
   red20 = "var(--color-red-20)",
