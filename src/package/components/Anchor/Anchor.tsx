@@ -8,14 +8,14 @@ export interface AnchorProps extends HTMLProps<HTMLAnchorElement> {
 }
 
 export const Anchor = styled.a<AnchorProps>`
-  color: ${(props) => props.color || Color.dodgerBlue};
+  color: ${(props) => props.color || Color.blue50};
   text-decoration: none;
 
   ${(props) =>
     props.backgroundColor && `background-color: ${props.backgroundColor};`}
 
   &:visited {
-    color: ${(props) => props.color || Color.blueViolet};
+    color: ${(props) => props.color || Color.purple50};
   }
 
   &:hover {
