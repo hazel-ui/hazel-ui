@@ -21,6 +21,6 @@ export const menuListStyles = (base: CSSProperties, state: any) => ({
     boxShadow: "inset 0 0 0.6rem rgba(0, 0, 0, 0.2)",
   },
   "::-webkit-scrollbar-thumb:hover": {
-    background: Color.silver,
+    background: Color.gray60,
   },
 });

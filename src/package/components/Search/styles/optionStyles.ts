@@ -7,7 +7,7 @@ export const optionStyles = (
   state: OptionProps<{}, boolean>
 ) => ({
   ...base,
-  color: Color.black,
+  color: Color.gray90,
   fontSize: "1rem",
   fontFamily: Theme.font.sansSerif,
   height: "3rem",
