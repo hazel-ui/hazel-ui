@@ -37,7 +37,7 @@ export const Badge = ({ size = "s", children, ...rest }: BadgeProps) => {
 const StyledBadge = styled.span<BadgeProps>`
   font-family: ${Theme.font.sansSerif};
   font-weight: ${Theme.fontWeight.bold};
-  background-color: ${Color.whiteSmoke};
+  background-color: ${Color.gray10};
 
   border-radius: 0.3rem;
   text-align: center;
