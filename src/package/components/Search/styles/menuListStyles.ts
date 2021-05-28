@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { Color } from "../../../foundation";
 
-export const menuListStyles = (base: CSSProperties, state: any) => ({
+export const menuListStyles: any = (base: CSSProperties, state: any) => ({
   ...base,
   maxHeight: "15rem",
   padding: "0px",
