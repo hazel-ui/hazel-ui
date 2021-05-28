@@ -2,18 +2,19 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Typography } from "../../Typography";
 import { Color } from "../Color";
-import { copyToClipboard, getContrastColor } from "./utils";
+import { copyToClipboard, getContrastColor, getHexFromCss } from "./utils";
 
-type ColorBlockProps = {
+interface ColorBlockProps {
   cardColor?: Color;
   title?: string;
-};
+}
 
 export function ColorBlock({
-  cardColor = Color.white,
+  cardColor = Color.gray5,
   title = "Unavailable",
 }: ColorBlockProps) {
-  const [text, setText] = useState(`Color.${title}: ${cardColor}`);
+  const hex = getHexFromCss(cardColor);
+  const [text, setText] = useState(hex);
 
   function changeText(temporary: string, permanent: string) {
     setText(temporary);
@@ -24,33 +25,34 @@ export function ColorBlock({
 
   return (
     <StyledDiv
-      cardColor={cardColor}
+      color={hex}
       title={title}
       onClick={() => {
-        copyToClipboard(cardColor);
-        changeText("Copied!", `Color.${title}: ${cardColor}`);
+        copyToClipboard(hex);
+        changeText("Copied!", hex);
       }}
     >
-      <Typography variant="p">{text}</Typography>
+      <Typography variant="p">
+        {`Color.${title}: ${cardColor}`}
+        <br />
+        {text}
+      </Typography>
     </StyledDiv>
   );
 }
 
 export const ColorBlockContainer = styled.div`
-  display: flex;
-  flex-flow: wrap;
-  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 1.6rem 1.6rem;
 `;
 
-const StyledDiv = styled.div<ColorBlockProps>`
-  color: ${(props) => getContrastColor(props.cardColor)};
-  background-color: ${(props) => props.cardColor};
+const StyledDiv = styled.div<{ color: string }>`
+  color: ${(props) => getContrastColor(props.color)};
+  background-color: ${(props) => props.color};
 
-  display: flex;
-  justify-content: center;
+  text-align: center;
   min-width: 264px;
-  flex: 0 0 25%;
-  flex-direction: row;
 
   height: 80px;
   padding: 0 20px;

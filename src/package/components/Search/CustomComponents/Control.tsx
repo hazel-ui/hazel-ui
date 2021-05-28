@@ -13,7 +13,7 @@ export function Control({
         <components.DropdownIndicator {...props}>
           <Icon.Search
             size="1.3rem"
-            color={invalidSearch ? Color.crimson : "none"}
+            color={invalidSearch ? Color.red50 : "none"}
           />
         </components.DropdownIndicator>
       </Box>

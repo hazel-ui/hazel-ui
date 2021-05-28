@@ -1,16 +1,14 @@
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 import { Color, Theme } from "../../../foundation";
-import { Badge } from "../Badge";
-import notes from "./notes.md";
+import { Badge as BadgeComponent } from "../Badge";
 
 <Meta
   title="Atoms/Badge"
-  component={Badge}
+  component={BadgeComponent}
   argTypes={{
     color: { control: "color" },
     backgroundColor: { control: "color" },
   }}
-  parameters={{ notes: { notes } }}
 />
 
 # Badge
@@ -19,11 +17,11 @@ This component can be used to render badge like elements on a page
 such as labels, categories, and tags. It renders as a `<span>` tag
 by default.
 
-export const Template = (args) => <Badge {...args} />;
+export const Template = (args) => <BadgeComponent {...args} />;
 
 <Canvas>
   <Story
-    name="Overview"
+    name="Badge"
     args={{
       size: "m",
       fontWeight: Theme.fontWeight.regular,
@@ -34,7 +32,7 @@ export const Template = (args) => <Badge {...args} />;
   </Story>
 </Canvas>
 
-<ArgsTable story="Overview" />
+<ArgsTable story="Badge" />
 
 ## Examples
 
@@ -43,25 +41,25 @@ export const Template = (args) => <Badge {...args} />;
 ### Small
 
 <Canvas>
-  <Badge backgroundColor={Color.yellow}>Cloud</Badge>
-  <Badge
+  <BadgeComponent backgroundColor={Color.yellow}>Cloud</BadgeComponent>
+  <BadgeComponent
     backgroundColor={Color.mintGreen}
     borderRadius="1rem"
     color={Color.yellowGreen}
   >
     Tip
-  </Badge>
-  <Badge
+  </BadgeComponent>
+  <BadgeComponent
     backgroundColor={Color.paleTurquoise}
     borderRadius="1rem"
     fontWeight={Theme.fontWeight.semiBold}
   >
     enhancement
-  </Badge>
+  </BadgeComponent>
 </Canvas>
 
 ### Large
 
 <Canvas>
-  <Badge size="l">TITLE</Badge>
+  <BadgeComponent size="l">TITLE</BadgeComponent>
 </Canvas>

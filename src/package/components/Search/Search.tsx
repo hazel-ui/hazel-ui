@@ -58,13 +58,13 @@ export function Search<IsMulti extends boolean>({
         ...theme,
         colors: {
           ...theme.colors,
-          neutral0: Color.whiteSmoke,
-          neutral5: Color.white,
-          neutral20: Color.silver,
-          neutral30: Color.gainsboro,
-          neutral50: Color.grey,
-          primary: Color.white, // border outline on focus and selected option in pop-up
-          primary25: Color.grey, // option hover color in pop-up
+          neutral0: Color.gray10,
+          neutral5: Color.gray5,
+          neutral20: Color.gray70,
+          neutral30: Color.gray40,
+          neutral50: Color.gray20,
+          primary: Color.gray5, // border outline on focus and selected option in pop-up
+          primary25: Color.gray20, // option hover color in pop-up
         },
       })}
       styles={{

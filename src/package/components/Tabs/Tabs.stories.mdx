@@ -1,0 +1,66 @@
+import { useState } from "react";
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Tabs } from "./index";
+
+<Meta title="Atoms/Tabs" component={Tabs.Root} />
+
+# Tabs
+
+A set of layered sections of content (called tab panels) that display one
+panel of content at a time. Built on top of [@radix-ui/react-tabs][1].
+
+<Canvas>
+  <Story name="Overview">
+    {() => (
+      <Tabs.Root defaultValue={0}>
+        <Tabs.List aria-label="tabs">
+          <Tabs.Tab value={0}>One</Tabs.Tab>
+          <Tabs.Tab value={1}>Two</Tabs.Tab>
+          <Tabs.Tab value={2}>Three</Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel value={0}>Tab one content</Tabs.Panel>
+        <Tabs.Panel value={1}>Tab two content</Tabs.Panel>
+        <Tabs.Panel value={2}>Tab three content</Tabs.Panel>
+      </Tabs.Root>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Overview" />
+
+## Examples
+
+### Controlled
+
+<Canvas>
+  <Story name="Controlled">
+    {() => {
+      const [value, setValue] = useState("0");
+      return (
+        <>
+          <label htmlFor="tab">Drag slider to change tab:</label>
+          <input
+            type="range"
+            name="tab"
+            min="0"
+            max="2"
+            value={value}
+            onChange={(event) => setValue(event.currentTarget.value)}
+          />
+          <Tabs.Root value={value} onValueChange={(value) => setValue(value)}>
+            <Tabs.List aria-label="tabs">
+              <Tabs.Tab value="0">One</Tabs.Tab>
+              <Tabs.Tab value="1">Two</Tabs.Tab>
+              <Tabs.Tab value="2">Three</Tabs.Tab>
+            </Tabs.List>
+            <Tabs.Panel value="0">Tab one content</Tabs.Panel>
+            <Tabs.Panel value="1">Tab two content</Tabs.Panel>
+            <Tabs.Panel value="2">Tab three content</Tabs.Panel>
+          </Tabs.Root>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+[1]: https://radix-ui.com/primitives/docs/components/tabs

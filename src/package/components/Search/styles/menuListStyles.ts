@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { Color } from "../../../foundation";
 
-export const menuListStyles = (base: CSSProperties, state: any) => ({
+export const menuListStyles: any = (base: CSSProperties, state: any) => ({
   ...base,
   maxHeight: "15rem",
   padding: "0px",
@@ -21,6 +21,6 @@ export const menuListStyles = (base: CSSProperties, state: any) => ({
     boxShadow: "inset 0 0 0.6rem rgba(0, 0, 0, 0.2)",
   },
   "::-webkit-scrollbar-thumb:hover": {
-    background: Color.silver,
+    background: Color.gray60,
   },
 });

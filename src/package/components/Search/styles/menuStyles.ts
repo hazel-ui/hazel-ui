@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 
-export const menuStyles = (base: CSSProperties) => ({
+export const menuStyles: any = (base: CSSProperties) => ({
   ...base,
   zIndex: 2,
 });

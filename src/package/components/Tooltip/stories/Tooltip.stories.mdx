@@ -1,10 +1,10 @@
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 import { Color, Icon, Box, Theme } from "../../../foundation";
-import { Tooltip } from "../Tooltip";
+import { Tooltip as TooltipComponent } from "../Tooltip";
 
 <Meta
   title="Atoms/Tooltip"
-  component={Tooltip}
+  component={TooltipComponent}
   argTypes={{
     tooltipBackground: { control: "color" },
     tooltipColor: { control: "color" },
@@ -17,11 +17,11 @@ This component can be used to render a pop-up message that appears on
 hovering a JSX element. This is useful for displaying additional details
 or helpful messages.
 
-export const Template = (args) => <Tooltip {...args} />;
+export const Template = (args) => <TooltipComponent {...args} />;
 
 <Canvas>
   <Story
-    name="Overview"
+    name="Tooltip"
     args={{
       children: "Hover to see tooltip",
       content: "Tooltip text",
@@ -31,7 +31,7 @@ export const Template = (args) => <Tooltip {...args} />;
   </Story>
 </Canvas>
 
-<ArgsTable story="Overview" />
+<ArgsTable story="Tooltip" />
 
 ## Direction
 
@@ -39,18 +39,18 @@ The tooltip text can be placed in 4 ways.
 
 <Canvas>
   <Box display="flex" justifyContent="space-between" margin="2rem">
-    <Tooltip content="Hello from the other side!" direction="top">
+    <TooltipComponent content="Hello from the other side!" direction="top">
       Top
-    </Tooltip>
-    <Tooltip content="Hello from the other side!" direction="right">
+    </TooltipComponent>
+    <TooltipComponent content="Hello from the other side!" direction="right">
       Right
-    </Tooltip>
-    <Tooltip content="Hello from the other side!" direction="bottom">
+    </TooltipComponent>
+    <TooltipComponent content="Hello from the other side!" direction="bottom">
       Bottom
-    </Tooltip>
-    <Tooltip content="Hello from the other side!" direction="left">
+    </TooltipComponent>
+    <TooltipComponent content="Hello from the other side!" direction="left">
       Left
-    </Tooltip>
+    </TooltipComponent>
   </Box>
 </Canvas>
 
@@ -58,7 +58,7 @@ The tooltip text can be placed in 4 ways.
 
 <Canvas>
   <Box marginLeft="4rem" marginBottom="6rem">
-    <Tooltip
+    <TooltipComponent
       content={
         <>
           <h4>Example title</h4>
@@ -66,11 +66,11 @@ The tooltip text can be placed in 4 ways.
         </>
       }
       place="bottom"
-      tooltipBackground={Color.crimson}
-      tooltipColor={Color.white}
+      tooltipBackground={Color.red60}
+      tooltipColor={Color.gray5}
       width="10rem"
     >
       <Icon.InfoCircle size="1.3rem" />
-    </Tooltip>
+    </TooltipComponent>
   </Box>
 </Canvas>

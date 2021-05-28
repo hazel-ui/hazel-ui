@@ -1,7 +1,6 @@
 import { Meta, Story } from "@storybook/react";
 import { Color } from "../../../foundation";
 import { Button, ButtonProps } from "../Button";
-import notes from "./notes.md";
 
 export default {
   title: "Atoms/Button",
@@ -13,7 +12,6 @@ export default {
   parameters: {
     componentSubtitle:
       "This component can be used to render a <button> or an <a> tag for clickable items and hyperlinks on a page.",
-    notes: { notes },
   },
 } as Meta;
 
@@ -48,10 +46,10 @@ Large.args = {
 
 export const Custom = Template.bind({});
 Custom.args = {
-  backgroundColor: Color.black,
-  border: "3px solid LightGreen",
+  backgroundColor: Color.gray90,
+  border: "3px solid " + Color.green20,
   borderRadius: "30px",
   children: "Awesome",
-  color: Color.white,
+  color: Color.gray5,
   size: "large",
 };

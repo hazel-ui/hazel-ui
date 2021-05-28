@@ -1,7 +1,6 @@
 import { Meta, Story } from "@storybook/react";
 import { Icon } from "../../../foundation";
 import { Table, TableProps } from "../Table";
-import notes from "./notes.md";
 
 export default {
   title: "Atoms/Table",
@@ -9,7 +8,6 @@ export default {
   parameters: {
     componentSubtitle:
       "This component can be used to render a <table> element to display a data table. Optionally, column headers can be hidden and sorting can enabled for each column individually. The render function for each column can be customized and every row can be made expandable to provide additional data.",
-    notes: { notes },
   },
 } as Meta;
 
