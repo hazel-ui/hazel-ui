@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    /* Specify what module code is generated: `CommonJS` (default if `target` is 
+    /* Specify what module code is generated: `CommonJS` (default if `target` is
      * `ES3` or `ES5`), `ES2015`, `ES2020`, `None`, `UMD`, `AMD`, `System`, `ESNext`
      */
     "module": "ES2015",
-    /* Set the language version for emitted JavaScript: `ES3` (default), `ES5`, 
-     * `ES6`/`ES2015` (synonymous), `ES7`/`ES2016`, `ES2017`, `ES2018`, `ES2019`, 
+    /* Set the language version for emitted JavaScript: `ES3` (default), `ES5`,
+     * `ES6`/`ES2015` (synonymous), `ES7`/`ES2016`, `ES2017`, `ES2018`, `ES2019`,
      * `ES2020`, or `ESNext`
      * https://stackoverflow.com/a/42429053/7435656
      */
