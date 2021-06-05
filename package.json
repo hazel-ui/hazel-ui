@@ -13,21 +13,21 @@
     "type": "git",
     "url": "https://github.com/hazel-ui/hazel-ui.git"
   },
-  "type": "module",
   "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o ./dist-storybook --quiet",
+    "serve-storybook": "npx http-server ./dist-storybook",
     "clean:css": "cd src/package && cleancss -o static/styles.css foundation/Theme/styles/*.css",
     "prettier": "prettier --check \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
     "prettier:fix": "prettier --write \"{.storybook,public,src}/**/*.{js,jsx,ts,tsx,json,yml,md,mdx}\"",
-    "build": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.dev.mjs",
     "prestart": "npm run clean:css",
-    "start": "webpack serve --open --config webpack.dev.js",
+    "start": "webpack serve --open --config webpack.dev.mjs",
     "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
     "postbuild:package": "copyfiles -u 3 \"src/package/static/**/*\" dist",
     "prepublishOnly": "npm run build:package",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d ./dist-storybook",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "deploy": "gh-pages -d ./dist-storybook"
   },
   "dependencies": {
     "@bbc/gel-foundations": "^6.0.0",
