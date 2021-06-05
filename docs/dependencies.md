@@ -26,6 +26,7 @@ The below table explains why certain dependencies are required by the project in
 | @types/node                       | Required by [@storybook/react][1]  |
 | babel-loader                      | Required by [@storybook/react][1]  |
 | copyfiles                         | Copy static files to `dist`        |
+| html-webpack-plugin               | Provide html template to webpack   |
 | prettier                          | Code formatter                     |
 | react                             | React core                         |
 | react-dom                         | React core                         |
