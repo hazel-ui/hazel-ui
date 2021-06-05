@@ -23,6 +23,7 @@
     "build": "webpack --config webpack.dev.mjs",
     "prestart": "npm run clean:css",
     "start": "webpack serve --open --config webpack.dev.mjs",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
     "postbuild:package": "copyfiles -u 3 \"src/package/static/**/*\" dist",
     "prepublishOnly": "npm run build:package",
