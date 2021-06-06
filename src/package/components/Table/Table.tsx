@@ -20,23 +20,18 @@ export function Table(props: TableProps) {
    */
 
   const data = useMemo(() => props.data, [props.data]);
-  const columns = useMemo(() => processColumns(props.columns, props.data), [
-    props.columns,
-    props.data,
-  ]);
-
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable(
-    // @ts-ignore
-    { columns, data, disableSortBy: !props.enableSorting },
-    useSortBy,
-    useExpanded
+  const columns = useMemo(
+    () => processColumns(props.columns, props.data),
+    [props.columns, props.data]
   );
+
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable(
+      // @ts-ignore
+      { columns, data, disableSortBy: !props.enableSorting },
+      useSortBy,
+      useExpanded
+    );
 
   return (
     // apply the table props

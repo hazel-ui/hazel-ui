@@ -43,9 +43,8 @@ import { Search, SearchOptionType, SearchValueType } from "hazel-ui";
 
 function Component() {
   const defaultEntry = { value: "", label: "" };
-  const [selectedEntry, setSelectedEntry] = useState<SearchOptionType>(
-    defaultEntry
-  );
+  const [selectedEntry, setSelectedEntry] =
+    useState<SearchOptionType>(defaultEntry);
 
   return (
     <Search
@@ -75,9 +74,8 @@ function Component() {
 ```tsx
 function Component() {
   const defaultEntry: SearchOptionType[] = [];
-  const [selectedEntry, setSelectedEntry] = useState<SearchOptionType[]>(
-    defaultEntry
-  );
+  const [selectedEntry, setSelectedEntry] =
+    useState<SearchOptionType[]>(defaultEntry);
 
   return (
     <Search
