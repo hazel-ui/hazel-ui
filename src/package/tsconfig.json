@@ -1,51 +1,38 @@
 {
+  // https://www.typescriptlang.org/tsconfig
   "compilerOptions": {
-    /* Specify what module code is generated: `CommonJS` (default if `target` is
-     * `ES3` or `ES5`), `ES2015`, `ES2020`, `None`, `UMD`, `AMD`, `System`, `ESNext`
-     */
-    "module": "ES2015",
-    /* Set the language version for emitted JavaScript: `ES3` (default), `ES5`,
-     * `ES6`/`ES2015` (synonymous), `ES7`/`ES2016`, `ES2017`, `ES2018`, `ES2019`,
-     * `ES2020`, or `ESNext`
-     * https://stackoverflow.com/a/42429053/7435656
-     */
-    "target": "es6",
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-    "declaration": true /* Generates corresponding '.d.ts' file. */,
-    // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
-    // "sourceMap": true,                     /* Generates corresponding '.map' file. */
-    "outDir": "../../dist" /* Redirect output structure to the directory. */,
-    // "composite": true,                     /* Enable project compilation */
-    "removeComments": true /* Do not emit comments to output. */,
-    // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
-    // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    // Project Options
+    "allowJs": true, // allow importing javascript files
+    "checkJs": true, // report type errors in javascript files
+    "declaration": true, // generate .d.ts files
+    "isolatedModules": true, // all implementation files must be modules
+    "jsx": "react-jsx", // use new jsx transform
+    "lib": ["dom", "dom.iterable", "esnext"], // type definitions for browser/JS APIs
+    "module": "esnext", // module system
+    "noEmit": false, // emit javascript output files & declarations
+    "outDir": "../../dist", // output directory
+    "removeComments": true, // strip all comments, set to false for libraries
+    "target": "ES6", // output code format
 
-    /* Strict Type-Checking Options */
-    "strict": true /* Enable all strict type-checking options. */,
-    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
-    // "strictNullChecks": true,              /* Enable strict null checks. */
-    // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
-    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
-    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
-    // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
-    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+    // Strict Checks
+    "strict": true, // stronger type checking, enables all strict rules
 
-    /* Additional Checks */
-    // "noUnusedLocals": true,                /* Report errors on unused locals. */
-    // "noUnusedParameters": true,            /* Report errors on unused parameters. */
-    // "noImplicitReturns": true,             /* Report error when not all code paths in function return a value. */
-    // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement. */
+    // Module Resolution
+    "esModuleInterop": true, // allow importing commonjs modules as es6
+    "moduleResolution": "node", // modern code module resolution strategy
 
-    /* Module Resolution Options */
-    // "typeRoots": [],                       /* List of folders to include type definitions from. */
-    // "types": [],                           /* Type declaration files to be included in compilation. */
-    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
-    // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
+    // Linter Checks
+    "noFallthroughCasesInSwitch": true, // disable fallthrough of cases in 'switch'
+    "noImplicitReturns": true, // make sure functions return a value
+    // "noPropertyAccessFromIndexSignature": true, // consistency for accessing object fields
+    // "noUnusedLocals": true, // no unused local variables
+    // "noUnusedParameters": true, // no unused function parameters
 
-    /* Advanced Options */
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
-    "skipLibCheck": true /* Skip type checking node_modules */
+    // Advanced
+    "allowUnreachableCode": false, // raise errors for unreachable code
+    "forceConsistentCasingInFileNames": true, // use original filename casing in imports
+    "resolveJsonModule": true, // allow .json file imports
+    "skipLibCheck": true // skip type checking library declaration files
   },
   "exclude": ["**/*.stories.tsx", "**/*.test.tsx"]
 }

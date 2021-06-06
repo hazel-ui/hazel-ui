@@ -1,22 +1,39 @@
 {
+  // https://www.typescriptlang.org/tsconfig
   "compilerOptions": {
-    "declaration": true, // add type declarations when compiling
-    "outDir": "dist", // output directory for compiled files
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    // Project Options
+    "allowJs": true, // allow importing javascript files
+    "checkJs": true, // report type errors in javascript files
+    "declaration": false, // generate .d.ts files
+    "isolatedModules": true, // all implementation files must be modules
+    "jsx": "react-jsx", // use new jsx transform
+    "lib": ["dom", "dom.iterable", "esnext"], // type definitions for browser/JS APIs
+    "module": "esnext", // module system
+    "noEmit": false, // emit javascript output files & declarations
+    "outDir": "./build/", // output directory
+    "removeComments": true, // strip all comments, set to false for libraries
+    "target": "ES6", // output code format
+
+    // Strict Checks
+    "strict": true, // stronger type checking, enables all strict rules
+
+    // Module Resolution
+    "esModuleInterop": true, // allow importing commonjs modules as es6
+    "moduleResolution": "node", // modern code module resolution strategy
+
+    // Linter Checks
+    "noFallthroughCasesInSwitch": true, // disable fallthrough of cases in 'switch'
+    "noImplicitReturns": true, // make sure functions return a value
+    // "noPropertyAccessFromIndexSignature": true, // consistency for accessing object fields
+    // "noUnusedLocals": true, // no unused local variables
+    // "noUnusedParameters": true, // no unused function parameters
+
+    // Advanced
+    "allowUnreachableCode": false, // raise errors for unreachable code
+    "forceConsistentCasingInFileNames": true, // use original filename casing in imports
+    "resolveJsonModule": true, // allow .json file imports
+    "skipLibCheck": true // skip type checking library declaration files
   },
-  "include": ["src"]
+  "include": ["app/**/*", "src/**/*"], // input files
+  "exclude": ["**/*.stories.tsx", "**/*.test.tsx"]
 }
