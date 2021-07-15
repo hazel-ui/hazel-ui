@@ -62,7 +62,7 @@ export function Search<IsMulti extends boolean>({
           neutral5: Color.gray5,
           neutral20: Color.gray70,
           neutral30: Color.gray40,
-          neutral50: Color.gray20,
+          neutral50: Color.gray80, // placeholder text color
           primary: Color.gray5, // border outline on focus and selected option in pop-up
           primary25: Color.gray20, // option hover color in pop-up
         },
