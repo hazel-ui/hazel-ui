@@ -13,17 +13,38 @@ export default {
     // https://webpack.js.org/configuration/dev-server/
     port: 3000,
   },
+  // https://webpack.js.org/guides/typescript/#source-maps
   devtool: "inline-source-map",
   entry: "./app/index.tsx",
   mode: "development",
   module: {
     rules: [
+      // https://webpack.js.org/guides/asset-management/
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+      },
+      // https://webpack.js.org/guides/typescript/
       {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
     ],
+  },
+  // https://webpack.js.org/guides/output-management/
+  output: {
+    filename: "[name].bundle.js",
+    path: resolve(__dirname, "build"),
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -32,10 +53,5 @@ export default {
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
-  },
-  output: {
-    filename: "[name].bundle.js",
-    path: resolve(__dirname, "build"),
-    clean: true,
   },
 };
