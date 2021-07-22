@@ -1,0 +1,10 @@
+# external packages
+node_modules
+# build output - app
+build
+# build output - package
+dist
+# build output - storybook
+dist-storybook
+# test coverage
+coverage
