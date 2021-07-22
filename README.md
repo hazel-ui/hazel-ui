@@ -12,6 +12,7 @@
 
 [![pull-requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![code-style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+[![airbnb-style](https://img.shields.io/badge/eslint-airbnb-4B32C3.svg)](https://github.com/airbnb/javascript)
 [![license](https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000)](LICENSE)
 
 [![typescript](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://www.typescriptlang.org/)
