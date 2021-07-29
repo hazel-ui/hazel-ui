@@ -1,4 +1,5 @@
 import { Meta, Story } from "@storybook/react";
+
 import { Color } from "../../../foundation";
 import { Button, ButtonProps } from "../Button";
 
@@ -15,6 +16,10 @@ export default {
   },
 } as Meta;
 
+/**
+ * TODO [2021-10-06]: Args spreading is not required in CSF 3.0: https://storybook.js.org/blog/component-story-format-3-0/
+ * Wait for stable release: https://storybook.js.org/docs/react/api/csf
+ */
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});

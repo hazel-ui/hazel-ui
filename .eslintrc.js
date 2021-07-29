@@ -12,6 +12,7 @@ module.exports = {
     "import", // https://github.com/benmosher/eslint-plugin-import#rules
     "jest", // https://github.com/jest-community/eslint-plugin-jest
     "jest-formatting", // https://www.npmjs.com/package/eslint-plugin-jest-formatting
+    "unicorn", // https://github.com/sindresorhus/eslint-plugin-unicorn
   ],
   extends: [
     // https://github.com/iamturns/create-exposed-app/blob/master/.eslintrc.js
@@ -22,6 +23,7 @@ module.exports = {
     "plugin:jest/recommended",
     "plugin:jest/style",
     "plugin:jest-formatting/strict",
+    "plugin:unicorn/recommended",
   ],
   rules: {
     /***********************************************************
@@ -32,7 +34,7 @@ module.exports = {
      * @see https://eslint.org/docs/rules/no-magic-numbers
      * @description Give meaningful names to constant numbers.
      */
-    "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 60, 1000] }],
+    "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 2, 60, 1000] }],
 
     /**
      * @see https://eslint.org/docs/rules/curly
@@ -129,6 +131,20 @@ module.exports = {
      * @description React default import is not needed in new JSX transform.
      */
     "react/react-in-jsx-scope": "off",
+
+    /**
+     * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+     * @description Discourage abbreviations except commonly known ones.
+     */
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        replacements: {
+          args: false,
+          props: false,
+        },
+      },
+    ],
   },
   overrides: [
     {
@@ -142,15 +158,33 @@ module.exports = {
       },
     },
     {
-      /**
-       * @see https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
-       * @description Allow unbound methods in `expect` calls for tests. Useful when mocking browser APIs.
-       */
       files: ["**/__tests__/*"],
       plugins: ["jest"],
       rules: {
+        /**
+         * @see https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
+         * @description Allow unbound methods in `expect` calls for tests. Useful when mocking browser APIs.
+         */
         "@typescript-eslint/unbound-method": "off",
         "jest/unbound-method": "error",
+      },
+    },
+    {
+      files: ["**/*.stories.*"],
+      rules: {
+        /**
+         * @see https://storybook.js.org/docs/react/api/csf#default-export
+         * @description Allow default export in stories.
+         */
+        "import/no-default-export": "off",
+        /**
+         * @see https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/imports.js
+         * @description Allow importing devDependencies in stories.
+         */
+        "import/no-extraneous-dependencies": [
+          "error",
+          { devDependencies: true, optionalDependencies: false },
+        ],
       },
     },
   ],

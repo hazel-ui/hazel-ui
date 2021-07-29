@@ -40,6 +40,7 @@ The below table explains why certain dependencies are required by the project in
 | eslint-plugin-jsx-a11y            | lint accessibility                    |
 | eslint-plugin-react               | lint react best practices             |
 | eslint-plugin-react-hooks         | lint hooks best practices             |
+| eslint-plugin-unicorn             | lint Todo expiration dates            |
 | html-webpack-plugin               | Provide html template to webpack      |
 | jest                              | Unit & integration tests              |
 | prettier                          | Code formatter                        |

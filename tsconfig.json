@@ -35,5 +35,5 @@
     "skipLibCheck": true // skip type checking library declaration files
   },
   "include": ["app/**/*", "src/**/*"], // input files
-  "exclude": ["**/*.stories.tsx", "**/*.test.tsx"]
+  "exclude": ["**/*.test.tsx"]
 }
