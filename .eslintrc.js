@@ -31,16 +31,16 @@ module.exports = {
      ***********************************************************/
 
     /**
-     * @see https://eslint.org/docs/rules/no-magic-numbers
-     * @description Give meaningful names to constant numbers.
-     */
-    "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 2, 60, 1000] }],
-
-    /**
      * @see https://eslint.org/docs/rules/curly
      * @description Use curly braces in multiline conditionals.
      */
     curly: ["error", "multi-line"],
+
+    /**
+     * @see https://eslint.org/docs/rules/max-lines
+     * @description Large files should be split into smaller modules.
+     */
+    "max-lines": "warn",
 
     /**
      * @see https://eslint.org/docs/rules/padding-line-between-statements
@@ -88,6 +88,19 @@ module.exports = {
       {
         selector: "enumMember",
         format: ["StrictPascalCase", "UPPER_CASE"],
+      },
+    ],
+
+    /**
+     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
+     * @description Give meaningful names to constant numbers.
+     */
+    "@typescript-eslint/no-magic-numbers": [
+      "warn",
+      {
+        ignore: [-1, 0, 1, 2, 60, 1000],
+        ignoreArrayIndexes: true,
+        ignoreEnums: true,
       },
     ],
 
