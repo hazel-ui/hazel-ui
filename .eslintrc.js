@@ -31,20 +31,26 @@ module.exports = {
      ***********************************************************/
 
     /**
-     * @see https://eslint.org/docs/rules/no-magic-numbers
-     * @description Give meaningful names to constant numbers.
-     */
-    "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 2, 60, 1000] }],
-
-    /**
+     * Use curly braces in multiline conditionals.
      * @see https://eslint.org/docs/rules/curly
-     * @description Use curly braces in multiline conditionals.
      */
     curly: ["error", "multi-line"],
 
     /**
+     * Large files should be split into smaller modules.
+     * @see https://eslint.org/docs/rules/max-lines
+     */
+    "max-lines": "warn",
+
+    /**
+     * Disallow type conversion with short notations that are hard to read
+     * @see https://eslint.org/docs/rules/no-implicit-coercion
+     */
+    "no-implicit-coercion": "warn",
+
+    /**
+     * Add padding lines for better readability.
      * @see https://eslint.org/docs/rules/padding-line-between-statements
-     * @description Add padding lines for better readability.
      */
     "padding-line-between-statements": [
       "warn",
@@ -57,8 +63,8 @@ module.exports = {
      ********************************************************************/
 
     /**
+     * Naming conventions for TypeScript.
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
-     * @description Naming conventions for TypeScript.
      */
     "@typescript-eslint/naming-convention": [
       "warn",
@@ -92,8 +98,21 @@ module.exports = {
     ],
 
     /**
+     * Give meaningful names to constant numbers.
+     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
+     */
+    "@typescript-eslint/no-magic-numbers": [
+      "warn",
+      {
+        ignore: [-1, 0, 1, 2, 60, 1000],
+        ignoreArrayIndexes: true,
+        ignoreEnums: true,
+      },
+    ],
+
+    /**
+     * Use double quotes everywhere for consistency.
      * @see https://github.com/airbnb/javascript/tree/master/react#quotes
-     * @description Use double quotes everywhere for consistency.
      */
     "@typescript-eslint/quotes": ["error", "double", { avoidEscape: true }],
 
@@ -102,8 +121,8 @@ module.exports = {
      *****************************************************************/
 
     /**
+     * Group imports by type for better readability: external, absolute, relative
      * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-     * @description Group imports by type for better readability: external, absolute, relative
      */
     "import/order": [
       "warn",
@@ -120,21 +139,28 @@ module.exports = {
     ],
 
     /**
+     * Prefer named exports.
      * @see https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
-     * @description Prefer named exports.
      */
     "import/prefer-default-export": "off",
     "import/no-default-export": "error",
 
     /**
+     * React default import is not needed in new JSX transform.
      * @see https://github.com/airbnb/javascript/issues/2334
-     * @description React default import is not needed in new JSX transform.
      */
     "react/react-in-jsx-scope": "off",
 
     /**
+     * File names can follow different case styles for naming to differentiate
+     * types & components (PascalCase) from functions (camelCase).
+     * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
+     */
+    "unicorn/filename-case": "off",
+
+    /**
+     * Discourage abbreviations except commonly known ones.
      * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
-     * @description Discourage abbreviations except commonly known ones.
      */
     "unicorn/prevent-abbreviations": [
       "error",
@@ -151,8 +177,8 @@ module.exports = {
       files: ["**/*.js"],
       rules: {
         /**
+         * Allow `require()` imports.
          * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
-         * @description Allow `require()` imports.
          */
         "@typescript-eslint/no-var-requires": "off",
       },
@@ -162,8 +188,8 @@ module.exports = {
       plugins: ["jest"],
       rules: {
         /**
+         * Allow unbound methods in `expect` calls for tests. Useful when mocking browser APIs.
          * @see https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
-         * @description Allow unbound methods in `expect` calls for tests. Useful when mocking browser APIs.
          */
         "@typescript-eslint/unbound-method": "off",
         "jest/unbound-method": "error",
@@ -173,13 +199,13 @@ module.exports = {
       files: ["**/*.stories.*"],
       rules: {
         /**
+         * Allow default export in stories.
          * @see https://storybook.js.org/docs/react/api/csf#default-export
-         * @description Allow default export in stories.
          */
         "import/no-default-export": "off",
         /**
+         * Allow importing devDependencies in stories.
          * @see https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/imports.js
-         * @description Allow importing devDependencies in stories.
          */
         "import/no-extraneous-dependencies": [
           "error",
@@ -190,8 +216,8 @@ module.exports = {
   ],
   env: {
     /**
+     * Predefined global variables.
      * @see https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
-     * @description Predefined global variables.
      */
     browser: true,
     node: true,
