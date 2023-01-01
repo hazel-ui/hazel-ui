@@ -50,6 +50,7 @@ The below table explains why certain dependencies are required by the project in
 | react                             | React core                            |
 | react-dom                         | React core                            |
 | style-loader                      | Support importing css files           |
+| tailwindcss                       | styling utility                       |
 | ts-loader                         | Required by webpack to parse jsx      |
 | typescript                        | Typescript language support           |
 | webpack                           | Webpack core                          |
