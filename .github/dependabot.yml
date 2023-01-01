@@ -7,7 +7,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
-    assignees: # Add assignees to pull requests
-      - ""
     reviewers: # Add reviewers to pull requests
       - "cseas"
+    open-pull-requests-limit: 2

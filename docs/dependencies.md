@@ -53,6 +53,13 @@ The below table explains why certain dependencies are required by the project in
 | webpack-cli                       | Required to run webpack commands      |
 | webpack-dev-server                | Development server                    |
 
+## Runtime software versions
+
+| Name | Version  |
+| ---- | -------- |
+| node | v16.14.2 |
+| npm  | 8.5.0    |
+
 [1]: https://www.npmjs.com/package/@storybook/react
 [2]: https://www.npmjs.com/package/react-scripts
 [3]: https://github.com/storybookjs/storybook/issues/14497#issuecomment-856284772
