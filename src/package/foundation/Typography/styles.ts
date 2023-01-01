@@ -12,6 +12,7 @@ import {
   getTrafalgar,
 } from "@bbc/gel-foundations/typography";
 import { css } from "styled-components";
+
 import { MediaQuery } from "../MediaQuery";
 import { Theme } from "../Theme";
 import { letterSpacing } from "./responsive";

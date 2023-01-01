@@ -21,6 +21,7 @@ The below table explains why certain dependencies are required by the project in
 | --------------------------------- | ------------------------------------- |
 | @babel/core                       | Required by Storybook to parse jsx    |
 | @babel/plugin-transform-react-jsx | Required by Storybook to parse jsx    |
+| @radix-ui/colors                  | color palette for dark mode           |
 | @storybook/builder-webpack5       | Storybook webpack 5 support           |
 | @storybook/manager-webpack5       | [Chromatic webpack 5 support][4]      |
 | @types/jest                       | Required for `expect()` in tests      |
@@ -56,6 +57,7 @@ The below table explains why certain dependencies are required by the project in
 | webpack                           | Webpack core                          |
 | webpack-cli                       | Required to run webpack commands      |
 | webpack-dev-server                | Development server                    |
+| windy-radix-palette               | integrate radix colors with tailwind  |
 
 ## Runtime software versions
 
