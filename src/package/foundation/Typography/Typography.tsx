@@ -50,7 +50,12 @@ export function Typography({
   ...rest
 }: TypographyProps) {
   return (
-    <StyledDiv variant={variant} as={TextTag[variant] as any} {...rest}>
+    <StyledDiv
+      className="text-mauve-12"
+      variant={variant}
+      as={TextTag[variant] as any}
+      {...rest}
+    >
       {children}
     </StyledDiv>
   );
