@@ -21,7 +21,7 @@ module.exports = {
     "unicorn", // https://github.com/sindresorhus/eslint-plugin-unicorn
   ],
   extends: [
-    // https://github.com/iamturns/create-exposed-app/blob/master/.eslintrc.js
+    // inspiration: https://github.com/iamturns/create-exposed-app/blob/master/.eslintrc.js
     "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -147,7 +147,12 @@ module.exports = {
     "import/order": [
       "warn",
       {
-        groups: [["builtin", "external"], "internal", ["parent", "sibling"]],
+        groups: [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling"],
+          "type",
+        ],
         pathGroups: [
           {
             pattern: "src/**",

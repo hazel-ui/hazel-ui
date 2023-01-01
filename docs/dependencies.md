@@ -27,6 +27,7 @@ The below table explains why certain dependencies are required by the project in
 | @types/node                       | Required by [@storybook/react][1]     |
 | @typescript-eslint/eslint-plugin  | typescript-eslint core                |
 | @typescript-eslint/parser         | typescript-eslint parser              |
+| autoprefixer                      | required by tailwind                  |
 | babel-loader                      | Required by [@storybook/react][1]     |
 | copyfiles                         | Copy static files to `dist`           |
 | css-loader                        | Support importing css files           |
@@ -43,10 +44,13 @@ The below table explains why certain dependencies are required by the project in
 | eslint-plugin-unicorn             | lint Todo expiration dates            |
 | html-webpack-plugin               | Provide html template to webpack      |
 | jest                              | Unit & integration tests              |
+| postcss                           | integrates tailwind with webpack      |
+| postcss-loader                    | integrates postcss with webpack       |
 | prettier                          | Code formatter                        |
 | react                             | React core                            |
 | react-dom                         | React core                            |
 | style-loader                      | Support importing css files           |
+| tailwindcss                       | styling utility                       |
 | ts-loader                         | Required by webpack to parse jsx      |
 | typescript                        | Typescript language support           |
 | webpack                           | Webpack core                          |
