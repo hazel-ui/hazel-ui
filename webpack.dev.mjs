@@ -48,6 +48,7 @@ export default {
     filename: "[name].bundle.js",
     path: resolve(__dirname, "build"),
     clean: true,
+    hashFunction: "xxhash64", // https://webpack.js.org/configuration/output/#outputhashfunction
   },
   plugins: [
     new HtmlWebpackPlugin({
