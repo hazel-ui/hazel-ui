@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import styled from "styled-components";
 import {
   background,
@@ -17,8 +16,11 @@ import {
   typography,
   TypographyProps as SSTypographyProps,
 } from "styled-system";
+
 import { applyTypographyVariant } from "./styles";
 import { TextTag, TypographyType } from "./types";
+
+import type { ReactNode } from "react";
 
 export interface TypographyProps
   extends BackgroundProps,
