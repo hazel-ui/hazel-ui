@@ -1,10 +1,10 @@
-import { Box, Button } from "../src/package";
-// import { Box, Slider } from "../dist";
+import { Typography } from "../src/package";
+import "./app.css";
 
 export function App(): JSX.Element {
   return (
-    <Box margin="50px">
-      <Button>Click me</Button>
-    </Box>
+    <div className="bg-black p-12">
+      <Typography>Hello</Typography>
+    </div>
   );
 }

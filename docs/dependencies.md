@@ -27,6 +27,7 @@ The below table explains why certain dependencies are required by the project in
 | @types/node                       | Required by [@storybook/react][1]     |
 | @typescript-eslint/eslint-plugin  | typescript-eslint core                |
 | @typescript-eslint/parser         | typescript-eslint parser              |
+| autoprefixer                      | required by tailwind                  |
 | babel-loader                      | Required by [@storybook/react][1]     |
 | copyfiles                         | Copy static files to `dist`           |
 | css-loader                        | Support importing css files           |
