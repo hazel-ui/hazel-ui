@@ -1,5 +1,6 @@
 module.exports = {
-  root: true, // https://eslint.org/docs/user-guide/configuring/configuration-files#cascading-and-hierarchy
+  // https://eslint.org/docs/user-guide/configuring/configuration-files#cascading-and-hierarchy
+  root: true,
   parser: "@typescript-eslint/parser",
   parserOptions: {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
@@ -7,11 +8,16 @@ module.exports = {
     project: ["./tsconfig.json"],
   },
   plugins: [
-    "@typescript-eslint", // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md
-    "eslint-comments", // https://mysticatea.github.io/eslint-plugin-eslint-comments/
-    "import", // https://github.com/benmosher/eslint-plugin-import#rules
-    "jest", // https://github.com/jest-community/eslint-plugin-jest
-    "jest-formatting", // https://www.npmjs.com/package/eslint-plugin-jest-formatting
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md
+    "@typescript-eslint",
+    // https://mysticatea.github.io/eslint-plugin-eslint-comments/
+    "eslint-comments",
+    // https://github.com/benmosher/eslint-plugin-import#rules
+    "import",
+    // https://github.com/jest-community/eslint-plugin-jest
+    "jest",
+    // https://www.npmjs.com/package/eslint-plugin-jest-formatting
+    "jest-formatting",
     "unicorn", // https://github.com/sindresorhus/eslint-plugin-unicorn
   ],
   extends: [
@@ -24,6 +30,7 @@ module.exports = {
     "plugin:jest/style",
     "plugin:jest-formatting/strict",
     "plugin:unicorn/recommended",
+    "plugin:storybook/recommended",
   ],
   rules: {
     /***********************************************************
@@ -54,8 +61,16 @@ module.exports = {
      */
     "padding-line-between-statements": [
       "warn",
-      { blankLine: "always", prev: "block-like", next: "return" },
-      { blankLine: "always", prev: "multiline-const", next: "multiline-const" },
+      {
+        blankLine: "always",
+        prev: "block-like",
+        next: "return",
+      },
+      {
+        blankLine: "always",
+        prev: "multiline-const",
+        next: "multiline-const",
+      },
     ],
 
     /********************************************************************
@@ -114,8 +129,13 @@ module.exports = {
      * Use double quotes everywhere for consistency.
      * @see https://github.com/airbnb/javascript/tree/master/react#quotes
      */
-    "@typescript-eslint/quotes": ["error", "double", { avoidEscape: true }],
-
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        avoidEscape: true,
+      },
+    ],
     /*****************************************************************
      * 3. plugin rules
      *****************************************************************/
@@ -129,12 +149,22 @@ module.exports = {
       {
         groups: [["builtin", "external"], "internal", ["parent", "sibling"]],
         pathGroups: [
-          { pattern: "src/**", group: "internal", position: "before" },
-          { pattern: "client/**", group: "internal" },
+          {
+            pattern: "src/**",
+            group: "internal",
+            position: "before",
+          },
+          {
+            pattern: "client/**",
+            group: "internal",
+          },
         ],
         pathGroupsExcludedImportTypes: ["builtin", "parent", "sibling"],
         "newlines-between": "always",
-        alphabetize: { order: "asc", caseInsensitive: false },
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: false,
+        },
       },
     ],
 
@@ -209,7 +239,10 @@ module.exports = {
          */
         "import/no-extraneous-dependencies": [
           "error",
-          { devDependencies: true, optionalDependencies: false },
+          {
+            devDependencies: true,
+            optionalDependencies: false,
+          },
         ],
       },
     },
