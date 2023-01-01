@@ -24,6 +24,7 @@ import type { ReactNode } from "react";
 
 export interface TypographyProps
   extends BackgroundProps,
+    // eslint config issue: https://github.com/iamturns/eslint-config-airbnb-typescript/issues/310
     BorderProps,
     ColorProps,
     DisplayProps,
