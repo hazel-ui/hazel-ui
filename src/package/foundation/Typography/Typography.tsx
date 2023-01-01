@@ -42,6 +42,7 @@ const styledSystemStyles = compose(
   display,
   layout,
   space,
+  // eslint config issue: https://github.com/iamturns/eslint-config-airbnb-typescript/issues/311
   typography
 );
 
