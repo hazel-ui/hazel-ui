@@ -3,7 +3,7 @@ import "./app.css";
 
 export function App(): JSX.Element {
   return (
-    <div className="bg-black p-12">
+    <div className="bg-red-400">
       <Typography>Hello</Typography>
     </div>
   );
