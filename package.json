@@ -24,7 +24,7 @@
     "predev": "npm run clean:css",
     "dev": "webpack serve --open --config webpack.dev.mjs",
     "build": "webpack --config webpack.prod.mjs",
-    "start": "npx http-server ./build",
+    "start": "npx http-server ./build -o",
     "test": "echo \"Error: no test specified\" && exit 0",
     "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
     "postbuild:package": "copyfiles -u 3 \"src/package/static/**/*\" dist",
