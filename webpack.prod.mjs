@@ -1,10 +1,9 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { dirname, resolve } from "path";
-import { fileURLToPath } from "url";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+import { baseConfig } from "./webpack.common.mjs";
 
 export default {
+  ...baseConfig,
   entry: "./app/index.tsx",
   mode: "production",
   module: {
@@ -27,11 +26,6 @@ export default {
         exclude: /node_modules/,
       },
     ],
-  },
-  output: {
-    filename: "[name].bundle.js",
-    path: resolve(__dirname, "build"),
-    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

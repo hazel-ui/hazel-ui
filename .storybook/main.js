@@ -3,5 +3,6 @@ module.exports = {
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
   core: {
     builder: "webpack5",
+    disableTelemetry: true, // https://storybook.js.org/docs/react/configure/telemetry#how-to-opt-out
   },
 };
