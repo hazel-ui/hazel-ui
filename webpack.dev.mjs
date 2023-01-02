@@ -1,12 +1,10 @@
 // https://github.com/webpack/webpack/issues/1403#issuecomment-799346606
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { dirname, resolve } from "path";
-import { fileURLToPath } from "url";
 
-// https://stackoverflow.com/a/50052194/7435656
-const __dirname = dirname(fileURLToPath(import.meta.url));
+import { baseConfig } from "./webpack.common.mjs";
 
 export default {
+  ...baseConfig,
   /**
    * https://webpack.js.org/guides/development/#using-webpack-dev-server
    * Note: If using Express, consider webpack-dev-middleware instead
@@ -42,13 +40,6 @@ export default {
         exclude: /node_modules/,
       },
     ],
-  },
-  // https://webpack.js.org/guides/output-management/
-  output: {
-    filename: "[name].bundle.js",
-    path: resolve(__dirname, "build"),
-    clean: true,
-    hashFunction: "xxhash64", // https://webpack.js.org/configuration/output/#outputhashfunction
   },
   plugins: [
     new HtmlWebpackPlugin({
