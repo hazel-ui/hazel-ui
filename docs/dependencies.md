@@ -63,8 +63,8 @@ The below table explains why certain dependencies are required by the project in
 
 | Name | Version  |
 | ---- | -------- |
-| node | v16.14.2 |
-| npm  | 8.5.0    |
+| node | v18.12.1 |
+| npm  | 9.2.0    |
 
 [1]: https://www.npmjs.com/package/@storybook/react
 [2]: https://www.npmjs.com/package/react-scripts

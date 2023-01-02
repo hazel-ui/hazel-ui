@@ -18,29 +18,6 @@ export default {
   devtool: "inline-source-map", // https://webpack.js.org/guides/typescript/#source-maps
   entry: "./app/index.tsx",
   mode: "development", // https://webpack.js.org/guides/development/
-  module: {
-    rules: [
-      // https://webpack.js.org/guides/asset-management/
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
-      },
-      // https://webpack.js.org/guides/typescript/
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
-      },
-    ],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./app/index.html",
