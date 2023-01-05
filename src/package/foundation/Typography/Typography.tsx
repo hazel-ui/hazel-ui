@@ -16,7 +16,7 @@ export interface TypographyProps {
 export function Typography({
   variant = "p",
   children,
-  sx,
+  sx = {},
   ...rest
 }: TypographyProps) {
   return (
