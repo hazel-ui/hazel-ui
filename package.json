@@ -28,6 +28,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
     "postbuild:package": "copyfiles -u 3 \"src/package/static/**/*\" dist",
+    "change:add": "changeset add",
     "prepublishOnly": "npm run build:package",
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d ./dist-storybook"
@@ -47,6 +48,8 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/plugin-transform-react-jsx": "^7.14.3",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.0",
     "@radix-ui/colors": "^0.1.8",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
