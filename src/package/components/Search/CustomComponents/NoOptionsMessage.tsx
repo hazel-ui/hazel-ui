@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { components, OptionTypeBase } from "react-select";
-import { NoticeProps } from "react-select/src/components/Menu";
+
 import { Typography } from "../../../foundation";
+
+import type { NoticeProps } from "react-select/src/components/Menu";
 
 export function NoOptionsMessage<
   OptionType extends OptionTypeBase,
@@ -18,9 +20,7 @@ export function NoOptionsMessage<
     <>
       <Typography
         variant="h5"
-        fontWeight="bold"
-        textAlign="center"
-        margin="1rem 0 0 0"
+        sx={{ fontWeight: "bold", textAlign: "center", marginTop: "1rem" }}
       >
         {noOptionsTitle}
       </Typography>

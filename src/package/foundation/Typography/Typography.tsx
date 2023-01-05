@@ -1,54 +1,22 @@
 import styled from "styled-components";
-import {
-  background,
-  BackgroundProps,
-  border,
-  BorderProps,
-  color,
-  ColorProps,
-  compose,
-  display,
-  DisplayProps,
-  layout,
-  LayoutProps,
-  space,
-  SpaceProps,
-  typography,
-  TypographyProps as SSTypographyProps,
-} from "styled-system";
 
 import { applyTypographyVariant } from "./styles";
 import { TextTag, TypographyType } from "./types";
 
+import type { SxProps } from "../sx";
 import type { ReactNode } from "react";
 
-export interface TypographyProps
-  extends BackgroundProps,
-    // eslint config issue: https://github.com/iamturns/eslint-config-airbnb-typescript/issues/310
-    BorderProps,
-    ColorProps,
-    DisplayProps,
-    LayoutProps,
-    SpaceProps,
-    SSTypographyProps {
+export interface TypographyProps {
+  // eslint config issue: https://github.com/iamturns/eslint-config-airbnb-typescript/issues/310
   variant?: TypographyType;
   children?: ReactNode;
+  sx?: SxProps;
 }
-
-const styledSystemStyles = compose(
-  background,
-  border,
-  color,
-  display,
-  layout,
-  space,
-  // eslint config issue: https://github.com/iamturns/eslint-config-airbnb-typescript/issues/311
-  typography
-);
 
 export function Typography({
   variant = "p",
   children,
+  sx,
   ...rest
 }: TypographyProps) {
   return (
@@ -56,6 +24,7 @@ export function Typography({
       className="text-mauve-12"
       variant={variant}
       as={TextTag[variant] as any}
+      style={sx}
       {...rest}
     >
       {children}
@@ -65,7 +34,6 @@ export function Typography({
 
 const StyledDiv = styled.div<TypographyProps>`
   ${(props) => props.variant && applyTypographyVariant(props.variant)};
-  ${styledSystemStyles};
 `;
 
 // https://www.bbc.co.uk/gel/guidelines/typography
