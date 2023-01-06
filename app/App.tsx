@@ -2,7 +2,7 @@
 import { Typography, Color } from "../src/package";
 
 import "./app.css"; // tailwind
-import "../dist/styles.css"; // exported styles
+import "../src/package/static/styles.css"; // exported styles
 
 export function App(): JSX.Element {
   return (
