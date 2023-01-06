@@ -4,16 +4,12 @@ export function copyToClipboard(newClip: string) {
   navigator.clipboard.writeText(newClip);
 }
 
-export function getContrastColor(hexColor: string = Color.gray5) {
-  hexColor = hexColor.replace("#", "");
-  const r = parseInt(hexColor.substr(0, 2), 16);
-  const g = parseInt(hexColor.substr(2, 2), 16);
-  const b = parseInt(hexColor.substr(4, 2), 16);
-  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-  return yiq > 149 ? Color.gray90 : Color.gray5;
+export function getContrastColor(hslColor: string = "hsl(0, 0%, 0%)") {
+  const lightness = Number(hslColor.split(",")[2].trim().split("%")[0]);
+  return lightness > 50 ? Color.gray12 : Color.gray2;
 }
 
-export function getHexFromCss(value: Color | undefined) {
+export function getCssVariableValue(value: Color | undefined) {
   if (!value) return "";
   return getComputedStyle(document.documentElement).getPropertyValue(
     value.slice(4, value.length - 1)
@@ -27,5 +23,5 @@ export function getHexFromCss(value: Color | undefined) {
 export function enumKeys<O extends object, K extends keyof O = keyof O>(
   obj: O
 ): K[] {
-  return Object.keys(obj).filter((k) => Number.isNaN(+k)) as K[];
+  return Object.keys(obj).filter((k) => Number.isNaN(Number(k))) as K[];
 }

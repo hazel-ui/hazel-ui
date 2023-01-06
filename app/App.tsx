@@ -1,10 +1,15 @@
-import { Typography } from "../src/package";
-import "./app.css";
+// import { Typography } from "../dist";
+import { Typography, Color } from "../src/package";
+
+import "./app.css"; // tailwind
+import "../dist/styles.css"; // exported styles
 
 export function App(): JSX.Element {
   return (
     <div className="bg-red-400">
-      <Typography sx={{ marginTop: "1rem" }}>Hello</Typography>
+      <Typography color={Color.blue10} sx={{ marginTop: "1rem" }}>
+        Hello
+      </Typography>
     </div>
   );
 }

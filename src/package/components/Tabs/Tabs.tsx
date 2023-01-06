@@ -1,12 +1,14 @@
-import styled from "styled-components";
 import {
-  Root as RadixRoot,
   List as RadixList,
   Panel as RadixPanel,
+  Root as RadixRoot,
   Tab as RadixTab,
 } from "@radix-ui/react-tabs";
-import type { TabsOwnProps } from "@radix-ui/react-tabs";
+import styled from "styled-components";
+
 import { Color } from "../../foundation";
+
+import type { TabsOwnProps } from "@radix-ui/react-tabs";
 
 export function Root(props: TabsOwnProps): JSX.Element {
   return <RadixRoot {...props} />;
@@ -14,22 +16,22 @@ export function Root(props: TabsOwnProps): JSX.Element {
 
 export const List = styled(RadixList)`
   display: flex;
-  border-bottom: 1px solid ${Color.gray40};
+  border-bottom: 1px solid ${Color.gray6};
   width: fit-content;
 `;
 
 export const Tab = styled(RadixTab)`
   padding: 10px 20px;
-  color: ${Color.gray50};
+  color: ${Color.gray7};
   user-select: none;
   cursor: pointer;
 
   &:hover {
-    color: ${Color.gray90};
+    color: ${Color.gray11};
   }
 
   &[data-state="active"] {
-    color: ${Color.gray90};
+    color: ${Color.gray11};
     box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
   }
 `;

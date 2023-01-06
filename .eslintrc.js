@@ -105,11 +105,6 @@ module.exports = {
         selector: "typeLike",
         format: ["StrictPascalCase"],
       },
-      // Enum members are PascalCase for object keys and UPPER_CASE for constants.
-      {
-        selector: "enumMember",
-        format: ["StrictPascalCase", "UPPER_CASE"],
-      },
     ],
 
     /**

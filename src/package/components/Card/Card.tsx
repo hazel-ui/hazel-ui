@@ -37,7 +37,7 @@ const StyledDiv = styled.div<CardProps>`
   margin: 1rem;
   padding: 1rem;
 
-  border: 1px solid ${Color.gray40};
+  border: 1px solid ${Color.gray6};
   border-radius: 5px;
   box-shadow: ${Shadow.s};
 
@@ -47,7 +47,7 @@ const StyledDiv = styled.div<CardProps>`
   }
 
   &:active {
-    border-color: ${Color.gray70};
+    border-color: ${Color.gray9};
     box-shadow: ${Shadow.s};
     transform: translate3d(0, 0, 0);
   }
