@@ -16,13 +16,13 @@ export function Root(props: TabsOwnProps): JSX.Element {
 
 export const List = styled(RadixList)`
   display: flex;
-  border-bottom: 1px solid ${Color.gray6};
+  border-bottom: 1px solid ${Color.gray8};
   width: fit-content;
 `;
 
 export const Tab = styled(RadixTab)`
   padding: 10px 20px;
-  color: ${Color.gray7};
+  color: ${Color.gray9};
   user-select: none;
   cursor: pointer;
 
@@ -31,7 +31,7 @@ export const Tab = styled(RadixTab)`
   }
 
   &[data-state="active"] {
-    color: ${Color.gray11};
+    color: ${Color.gray12};
     box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
   }
 `;
