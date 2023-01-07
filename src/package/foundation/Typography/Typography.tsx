@@ -20,7 +20,7 @@ const StyledDiv = styled.div<TypographyProps>`
 `;
 
 export function Typography({
-  color = "var(--mauve12)",
+  color = "var(--gray12)",
   variant = "p",
   children,
   sx = {},
