@@ -1,6 +1,6 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
-import { baseConfig } from "./webpack.common.mjs";
+import { baseConfig } from "./webpack.base.mjs";
 
 export default {
   ...baseConfig,
@@ -11,7 +11,4 @@ export default {
       template: "./app/index.html",
     }),
   ],
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
 };

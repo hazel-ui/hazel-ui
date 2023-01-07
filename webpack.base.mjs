@@ -35,4 +35,10 @@ export const baseConfig = {
     clean: true,
     hashFunction: "xxhash64", // https://stackoverflow.com/a/73465262/7435656
   },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".html"],
+    extensionAlias: {
+      ".js": [".tsx", ".ts", ".js"],
+    },
+  },
 };
