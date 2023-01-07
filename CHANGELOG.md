@@ -1,5 +1,14 @@
 # hazel-ui
 
+## 0.2.2
+
+### Patch Changes
+
+- [#164](https://github.com/hazel-ui/hazel-ui/pull/164) [`d6dc5ba`](https://github.com/hazel-ui/hazel-ui/commit/d6dc5ba96a10950eff8b2cd8351a3ee0e70704ad) Thanks [@cseas](https://github.com/cseas)! - refactor: remove barrel files
+
+  - removed barrel files that were causing issues with node for directory imports in mjs files
+  - improved contrast of Anchor color
+
 ## 0.2.1
 
 ### Patch Changes
