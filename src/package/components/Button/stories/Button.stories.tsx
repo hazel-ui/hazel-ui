@@ -1,7 +1,9 @@
 import { Meta, Story } from "@storybook/react";
 
-import { Color } from "../../../foundation";
-import { Button, ButtonProps } from "../Button";
+import { Color } from "../../../foundation/Color/Color";
+import { Button } from "../Button";
+
+import type { ButtonProps } from "../Button";
 
 export default {
   title: "Atoms/Button",

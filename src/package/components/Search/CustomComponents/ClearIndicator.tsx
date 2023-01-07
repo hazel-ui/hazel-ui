@@ -1,4 +1,4 @@
-import { Icon } from "../../../foundation";
+import { Icon } from "../../../foundation/Icon/Icon";
 
 export function ClearIndicator(props: any) {
   function clearValue() {

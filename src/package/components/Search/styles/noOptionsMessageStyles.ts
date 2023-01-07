@@ -1,5 +1,7 @@
-import { CSSProperties } from "react";
-import { Color, Theme } from "../../../foundation";
+import { Color } from "../../../foundation/Color/Color";
+import { Theme } from "../../../foundation/Theme/Theme";
+
+import type { CSSProperties } from "react";
 
 export const noOptionsMessageStyles: any = (base: CSSProperties) => ({
   ...base,

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Box } from "../../../../foundation";
+
+import { Box } from "../../../../foundation/Box/Box";
 import { Slider } from "../../Slider";
 
 export function EgSingleHandle() {

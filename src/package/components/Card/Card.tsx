@@ -11,7 +11,9 @@ import {
   typography,
   TypographyProps as SSTypographyProps,
 } from "styled-system";
-import { Color, Shadow } from "../../foundation";
+
+import { Color } from "../../foundation/Color/Color";
+import { Shadow } from "../../foundation/Shadow/Shadow";
 
 export interface CardProps
   extends FlexboxProps,

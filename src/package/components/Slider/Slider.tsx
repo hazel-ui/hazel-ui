@@ -1,8 +1,10 @@
 import RCSlider, { Handle, SliderProps as RCSliderProps } from "rc-slider";
 import styled from "styled-components";
-import { Box, Icon } from "../../foundation";
 
-interface SliderProps extends RCSliderProps {
+import { Box } from "../../foundation/Box/Box";
+import { Icon } from "../../foundation/Icon/Icon";
+
+export interface SliderProps extends RCSliderProps {
   width?: string;
 }
 

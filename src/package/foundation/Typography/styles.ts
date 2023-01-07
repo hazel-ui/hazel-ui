@@ -13,8 +13,8 @@ import {
 } from "@bbc/gel-foundations/typography";
 import { css } from "styled-components";
 
-import { MediaQuery } from "../MediaQuery";
-import { Theme } from "../Theme";
+import { MediaQuery } from "../MediaQuery/MediaQuery";
+import { Theme } from "../Theme/Theme";
 import { letterSpacing } from "./responsive";
 import { TypographyType } from "./types";
 

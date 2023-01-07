@@ -1,5 +1,6 @@
-import { CSSProperties } from "react";
-import { Color } from "../../../foundation";
+import { Color } from "../../../foundation/Color/Color";
+
+import type { CSSProperties } from "react";
 
 export const menuListStyles: any = (base: CSSProperties, state: any) => ({
   ...base,

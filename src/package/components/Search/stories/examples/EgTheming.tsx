@@ -1,5 +1,5 @@
-import { Color } from "../../../../foundation";
-import { showToast } from "../../../Toast";
+import { Color } from "../../../../foundation/Color/Color";
+import { showToast } from "../../../Toast/Toast";
 import { Search } from "../../Search";
 import { SearchOptionType, SearchValueType } from "../../types";
 

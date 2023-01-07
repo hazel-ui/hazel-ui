@@ -1,7 +1,9 @@
-import { CSSProperties } from "react";
 import { PlaceholderProps } from "react-select";
 import { StylesConfigFunction } from "react-select/src/styles";
-import { Theme } from "../../../foundation";
+
+import { Theme } from "../../../foundation/Theme/Theme";
+
+import type { CSSProperties } from "react";
 
 export const placeholderStyles: StylesConfigFunction<
   PlaceholderProps<{}, boolean>

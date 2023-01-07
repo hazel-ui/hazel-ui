@@ -6,21 +6,21 @@ import {
 } from "@radix-ui/react-tabs";
 import styled from "styled-components";
 
-import { Color } from "../../foundation";
+import { Color } from "../../foundation/Color/Color";
 
 import type { TabsOwnProps } from "@radix-ui/react-tabs";
 
-export function Root(props: TabsOwnProps): JSX.Element {
+function Root(props: TabsOwnProps): JSX.Element {
   return <RadixRoot {...props} />;
 }
 
-export const List = styled(RadixList)`
+const List = styled(RadixList)`
   display: flex;
   border-bottom: 1px solid ${Color.gray8};
   width: fit-content;
 `;
 
-export const Tab = styled(RadixTab)`
+const Tab = styled(RadixTab)`
   padding: 10px 20px;
   color: ${Color.gray9};
   user-select: none;
@@ -36,6 +36,13 @@ export const Tab = styled(RadixTab)`
   }
 `;
 
-export const Panel = styled(RadixPanel)`
+const Panel = styled(RadixPanel)`
   padding: 20px 0 0;
 `;
+
+export const Tabs = {
+  Root,
+  List,
+  Tab,
+  Panel,
+};

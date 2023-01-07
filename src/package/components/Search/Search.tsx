@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactSelect, { Props } from "react-select";
-import { Color } from "../../foundation";
+
+import { Color } from "../../foundation/Color/Color";
 import {
   ClearIndicator,
   Control,

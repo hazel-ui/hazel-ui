@@ -1,6 +1,8 @@
+import { Color } from "../../../foundation/Color/Color";
+import { Shadow } from "../../../foundation/Shadow/Shadow";
+
 import type { CSSProperties } from "react";
-import { ControlProps } from "react-select";
-import { Color, Shadow } from "../../../foundation";
+import type { ControlProps } from "react-select";
 
 export const controlStyles: any = (
   base: CSSProperties,
