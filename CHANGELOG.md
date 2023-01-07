@@ -1,5 +1,14 @@
 # hazel-ui
 
+## 0.2.1
+
+### Patch Changes
+
+- [#162](https://github.com/hazel-ui/hazel-ui/pull/162) [`cb8a802`](https://github.com/hazel-ui/hazel-ui/commit/cb8a8020e60b4f90878b7bdd50f145e9df8cc46f) Thanks [@cseas](https://github.com/cseas)! - fix: package esm format
+
+  - Modified build output for package to be correctly detected as ESM as reported by publint.
+  - Added root export for styles.css
+
 ## 0.2.0
 
 ### Minor Changes
