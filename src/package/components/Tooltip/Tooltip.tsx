@@ -4,7 +4,7 @@ import { Shadow, Theme } from "../../foundation";
 import { applyTooltipDirection } from "./styles";
 import { DirectionType, TooltipContentType } from "./types.";
 
-type TooltipProps = {
+export type TooltipProps = {
   arrowSize?: string;
   children?: ReactNode;
   content?: ReactNode;
