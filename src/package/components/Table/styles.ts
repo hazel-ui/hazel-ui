@@ -25,12 +25,12 @@ export const TableContainer = styled.table`
   ::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: ${Color.gray4};
+    background: ${Color.gray8};
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: ${Color.gray5};
+    background: ${Color.gray9};
   }
 `;
 
@@ -42,7 +42,7 @@ export const Th = styled.th`
   height: 100px;
   min-width: 142px;
   padding: 0px 27px;
-  background-color: ${Color.gray6};
+  background-color: ${Color.gray8};
   border-bottom: 1px solid rgba(230, 230, 250, 0.7);
 
   font-size: 0.9rem;
