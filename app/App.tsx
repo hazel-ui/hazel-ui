@@ -1,4 +1,4 @@
-// import { Typography } from "../dist";
+// import { Typography, Color } from "../dist";
 import { Typography, Color } from "../src/package";
 
 import "./app.css"; // tailwind

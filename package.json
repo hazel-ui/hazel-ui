@@ -2,7 +2,10 @@
   "name": "hazel-ui",
   "version": "0.2.0",
   "description": "A flexible React component library.",
-  "module": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./styles.css": "./dist/styles.css"
+  },
   "files": [
     "dist/"
   ],
@@ -26,8 +29,12 @@
     "build": "webpack --config webpack.prod.mjs",
     "start": "npx http-server ./build -o",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build:package": "rm -rf dist && mkdir dist && cd src/package && tsc",
-    "postbuild:package": "copyfiles -u 3 \"src/package/static/**/*\" dist",
+    "build:compile": "rm -rf dist && mkdir dist && cd src/package && tsc",
+    "build:static": "copyfiles -u 3 \"src/package/static/**/*\" dist",
+    "build:rename": "renamer --find '/\\.js$/' --replace '.mjs' 'dist/**/*.js'",
+    "build:package:dev": "npm run build:compile && npm run build:static",
+    "build:package": "npm run build:compile && npm run build:rename",
+    "postbuild:package": "npm run build:static",
     "change:add": "changeset add",
     "prepublishOnly": "npm run build:package",
     "predeploy": "npm run build-storybook",
@@ -95,6 +102,7 @@
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "renamer": "^4.0.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "^3.2.4",
     "ts-loader": "^9.4.2",
