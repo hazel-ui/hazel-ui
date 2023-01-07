@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { Box } from "../../../../foundation/Box/Box";
-import { Slider } from "../../Slider";
+import { Box } from "../../../../foundation/Box/Box.js";
+import { Slider } from "../../Slider.js";
 
 export function EgSingleHandle() {
   const [rangeVal, setRangeVal] = useState<number>(0);

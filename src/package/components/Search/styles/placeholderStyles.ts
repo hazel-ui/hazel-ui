@@ -1,7 +1,7 @@
 import { PlaceholderProps } from "react-select";
 import { StylesConfigFunction } from "react-select/src/styles";
 
-import { Theme } from "../../../foundation/Theme/Theme";
+import { Theme } from "../../../foundation/Theme/Theme.js";
 
 import type { CSSProperties } from "react";
 

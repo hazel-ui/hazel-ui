@@ -1,7 +1,7 @@
-import { Color } from "../../../../foundation/Color/Color";
-import { showToast } from "../../../Toast/Toast";
-import { Search } from "../../Search";
-import { SearchOptionType, SearchValueType } from "../../types";
+import { Color } from "../../../../foundation/Color/Color.js";
+import { showToast } from "../../../Toast/Toast.js";
+import { Search } from "../../Search.js";
+import { SearchOptionType, SearchValueType } from "../../types.js";
 
 export function EgTheming() {
   return (

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { MediaQuery } from "../../MediaQuery";
+
+import { MediaQuery } from "../../MediaQuery.js";
 
 export function EgMobileFirst() {
   return <Container>Lorem ipsum</Container>;

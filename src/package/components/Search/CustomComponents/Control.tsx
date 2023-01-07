@@ -1,10 +1,10 @@
 import { components } from "react-select";
 import styled from "styled-components";
 
-import { Box } from "../../../foundation/Box/Box";
-import { Color } from "../../../foundation/Color/Color";
-import { Icon } from "../../../foundation/Icon/Icon";
-import { Theme } from "../../../foundation/Theme/Theme";
+import { Box } from "../../../foundation/Box/Box.js";
+import { Color } from "../../../foundation/Color/Color.js";
+import { Icon } from "../../../foundation/Icon/Icon.js";
+import { Theme } from "../../../foundation/Theme/Theme.js";
 
 export function Control({
   selectProps: { floatingLabel, invalidSearch },

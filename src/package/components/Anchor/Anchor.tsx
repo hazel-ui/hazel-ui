@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Color } from "../../foundation/Color/Color";
+import { Color } from "../../foundation/Color/Color.js";
 
 import type { HTMLProps } from "react";
 

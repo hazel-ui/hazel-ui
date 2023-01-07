@@ -1,4 +1,4 @@
-import { Search } from "../../Search";
+import { Search } from "../../Search.js";
 
 export function EgMultiSelect() {
   return (

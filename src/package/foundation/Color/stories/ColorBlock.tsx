@@ -1,13 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-import { Typography } from "../../Typography/Typography";
-import { Color } from "../Color";
+import { Typography } from "../../Typography/Typography.js";
+import { Color } from "../Color.js";
 import {
   copyToClipboard,
   getContrastColor,
   getCssVariableValue,
-} from "./utils";
+} from "./utils.js";
 
 interface ColorBlockProps {
   cardColor?: Color;

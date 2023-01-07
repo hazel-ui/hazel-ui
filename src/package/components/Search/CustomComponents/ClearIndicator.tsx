@@ -1,4 +1,4 @@
-import { Icon } from "../../../foundation/Icon/Icon";
+import { Icon } from "../../../foundation/Icon/Icon.js";
 
 export function ClearIndicator(props: any) {
   function clearValue() {

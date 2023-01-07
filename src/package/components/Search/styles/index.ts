@@ -1,7 +1,7 @@
-export { controlStyles } from "./controlStyles";
-export { menuListStyles } from "./menuListStyles";
-export { menuStyles } from "./menuStyles";
-export { noOptionsMessageStyles } from "./noOptionsMessageStyles";
-export { optionStyles } from "./optionStyles";
-export { placeholderStyles } from "./placeholderStyles";
-export { valueContainerStyles } from "./valueContainerStyles";
+export { controlStyles } from "./controlStyles.js";
+export { menuListStyles } from "./menuListStyles.js";
+export { menuStyles } from "./menuStyles.js";
+export { noOptionsMessageStyles } from "./noOptionsMessageStyles.js";
+export { optionStyles } from "./optionStyles.js";
+export { placeholderStyles } from "./placeholderStyles.js";
+export { valueContainerStyles } from "./valueContainerStyles.js";

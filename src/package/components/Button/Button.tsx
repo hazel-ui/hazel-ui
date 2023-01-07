@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 import { border, BorderProps, color, ColorProps, compose } from "styled-system";
 
-import { Theme } from "../../foundation/Theme/Theme";
-import { applyButtonSize, applyButtonVariant } from "./styles";
-import { ButtonSizeType, ButtonType } from "./types";
+import { Theme } from "../../foundation/Theme/Theme.js";
+import { applyButtonSize, applyButtonVariant } from "./styles.js";
+import { ButtonSizeType, ButtonType } from "./types.js";
 
 export interface ButtonProps extends BorderProps, ColorProps {
   children?: ReactNode;

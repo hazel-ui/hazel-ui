@@ -1,1 +1,1 @@
-export { EgSingleHandle } from "./EgSingleHandle";
+export { EgSingleHandle } from "./EgSingleHandle.js";

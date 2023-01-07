@@ -12,11 +12,11 @@ import {
   TypographyProps as SSTypographyProps,
 } from "styled-system";
 
-import { Color } from "../../foundation/Color/Color";
-import { Shadow } from "../../foundation/Shadow/Shadow";
-import { Theme } from "../../foundation/Theme/Theme";
-import { applyBadgeSize } from "./styles";
-import { BadgeSizeType } from "./types";
+import { Color } from "../../foundation/Color/Color.js";
+import { Shadow } from "../../foundation/Shadow/Shadow.js";
+import { Theme } from "../../foundation/Theme/Theme.js";
+import { applyBadgeSize } from "./styles.js";
+import { BadgeSizeType } from "./types.js";
 
 export interface BadgeProps
   extends BorderProps,

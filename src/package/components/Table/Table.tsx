@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { Column, useExpanded, useSortBy, useTable } from "react-table";
 
-import { Icon } from "../../foundation/Icon/Icon";
-import { TableContainer, Td, Th, Tr, TrHead } from "./styles";
-import { processColumns } from "./utils";
+import { Icon } from "../../foundation/Icon/Icon.js";
+import { TableContainer, Td, Th, Tr, TrHead } from "./styles.js";
+import { processColumns } from "./utils.js";
 
 export type TableProps = {
   data: Array<any>;

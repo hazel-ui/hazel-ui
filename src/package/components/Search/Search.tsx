@@ -1,23 +1,19 @@
 import { useState } from "react";
 import ReactSelect, { Props } from "react-select";
 
-import { Color } from "../../foundation/Color/Color";
-import {
-  ClearIndicator,
-  Control,
-  IndicatorsContainer,
-  NoOptionsMessage,
-} from "./CustomComponents";
-import {
-  controlStyles,
-  menuListStyles,
-  menuStyles,
-  noOptionsMessageStyles,
-  optionStyles,
-  placeholderStyles,
-  valueContainerStyles,
-} from "./styles";
-import { SearchOptionType } from "./types";
+import { Color } from "../../foundation/Color/Color.js";
+import { ClearIndicator } from "./CustomComponents/ClearIndicator.js";
+import { Control } from "./CustomComponents/Control.js";
+import { IndicatorsContainer } from "./CustomComponents/IndicatorsContainer.js";
+import { NoOptionsMessage } from "./CustomComponents/NoOptionsMessage.js";
+import { controlStyles } from "./styles/controlStyles.js";
+import { menuListStyles } from "./styles/menuListStyles.js";
+import { menuStyles } from "./styles/menuStyles.js";
+import { noOptionsMessageStyles } from "./styles/noOptionsMessageStyles.js";
+import { optionStyles } from "./styles/optionStyles.js";
+import { placeholderStyles } from "./styles/placeholderStyles.js";
+import { valueContainerStyles } from "./styles/valueContainerStyles.js";
+import { SearchOptionType } from "./types.js";
 
 export interface SearchProps<IsMulti extends boolean>
   extends Props<SearchOptionType, IsMulti> {

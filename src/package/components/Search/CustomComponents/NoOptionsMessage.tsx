@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { components, OptionTypeBase } from "react-select";
 
-import { Typography } from "../../../foundation/Typography/Typography";
+import { Typography } from "../../../foundation/Typography/Typography.js";
 
 import type { NoticeProps } from "react-select/src/components/Menu";
 

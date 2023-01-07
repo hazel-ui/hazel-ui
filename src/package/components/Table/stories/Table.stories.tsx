@@ -1,6 +1,6 @@
 import { Meta, Story } from "@storybook/react";
-import { Icon } from "../../../foundation/Icon/Icon";
-import { Table, TableProps } from "../Table";
+import { Icon } from "../../../foundation/Icon/Icon.js";
+import { Table, TableProps } from "../Table.js";
 
 export default {
   title: "Atoms/Table",

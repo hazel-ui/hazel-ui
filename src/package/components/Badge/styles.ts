@@ -1,5 +1,6 @@
 import { css } from "styled-components";
-import { BadgeSizeType } from "./types";
+
+import { BadgeSizeType } from "./types.js";
 
 export function applyBadgeSize(size: BadgeSizeType) {
   switch (size) {

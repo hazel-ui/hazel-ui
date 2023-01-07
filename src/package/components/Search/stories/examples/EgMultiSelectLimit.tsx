@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { Search } from "../../Search";
-import { SearchOptionType, SearchValueType } from "../../types";
+import { Search } from "../../Search.js";
+import { SearchOptionType, SearchValueType } from "../../types.js";
 
 export function EgMultiSelectLimit() {
   const defaultEntry: SearchOptionType[] = [];
