@@ -28,9 +28,9 @@ export type { TableProps } from "./components/Table/Table";
 export { Tooltip } from "./components/Tooltip/Tooltip";
 export type { TooltipProps } from "./components/Tooltip/Tooltip";
 
-/*************************
+/* **********************
  * Foundation components
- *************************/
+ *********************** */
 
 export { Box } from "./foundation/Box/Box";
 export type { BoxProps } from "./foundation/Box/Box";

@@ -3,7 +3,12 @@
   "version": "0.2.2",
   "description": "A flexible React component library.",
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      }
+    },
     "./styles.css": "./dist/styles.css"
   },
   "files": [
