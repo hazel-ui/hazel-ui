@@ -1,4 +1,4 @@
-export {
+import {
   ChevronDown,
   ChevronRight,
   InfoCircle,
@@ -8,4 +8,18 @@ export {
   SortUp,
   X,
 } from "@styled-icons/boxicons-regular";
-export { Circle } from "@styled-icons/boxicons-solid";
+import { Circle } from "@styled-icons/boxicons-solid";
+
+export const Icon = {
+  // regular
+  ChevronDown,
+  ChevronRight,
+  InfoCircle,
+  Search,
+  Sort,
+  SortDown,
+  SortUp,
+  X,
+  // solid
+  Circle,
+};

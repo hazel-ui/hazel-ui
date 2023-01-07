@@ -28,13 +28,18 @@ export type { TableProps } from "./components/Table/Table";
 export { Tooltip } from "./components/Tooltip/Tooltip";
 export type { TooltipProps } from "./components/Tooltip/Tooltip";
 
-export {
-  Box,
-  Color,
-  Icon,
-  MediaQuery,
-  Shadow,
-  Theme,
-  Typography,
-} from "./foundation";
-export type { BoxProps, TypographyProps } from "./foundation";
+/*************************
+ * Foundation components
+ *************************/
+
+export { Box } from "./foundation/Box/Box";
+export type { BoxProps } from "./foundation/Box/Box";
+
+export { Color } from "./foundation/Color/Color";
+export { Icon } from "./foundation/Icon/Icon";
+export { MediaQuery } from "./foundation/MediaQuery/MediaQuery";
+export { Shadow } from "./foundation/Shadow/Shadow";
+export { Theme } from "./foundation/Theme/Theme";
+
+export { Typography } from "./foundation/Typography/Typography";
+export type { TypographyProps } from "./foundation/Typography/Typography";
