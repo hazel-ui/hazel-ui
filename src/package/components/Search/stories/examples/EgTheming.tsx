@@ -22,13 +22,13 @@ export function EgTheming() {
         ...theme,
         colors: {
           ...theme.colors,
-          neutral0: Color.gray10,
-          neutral5: Color.gray5,
-          neutral20: Color.gray70,
-          neutral30: Color.gray20,
-          neutral50: Color.gray40,
-          primary: Color.gray5,
-          primary25: Color.blue40,
+          neutral0: Color.gray3,
+          neutral5: Color.gray2,
+          neutral20: Color.gray9,
+          neutral30: Color.gray4,
+          neutral50: Color.gray6,
+          primary: Color.gray2,
+          primary25: Color.blue6,
         },
       })}
     />

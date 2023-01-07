@@ -11,7 +11,7 @@
     "module": "esnext", // module system
     "noEmit": false, // emit javascript output files & declarations
     "outDir": "../../dist", // output directory
-    "removeComments": true, // strip all comments, set to false for libraries
+    "removeComments": false, // strip all comments, set to false for libraries
     "target": "ES6", // output code format
 
     // Strict Checks

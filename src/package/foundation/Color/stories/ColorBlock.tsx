@@ -2,19 +2,36 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Typography } from "../../Typography";
 import { Color } from "../Color";
-import { copyToClipboard, getContrastColor, getHexFromCss } from "./utils";
+import {
+  copyToClipboard,
+  getContrastColor,
+  getCssVariableValue,
+} from "./utils";
 
 interface ColorBlockProps {
   cardColor?: Color;
   title?: string;
 }
 
+const StyledDiv = styled.div<{ color: string }>`
+  color: ${(props) => getContrastColor(props.color)};
+  background-color: ${(props) => props.color};
+
+  text-align: center;
+  min-width: 264px;
+
+  height: 80px;
+  padding: 0 20px;
+  cursor: pointer;
+  align-items: center;
+`;
+
 export function ColorBlock({
   cardColor = Color.gray5,
   title = "Unavailable",
 }: ColorBlockProps) {
-  const hex = getHexFromCss(cardColor);
-  const [text, setText] = useState(hex);
+  const colorValue = getCssVariableValue(cardColor);
+  const [text, setText] = useState(colorValue);
 
   function changeText(temporary: string, permanent: string) {
     setText(temporary);
@@ -25,11 +42,11 @@ export function ColorBlock({
 
   return (
     <StyledDiv
-      color={hex}
+      color={colorValue}
       title={title}
       onClick={() => {
-        copyToClipboard(hex);
-        changeText("Copied!", hex);
+        copyToClipboard(colorValue);
+        changeText("Copied!", colorValue);
       }}
     >
       <Typography variant="p">
@@ -45,17 +62,4 @@ export const ColorBlockContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 1.6rem 1.6rem;
-`;
-
-const StyledDiv = styled.div<{ color: string }>`
-  color: ${(props) => getContrastColor(props.color)};
-  background-color: ${(props) => props.color};
-
-  text-align: center;
-  min-width: 264px;
-
-  height: 80px;
-  padding: 0 20px;
-  cursor: pointer;
-  align-items: center;
 `;

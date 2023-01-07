@@ -6,7 +6,7 @@ import { ButtonSizeType, ButtonType } from "./types";
 
 export function applyButtonVariant(
   variant: ButtonType,
-  variantColor: string = Color.blue50
+  variantColor: string = Color.blue9
 ) {
   switch (variant) {
     case "primary":

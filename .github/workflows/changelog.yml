@@ -1,4 +1,4 @@
-name: Changelog
+name: changelog
 
 on:
   push:
@@ -9,7 +9,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Release
+    name: version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
