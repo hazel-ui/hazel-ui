@@ -1,8 +1,9 @@
 import { css } from "styled-components";
 
-import { Color, Theme } from "../../foundation";
+import { Color } from "../../foundation/Color/Color";
+import { Theme } from "../../foundation/Theme/Theme";
 
-import { ButtonSizeType, ButtonType } from "./types";
+import type { ButtonSizeType, ButtonType } from "./types";
 
 export function applyButtonVariant(
   variant: ButtonType,

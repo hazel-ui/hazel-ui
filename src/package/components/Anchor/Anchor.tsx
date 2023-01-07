@@ -1,6 +1,8 @@
-import { HTMLProps } from "react";
 import styled from "styled-components";
-import { Color } from "../../foundation";
+
+import { Color } from "../../foundation/Color/Color";
+
+import type { HTMLProps } from "react";
 
 export interface AnchorProps extends HTMLProps<HTMLAnchorElement> {
   color?: string;

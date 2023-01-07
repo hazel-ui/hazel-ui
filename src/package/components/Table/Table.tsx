@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Column, useExpanded, useSortBy, useTable } from "react-table";
-import { Icon } from "../../foundation/Icon";
+
+import { Icon } from "../../foundation/Icon/Icon";
 import { TableContainer, Td, Th, Tr, TrHead } from "./styles";
 import { processColumns } from "./utils";
 

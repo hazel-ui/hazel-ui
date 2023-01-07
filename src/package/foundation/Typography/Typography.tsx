@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { applyTypographyVariant } from "./styles";
 import { TextTag, TypographyType } from "./types";
 
-import type { Color } from "../Color";
+import type { Color } from "../Color/Color";
 import type { SxProps } from "../sx";
 import type { ReactNode } from "react";
 

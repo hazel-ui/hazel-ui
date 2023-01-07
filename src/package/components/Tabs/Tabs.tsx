@@ -6,7 +6,7 @@ import {
 } from "@radix-ui/react-tabs";
 import styled from "styled-components";
 
-import { Color } from "../../foundation";
+import { Color } from "../../foundation/Color/Color";
 
 import type { TabsOwnProps } from "@radix-ui/react-tabs";
 

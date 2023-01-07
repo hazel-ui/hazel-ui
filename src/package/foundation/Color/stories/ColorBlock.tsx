@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Typography } from "../../Typography";
+
+import { Typography } from "../../Typography/Typography";
 import { Color } from "../Color";
 import {
   copyToClipboard,

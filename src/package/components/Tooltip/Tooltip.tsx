@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
-import { Shadow, Theme } from "../../foundation";
+
+import { Shadow } from "../../foundation/Shadow/Shadow";
+import { Theme } from "../../foundation/Theme/Theme";
 import { applyTooltipDirection } from "./styles";
 import { DirectionType, TooltipContentType } from "./types.";
 

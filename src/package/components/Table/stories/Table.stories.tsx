@@ -1,5 +1,5 @@
 import { Meta, Story } from "@storybook/react";
-import { Icon } from "../../../foundation";
+import { Icon } from "../../../foundation/Icon/Icon";
 import { Table, TableProps } from "../Table";
 
 export default {

@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 import { border, BorderProps, color, ColorProps, compose } from "styled-system";
-import { Theme } from "../../foundation";
+
+import { Theme } from "../../foundation/Theme/Theme";
 import { applyButtonSize, applyButtonVariant } from "./styles";
 import { ButtonSizeType, ButtonType } from "./types";
 

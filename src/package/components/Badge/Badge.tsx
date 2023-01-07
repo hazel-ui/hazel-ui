@@ -11,7 +11,10 @@ import {
   typography,
   TypographyProps as SSTypographyProps,
 } from "styled-system";
-import { Color, Shadow, Theme } from "../../foundation";
+
+import { Color } from "../../foundation/Color/Color";
+import { Shadow } from "../../foundation/Shadow/Shadow";
+import { Theme } from "../../foundation/Theme/Theme";
 import { applyBadgeSize } from "./styles";
 import { BadgeSizeType } from "./types";
 
