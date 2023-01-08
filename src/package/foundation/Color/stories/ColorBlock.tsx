@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { Typography } from "../../Typography/Typography.js";
 import { Color } from "../Color.js";

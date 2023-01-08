@@ -1,5 +1,5 @@
 import { components } from "react-select";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { Box } from "../../../foundation/Box/Box.js";
 import { Color } from "../../../foundation/Color/Color.js";

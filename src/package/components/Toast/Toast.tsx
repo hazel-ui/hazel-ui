@@ -1,5 +1,5 @@
 import { toast, ToastContainer } from "react-toastify";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 export function Toast() {
   return (

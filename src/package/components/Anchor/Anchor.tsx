@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { Color } from "../../foundation/Color/Color.js";
 

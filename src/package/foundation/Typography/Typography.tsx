@@ -1,5 +1,4 @@
-// @ts-ignore
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { applyTypographyVariant } from "./styles.js";
 import { TextTag, TypographyType } from "./types.js";
@@ -16,8 +15,6 @@ export interface TypographyProps {
   sx?: SxProps;
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 const StyledDiv = styled.div<TypographyProps>`
   ${(props: { variant?: TypographyType }) =>
     // eslint-disable-next-line implicit-arrow-linebreak

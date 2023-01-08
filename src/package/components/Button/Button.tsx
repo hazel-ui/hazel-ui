@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { Theme } from "../../foundation/Theme/Theme.js";
 import { applyButtonSize, applyButtonVariant } from "./styles.js";

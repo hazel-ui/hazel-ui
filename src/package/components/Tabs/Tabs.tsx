@@ -4,7 +4,7 @@ import {
   Root as RadixRoot,
   Tab as RadixTab,
 } from "@radix-ui/react-tabs";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { Color } from "../../foundation/Color/Color.js";
 
