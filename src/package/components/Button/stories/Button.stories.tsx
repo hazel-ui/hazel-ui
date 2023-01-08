@@ -53,10 +53,7 @@ Large.args = {
 
 export const Custom = Template.bind({});
 Custom.args = {
-  backgroundColor: Color.gray12,
-  border: "3px solid " + Color.green8,
-  borderRadius: "30px",
+  variantColor: Color.gray12,
   children: "Awesome",
-  color: Color.gray2,
   size: "large",
 };

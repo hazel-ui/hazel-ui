@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { MediaQuery } from "../../MediaQuery.js";
 
