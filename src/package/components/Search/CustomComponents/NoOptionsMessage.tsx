@@ -3,7 +3,7 @@ import { components, OptionTypeBase } from "react-select";
 
 import { Typography } from "../../../foundation/Typography/Typography.js";
 
-import type { NoticeProps } from "react-select/src/components/Menu";
+import type { NoticeProps } from "react-select/src/components/Menu.js";
 
 export function NoOptionsMessage<
   OptionType extends OptionTypeBase,

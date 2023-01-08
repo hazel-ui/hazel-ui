@@ -17,6 +17,7 @@ export function Slider({
   return (
     <Styles>
       <Container width={width}>
+        {/* @ts-ignore */}
         <RCSlider
           handle={({ dragging, ...restProps }: any) => {
             return (

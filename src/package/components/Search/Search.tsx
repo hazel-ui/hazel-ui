@@ -38,6 +38,7 @@ export function Search<IsMulti extends boolean>({
 }: SearchProps<IsMulti>) {
   const [invalidSearch, setInvalidSearch] = useState(false);
   return (
+    // @ts-ignore
     <ReactSelect
       // custom props
       floatingLabel={floatingLabel}
