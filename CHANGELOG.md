@@ -1,5 +1,27 @@
 # hazel-ui
 
+## 0.2.3
+
+### Patch Changes
+
+- [#167](https://github.com/hazel-ui/hazel-ui/pull/167) [`1dff6c5`](https://github.com/hazel-ui/hazel-ui/commit/1dff6c533fdfb603c7c3155034e44086bbe36f75) Thanks [@cseas](https://github.com/cseas)! - fix: package exports and ESM support
+
+  - remove airbnb-typescript config from eslint
+  - upgrade storybook to v7 for esm support
+  - add storybook webpack config override for "type: module"
+  - remove tailwindcss, postcss, postcss-loader, radix colors, windy-radix
+  - add .js file extensions to all relative imports
+  - modify exports field format to specify both default and types
+  - remove rename script from package build, removed renamer
+  - upgrade styled-components to v6 for named import
+  - upgrade types: react, react-dom, styled-components
+  - upgrade css-loader, webpack-cli, webpack-dev-server
+  - change styled imports to named imports
+  - remove styled-system from Badge, Button
+  - remove remaining barrel files
+  - changed module to NodeNext in tsconfig
+  - add extensionAlias for typescript .js imports in webpack config
+
 ## 0.2.2
 
 ### Patch Changes
