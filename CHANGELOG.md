@@ -1,5 +1,11 @@
 # hazel-ui
 
+## 0.2.4
+
+### Patch Changes
+
+- [#169](https://github.com/hazel-ui/hazel-ui/pull/169) [`4f28a5a`](https://github.com/hazel-ui/hazel-ui/commit/4f28a5a88bfce3d7e6fc85b55403e62e38a71c64) Thanks [@cseas](https://github.com/cseas)! - fix: peer dependencies for react
+
 ## 0.2.3
 
 ### Patch Changes
