@@ -2,7 +2,7 @@ import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
 
 // https://stackoverflow.com/a/50052194/7435656
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirnameCustom = dirname(fileURLToPath(import.meta.url));
 
 export const baseConfig = {
   module: {
@@ -22,6 +22,10 @@ export const baseConfig = {
       },
       // https://webpack.js.org/guides/typescript/
       {
+        /*
+         * Note: This rule is referenced in .storybook/main.js
+         * If you change this, change it there too.
+         */
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
@@ -31,7 +35,7 @@ export const baseConfig = {
   // https://webpack.js.org/guides/output-management/
   output: {
     filename: "[name].bundle.js",
-    path: resolve(__dirname, "build"),
+    path: resolve(__dirnameCustom, "build"),
     clean: true,
     hashFunction: "xxhash64", // https://stackoverflow.com/a/73465262/7435656
   },
