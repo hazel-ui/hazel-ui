@@ -1,5 +1,5 @@
-import { Color } from "../../../foundation/Color/Color";
-import { Theme } from "../../../foundation/Theme/Theme";
+import { Color } from "../../../foundation/Color/Color.js";
+import { Theme } from "../../../foundation/Theme/Theme.js";
 
 import type { CSSProperties } from "react";
 

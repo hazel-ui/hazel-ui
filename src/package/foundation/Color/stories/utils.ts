@@ -1,4 +1,4 @@
-import { Color } from "../Color";
+import { Color } from "../Color.js";
 
 export function copyToClipboard(newClip: string) {
   navigator.clipboard.writeText(newClip);

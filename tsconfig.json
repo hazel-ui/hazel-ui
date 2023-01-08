@@ -8,7 +8,8 @@
     "isolatedModules": true, // all implementation files must be modules
     "jsx": "react-jsx", // use new jsx transform
     "lib": ["dom", "dom.iterable", "esnext"], // type definitions for browser/JS APIs
-    "module": "esnext", // module system
+    // TODO: Change to minimal when available: https://github.com/microsoft/TypeScript/pull/50153
+    "module": "NodeNext", // module system
     "noEmit": false, // emit javascript output files & declarations
     "outDir": "./build/", // output directory
     "removeComments": true, // strip all comments, set to false for libraries
@@ -19,7 +20,6 @@
 
     // Module Resolution
     "esModuleInterop": true, // allow importing commonjs modules as es6
-    "moduleResolution": "node", // modern code module resolution strategy
 
     // Linter Checks
     "noFallthroughCasesInSwitch": true, // disable fallthrough of cases in 'switch'

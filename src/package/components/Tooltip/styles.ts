@@ -1,5 +1,6 @@
 import { css } from "styled-components";
-import { DirectionType } from "./types.";
+
+import { DirectionType } from "./types.js";
 
 export function applyTooltipDirection(
   arrowSize: string,

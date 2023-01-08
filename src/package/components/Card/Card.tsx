@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import {
   compose,
   flexbox,
@@ -12,8 +12,8 @@ import {
   TypographyProps as SSTypographyProps,
 } from "styled-system";
 
-import { Color } from "../../foundation/Color/Color";
-import { Shadow } from "../../foundation/Shadow/Shadow";
+import { Color } from "../../foundation/Color/Color.js";
+import { Shadow } from "../../foundation/Shadow/Shadow.js";
 
 export interface CardProps
   extends FlexboxProps,

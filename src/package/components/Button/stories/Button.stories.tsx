@@ -1,9 +1,9 @@
 import { Meta, Story } from "@storybook/react";
 
-import { Color } from "../../../foundation/Color/Color";
-import { Button } from "../Button";
+import { Color } from "../../../foundation/Color/Color.js";
+import { Button } from "../Button.js";
 
-import type { ButtonProps } from "../Button";
+import type { ButtonProps } from "../Button.js";
 
 export default {
   title: "Atoms/Button",
@@ -53,10 +53,7 @@ Large.args = {
 
 export const Custom = Template.bind({});
 Custom.args = {
-  backgroundColor: Color.gray12,
-  border: "3px solid " + Color.green8,
-  borderRadius: "30px",
+  variantColor: Color.gray12,
   children: "Awesome",
-  color: Color.gray2,
   size: "large",
 };

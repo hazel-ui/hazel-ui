@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
-import { Color } from "../../foundation/Color/Color";
-import { MediaQuery } from "../../foundation/MediaQuery/MediaQuery";
-import { Theme } from "../../foundation/Theme/Theme";
+import { Color } from "../../foundation/Color/Color.js";
+import { MediaQuery } from "../../foundation/MediaQuery/MediaQuery.js";
+import { Theme } from "../../foundation/Theme/Theme.js";
 
 // <table>
 export const TableContainer = styled.table`

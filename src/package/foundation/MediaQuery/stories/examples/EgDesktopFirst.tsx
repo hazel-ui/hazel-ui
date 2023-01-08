@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { MediaQuery } from "../../MediaQuery";
+import { styled } from "styled-components";
+
+import { MediaQuery } from "../../MediaQuery.js";
 
 export function EgDesktopFirst() {
   return <Container>Lorem ipsum</Container>;

@@ -1,6 +1,9 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
 import { MediaQuery } from "../MediaQuery";
-import { EgMobileFirst, EgDesktopFirst, EgTouch } from "./examples";
+import { EgMobileFirst } from "./examples/EgMobileFirst";
+import { EgDesktopFirst } from "./examples/EgDesktopFirst";
+import { EgTouch } from "./examples/EgTouch";
 
 <Meta title="Foundation/MediaQuery" component={MediaQuery} />
 
@@ -28,7 +31,7 @@ also has utilities for adding styles specifically for mobile or desktop devices.
 ### Mobile-first
 
 ```tsx
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { MediaQuery } from "hazel-ui";
 
 export function Component() {
@@ -57,7 +60,7 @@ const Container = styled.div`
 ### Desktop-first
 
 ```tsx
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { MediaQuery } from "hazel-ui";
 
 export function Component() {
@@ -86,7 +89,7 @@ const Container = styled.div`
 ### Touch
 
 ```tsx
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { MediaQuery } from "hazel-ui";
 
 export function Component() {

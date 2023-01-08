@@ -1,41 +1,20 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
-import {
-  border,
-  BorderProps,
-  color,
-  ColorProps,
-  compose,
-  space,
-  SpaceProps as SSSpaceProps,
-  typography,
-  TypographyProps as SSTypographyProps,
-} from "styled-system";
+import { styled } from "styled-components";
 
-import { Color } from "../../foundation/Color/Color";
-import { Shadow } from "../../foundation/Shadow/Shadow";
-import { Theme } from "../../foundation/Theme/Theme";
-import { applyBadgeSize } from "./styles";
-import { BadgeSizeType } from "./types";
+import { Color } from "../../foundation/Color/Color.js";
+import { Shadow } from "../../foundation/Shadow/Shadow.js";
+import { Theme } from "../../foundation/Theme/Theme.js";
+import { applyBadgeSize } from "./styles.js";
+import { BadgeSizeType } from "./types.js";
 
-export interface BadgeProps
-  extends BorderProps,
-    ColorProps,
-    SSSpaceProps,
-    SSTypographyProps {
+import type { ReactNode } from "react";
+
+export interface BadgeProps {
   children?: ReactNode;
   size?: BadgeSizeType;
+  // styles
+  color?: Color | string;
+  backgroundColor?: Color | string;
 }
-
-const styledSystemStyles = compose(border, color, space, typography);
-
-export const Badge = ({ size = "s", children, ...rest }: BadgeProps) => {
-  return (
-    <StyledBadge size={size} as={"span" as any} {...rest}>
-      {children}
-    </StyledBadge>
-  );
-};
 
 const StyledBadge = styled.span<BadgeProps>`
   font-family: ${Theme.font.sansSerif};
@@ -50,5 +29,17 @@ const StyledBadge = styled.span<BadgeProps>`
   }
 
   ${(props) => applyBadgeSize(props.size!)};
-  ${styledSystemStyles};
 `;
+
+export function Badge({
+  size = "s",
+  children,
+  color,
+  backgroundColor,
+}: BadgeProps) {
+  return (
+    <StyledBadge size={size} as="span" style={{ color, backgroundColor }}>
+      {children}
+    </StyledBadge>
+  );
+}

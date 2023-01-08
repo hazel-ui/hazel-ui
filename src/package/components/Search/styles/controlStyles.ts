@@ -1,5 +1,5 @@
-import { Color } from "../../../foundation/Color/Color";
-import { Shadow } from "../../../foundation/Shadow/Shadow";
+import { Color } from "../../../foundation/Color/Color.js";
+import { Shadow } from "../../../foundation/Shadow/Shadow.js";
 
 import type { CSSProperties } from "react";
 import type { ControlProps } from "react-select";

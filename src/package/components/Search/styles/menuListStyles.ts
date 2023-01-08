@@ -1,4 +1,4 @@
-import { Color } from "../../../foundation/Color/Color";
+import { Color } from "../../../foundation/Color/Color.js";
 
 import type { CSSProperties } from "react";
 

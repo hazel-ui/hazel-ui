@@ -13,10 +13,10 @@ import {
 } from "@bbc/gel-foundations/typography";
 import { css } from "styled-components";
 
-import { MediaQuery } from "../MediaQuery/MediaQuery";
-import { Theme } from "../Theme/Theme";
-import { letterSpacing } from "./responsive";
-import { TypographyType } from "./types";
+import { MediaQuery } from "../MediaQuery/MediaQuery.js";
+import { Theme } from "../Theme/Theme.js";
+import { letterSpacing } from "./responsive/letterSpacing.js";
+import { TypographyType } from "./types.js";
 
 export function applyTypographyVariant(variant: TypographyType) {
   switch (variant) {

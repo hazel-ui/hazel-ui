@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
-import { applyTypographyVariant } from "./styles";
-import { TextTag, TypographyType } from "./types";
+import { applyTypographyVariant } from "./styles.js";
+import { TextTag, TypographyType } from "./types.js";
 
-import type { Color } from "../Color/Color";
-import type { SxProps } from "../sx";
+import type { Color } from "../Color/Color.js";
+import type { SxProps } from "../sx.js";
 import type { ReactNode } from "react";
 
 export interface TypographyProps {
@@ -16,7 +16,9 @@ export interface TypographyProps {
 }
 
 const StyledDiv = styled.div<TypographyProps>`
-  ${(props) => props.variant && applyTypographyVariant(props.variant)};
+  ${(props: { variant?: TypographyType }) =>
+    // eslint-disable-next-line implicit-arrow-linebreak
+    props.variant && applyTypographyVariant(props.variant)};
 `;
 
 export function Typography({

@@ -1,8 +1,8 @@
 import RCSlider, { Handle, SliderProps as RCSliderProps } from "rc-slider";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
-import { Box } from "../../foundation/Box/Box";
-import { Icon } from "../../foundation/Icon/Icon";
+import { Box } from "../../foundation/Box/Box.js";
+import { Icon } from "../../foundation/Icon/Icon.js";
 
 export interface SliderProps extends RCSliderProps {
   width?: string;
@@ -17,6 +17,7 @@ export function Slider({
   return (
     <Styles>
       <Container width={width}>
+        {/* @ts-ignore */}
         <RCSlider
           handle={({ dragging, ...restProps }: any) => {
             return (
