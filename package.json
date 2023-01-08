@@ -7,7 +7,7 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
+        "default": "./dist/index.js"
       }
     },
     "./styles.css": "./dist/styles.css"
@@ -72,8 +72,8 @@
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.16",
     "@types/node": "^14.14.27",
-    "@types/react": "^17.0.52",
-    "@types/react-dom": "^17.0.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
     "@types/react-select": "^3.0.28",
     "@types/react-table": "^7.0.24",
     "@types/styled-components": "^5.1.26",
@@ -100,8 +100,8 @@
     "html-webpack-plugin": "^5.3.1",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "storybook": "^7.0.0-beta.20",
     "style-loader": "^2.0.0",
     "ts-loader": "^9.4.2",
@@ -109,6 +109,10 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "browserslist": {
     "production": [
