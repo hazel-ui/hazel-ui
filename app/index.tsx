@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 import { App } from "./App.js";
 
-import "../src/package/static/styles.css";
+import "../src/package/static/styles.css"; // exported styles
 // import "../dist/styles.css";
 
 render(
