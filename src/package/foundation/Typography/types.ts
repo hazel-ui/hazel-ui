@@ -1,15 +1,22 @@
 export type TypographyType =
   | "display"
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "h6"
-  | "p"
-  | "caption"
+  | "headline"
+  | "title"
   | "label"
-  | "none";
+  | "body";
+
+interface TypeTokens {
+  lineHeight: `${number}px`;
+  size: `${number}px`;
+  tracking: `${number}px` | 0;
+  weight: number;
+}
+
+export interface TypeScale {
+  large: TypeTokens;
+  medium: TypeTokens;
+  small: TypeTokens;
+}
 
 export enum TextTag {
   display = "h1",

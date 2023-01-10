@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { applyTypographyVariant } from "./styles.js";
+import { applyTypographyVariant } from "./styles/styles.js";
 import { TextTag, TypographyType } from "./types.js";
 
 import type { Color } from "../Color/Color.js";
