@@ -57,11 +57,13 @@ export const Th = styled.th`
     /* make first column header sticky */
     left: 0;
     position: sticky;
+
+    box-shadow: 6px 0px 25px 0px ${Color.gray3};
   }
 
-  ${MediaQuery.maxWidth.mobile} {
+  ${MediaQuery.minWidth.tablet} {
     &:nth-of-type(1) {
-      box-shadow: 6px 0px 25px 0px ${Color.gray3};
+      box-shadow: none;
     }
   }
 `;
@@ -80,12 +82,15 @@ export const Td = styled.td`
     /* make first column body sticky */
     left: 0;
     position: sticky;
+
+    box-shadow: 6px 0px 25px 0px ${Color.gray3};
+    clip-path: inset(0px -30px 0px 0px);
   }
 
-  ${MediaQuery.maxWidth.mobile} {
+  ${MediaQuery.minWidth.tablet} {
     &:nth-of-type(1) {
-      box-shadow: 6px 0px 25px 0px ${Color.gray3};
-      clip-path: inset(0px -30px 0px 0px);
+      box-shadow: none;
+      clip-path: none;
     }
   }
 `;

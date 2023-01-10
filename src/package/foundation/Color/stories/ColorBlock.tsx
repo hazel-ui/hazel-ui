@@ -50,7 +50,7 @@ export function ColorBlock({
         changeText("Copied!", colorValue);
       }}
     >
-      <Typography variant="p">
+      <Typography variant="body">
         {`Color.${title}: ${cardColor}`}
         <br />
         {text}

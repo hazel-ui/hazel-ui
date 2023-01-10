@@ -20,11 +20,24 @@ export default meta;
 type Story = StoryObj<typeof Typography>;
 
 export const Display: Story = {
-  name: "Display",
-  args: { children: "The quick brown fox jumps over the lazy dog." },
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+    variant: "display",
+  },
 };
 
-export const Heading: Story = {
-  name: "Heading",
-  args: { ...Display.args },
+export const Headline: Story = {
+  args: { children: Display.args?.children, variant: "headline" },
+};
+
+export const Title: Story = {
+  args: { children: Display.args?.children, variant: "title" },
+};
+
+export const Label: Story = {
+  args: { children: Display.args?.children, variant: "label" },
+};
+
+export const Body: Story = {
+  args: { children: Display.args?.children, variant: "body" },
 };

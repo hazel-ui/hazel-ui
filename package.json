@@ -46,7 +46,6 @@
     "deploy": "gh-pages -d ./dist-storybook"
   },
   "dependencies": {
-    "@bbc/gel-foundations": "^6.0.0",
     "@radix-ui/react-tabs": "^0.0.13",
     "@styled-icons/boxicons-regular": "^10.23.0",
     "@styled-icons/boxicons-solid": "^10.37.0",

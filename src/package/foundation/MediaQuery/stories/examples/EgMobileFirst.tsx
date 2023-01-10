@@ -9,10 +9,6 @@ export function EgMobileFirst() {
 const Container = styled.div`
   color: red;
 
-  ${MediaQuery.minWidth.mobile} {
-    color: green;
-  }
-
   ${MediaQuery.minWidth.tablet} {
     color: blue;
   }

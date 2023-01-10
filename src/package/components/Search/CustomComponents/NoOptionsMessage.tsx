@@ -19,7 +19,7 @@ export function NoOptionsMessage<
   return (
     <>
       <Typography
-        variant="h5"
+        variant="label"
         sx={{ fontWeight: "bold", textAlign: "center", marginTop: "1rem" }}
       >
         {noOptionsTitle}

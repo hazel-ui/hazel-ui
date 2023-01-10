@@ -1,8 +1,9 @@
 import "../src/package/static/styles.css";
+import "../src/package/static/fonts.css";
 
 export const decorators = [
   (Story) => (
-    <div class="dark">
+    <div className="dark">
       <Story />
     </div>
   ),
