@@ -19,9 +19,8 @@ export interface BadgeProps {
 const StyledBadge = styled.span<BadgeProps>`
   font-family: ${Theme.font.sansSerif};
   font-weight: ${Theme.fontWeight.bold};
-  background-color: ${Color.gray7};
 
-  border-radius: 0.3rem;
+  border-radius: 0.4rem;
   text-align: center;
 
   &:hover {
@@ -34,8 +33,8 @@ const StyledBadge = styled.span<BadgeProps>`
 export function Badge({
   size = "s",
   children,
-  color,
-  backgroundColor,
+  color = Color.gray1,
+  backgroundColor = Color.gray11,
 }: BadgeProps) {
   return (
     <StyledBadge size={size} as="span" style={{ color, backgroundColor }}>

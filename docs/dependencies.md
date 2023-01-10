@@ -49,7 +49,6 @@ The below table explains why certain dependencies are required by the project in
 | prettier                          | Code formatter                        |
 | react                             | React core                            |
 | react-dom                         | React core                            |
-| renamer                           | ci to rename output [js to mjs][4]    |
 | style-loader                      | Support importing css files           |
 | tailwindcss                       | styling utility                       |
 | ts-loader                         | Required by webpack to parse jsx      |
@@ -69,4 +68,3 @@ The below table explains why certain dependencies are required by the project in
 [1]: https://www.npmjs.com/package/@storybook/react
 [2]: https://www.npmjs.com/package/react-scripts
 [3]: https://github.com/storybookjs/storybook/issues/14497#issuecomment-856284772
-[4]: https://github.com/microsoft/TypeScript/issues/18442#issuecomment-329387971

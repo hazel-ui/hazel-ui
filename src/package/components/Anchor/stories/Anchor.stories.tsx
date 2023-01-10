@@ -14,16 +14,10 @@ const meta: Meta<typeof Anchor> = {
   },
 
   argTypes: {
-    as: {
-      table: {
-        disable: true,
-      },
-    },
-    theme: {
-      table: {
-        disable: true,
-      },
-    },
+    color: { control: "color" },
+    backgroundColor: { control: "color" },
+    as: { table: { disable: true } },
+    theme: { table: { disable: true } },
   },
 };
 
@@ -40,7 +34,7 @@ export const Basic: Story = {
 export const CustomColors: Story = {
   args: {
     children: Basic.args?.children,
-    textColor: Color.orange11,
+    color: Color.orange11,
     backgroundColor: Color.orange4,
   },
 };

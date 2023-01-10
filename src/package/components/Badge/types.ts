@@ -1,1 +1,1 @@
-export type BadgeSizeType = "s" | "m" | "l" | "none";
+export type BadgeSizeType = "s" | "m" | "l";
