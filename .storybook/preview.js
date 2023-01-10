@@ -9,26 +9,9 @@ export const decorators = [
   ),
 ];
 
-// TODO: Add storybook docs link for these parameters. Some may be outdated.
 export const parameters = {
+  // https://storybook.js.org/docs/react/essentials/backgrounds#configuration
   backgrounds: {
     default: "dark",
   },
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-  previewTabs: {
-    canvas: {
-      title: "Canvas",
-      hidden: false,
-    },
-    docs: {
-      hidden: false,
-    },
-  },
-  viewMode: "docs",
 };
