@@ -1,7 +1,6 @@
 import RCSlider, { Handle, SliderProps as RCSliderProps } from "rc-slider";
 import { styled } from "styled-components";
 
-import { Box } from "../../foundation/Box/Box.js";
 import { Icon } from "../../foundation/Icon/Icon.js";
 
 export interface SliderProps extends RCSliderProps {
