@@ -4,14 +4,13 @@ The below table explains why certain dependencies are required by the project in
 
 ## Dependencies
 
-| Package name                   | Purpose                       |
-| ------------------------------ | ----------------------------- |
-| @bbc/gel-foundations           | Responsive text in Typography |
-| @radix-ui/react-tabs           | Base for Tabs                 |
-| @styled-icons/boxicons-regular | Base for Icon                 |
-| @styled-icons/boxicons-solid   | Base for Icon                 |
-| rc-slider                      | Base for Slider               |
-| react-select                   | Base for Search               |
+| Package name                   | Purpose         |
+| ------------------------------ | --------------- |
+| @radix-ui/react-tabs           | Base for Tabs   |
+| @styled-icons/boxicons-regular | Base for Icon   |
+| @styled-icons/boxicons-solid   | Base for Icon   |
+| rc-slider                      | Base for Slider |
+| react-select                   | Base for Search |
 
 []()
 
@@ -24,8 +23,6 @@ The below table explains why certain dependencies are required by the project in
 | @changesets/changelog-github      | Adds GitHub metadata to changelog     |
 | @changesets/cli                   | CLI for Changesets                    |
 | @radix-ui/colors                  | color palette for dark mode           |
-| @storybook/builder-webpack5       | Storybook webpack 5 support           |
-| @storybook/manager-webpack5       | [Chromatic webpack 5 support][4]      |
 | @types/jest                       | Required for `expect()` in tests      |
 | @types/node                       | Required by [@storybook/react][1]     |
 | @typescript-eslint/eslint-plugin  | typescript-eslint core                |
@@ -52,7 +49,6 @@ The below table explains why certain dependencies are required by the project in
 | prettier                          | Code formatter                        |
 | react                             | React core                            |
 | react-dom                         | React core                            |
-| renamer                           | ci to rename output [js to mjs][5]    |
 | style-loader                      | Support importing css files           |
 | tailwindcss                       | styling utility                       |
 | ts-loader                         | Required by webpack to parse jsx      |
@@ -72,5 +68,3 @@ The below table explains why certain dependencies are required by the project in
 [1]: https://www.npmjs.com/package/@storybook/react
 [2]: https://www.npmjs.com/package/react-scripts
 [3]: https://github.com/storybookjs/storybook/issues/14497#issuecomment-856284772
-[4]: https://gist.github.com/shilman/8856ea1786dcd247139b47b270912324#upgrading-from-62-webpack-5
-[5]: https://github.com/microsoft/TypeScript/issues/18442#issuecomment-329387971

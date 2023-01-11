@@ -1,29 +1,17 @@
 import "../src/package/static/styles.css";
+import "../src/package/static/fonts.css";
 
 export const decorators = [
   (Story) => (
-    <>
+    <div className="dark">
       <Story />
-    </>
+    </div>
   ),
 ];
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
+  // https://storybook.js.org/docs/react/essentials/backgrounds#configuration
+  backgrounds: {
+    default: "dark",
   },
-  previewTabs: {
-    canvas: {
-      title: "Canvas",
-      hidden: false,
-    },
-    docs: {
-      hidden: false,
-    },
-  },
-  viewMode: "docs",
 };

@@ -1,33 +1,21 @@
 import { ReactNode } from "react";
 import { styled } from "styled-components";
-import {
-  compose,
-  flexbox,
-  FlexboxProps,
-  layout,
-  LayoutProps,
-  space,
-  SpaceProps,
-  typography,
-  TypographyProps as SSTypographyProps,
-} from "styled-system";
 
 import { Color } from "../../foundation/Color/Color.js";
 import { Shadow } from "../../foundation/Shadow/Shadow.js";
 
-export interface CardProps
-  extends FlexboxProps,
-    LayoutProps,
-    SpaceProps,
-    SSTypographyProps {
+import type { SxProps } from "../../foundation/sx.js";
+
+export interface CardProps {
   children?: ReactNode;
+  // style
+  width?: string;
+  sx?: SxProps;
 }
 
-const styledSystemStyles = compose(flexbox, layout, space, typography);
-
-export function Card({ children, ...rest }: CardProps) {
+export function Card({ children, width, sx }: CardProps) {
   return (
-    <StyledDiv as={"div" as any} {...rest}>
+    <StyledDiv as="div" style={{ width, ...sx }}>
       {children}
     </StyledDiv>
   );
@@ -35,6 +23,7 @@ export function Card({ children, ...rest }: CardProps) {
 
 const StyledDiv = styled.div<CardProps>`
   float: left;
+  background-color: ${Color.gray8};
 
   margin: 1rem;
   padding: 1rem;
@@ -45,17 +34,15 @@ const StyledDiv = styled.div<CardProps>`
 
   &:hover {
     box-shadow: ${Shadow.m};
-    transform: translate3d(0, -3px, 0);
+    transform: scale(1.01);
   }
 
   &:active {
     border-color: ${Color.gray9};
     box-shadow: ${Shadow.s};
-    transform: translate3d(0, 0, 0);
+    transform: scale(1.01);
   }
 
   transition: background 150ms ease-out, border 150ms ease-out,
     transform 150ms ease-out;
-
-  ${styledSystemStyles}
 `;

@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { applyTypographyVariant } from "./styles.js";
+import { applyTypographyVariant } from "./styles/typography-styles.js";
 import { TextTag, TypographyType } from "./types.js";
 
 import type { Color } from "../Color/Color.js";
@@ -17,13 +17,12 @@ export interface TypographyProps {
 
 const StyledDiv = styled.div<TypographyProps>`
   ${(props: { variant?: TypographyType }) =>
-    // eslint-disable-next-line implicit-arrow-linebreak
     props.variant && applyTypographyVariant(props.variant)};
 `;
 
 export function Typography({
   color = "var(--gray12)",
-  variant = "p",
+  variant = "body",
   children,
   sx = {},
 }: TypographyProps) {
@@ -33,5 +32,3 @@ export function Typography({
     </StyledDiv>
   );
 }
-
-// https://www.bbc.co.uk/gel/guidelines/typography
