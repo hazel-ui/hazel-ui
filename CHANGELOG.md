@@ -1,5 +1,23 @@
 # hazel-ui
 
+## 0.2.5
+
+### Patch Changes
+
+- [#171](https://github.com/hazel-ui/hazel-ui/pull/171) [`a7959ae`](https://github.com/hazel-ui/hazel-ui/commit/a7959ae077a96431da309c5c5f2544e410279e21) Thanks [@cseas](https://github.com/cseas)! - feat: switch to Material Typography
+
+  - cleanup addons in storybook/main.js config
+  - add fonst css import to storybook
+  - switch to dark background in storybook
+  - remove old parameters from storybook preview.js
+  - remove @bbc/gel-foundations
+  - remove storybook addons except essentials
+  - improve Anchor color contrast
+  - remove maxWidth media queries
+  - remove minWidth mobile breakpoint
+  - add Inter var font
+  - add GitHub Primer fallback fonts
+
 ## 0.2.4
 
 ### Patch Changes
