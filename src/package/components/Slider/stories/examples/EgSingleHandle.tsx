@@ -1,19 +1,18 @@
 import { useState } from "react";
 
-import { Box } from "../../../../foundation/Box/Box.js";
 import { Slider } from "../../Slider.js";
 
 export function EgSingleHandle() {
   const [rangeVal, setRangeVal] = useState<number>(0);
   return (
-    <Box display="flex">
-      <Box marginRight="2rem">{rangeVal}</Box>
+    <div style={{ display: "flex" }}>
+      <div style={{ marginRight: "2rem" }}>{rangeVal}</div>
       <Slider
         onChange={(value: number) => setRangeVal(value)}
         min={10}
         max={20}
         width="200px"
       />
-    </Box>
+    </div>
   );
 }

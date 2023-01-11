@@ -22,9 +22,15 @@ export function Slider({
           handle={({ dragging, ...restProps }: any) => {
             return (
               <Handle dragging={dragging.toString()} {...restProps}>
-                <Box display="flex" justifyContent="center" marginTop="10px">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "10px",
+                  }}
+                >
                   <Icon.Circle width="8px" />
-                </Box>
+                </div>
               </Handle>
             );
           }}
