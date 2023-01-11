@@ -1,5 +1,11 @@
 # hazel-ui
 
+## 0.2.6
+
+### Patch Changes
+
+- [#173](https://github.com/hazel-ui/hazel-ui/pull/173) [`e17d8b1`](https://github.com/hazel-ui/hazel-ui/commit/e17d8b1ff3b8fc7ba55898368454bbf05588e9ef) Thanks [@cseas](https://github.com/cseas)! - fix: types metadata in package.json
+
 ## 0.2.5
 
 ### Patch Changes
