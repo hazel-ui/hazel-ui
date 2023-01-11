@@ -31,21 +31,21 @@ export function applyButtonVariant(
 
 export function applyButtonSize(size: ButtonSizeType) {
   switch (size) {
-    case "small":
+    case "s":
       return css`
         font-size: 13px;
         padding: 6px 12px;
         font-weight: ${Theme.fontWeight.light};
       `;
 
-    case "medium":
+    case "m":
       return css`
         font-size: 14px;
         padding: 11px 20px;
         font-weight: ${Theme.fontWeight.semiBold};
       `;
 
-    case "large":
+    case "l":
       return css`
         font-size: 16px;
         padding: 12px 24px;

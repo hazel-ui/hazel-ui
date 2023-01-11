@@ -1,3 +1,3 @@
-export type ButtonType = "primary" | "secondary" | "none";
+export type ButtonType = "primary" | "secondary";
 
-export type ButtonSizeType = "small" | "medium" | "large" | "none";
+export type ButtonSizeType = "s" | "m" | "l";

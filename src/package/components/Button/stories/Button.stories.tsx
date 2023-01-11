@@ -1,59 +1,46 @@
-import { Meta, Story } from "@storybook/react";
-
 import { Color } from "../../../foundation/Color/Color.js";
 import { Button } from "../Button.js";
 
-import type { ButtonProps } from "../Button.js";
+import type { Meta, StoryObj } from "@storybook/react";
 
-export default {
-  title: "Atoms/Button",
+const meta: Meta<typeof Button> = {
+  title: "Components/Button",
   component: Button,
-  argTypes: {
-    color: { control: "color" },
-    backgroundColor: { control: "color" },
-  },
+
   parameters: {
-    componentSubtitle:
-      "This component can be used to render a <button> or an <a> tag for clickable items and hyperlinks on a page.",
+    componentSubtitle: `This component can be used to render a <button> 
+      or an <a> tag for clickable items and hyperlinks on a page.`,
   },
-} as Meta;
 
-/**
- * TODO [2021-10-06]: Args spreading is not required in CSF 3.0: https://storybook.js.org/blog/component-story-format-3-0/
- * Wait for stable release: https://storybook.js.org/docs/react/api/csf
- */
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  children: "Button",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  variant: "secondary",
-  children: "Click me",
-  onClick: () => {
-    alert("Hey, good looking!");
+  argTypes: {
+    variantColor: { control: "color" },
   },
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  variant: "secondary",
-  size: "small",
-  children: "Follow",
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
+  args: {
+    children: "Button",
+    variant: "primary",
+    size: "m",
+    onClick: () => alert("Hey, good looking!"),
+  },
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  children: "Button",
+export const Secondary: Story = {
+  args: {
+    children: "Follow",
+    variant: "secondary",
+    size: "s",
+  },
 };
 
-export const Custom = Template.bind({});
-Custom.args = {
-  variantColor: Color.gray12,
-  children: "Awesome",
-  size: "large",
+export const CustomColors: Story = {
+  args: {
+    children: "Discord",
+    variantColor: Color.purple9,
+    size: "l",
+  },
 };
