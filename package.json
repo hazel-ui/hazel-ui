@@ -5,14 +5,12 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      }
+      "import": "./dist/index.js"
     },
     "./styles.css": "./dist/styles.css",
     "./fonts.css": "./dist/fonts.css"
   },
+  "types": "./dist/index.d.ts",
   "files": [
     "dist/"
   ],
