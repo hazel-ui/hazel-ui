@@ -36,6 +36,12 @@ Just add the following line to your project's root level component:
 import "hazel-ui/styles.css";
 ```
 
+The Typography in the project uses the [Inter][1] variable font (`font-family: "Inter var"`). You can set it up yourself or use the following import:
+
+```tsx
+import "hazel-ui/fonts.css";
+```
+
 ## Alternatives
 
 We'd be happy to incorporate any new functionality that you feel might not be possible with Hazel UI. But if you're looking for a completely different flavour of UI then you might want to check out these great alternatives:
@@ -51,3 +57,5 @@ We'd be happy to incorporate any new functionality that you feel might not be po
 - [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) _by Adobe_
 - [Reakit](https://github.com/reakit/reakit)
 - [Storybook](https://github.com/storybookjs/design-system)
+
+[1]: https://github.com/rsms/inter

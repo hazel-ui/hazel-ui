@@ -10,7 +10,8 @@
         "default": "./dist/index.js"
       }
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./fonts.css": "./dist/fonts.css"
   },
   "files": [
     "dist/"
