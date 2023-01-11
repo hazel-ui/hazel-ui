@@ -1,7 +1,6 @@
 import RCSlider, { Handle, SliderProps as RCSliderProps } from "rc-slider";
 import { styled } from "styled-components";
 
-import { Box } from "../../foundation/Box/Box.js";
 import { Icon } from "../../foundation/Icon/Icon.js";
 
 export interface SliderProps extends RCSliderProps {
@@ -22,9 +21,15 @@ export function Slider({
           handle={({ dragging, ...restProps }: any) => {
             return (
               <Handle dragging={dragging.toString()} {...restProps}>
-                <Box display="flex" justifyContent="center" marginTop="10px">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "10px",
+                  }}
+                >
                   <Icon.Circle width="8px" />
-                </Box>
+                </div>
               </Handle>
             );
           }}

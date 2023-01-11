@@ -1,7 +1,6 @@
 import { components } from "react-select";
 import { styled } from "styled-components";
 
-import { Box } from "../../../foundation/Box/Box.js";
 import { Color } from "../../../foundation/Color/Color.js";
 import { Icon } from "../../../foundation/Icon/Icon.js";
 import { Theme } from "../../../foundation/Theme/Theme.js";
@@ -13,14 +12,14 @@ export function Control({
 }: any) {
   return (
     <components.Control {...props}>
-      <Box margin="0rem 0.1rem">
+      <div style={{ margin: "0 0.1rem" }}>
         <components.DropdownIndicator {...props}>
           <Icon.Search
             size="1.3rem"
             color={invalidSearch ? Color.red7 : "none"}
           />
         </components.DropdownIndicator>
-      </Box>
+      </div>
 
       <StyledIndicatorSeparator {...props} />
 

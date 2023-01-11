@@ -2,7 +2,6 @@ import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
 
 import { Color } from "../../../foundation/Color/Color";
 import { Icon } from "../../../foundation/Icon/Icon";
-import { Box } from "../../../foundation/Box/Box";
 import { Theme } from "../../../foundation/Theme/Theme";
 import { Tooltip as TooltipComponent } from "../Tooltip";
 
@@ -42,7 +41,7 @@ export const Template = (args) => <TooltipComponent {...args} />;
 The tooltip text can be placed in 4 ways.
 
 <Canvas>
-  <Box display="flex" justifyContent="space-between" margin="2rem">
+  <div style={{ display: "flex", justifyContent: "center", margin: "2rem" }}>
     <TooltipComponent content="Hello from the other side!" direction="top">
       Top
     </TooltipComponent>
@@ -55,7 +54,7 @@ The tooltip text can be placed in 4 ways.
     <TooltipComponent content="Hello from the other side!" direction="left">
       Left
     </TooltipComponent>
-  </Box>
+  </div>
 </Canvas>
 
 ### Example

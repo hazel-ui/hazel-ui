@@ -32,9 +32,6 @@ export type { TooltipProps } from "./components/Tooltip/Tooltip.js";
  * Foundation components
  *********************** */
 
-export { Box } from "./foundation/Box/Box.js";
-export type { BoxProps } from "./foundation/Box/Box.js";
-
 export { Color } from "./foundation/Color/Color.js";
 export { Icon } from "./foundation/Icon/Icon.js";
 export { MediaQuery } from "./foundation/MediaQuery/MediaQuery.js";
