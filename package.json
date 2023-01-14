@@ -34,16 +34,14 @@
     "build": "webpack --config webpack.prod.mjs",
     "start": "npx http-server ./build -o",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build:compile": "rm -rf dist && mkdir dist && cd src/package && tsc",
+    "build:compile": "rollup --config rollup.config.ts --configPlugin typescript",
     "build:static": "copyfiles -u 3 \"src/package/static/**/*\" dist",
-    "build:package:dev": "npm run build:compile && npm run build:static",
-    "build:package": "npm run build:compile",
+    "build:package": "rm -rf dist && npm run build:compile",
     "postbuild:package": "npm run build:static",
     "change:add": "changeset add",
     "prepublishOnly": "npm run build:package",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d ./dist-storybook",
-    "build:lib": "rollup --config rollup.config.ts --configPlugin typescript"
+    "deploy": "gh-pages -d ./dist-storybook"
   },
   "dependencies": {
     "@radix-ui/react-tabs": "^0.0.13",
