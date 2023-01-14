@@ -1,9 +1,7 @@
-import { Color } from "../../../foundation/Color/Color.js";
 import { Typography } from "../../../foundation/Typography/Typography.js";
 import { Card } from "../Card.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
