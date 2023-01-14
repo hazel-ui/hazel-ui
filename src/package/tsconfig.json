@@ -24,9 +24,8 @@
     // Linter Checks
     "noFallthroughCasesInSwitch": true, // disable fallthrough of cases in 'switch'
     "noImplicitReturns": true, // make sure functions return a value
-    // "noPropertyAccessFromIndexSignature": true, // consistency for accessing object fields
-    // "noUnusedLocals": true, // no unused local variables
-    // "noUnusedParameters": true, // no unused function parameters
+    "noUnusedLocals": true, // no unused local variables
+    "noUnusedParameters": true, // no unused function parameters
 
     // Advanced
     "allowUnreachableCode": false, // raise errors for unreachable code

@@ -8,7 +8,7 @@ import type { CSSProperties } from "react";
 
 export const placeholderStyles: StylesConfigFunction<
   PlaceholderProps<{}, boolean>
-> = (base: CSSProperties, state: any) => ({
+> = (base: CSSProperties, _state: any) => ({
   ...base,
   fontFamily: Theme.font.sansSerif,
 });

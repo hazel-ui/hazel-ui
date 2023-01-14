@@ -5,7 +5,15 @@ import path from "path";
 import { defineConfig } from "rollup";
 import { fileURLToPath } from "url";
 
+import pkg from "./package.json" assert { type: "json" };
+
 export default defineConfig({
+  // https://rollupjs.org/guide/en/#importing-packagejson
+  external: [
+    ...Object.keys(pkg.dependencies),
+    ...Object.keys(pkg.peerDependencies),
+    "react/jsx-runtime",
+  ],
   input: Object.fromEntries(
     glob.sync("src/package/**/!(*.stories|*.test).@(ts|tsx)").map((file) => [
       // This remove `src/package` as well as the file extension from each file
@@ -22,7 +30,6 @@ export default defineConfig({
 
   output: {
     dir: "dist",
-    format: "es",
     generatedCode: "es2015",
     hoistTransitiveImports: false, // don't add additional imports to entry files
   },

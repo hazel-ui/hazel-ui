@@ -62,7 +62,7 @@ The below table explains why certain dependencies are required by the project in
 
 | Name | Version  |
 | ---- | -------- |
-| node | v18.12.1 |
+| node | v18.13.0 |
 | npm  | 9.2.0    |
 
 [1]: https://www.npmjs.com/package/@storybook/react
