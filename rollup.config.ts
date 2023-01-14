@@ -20,7 +20,6 @@ export default defineConfig({
     ])
   ),
 
-  // TODO: Consider terser for minifying output to reduce package size
   output: {
     dir: "dist",
     format: "es",
