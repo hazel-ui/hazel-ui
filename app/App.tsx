@@ -1,5 +1,6 @@
-// import { Typography, Color } from "../dist";
-import { Typography, Color } from "../src/package/index.js";
+import { Typography } from "../dist/foundation/Typography/Typography.js";
+import { Color } from "../dist/foundation/Color/Color.js";
+// import { Typography, Color } from "../src/package/index.js";
 
 export function App(): JSX.Element {
   return (
