@@ -27,5 +27,8 @@ export default defineConfig({
     hoistTransitiveImports: false, // don't add additional imports to entry files
   },
 
-  plugins: [typescript({ tsconfig: "src/package/tsconfig.json" }), terser()],
+  plugins: [
+    typescript({ tsconfig: "src/package/tsconfig.json" }),
+    terser({ ecma: 2020 }), // https://github.com/terser/terser#compress-options
+  ],
 });
