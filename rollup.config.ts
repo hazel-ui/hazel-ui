@@ -1,3 +1,4 @@
+import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import glob from "glob";
 import path from "path";
@@ -27,5 +28,5 @@ export default defineConfig({
     hoistTransitiveImports: false, // don't add additional imports to entry files
   },
 
-  plugins: [typescript({ tsconfig: "src/package/tsconfig.json" })],
+  plugins: [typescript({ tsconfig: "src/package/tsconfig.json" }), terser()],
 });
