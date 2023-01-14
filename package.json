@@ -11,6 +11,9 @@
     "./fonts.css": "./dist/fonts.css"
   },
   "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist/"
   ],
