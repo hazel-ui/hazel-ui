@@ -14,6 +14,7 @@ export default defineConfig({
     ...Object.keys(pkg.peerDependencies),
     "react/jsx-runtime",
   ],
+  // https://rollupjs.org/guide/en/#input
   input: Object.fromEntries(
     glob.sync("src/package/**/!(*.stories|*.test).@(ts|tsx)").map((file) => [
       // This remove `src/package` as well as the file extension from each file
