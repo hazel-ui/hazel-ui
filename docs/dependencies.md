@@ -22,7 +22,8 @@ The below table explains why certain dependencies are required by the project in
 | @babel/plugin-transform-react-jsx | Required by Storybook to parse jsx    |
 | @changesets/changelog-github      | Adds GitHub metadata to changelog     |
 | @changesets/cli                   | CLI for Changesets                    |
-| @radix-ui/colors                  | color palette for dark mode           |
+| @rollup/plugin-terser             | Minify the npm package                |
+| @rollup/plugin-typescript         | TypeScript support for rollup         |
 | @types/jest                       | Required for `expect()` in tests      |
 | @types/node                       | Required by [@storybook/react][1]     |
 | @typescript-eslint/eslint-plugin  | typescript-eslint core                |
@@ -49,6 +50,7 @@ The below table explains why certain dependencies are required by the project in
 | prettier                          | Code formatter                        |
 | react                             | React core                            |
 | react-dom                         | React core                            |
+| rollup                            | npm package bundler                   |
 | style-loader                      | Support importing css files           |
 | tailwindcss                       | styling utility                       |
 | ts-loader                         | Required by webpack to parse jsx      |
