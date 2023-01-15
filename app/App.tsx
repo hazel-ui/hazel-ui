@@ -1,4 +1,4 @@
-// import { Typography, Color } from "../dist";
+// import { Typography, Color } from "../dist/index.js";
 import { Typography, Color } from "../src/package/index.js";
 
 export function App(): JSX.Element {
