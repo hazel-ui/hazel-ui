@@ -1,5 +1,17 @@
 # hazel-ui
 
+## 0.2.7
+
+### Patch Changes
+
+- [#178](https://github.com/hazel-ui/hazel-ui/pull/178) [`eab2edd`](https://github.com/hazel-ui/hazel-ui/commit/eab2edd844d033472ddd0d9c684594ea9b50a164) Thanks [@cseas](https://github.com/cseas)! - fix: tree shaking
+
+  - switch to rollup for bundling the package
+  - added sideEffects package.json metadata to enable tree shaking
+  - added terser for minifying bundle
+
+- [#175](https://github.com/hazel-ui/hazel-ui/pull/175) [`7d411e9`](https://github.com/hazel-ui/hazel-ui/commit/7d411e9386c7bd33743b115111971cffe30519f2) Thanks [@cseas](https://github.com/cseas)! - chore: remove Box component
+
 ## 0.2.6
 
 ### Patch Changes
