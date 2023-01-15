@@ -1,4 +1,4 @@
-import { baseConfig } from "../webpack.base.mjs";
+import { baseConfig } from "../app/webpack.base.mjs";
 
 export default {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
