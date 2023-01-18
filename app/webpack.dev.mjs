@@ -1,6 +1,3 @@
-// https://github.com/webpack/webpack/issues/1403#issuecomment-799346606
-import HtmlWebpackPlugin from "html-webpack-plugin";
-
 import { baseConfig } from "./webpack.base.mjs";
 
 export default {
@@ -16,11 +13,5 @@ export default {
   },
   target: "web", // https://stackoverflow.com/a/65928346/7435656
   devtool: "inline-source-map", // https://webpack.js.org/guides/typescript/#source-maps
-  entry: "./app/index.tsx",
   mode: "development", // https://webpack.js.org/guides/development/
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./app/index.html",
-    }),
-  ],
 };

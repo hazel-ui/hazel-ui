@@ -1,27 +1,38 @@
-import { styled } from "styled-components";
-
 import { Color } from "../../foundation/Color/Color.js";
+import { anchor } from "./Anchor.css.js";
 
 import type { HTMLProps } from "react";
 
-export interface AnchorProps extends HTMLProps<HTMLAnchorElement> {
+export interface AnchorProps
+  extends Omit<HTMLProps<HTMLAnchorElement>, "className" | "style"> {
   color?: string;
   backgroundColor?: string;
 }
 
-export const Anchor = styled.a<AnchorProps>`
-  color: ${(props) => props.color || Color.blue11};
-  text-decoration: none;
+export function Anchor({
+  color = Color.blue11,
+  children,
+  ...rest
+}: AnchorProps) {
+  return (
+    <a className={anchor} style={{ color }} {...rest}>
+      {children}
+    </a>
+  );
+}
 
-  ${(props) =>
-    props.backgroundColor && `background-color: ${props.backgroundColor};`}
+// export const Anchor = styled.a<AnchorProps>`
+//   text-decoration: none;
 
-  &:visited {
-    color: ${(props) => props.color || Color.purple11};
-  }
+//   ${(props) =>
+//     props.backgroundColor && `background-color: ${props.backgroundColor};`}
 
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-`;
+//   &:visited {
+//     color: ${(props) => props.color || Color.purple11};
+//   }
+
+//   &:hover {
+//     cursor: pointer;
+//     text-decoration: underline;
+//   }
+// `;
