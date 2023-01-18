@@ -16,8 +16,6 @@ const meta: Meta<typeof Anchor> = {
   argTypes: {
     color: { control: "color" },
     backgroundColor: { control: "color" },
-    as: { table: { disable: true } },
-    theme: { table: { disable: true } },
   },
 };
 
