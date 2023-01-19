@@ -7,7 +7,7 @@ export function App(): JSX.Element {
       <Typography color={Color.blue10} sx={{ marginTop: "1rem" }}>
         Hello
       </Typography>
-      <Anchor href="">World</Anchor>
+      <Anchor href="https://youtu.be/dQw4w9WgXcQ">World</Anchor>
     </>
   );
 }
