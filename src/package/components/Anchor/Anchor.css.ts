@@ -1,16 +1,15 @@
 import { style } from "@vanilla-extract/css";
+import { borderB2, transitionAll } from "../../foundation/tailwind.css.js";
 
-export const anchor = style({
-  textDecoration: "none",
+export const anchor = style([
+  borderB2,
+  transitionAll,
+  {
+    textDecoration: "none",
 
-  ":hover": {
-    cursor: "pointer",
-    borderBottomStyle: "solid",
-    // make this a util
-    borderBottomWidth: "2px",
-    // make this a util
-    transitionProperty: "border-bottom-width",
-    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
-    transitionDuration: "150ms",
+    ":hover": {
+      cursor: "pointer",
+      borderBottomStyle: "solid",
+    },
   },
-});
+]);
