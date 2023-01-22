@@ -1,5 +1,6 @@
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
+import { vanillaExtractPlugin } from "@vanilla-extract/rollup-plugin";
 import glob from "glob";
 import path from "path";
 import { defineConfig } from "rollup";
@@ -37,6 +38,7 @@ export default defineConfig({
 
   plugins: [
     typescript({ tsconfig: "src/package/tsconfig.json" }),
+    vanillaExtractPlugin({ identifiers: "short" }),
     terser({ ecma: 2020 }), // https://github.com/terser/terser#compress-options
   ],
 });

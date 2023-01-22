@@ -4,13 +4,17 @@ The below table explains why certain dependencies are required by the project in
 
 ## Dependencies
 
-| Package name                   | Purpose         |
-| ------------------------------ | --------------- |
-| @radix-ui/react-tabs           | Base for Tabs   |
-| @styled-icons/boxicons-regular | Base for Icon   |
-| @styled-icons/boxicons-solid   | Base for Icon   |
-| rc-slider                      | Base for Slider |
-| react-select                   | Base for Search |
+| Package name                   | Purpose          |
+| ------------------------------ | ---------------- |
+| @radix-ui/react-tabs           | Base for Tabs    |
+| @styled-icons/boxicons-regular | Base for Icon    |
+| @styled-icons/boxicons-solid   | Base for Icon    |
+| rc-slider                      | Base for Slider  |
+| react-select                   | Base for Search  |
+| react-table                    | Base for Table   |
+| react-toastify                 | Base for Toast   |
+| styled-components              | css-in-js styles |
+| styled-system                  | css-in-js props  |
 
 []()
 
@@ -24,11 +28,16 @@ The below table explains why certain dependencies are required by the project in
 | @changesets/cli                   | CLI for Changesets                    |
 | @rollup/plugin-terser             | Minify the npm package                |
 | @rollup/plugin-typescript         | TypeScript support for rollup         |
+| @storybook/addon-essentials       | storybook official addons             |
+| @storybook/react                  | storybook core                        |
+| @storybook/react-webpack5         | storybook webpack5 support            |
 | @types/jest                       | Required for `expect()` in tests      |
 | @types/node                       | Required by [@storybook/react][1]     |
 | @typescript-eslint/eslint-plugin  | typescript-eslint core                |
 | @typescript-eslint/parser         | typescript-eslint parser              |
-| autoprefixer                      | required by tailwind                  |
+| @vanilla-extract/css              | static styles                         |
+| @vanilla-extract/rollup-plugin    | required by vanilla-extract           |
+| @vanilla-extract/webpack-plugin   | required by vanilla-extract           |
 | babel-loader                      | Required by [@storybook/react][1]     |
 | copyfiles                         | Copy static files to `dist`           |
 | css-loader                        | Support importing css files           |
@@ -45,6 +54,7 @@ The below table explains why certain dependencies are required by the project in
 | eslint-plugin-unicorn             | lint Todo expiration dates            |
 | html-webpack-plugin               | Provide html template to webpack      |
 | jest                              | Unit & integration tests              |
+| mini-css-extract-plugin           | vanilla-extract webpack integration   |
 | postcss                           | integrates tailwind with webpack      |
 | postcss-loader                    | integrates postcss with webpack       |
 | prettier                          | Code formatter                        |
