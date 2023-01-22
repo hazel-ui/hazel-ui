@@ -1,5 +1,14 @@
 # hazel-ui
 
+## 0.2.8
+
+### Patch Changes
+
+- [#179](https://github.com/hazel-ui/hazel-ui/pull/179) [`6f9313e`](https://github.com/hazel-ui/hazel-ui/commit/6f9313e5244f70438404c24238365f0a8b0b4321) Thanks [@cseas](https://github.com/cseas)! - feat: rewrite anchor to use static styles
+
+  - move webpack configs to app directory
+  - modify storybook webpack config to support vanilla extract
+
 ## 0.2.7
 
 ### Patch Changes
