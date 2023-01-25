@@ -6,6 +6,7 @@ export const anchor = style([
   transitionAll,
   {
     textDecoration: "none",
+    borderBottomStyle: "none",
 
     ":hover": {
       cursor: "pointer",
