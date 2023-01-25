@@ -1,5 +1,11 @@
 # hazel-ui
 
+## 0.2.9
+
+### Patch Changes
+
+- [#181](https://github.com/hazel-ui/hazel-ui/pull/181) [`a8c2499`](https://github.com/hazel-ui/hazel-ui/commit/a8c24994c237a78a7fed3301b45f4cf2e314398c) Thanks [@cseas](https://github.com/cseas)! - fix: anchor default border style
+
 ## 0.2.8
 
 ### Patch Changes
