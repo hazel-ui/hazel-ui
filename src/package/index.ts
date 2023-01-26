@@ -10,6 +10,9 @@ export type { ButtonProps } from "./components/Button/Button.js";
 export { Card } from "./components/Card/Card.js";
 export type { CardProps } from "./components/Card/Card.js";
 
+export { Divider } from "./components/Divider/Divider.js";
+export type { DividerProps } from "./components/Divider/Divider.js";
+
 export { Search } from "./components/Search/Search.js";
 export type { SearchProps } from "./components/Search/Search.js";
 export type {
