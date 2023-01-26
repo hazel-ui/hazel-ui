@@ -1,5 +1,15 @@
 # hazel-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- [#183](https://github.com/hazel-ui/hazel-ui/pull/183) [`0bbdcfc`](https://github.com/hazel-ui/hazel-ui/commit/0bbdcfcde65b39b95dea8135dd5c6630b011e889) Thanks [@cseas](https://github.com/cseas)! - feat: add Divider component and story
+
+### Patch Changes
+
+- [#183](https://github.com/hazel-ui/hazel-ui/pull/183) [`0bbdcfc`](https://github.com/hazel-ui/hazel-ui/commit/0bbdcfcde65b39b95dea8135dd5c6630b011e889) Thanks [@cseas](https://github.com/cseas)! - feat: add display to sx prop
+
 ## 0.2.9
 
 ### Patch Changes
