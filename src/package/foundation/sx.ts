@@ -1,4 +1,5 @@
 export interface SxProps {
+  display?: "inline";
   fontWeight?: "bold";
 
   /**
