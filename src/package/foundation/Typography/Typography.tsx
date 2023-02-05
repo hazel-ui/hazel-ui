@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { applyTypographyVariant } from "./styles/typography-styles.js";
+import { variants } from "./Typography.css.js";
 import { TextTag, TypographyType } from "./types.js";
 
 import type { Color } from "../Color/Color.js";
@@ -15,10 +15,7 @@ export interface TypographyProps {
   sx?: SxProps;
 }
 
-const StyledDiv = styled.div<TypographyProps>`
-  ${(props: { variant?: TypographyType }) =>
-    props.variant && applyTypographyVariant(props.variant)};
-`;
+const StyledDiv = styled.div<TypographyProps>``;
 
 export function Typography({
   color = "var(--gray12)",
@@ -27,7 +24,11 @@ export function Typography({
   sx = {},
 }: TypographyProps) {
   return (
-    <StyledDiv variant={variant} as={TextTag[variant]} style={{ color, ...sx }}>
+    <StyledDiv
+      className={variants[variant]}
+      as={TextTag[variant]}
+      style={{ color, ...sx }}
+    >
       {children}
     </StyledDiv>
   );

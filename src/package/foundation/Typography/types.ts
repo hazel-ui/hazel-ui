@@ -5,19 +5,6 @@ export type TypographyType =
   | "label"
   | "body";
 
-interface TypeTokens {
-  lineHeight: `${number}rem`;
-  size: `${number}rem`;
-  letterSpacing: `${number}rem` | 0;
-  weight: number;
-}
-
-export interface TypeScale {
-  large: TypeTokens;
-  medium: TypeTokens;
-  small: TypeTokens;
-}
-
 export enum TextTag {
   display = "h1",
   headline = "h2",
