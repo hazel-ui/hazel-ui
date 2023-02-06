@@ -1,5 +1,17 @@
 # hazel-ui
 
+## 0.4.0
+
+### Minor Changes
+
+- [#186](https://github.com/hazel-ui/hazel-ui/pull/186) [`92a1288`](https://github.com/hazel-ui/hazel-ui/commit/92a128856de0b2dc26d6d7069b58fd240e5c7f70) Thanks [@cseas](https://github.com/cseas)! - feat: static css & 'as' prop for Typography
+
+  - remove `@media` from MediaQuery
+  - change desktop breakpoint to 840
+  - new MediaQuery story with Vanilla Extract example
+  - static styles for Typography with Vanilla Extract
+  - support for `as` prop in Typography
+
 ## 0.3.0
 
 ### Minor Changes
