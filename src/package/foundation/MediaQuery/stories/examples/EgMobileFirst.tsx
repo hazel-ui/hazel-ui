@@ -1,19 +1,9 @@
-import { styled } from "styled-components";
-
-import { MediaQuery } from "../../MediaQuery.js";
+import { className } from "./EgMobileFirst.css.js";
 
 export function EgMobileFirst() {
-  return <Container>Lorem ipsum</Container>;
+  return (
+    <p className={className}>
+      Resize your screen to change the color of this text.
+    </p>
+  );
 }
-
-const Container = styled.div`
-  color: red;
-
-  ${MediaQuery.minWidth.tablet} {
-    color: blue;
-  }
-
-  ${MediaQuery.minWidth.desktop} {
-    color: yellow;
-  }
-`;

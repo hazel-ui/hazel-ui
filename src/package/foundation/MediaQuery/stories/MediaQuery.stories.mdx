@@ -1,0 +1,61 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import { EgMobileFirst } from "./examples/EgMobileFirst";
+
+<Meta title="Foundation/MediaQuery" />
+
+# MediaQuery
+
+A helper utility for writing uniform media queries. This can
+be used to write media queries for a "mobile-first" approach.  
+The breakpoints have been taken from [Material M3][1].
+
+## Breakpoints
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Viewport Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tablet</td>
+      <td>600px to 839px</td>
+    </tr>
+    <tr>
+      <td>desktop</td>
+      <td>Starting from 840px</td>
+    </tr>
+  </tbody>
+</table>
+
+## Example
+
+[]()
+
+```tsx
+import { style } from "@vanilla-extract/css";
+import { MediaQuery } from "hazel-ui";
+
+export const className = style({
+  color: "red",
+
+  "@media": {
+    [MediaQuery.minWidth.tablet]: {
+      color: "blue",
+    },
+
+    [MediaQuery.minWidth.desktop]: {
+      color: "green",
+    },
+  },
+});
+```
+
+<Canvas withSource="none">
+  <EgMobileFirst />
+</Canvas>
+
+[1]: https://m3.material.io/foundations/layout/applying-layout/window-size-classes
