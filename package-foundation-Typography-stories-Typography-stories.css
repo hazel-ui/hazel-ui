@@ -1,0 +1,101 @@
+.zbkr780 {
+  font-family: 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 
+      'Segoe UI Emoji';
+}
+.zbkr781 {
+  line-height: 2.75rem;
+  font-size: 2.25rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.zbkr782 {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.zbkr783 {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.007143rem;
+  font-weight: 500;
+}
+.zbkr784 {
+  line-height: 1rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.045454rem;
+  font-weight: 500;
+}
+.zbkr785 {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.033333rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 600px) {
+  .zbkr781 {
+    line-height: 3.25rem;
+    font-size: 2.8125rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .zbkr782 {
+    line-height: 2.25rem;
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .zbkr783 {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.009375rem;
+    font-weight: 500;
+  }
+  .zbkr784 {
+    line-height: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.041667rem;
+    font-weight: 500;
+  }
+  .zbkr785 {
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.017857rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 840px) {
+  .zbkr781 {
+    line-height: 4rem;
+    font-size: 3.5625rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .zbkr782 {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .zbkr783 {
+    line-height: 1.75rem;
+    font-size: 1.375rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .zbkr784 {
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.007143rem;
+    font-weight: 500;
+  }
+  .zbkr785 {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.03125rem;
+    font-weight: 400;
+  }
+}
+
+/*# sourceMappingURL=package-foundation-Typography-stories-Typography-stories.css.map*/

@@ -1,0 +1,15 @@
+.m9nngp0 {
+  color: red;
+}
+@media screen and (min-width: 600px) {
+  .m9nngp0 {
+    color: blue;
+  }
+}
+@media screen and (min-width: 840px) {
+  .m9nngp0 {
+    color: green;
+  }
+}
+
+/*# sourceMappingURL=package-foundation-MediaQuery-stories-MediaQuery-stories-mdx.css.map*/
