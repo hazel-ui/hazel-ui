@@ -8,7 +8,11 @@
       "import": "./dist/index.js"
     },
     "./styles.css": "./dist/styles.css",
-    "./fonts.css": "./dist/fonts.css"
+    "./fonts.css": "./dist/fonts.css",
+    "./*": {
+      "import": "./dist/exports/*.js",
+      "types": "./dist/exports/*.d.ts"
+    }
   },
   "types": "./dist/index.d.ts",
   "sideEffects": [
