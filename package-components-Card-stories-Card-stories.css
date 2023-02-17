@@ -28,9 +28,9 @@
   font-weight: 500;
 }
 .zbkr785 {
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.033333rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.017857rem;
   font-weight: 400;
 }
 @media screen and (min-width: 600px) {
@@ -58,17 +58,11 @@
     letter-spacing: 0.041667rem;
     font-weight: 500;
   }
-  .zbkr785 {
-    line-height: 1.25rem;
-    font-size: 0.875rem;
-    letter-spacing: 0.017857rem;
-    font-weight: 400;
-  }
 }
 @media screen and (min-width: 840px) {
   .zbkr781 {
-    line-height: 4rem;
-    font-size: 3.5625rem;
+    line-height: 3.8rem;
+    font-size: 3rem;
     letter-spacing: 0;
     font-weight: 400;
   }
