@@ -118,9 +118,9 @@ export const variants = styleVariants({
   body: [
     base,
     {
-      lineHeight: "1.25rem" /** 20px */,
-      fontSize: "0.875rem" /** 14px */,
-      letterSpacing: "0.017857rem" /** tracking: 0.25px */,
+      lineHeight: "1.25rem" /** 20px */, // modified
+      fontSize: "0.875rem" /** 14px */, // modified
+      letterSpacing: "0.017857rem" /** tracking: 0.25px */, // modified
       fontWeight: 400,
 
       "@media": {
