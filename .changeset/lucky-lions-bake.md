@@ -11,3 +11,4 @@ feat: add support for deep importing components individually
 - add individual exports for each component
 - add Space tokens based on Tailwind
 - changed Typography tokens based on feedback
+- fix table render warning in MediaQuery story
