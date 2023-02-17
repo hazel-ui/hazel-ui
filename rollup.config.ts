@@ -39,6 +39,6 @@ export default defineConfig({
   plugins: [
     typescript({ tsconfig: "src/package/tsconfig.json" }),
     vanillaExtractPlugin({ identifiers: "short" }),
-    terser({ ecma: 2020 }), // https://github.com/terser/terser#compress-options
+    terser({ ecma: 2020, format: { beautify: true, indent_level: 1 } }), // https://github.com/terser/terser#compress-options
   ],
 });

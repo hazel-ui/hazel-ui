@@ -135,6 +135,12 @@ module.exports = {
      *****************************************************************/
 
     /**
+     * Don't allow importing packages from node_modules that are not a direct dependency
+     * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
+     */
+    "import/no-extraneous-dependencies": "error",
+
+    /**
      * Group imports by type for better readability: external, absolute, relative
      * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
      */
@@ -232,17 +238,6 @@ module.exports = {
          * @see https://storybook.js.org/docs/react/api/csf#default-export
          */
         "import/no-default-export": "off",
-        /**
-         * Allow importing devDependencies in stories.
-         * @see https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/imports.js
-         */
-        "import/no-extraneous-dependencies": [
-          "error",
-          {
-            devDependencies: true,
-            optionalDependencies: false,
-          },
-        ],
       },
     },
   ],

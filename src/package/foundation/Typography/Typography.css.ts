@@ -7,7 +7,7 @@ const base = style({
 });
 
 /**
- * Variants are taken from Material M3
+ * Variants are inspired by Material M3
  * @see https://m3.material.io/styles/typography/type-scale-tokens
  */
 export const variants = styleVariants({
@@ -28,8 +28,8 @@ export const variants = styleVariants({
         },
 
         [MediaQuery.minWidth.desktop]: {
-          lineHeight: "4rem" /** 64px */,
-          fontSize: "3.5625rem" /** 57px */,
+          lineHeight: "3.8rem" /** 61px */, // modified
+          fontSize: "3rem" /** 48px */, // modified
           letterSpacing: 0 /* letterSpacing = (tracking / size in px) */,
           fontWeight: 400,
         },
@@ -118,19 +118,12 @@ export const variants = styleVariants({
   body: [
     base,
     {
-      lineHeight: "1rem" /** 16px */,
-      fontSize: "0.75rem" /** 12px */,
-      letterSpacing: "0.033333rem" /** tracking: 0.4px */,
+      lineHeight: "1.25rem" /** 20px */, // modified
+      fontSize: "0.875rem" /** 14px */, // modified
+      letterSpacing: "0.017857rem" /** tracking: 0.25px */, // modified
       fontWeight: 400,
 
       "@media": {
-        [MediaQuery.minWidth.tablet]: {
-          lineHeight: "1.25rem" /** 20px */,
-          fontSize: "0.875rem" /** 14px */,
-          letterSpacing: "0.017857rem" /** tracking: 0.25px */,
-          fontWeight: 400,
-        },
-
         [MediaQuery.minWidth.desktop]: {
           lineHeight: "1.5rem" /** 24px */,
           fontSize: "1rem" /** 16px */,
