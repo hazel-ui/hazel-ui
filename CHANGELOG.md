@@ -1,5 +1,20 @@
 # hazel-ui
 
+## 0.4.1
+
+### Patch Changes
+
+- [#188](https://github.com/hazel-ui/hazel-ui/pull/188) [`3f87511`](https://github.com/hazel-ui/hazel-ui/commit/3f875117cfc2df40d529cd790a46c82b46ead6ab) Thanks [@cseas](https://github.com/cseas)! - feat: add support for deep importing components individually
+
+  - add eslint rule import/no-extreneous-dependencies
+  - remove redundant override for stories files
+  - add wildcart exports config to root package.json
+  - enable beautify option in terser for better debugging
+  - add individual exports for each component
+  - add Space tokens based on Tailwind
+  - changed Typography tokens based on feedback
+  - fix table render warning in MediaQuery story
+
 ## 0.4.0
 
 ### Minor Changes
