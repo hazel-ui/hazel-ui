@@ -1,4 +1,5 @@
 import { style, styleVariants } from "@vanilla-extract/css";
+
 import { MediaQuery } from "../MediaQuery/MediaQuery.js";
 import { Theme } from "../Theme/Theme.js";
 
