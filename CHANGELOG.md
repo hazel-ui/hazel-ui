@@ -1,5 +1,11 @@
 # hazel-ui
 
+## 0.4.2
+
+### Patch Changes
+
+- [#190](https://github.com/hazel-ui/hazel-ui/pull/190) [`c60d857`](https://github.com/hazel-ui/hazel-ui/commit/c60d857a7524351e2f149013367ecd734a18a8b7) Thanks [@cseas](https://github.com/cseas)! - fix: order of types in exports
+
 ## 0.4.1
 
 ### Patch Changes
