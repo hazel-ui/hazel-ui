@@ -1,5 +1,11 @@
 # hazel-ui
 
+## 0.4.4
+
+### Patch Changes
+
+- [#194](https://github.com/hazel-ui/hazel-ui/pull/194) [`49c26b9`](https://github.com/hazel-ui/hazel-ui/commit/49c26b9cd67964c1fa8dd45166726b75cd86ea5a) Thanks [@cseas](https://github.com/cseas)! - fix: types exports for node10
+
 ## 0.4.3
 
 ### Patch Changes
