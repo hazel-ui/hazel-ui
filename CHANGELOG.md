@@ -1,5 +1,11 @@
 # hazel-ui
 
+## 0.4.3
+
+### Patch Changes
+
+- [#192](https://github.com/hazel-ui/hazel-ui/pull/192) [`162aa5c`](https://github.com/hazel-ui/hazel-ui/commit/162aa5ce80579710b38972a1bf7154f7f5a920ae) Thanks [@cseas](https://github.com/cseas)! - fix: add declaration file for static exports
+
 ## 0.4.2
 
 ### Patch Changes
