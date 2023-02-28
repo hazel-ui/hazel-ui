@@ -1,5 +1,5 @@
-import "../src/package/static/styles.css";
-import "../src/package/static/fonts.css";
+import "../src/static/styles.css";
+import "../src/static/fonts.css";
 
 export const decorators = [
   (Story) => (
