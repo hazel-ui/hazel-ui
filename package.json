@@ -5,16 +5,22 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css",
-    "./fonts.css": "./dist/fonts.css",
+    "./styles.css": {
+      "types": "./dist/css.d.ts",
+      "default": "./dist/styles.css"
+    },
+    "./fonts.css": {
+      "types": "./dist/css.d.ts",
+      "default": "./dist/fonts.css"
+    },
     "./*": {
       "types": "./dist/exports/*.d.ts",
-      "import": "./dist/exports/*.js"
+      "default": "./dist/exports/*.js"
     }
   },
-  "types": "./dist/index.d.ts",
   "sideEffects": [
     "*.css"
   ],
@@ -42,7 +48,7 @@
     "start": "npx http-server ./build -o",
     "test": "echo \"Error: no test specified\" && exit 0",
     "build:compile": "rollup --config rollup.config.ts --configPlugin typescript",
-    "build:static": "copyfiles -u 3 \"src/package/static/**/*\" dist",
+    "build:static": "copyfiles -u 2 \"src/static/**/*\" dist",
     "build:package": "rm -rf dist && npm run build:compile",
     "postbuild:package": "npm run build:static",
     "change:add": "changeset add",
