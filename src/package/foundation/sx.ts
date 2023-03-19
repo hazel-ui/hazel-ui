@@ -1,4 +1,6 @@
 export interface SxProps {
+  /* Below props are safe to use */
+
   display?: "inline";
   fontWeight?: "bold";
 
@@ -13,4 +15,14 @@ export interface SxProps {
   marginLeft?: `${number}rem` | `${number}px`;
 
   textAlign?: "center";
+
+  width?: `${number}rem` | `${number}px` | "fit-content";
+
+  /*
+   * These props might affect the intended visual of the component.
+   * Use at your own risk.
+   */
+
+  color?: string;
+  backgroundColor?: string;
 }
