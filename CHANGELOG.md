@@ -1,5 +1,13 @@
 # hazel-ui
 
+## 0.4.5
+
+### Patch Changes
+
+- [#196](https://github.com/hazel-ui/hazel-ui/pull/196) [`d530ff2`](https://github.com/hazel-ui/hazel-ui/commit/d530ff256aec6d2bd136f6ab27aff07d9d0b0881) Thanks [@cseas](https://github.com/cseas)! - feat: migrate Card to static css
+
+  - added new props to sx: width, color, backgroundColor
+
 ## 0.4.4
 
 ### Patch Changes
