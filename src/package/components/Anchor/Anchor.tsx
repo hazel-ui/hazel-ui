@@ -1,5 +1,5 @@
-import { Color } from "../../foundation/Color/Color.js";
 import { anchor } from "./Anchor.css.js";
+import { Color } from "../../foundation/Color/Color.js";
 
 import type { HTMLProps } from "react";
 
