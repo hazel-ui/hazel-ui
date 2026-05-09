@@ -26,17 +26,22 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
       - name: Install dependencies
-        run: npm i
+        run: pnpm install
 
       - name: Evaluate code quality
-        run: npm run prettier
+        run: pnpm prettier
 
       - name: Run tests
-        run: npm test
+        run: pnpm test
 
       - name: Create project build
-        run: npm run build --if-present
+        run: pnpm build
 
       - name: Create package build
-        run: npm run build:package
+        run: pnpm build:package

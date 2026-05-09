@@ -24,11 +24,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
       - name: Install dependencies
-        run: npm i
+        run: pnpm install
 
       - name: Build storybook
-        run: npm run build-storybook
+        run: pnpm build-storybook
 
       - name: Publish storybook 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
