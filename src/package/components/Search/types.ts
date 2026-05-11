@@ -1,4 +1,6 @@
-export type {
-  OptionTypeBase as SearchOptionType,
-  ValueType as SearchValueType,
-} from "react-select";
+export interface SearchOptionType {
+  label: string;
+  value: string;
+}
+
+export type SearchValueType<T> = T | readonly T[] | null;

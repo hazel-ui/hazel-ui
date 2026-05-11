@@ -1,9 +1,8 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgTypes, Canvas, Meta, Story } from "@storybook/blocks";
 
 import { Color } from "../../../foundation/Color/Color";
 import { Toast, showToast } from "../../Toast/Toast";
-import { Search, SearchProps } from "../Search";
-import { SearchOptionType, SearchValueType } from "../types";
+import { Search } from "../Search";
 import { EgFiltering } from "./examples/EgFiltering";
 import { EgMultiSelect } from "./examples/EgMultiSelect";
 import { EgMultiSelectLimit } from "./examples/EgMultiSelectLimit";
@@ -24,7 +23,7 @@ dropdown menu.
 
 The following props are available in addition to [react-select props][1].
 
-<ArgsTable of={Search} />
+<ArgTypes of={Search} />
 
 ## Examples
 

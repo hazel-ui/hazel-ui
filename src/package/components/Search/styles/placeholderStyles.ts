@@ -1,14 +1,12 @@
-import { PlaceholderProps } from "react-select";
-
-import type { StylesConfigFunction } from "react-select/src/styles.js";
-
 import { Theme } from "../../../foundation/Theme/Theme.js";
 
-import type { CSSProperties } from "react";
+import type { SearchOptionType } from "../types.js";
+import type { CSSObjectWithLabel, GroupBase, PlaceholderProps } from "react-select";
 
-export const placeholderStyles: StylesConfigFunction<
-  PlaceholderProps<{}, boolean>
-> = (base: CSSProperties, _state: any) => ({
+export const placeholderStyles = (
+  base: CSSObjectWithLabel,
+  _state: PlaceholderProps<SearchOptionType, boolean, GroupBase<SearchOptionType>>
+): CSSObjectWithLabel => ({
   ...base,
   fontFamily: Theme.font.sansSerif,
 });

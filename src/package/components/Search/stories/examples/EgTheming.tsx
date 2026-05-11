@@ -23,11 +23,11 @@ export function EgTheming() {
         colors: {
           ...theme.colors,
           neutral0: Color.gray3,
-          neutral5: Color.gray2,
-          neutral20: Color.gray9,
-          neutral30: Color.gray4,
-          neutral50: Color.gray6,
-          primary: Color.gray2,
+          neutral5: Color.gray4,
+          neutral20: Color.gray7,
+          neutral30: Color.gray8,
+          neutral50: Color.gray11,
+          primary: Color.blue8,
           primary25: Color.blue6,
         },
       })}
