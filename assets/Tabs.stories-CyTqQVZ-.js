@@ -14,7 +14,9 @@ import{j as f}from"./jsx-runtime-BTJTZTIL.js";import{r as n,R as m}from"./index-
 
   &[data-state="active"] {
     color: ${$.gray12};
-    box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
+    box-shadow:
+      inset 0 -1px 0 0 currentColor,
+      0 1px 0 0 currentColor;
   }
 `,je=V(Pe)`
   padding: 20px 0 0;
