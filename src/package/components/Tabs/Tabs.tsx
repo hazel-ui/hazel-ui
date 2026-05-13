@@ -32,7 +32,9 @@ const Tab = styled(RadixTab)`
 
   &[data-state="active"] {
     color: ${Color.gray12};
-    box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
+    box-shadow:
+      inset 0 -1px 0 0 currentColor,
+      0 1px 0 0 currentColor;
   }
 `;
 

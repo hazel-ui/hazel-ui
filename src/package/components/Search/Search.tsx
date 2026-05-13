@@ -15,8 +15,7 @@ import { placeholderStyles } from "./styles/placeholderStyles.js";
 import { valueContainerStyles } from "./styles/valueContainerStyles.js";
 import { SearchOptionType } from "./types.js";
 
-export interface SearchProps<IsMulti extends boolean>
-  extends Props<SearchOptionType, IsMulti> {
+export interface SearchProps<IsMulti extends boolean> extends Props<SearchOptionType, IsMulti> {
   floatingLabel?: string;
   noOptionsTitle?: string;
 }

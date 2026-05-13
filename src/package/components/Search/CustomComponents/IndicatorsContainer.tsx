@@ -9,8 +9,6 @@ export function IndicatorsContainer({ children, ...props }: any) {
   });
 
   return (
-    <components.IndicatorsContainer {...props}>
-      {allowedChildren}
-    </components.IndicatorsContainer>
+    <components.IndicatorsContainer {...props}>{allowedChildren}</components.IndicatorsContainer>
   );
 }

@@ -32,19 +32,9 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-export function Button({
-  size = "m",
-  variant = "primary",
-  variantColor,
-  children,
-}: ButtonProps) {
+export function Button({ size = "m", variant = "primary", variantColor, children }: ButtonProps) {
   return (
-    <StyledButton
-      size={size}
-      variant={variant}
-      as="button"
-      variantColor={variantColor}
-    >
+    <StyledButton size={size} variant={variant} as="button" variantColor={variantColor}>
       {children}
     </StyledButton>
   );

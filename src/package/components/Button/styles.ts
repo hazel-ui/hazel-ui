@@ -5,10 +5,7 @@ import { Theme } from "../../foundation/Theme/Theme.js";
 
 import type { ButtonSizeType, ButtonType } from "./types.js";
 
-export function applyButtonVariant(
-  variant: ButtonType,
-  variantColor: string = Color.blue9
-) {
+export function applyButtonVariant(variant: ButtonType, variantColor: string = Color.blue9) {
   switch (variant) {
     case "primary":
       return css`

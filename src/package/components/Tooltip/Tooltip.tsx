@@ -92,10 +92,5 @@ const TooltipContent = styled.span<TooltipContentType>`
   }
 
   ${(props) => props.width && `width: ${props.width};`};
-  ${(props) =>
-    applyTooltipDirection(
-      props.arrowSize,
-      props.direction,
-      props.tooltipBackground
-    )}
+  ${(props) => applyTooltipDirection(props.arrowSize, props.direction, props.tooltipBackground)}
 `;

@@ -7,12 +7,7 @@ export interface SliderProps extends RCSliderProps {
   width?: string;
 }
 
-export function Slider({
-  min = 0,
-  max = 30,
-  width = "100%",
-  ...rest
-}: SliderProps) {
+export function Slider({ min = 0, max = 30, width = "100%", ...rest }: SliderProps) {
   return (
     <Styles>
       <Container width={width}>

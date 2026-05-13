@@ -4,11 +4,7 @@ import { styled } from "styled-components";
 export function Toast() {
   return (
     <Styles>
-      <ToastContainer
-        autoClose={3000}
-        hideProgressBar={true}
-        position="bottom-center"
-      />
+      <ToastContainer autoClose={3000} hideProgressBar={true} position="bottom-center" />
     </Styles>
   );
 }
@@ -86,7 +82,8 @@ const Styles = styled.div`
     margin-bottom: 1rem;
     padding: 8px;
     border-radius: 1px;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1),
+    box-shadow:
+      0 1px 10px 0 rgba(0, 0, 0, 0.1),
       0 2px 15px 0 rgba(0, 0, 0, 0.05);
     display: -ms-flexbox;
     display: flex;
@@ -189,15 +186,7 @@ const Styles = styled.div`
     transform-origin: right;
   }
   .Toastify__progress-bar--default {
-    background: linear-gradient(
-      to right,
-      #4cd964,
-      #5ac8fa,
-      #007aff,
-      #34aadc,
-      #5856d6,
-      #ff2d55
-    );
+    background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
   }
   .Toastify__progress-bar--dark {
     background: #bb86fc;

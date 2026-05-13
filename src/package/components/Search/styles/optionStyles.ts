@@ -4,10 +4,7 @@ import { Theme } from "../../../foundation/Theme/Theme.js";
 import type { CSSProperties } from "react";
 import type { OptionProps } from "react-select";
 
-export const optionStyles: any = (
-  base: CSSProperties,
-  state: OptionProps<{}, boolean>
-) => ({
+export const optionStyles: any = (base: CSSProperties, state: OptionProps<{}, boolean>) => ({
   ...base,
   color: Color.gray11,
   fontSize: "1rem",

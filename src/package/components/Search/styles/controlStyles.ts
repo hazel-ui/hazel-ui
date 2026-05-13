@@ -4,10 +4,7 @@ import { Shadow } from "../../../foundation/Shadow/Shadow.js";
 import type { CSSProperties } from "react";
 import type { ControlProps } from "react-select";
 
-export const controlStyles: any = (
-  base: CSSProperties,
-  state: ControlProps<{}, boolean>
-) => ({
+export const controlStyles: any = (base: CSSProperties, state: ControlProps<{}, boolean>) => ({
   ...base,
   height: "3.2rem",
 

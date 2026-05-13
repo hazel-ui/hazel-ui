@@ -5,8 +5,7 @@ import { SearchOptionType, SearchValueType } from "../../types.js";
 
 export function EgMultiSelectLimit() {
   const defaultEntry: SearchOptionType[] = [];
-  const [selectedEntry, setSelectedEntry] =
-    useState<readonly SearchOptionType[]>(defaultEntry);
+  const [selectedEntry, setSelectedEntry] = useState<readonly SearchOptionType[]>(defaultEntry);
 
   return (
     <Search

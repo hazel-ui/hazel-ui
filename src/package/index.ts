@@ -15,10 +15,7 @@ export type { DividerProps } from "./components/Divider/Divider.js";
 
 export { Search } from "./components/Search/Search.js";
 export type { SearchProps } from "./components/Search/Search.js";
-export type {
-  SearchOptionType,
-  SearchValueType,
-} from "./components/Search/types.js";
+export type { SearchOptionType, SearchValueType } from "./components/Search/types.js";
 
 export { Toast, showToast } from "./components/Toast/Toast.js";
 
