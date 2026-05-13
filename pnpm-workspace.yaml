@@ -1,0 +1,7 @@
+saveExact: true
+minimumReleaseAge: 28800 # 20 days in minutes
+
+# Allowlist for packages permitted to run postinstall scripts.
+allowBuilds:
+  core-js-pure: true
+  esbuild: true

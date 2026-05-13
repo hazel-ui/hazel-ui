@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [22.x]
 
     steps:
       - name: Checkout repository
@@ -24,11 +24,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.1.1
+
       - name: Install dependencies
-        run: npm i
+        run: pnpm install
 
       - name: Build storybook
-        run: npm run build-storybook
+        run: pnpm build-storybook
 
       - name: Publish storybook 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1

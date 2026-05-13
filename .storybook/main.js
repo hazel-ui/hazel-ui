@@ -1,39 +1,23 @@
-import { baseConfig } from "../app/webpack.base.mjs";
+import react from "@vitejs/plugin-react";
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import { mergeConfig } from "vite";
 
 export default {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)", "../src/**/*.mdx"],
   addons: ["@storybook/addon-essentials"],
   core: {
     disableTelemetry: true,
   },
   framework: {
-    name: "@storybook/react-webpack5",
+    name: "@storybook/react-vite",
     options: {},
   },
   docs: {
     autodocs: true,
   },
-
-  webpackFinal: async (config) => {
-    const customConfig = { ...config };
-
-    // modify css rule of storybook to exclude Vanilla Extract files
-    for (let i = 0; i < customConfig.module.rules.length; i++) {
-      if (customConfig.module.rules[i].test.test("sample.css")) {
-        customConfig.module.rules[i].exclude = /\.vanilla\.css$/i;
-        break;
-      }
-    }
-
-    customConfig.module.rules.push(
-      baseConfig.module.rules[0], // Vanilla Extract
-      baseConfig.module.rules[4] // TypeScript
-    );
-
-    customConfig.resolve.extensionAlias = baseConfig.resolve.extensionAlias;
-
-    customConfig.plugins.push(...baseConfig.plugins.slice(1));
-
-    return customConfig;
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      plugins: [react(), vanillaExtractPlugin()],
+    });
   },
 };

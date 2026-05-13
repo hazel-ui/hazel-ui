@@ -1,0 +1,38 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+# Hazel UI
+
+A composable, open-source React component library built for modern web applications.
+
+[GitHub](https://github.com/hazel-ui/hazel-ui)
+
+## Installation
+
+```sh
+pnpm add hazel-ui
+```
+
+Import styles once in your app entry point:
+
+```tsx
+import "hazel-ui/styles.css";
+```
+
+## Usage
+
+```tsx
+import { Button, Badge, Tooltip } from "hazel-ui";
+
+function App() {
+  return <Button>Click me</Button>;
+}
+```
+
+For better tree-shaking, use subpath imports:
+
+```tsx
+import { Button } from "hazel-ui/Button";
+import { Badge } from "hazel-ui/Badge";
+```

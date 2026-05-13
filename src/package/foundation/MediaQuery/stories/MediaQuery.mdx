@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from "@storybook/blocks";
+import { Meta } from "@storybook/blocks";
 
 import { EgMobileFirst } from "./examples/EgMobileFirst";
 
@@ -12,28 +12,10 @@ The breakpoints have been taken from [Material M3][1].
 
 ## Breakpoints
 
-{/* Why these brackets: https://github.com/mdx-js/mdx/issues/2000#issuecomment-1280603924 */}
-{
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Viewport Size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>tablet</td>
-      <td>600px to 839px</td>
-    </tr>
-    <tr>
-      <td>desktop</td>
-      <td>Starting from 840px</td>
-    </tr>
-  </tbody>
-</table>
-}
+| Name    | Viewport Size       |
+| ------- | ------------------- |
+| tablet  | 600px to 839px      |
+| desktop | Starting from 840px |
 
 ## Example
 
@@ -58,8 +40,6 @@ export const className = style({
 });
 ```
 
-<Canvas withSource="none">
-  <EgMobileFirst />
-</Canvas>
+<EgMobileFirst />
 
 [1]: https://m3.material.io/foundations/layout/applying-layout/window-size-classes

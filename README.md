@@ -42,20 +42,4 @@ The Typography in the project uses the [Inter][1] variable font (`font-family: "
 import "hazel-ui/fonts.css";
 ```
 
-## Alternatives
-
-We'd be happy to incorporate any new functionality that you feel might not be possible with Hazel UI. But if you're looking for a completely different flavour of UI then you might want to check out these great alternatives:
-
-- [Ant Design](https://github.com/react-component)
-- [Chakra UI](https://github.com/chakra-ui/chakra-ui)
-- [Evergreen](https://evergreen.segment.com/components) _by Twilio Segment_
-- [Fluent UI](https://github.com/microsoft/fluentui) _by Microsoft_
-- [Forma 36](https://github.com/contentful/forma-36) _by Contentful_
-- [Material UI](https://material-ui.com/getting-started/usage/)
-- [Reach UI](https://reach.tech/) _by React Training_
-- [React Bootstrap](https://react-bootstrap.github.io/)
-- [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) _by Adobe_
-- [Reakit](https://github.com/reakit/reakit)
-- [Storybook](https://github.com/storybookjs/design-system)
-
 [1]: https://github.com/rsms/inter
