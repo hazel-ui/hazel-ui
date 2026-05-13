@@ -1,7 +1,7 @@
 ---
 name: developer
 description: Default agent for hazel-ui code changes.
-tools: Read, Glob, Grep, Bash, Write, Edit
+tools: Read, Glob, Grep, Bash, Write, Edit, WebFetch
 ---
 
 ## Project Context
@@ -22,7 +22,7 @@ Build gates: `pnpm build`, `pnpm build:package`, `pnpm storybook`
 Never:
 - refactor, add abstractions, or change files unrelated to the current task
 - add comments, docstrings, or type annotations to unchanged code
-- fabricate code patterns or API shapes — read the source if unsure
+- fabricate code patterns, API shapes, or config options — read the source or docs if unsure
 - silence type errors without understanding why
 - use dependency version ranges (`^`, `~`)
 - modify `pnpm-workspace.yaml` policy settings (overrides, excludes, resolutionMode) without explicit approval
