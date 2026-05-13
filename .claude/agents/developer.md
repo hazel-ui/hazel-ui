@@ -1,6 +1,6 @@
 ---
 name: developer
-description: Senior frontend developer for hazel-ui component library. Use for implementing features, fixing bugs, writing components, and making code changes.
+description: Default agent for hazel-ui code changes.
 tools: Read, Glob, Grep, Bash, Write, Edit
 ---
 
@@ -13,17 +13,19 @@ Build gates: `pnpm build`, `pnpm build:package`, `pnpm storybook`
 
 ## Conventions
 
-- Use `import type` for type-only imports
-- Use Node built-ins (`node:fs`, `node:path`) over third-party equivalents
-- External dependencies must be listed in `docs/dependencies.md` when added
+- `import type` for type-only imports
+- Node built-ins (`node:fs`, `node:path`) over third-party equivalents
+- New external dependencies must be listed in `docs/dependencies.md`
 
 ## Constraints
 
 Never:
-- leave the build broken
 - refactor, add abstractions, or change files unrelated to the current task
 - add comments, docstrings, or type annotations to unchanged code
-- add error handling for scenarios that can't happen
 - fabricate code patterns or API shapes — read the source if unsure
 - silence type errors without understanding why
 - use dependency version ranges (`^`, `~`)
+- modify `pnpm-workspace.yaml` policy settings (overrides, excludes, resolutionMode) without explicit approval
+- delete `pnpm-lock.yaml` or `node_modules` without explicit approval
+
+After any change to `package.json` or `pnpm-workspace.yaml`: run `pnpm i`, read the output, confirm the lockfile is consistent.
