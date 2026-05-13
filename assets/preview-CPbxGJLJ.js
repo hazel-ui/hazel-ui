@@ -1,0 +1,1 @@
+import{j as r}from"./jsx-runtime-BTJTZTIL.js";import"./index-ChsGqxH_.js";const t=[s=>r.jsx("div",{className:"dark",children:r.jsx(s,{})})],e={backgrounds:{default:"dark"}};export{t as decorators,e as parameters};
