@@ -13,7 +13,7 @@
     "noEmit": false, // emit javascript output files & declarations
     "outDir": "./build/", // output directory
     "removeComments": true, // strip all comments, set to false for libraries
-    "target": "ES6", // output code format
+    "target": "ES2020", // output code format
 
     // Strict Checks
     "strict": true, // stronger type checking, enables all strict rules
