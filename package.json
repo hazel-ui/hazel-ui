@@ -29,7 +29,8 @@
     "dist/"
   ],
   "engines": {
-    "node": ">=22"
+    "node": ">=22",
+    "pnpm": ">=11"
   },
   "private": false,
   "bugs": "https://github.com/hazel-ui/hazel-ui/issues",
