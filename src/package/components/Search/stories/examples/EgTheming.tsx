@@ -3,6 +3,8 @@ import { showToast } from "../../../Toast/Toast.js";
 import { Search } from "../../Search.js";
 import { SearchOptionType, SearchValueType } from "../../types.js";
 
+import type { Theme } from "react-select";
+
 export function EgTheming() {
   return (
     <Search
@@ -18,7 +20,7 @@ export function EgTheming() {
         if (selectedOption) showToast("Selected: " + selectedOption.label);
         else showToast("Cleared");
       }}
-      theme={(theme) => ({
+      theme={(theme: Theme) => ({
         ...theme,
         colors: {
           ...theme.colors,

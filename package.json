@@ -28,6 +28,9 @@
   "files": [
     "dist/"
   ],
+  "engines": {
+    "node": ">=22"
+  },
   "private": false,
   "bugs": "https://github.com/hazel-ui/hazel-ui/issues",
   "homepage": "https://hazel-ui.github.io/hazel-ui",

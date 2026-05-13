@@ -1,8 +1,10 @@
 import { useEffect } from "react";
-import { components, NoticeProps } from "react-select";
+import { components } from "react-select";
 
 import { Typography } from "../../../foundation/Typography/Typography.js";
-import { SearchOptionType } from "../types.js";
+
+import type { SearchOptionType } from "../types.js";
+import type { NoticeProps } from "react-select";
 
 export function NoOptionsMessage(props: NoticeProps<SearchOptionType>) {
   const { noOptionsTitle, setInvalidSearch } = props.selectProps;

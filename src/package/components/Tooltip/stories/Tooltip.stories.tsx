@@ -1,4 +1,4 @@
-import { Tooltip } from "../Tooltip";
+import { Tooltip } from "../Tooltip.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
