@@ -5,10 +5,7 @@ import { Color } from "../../../foundation/Color/Color.js";
 import { Icon } from "../../../foundation/Icon/Icon.js";
 import { Theme } from "../../../foundation/Theme/Theme.js";
 
-export function Control({
-  children,
-  ...props
-}: any) {
+export function Control({ children, ...props }: any) {
   const { floatingLabel, invalidSearch } = props.selectProps;
   return (
     <components.Control {...props}>
@@ -23,7 +20,10 @@ export function Control({
 
       <Separator />
 
-      <Label $isFloating={props.isFocused || props.hasValue} theme={props.theme}>
+      <Label
+        $isFloating={props.isFocused || props.hasValue}
+        theme={props.theme}
+      >
         {floatingLabel}
       </Label>
 

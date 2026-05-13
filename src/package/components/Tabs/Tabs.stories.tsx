@@ -4,7 +4,6 @@ import { Tabs } from "./Tabs.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-
 const meta: Meta = {
   title: "Atoms/Tabs",
 };
@@ -38,7 +37,9 @@ export const Controlled: StoryObj = {
           min="0"
           max="2"
           value={value}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => setValue(event.currentTarget.value)}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            setValue(event.currentTarget.value)
+          }
         />
         <Tabs.Root value={value} onValueChange={(value) => setValue(value)}>
           <Tabs.List aria-label="tabs">

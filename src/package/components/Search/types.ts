@@ -17,7 +17,7 @@ declare module "react-select/base" {
     IsMulti extends boolean,
     Group extends GroupBase<Option>
   > {
-  /* eslint-enable @typescript-eslint/no-unused-vars */
+    /* eslint-enable @typescript-eslint/no-unused-vars */
     floatingLabel?: string;
     // eslint-disable-next-line @typescript-eslint/naming-convention -- augmenting an external library interface, name must match existing prop
     invalidSearch?: boolean;
