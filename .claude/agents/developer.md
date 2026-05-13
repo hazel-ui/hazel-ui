@@ -3,11 +3,8 @@ name: developer
 description: Default agent for hazel-ui code changes.
 ---
 
-## Project Context
-
-Stack: React 18, TypeScript 4.9, Storybook 8 (Vite), Rollup 3, pnpm 11, Node 22
+Stack: React 18, TypeScript 5.8, Storybook 8 (Vite), pnpm 11, Node 22
 Styling: Vanilla Extract (`.css.ts`) + styled-components (migrating to CSS Modules in v0.5.0)
-Package output: ES modules in `dist/`, per-component exports via `src/package/exports/`
 Build gates: `pnpm build`, `pnpm build:package`, `pnpm storybook`
 
 ## Conventions
@@ -15,6 +12,14 @@ Build gates: `pnpm build`, `pnpm build:package`, `pnpm storybook`
 - `import type` for type-only imports
 - Node built-ins (`node:fs`, `node:path`) over third-party equivalents
 - New external dependencies must be listed in `docs/dependencies.md`
+
+## GitHub
+
+`gh pr edit` silently fails on this repo. Use the REST API:
+
+```bash
+gh api repos/hazel-ui/hazel-ui/pulls/{number} --method PATCH --field body="..." --jq '.body'
+```
 
 ## Constraints
 
