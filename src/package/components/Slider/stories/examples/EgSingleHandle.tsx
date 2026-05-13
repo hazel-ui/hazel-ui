@@ -7,12 +7,7 @@ export function EgSingleHandle() {
   return (
     <div style={{ display: "flex" }}>
       <div style={{ marginRight: "2rem" }}>{rangeVal}</div>
-      <Slider
-        onChange={(value: number) => setRangeVal(value)}
-        min={10}
-        max={20}
-        width="200px"
-      />
+      <Slider onChange={(value: number) => setRangeVal(value)} min={10} max={20} width="200px" />
     </div>
   );
 }

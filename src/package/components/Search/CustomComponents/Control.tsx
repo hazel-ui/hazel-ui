@@ -11,19 +11,13 @@ export function Control({ children, ...props }: any) {
     <components.Control {...props}>
       <div style={{ margin: "0 0.1rem" }}>
         <components.DropdownIndicator {...props}>
-          <Icon.Search
-            size="1.3rem"
-            color={invalidSearch ? Color.red7 : "none"}
-          />
+          <Icon.Search size="1.3rem" color={invalidSearch ? Color.red7 : "none"} />
         </components.DropdownIndicator>
       </div>
 
       <Separator />
 
-      <Label
-        $isFloating={props.isFocused || props.hasValue}
-        theme={props.theme}
-      >
+      <Label $isFloating={props.isFocused || props.hasValue} theme={props.theme}>
         {floatingLabel}
       </Label>
 

@@ -1,4 +1,5 @@
 import { Meta, Story } from "@storybook/react";
+
 import { Icon } from "../../../foundation/Icon/Icon.js";
 import { Table, TableProps } from "../Table.js";
 

@@ -23,10 +23,6 @@ Click on a color to copy its HSL value.
 
 <ColorBlockContainer>
   {enumKeys(Color).map((colorName) => (
-    <ColorBlock
-      cardColor={Color[colorName]}
-      title={colorName}
-      key={colorName}
-    />
+    <ColorBlock cardColor={Color[colorName]} title={colorName} key={colorName} />
   ))}
 </ColorBlockContainer>

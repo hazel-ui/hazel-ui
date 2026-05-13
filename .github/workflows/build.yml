@@ -34,8 +34,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Evaluate code quality
-        run: pnpm prettier
+      - name: Check formatting
+        run: pnpm formatter
 
       - name: Run tests
         run: pnpm test

@@ -23,16 +23,15 @@ export function Table(props: TableProps) {
   const data = useMemo(() => props.data, [props.data]);
   const columns = useMemo(
     () => processColumns(props.columns, props.data),
-    [props.columns, props.data]
+    [props.columns, props.data],
   );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      // @ts-ignore
-      { columns, data, disableSortBy: !props.enableSorting },
-      useSortBy,
-      useExpanded
-    );
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable(
+    // @ts-ignore
+    { columns, data, disableSortBy: !props.enableSorting },
+    useSortBy,
+    useExpanded,
+  );
 
   return (
     // apply the table props
@@ -48,9 +47,7 @@ export function Table(props: TableProps) {
                   // Loop over the headers in each row
                   headerGroup.headers.map((column: any) => (
                     // Apply the header cell props
-                    <Th
-                      {...column.getHeaderProps(column.getSortByToggleProps())}
-                    >
+                    <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
                       {
                         // Render the header
                         column.render("Header")

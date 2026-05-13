@@ -1,0 +1,104 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "import", "jest"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "style": "warn"
+  },
+  "env": { "browser": true, "node": true, "jest": true },
+  "rules": {
+    /***********************************************************
+     * 1. ESLint rules
+     ***********************************************************/
+
+    /**
+     * Use curly braces in multiline conditionals.
+     * @see https://eslint.org/docs/rules/curly
+     */
+    "curly": ["error", "multi-line"],
+
+    /**
+     * Large files should be split into smaller modules.
+     * @see https://eslint.org/docs/rules/max-lines
+     */
+    "max-lines": "warn",
+
+    /**
+     * Disallow type conversion with short notations that are hard to read.
+     * @see https://eslint.org/docs/rules/no-implicit-coercion
+     */
+    "no-implicit-coercion": "warn",
+
+    /********************************************************************
+     * 2. typescript-eslint rules
+     ********************************************************************/
+
+    /**
+     * Give meaningful names to constant numbers.
+     * Note: oxlint support is partial (🚧) — options may not be fully honoured.
+     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
+     */
+    "no-magic-numbers": [
+      "warn",
+      { "ignore": [-1, 0, 1, 2, 60, 1000], "ignoreArrayIndexes": true, "ignoreEnums": true }
+    ],
+
+    /*****************************************************************
+     * 3. plugin rules
+     *****************************************************************/
+
+    /**
+     * Prefer named exports.
+     * @see https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
+     */
+    "import/no-default-export": "error",
+
+    /**
+     * React default import is not needed in new JSX transform.
+     * @see https://github.com/airbnb/javascript/issues/2334
+     */
+    "react/react-in-jsx-scope": "off",
+
+    /**
+     * File names can follow different case styles to differentiate
+     * types & components (PascalCase) from functions (camelCase).
+     * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
+     */
+    "unicorn/filename-case": "off"
+
+    // Rules handled by oxfmt (formatter, not linter):
+    // "@typescript-eslint/quotes"  — oxfmt singleQuote: false (double quotes)
+    // "import/order"               — oxfmt sortImports
+
+    // Rules with no oxlint equivalent yet (tracked as custom oxlint plugins — see feedback-plan.md PR 31):
+    // "@typescript-eslint/naming-convention" // check: https://github.com/oxc-project/oxc/issues/2180
+    // "import/no-extraneous-dependencies" // check: https://github.com/oxc-project/oxc/issues/1117
+    // "unicorn/prevent-abbreviations" // check: https://github.com/oxc-project/oxc/issues/684
+  },
+  "overrides": [
+    {
+      // Allow require() calls in .js files.
+      "files": ["**/*.js"],
+      "rules": {
+        "typescript/no-var-requires": "off"
+      }
+    },
+    {
+      // Disable ts unbound-method in tests.
+      // jest/unbound-method has no oxlint equivalent yet — tracked in feedback-plan.md PR 31.
+      "files": ["**/__tests__/*"],
+      "rules": {
+        "typescript/unbound-method": "off"
+      }
+    },
+    {
+      // Storybook requires default exports.
+      "files": ["**/*.stories.*"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["node_modules", "dist", "build", "dist-storybook", "coverage"]
+}

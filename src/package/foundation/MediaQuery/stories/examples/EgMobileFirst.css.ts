@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+
 import { MediaQuery } from "../../MediaQuery.js";
 
 export const className = style({

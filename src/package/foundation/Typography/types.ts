@@ -1,9 +1,4 @@
-export type TypographyType =
-  | "display"
-  | "headline"
-  | "title"
-  | "label"
-  | "body";
+export type TypographyType = "display" | "headline" | "title" | "label" | "body";
 
 export enum TextTag {
   display = "h1",

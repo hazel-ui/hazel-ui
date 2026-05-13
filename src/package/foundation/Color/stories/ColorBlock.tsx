@@ -3,11 +3,7 @@ import { styled } from "styled-components";
 
 import { Typography } from "../../Typography/Typography.js";
 import { Color } from "../Color.js";
-import {
-  copyToClipboard,
-  getContrastColor,
-  getCssVariableValue,
-} from "./utils.js";
+import { copyToClipboard, getContrastColor, getCssVariableValue } from "./utils.js";
 
 interface ColorBlockProps {
   cardColor?: Color;
@@ -27,10 +23,7 @@ const StyledDiv = styled.div<{ color: string }>`
   align-items: center;
 `;
 
-export function ColorBlock({
-  cardColor = Color.gray5,
-  title = "Unavailable",
-}: ColorBlockProps) {
+export function ColorBlock({ cardColor = Color.gray5, title = "Unavailable" }: ColorBlockProps) {
   const colorValue = getCssVariableValue(cardColor);
   const [text, setText] = useState(colorValue);
 

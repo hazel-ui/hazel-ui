@@ -5,7 +5,7 @@ import { DirectionType } from "./types.js";
 export function applyTooltipDirection(
   arrowSize: string,
   direction: DirectionType,
-  tooltipBackground: string
+  tooltipBackground: string,
 ) {
   const tooltipMargin = "2.6rem";
   switch (direction) {

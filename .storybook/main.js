@@ -1,5 +1,5 @@
-import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import react from "@vitejs/plugin-react";
 import { mergeConfig } from "vite";
 
 export default {

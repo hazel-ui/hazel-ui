@@ -6,9 +6,7 @@ export function processColumns(columns: Array<any>, data: Array<any>) {
   let columnIndex = 0;
   for (let td in data[0]) {
     if (typeof data[0][td] === "number" && !("Cell" in columns[columnIndex])) {
-      columns[columnIndex]["Cell"] = (props: any) => (
-        <>{props.value.toLocaleString("en-IN")}</>
-      );
+      columns[columnIndex]["Cell"] = (props: any) => <>{props.value.toLocaleString("en-IN")}</>;
     }
     columnIndex++;
   }

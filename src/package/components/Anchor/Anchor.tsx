@@ -1,10 +1,9 @@
-import { anchor } from "./Anchor.css.js";
 import { Color } from "../../foundation/Color/Color.js";
+import { anchor } from "./Anchor.css.js";
 
 import type { HTMLProps } from "react";
 
-export interface AnchorProps
-  extends Omit<HTMLProps<HTMLAnchorElement>, "className" | "style"> {
+export interface AnchorProps extends Omit<HTMLProps<HTMLAnchorElement>, "className" | "style"> {
   color?: string;
   backgroundColor?: string;
 }
@@ -16,11 +15,7 @@ export function Anchor({
   ...rest
 }: AnchorProps) {
   return (
-    <a
-      className={anchor}
-      style={{ color, backgroundColor, borderColor: color }}
-      {...rest}
-    >
+    <a className={anchor} style={{ color, backgroundColor, borderColor: color }} {...rest}>
       {children}
     </a>
   );

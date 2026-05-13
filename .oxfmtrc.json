@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": false,
+  "sortImports": {
+    "groups": [
+      ["builtin", "external"],
+      "internal",
+      ["parent", "sibling", "index"],
+      "type"
+    ],
+    "newlinesBetween": true,
+    "order": "asc",
+    "ignoreCase": false
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "build",
+    "dist-storybook",
+    "coverage",
+    "src/package/static/styles.css",
+    "src/static/styles.css"
+  ]
+}

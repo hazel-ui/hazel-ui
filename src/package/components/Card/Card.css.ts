@@ -25,6 +25,5 @@ export const card = style({
     transform: "scale(1.01)",
   },
 
-  transition:
-    "background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out",
+  transition: "background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out",
 });
