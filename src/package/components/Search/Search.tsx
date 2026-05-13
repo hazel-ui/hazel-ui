@@ -21,9 +21,7 @@ export interface SearchProps<IsMulti extends boolean>
   noOptionsTitle?: string;
 }
 
-export function Search<IsMulti extends boolean>(
-  props: SearchProps<IsMulti>
-) {
+export function Search<IsMulti extends boolean>(props: SearchProps<IsMulti>) {
   // TODO: replaced in PR 19 — file is deleted and rewritten with React Aria
   const {
     floatingLabel = "Search",
