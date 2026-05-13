@@ -1,7 +1,6 @@
 ---
 name: developer
 description: Default agent for hazel-ui code changes.
-tools: Read, Glob, Grep, Bash, Write, Edit, WebFetch
 ---
 
 ## Project Context

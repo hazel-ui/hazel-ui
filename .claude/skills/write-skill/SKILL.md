@@ -14,7 +14,7 @@ Every token must be load-bearing:
 
 ## Structure
 
-Agents: `.claude/agents/<name>.md` with YAML frontmatter (`name`, `description`, `tools`) followed by body sections.
+Agents: `.claude/agents/<name>.md` with YAML frontmatter (`name`, `description`) followed by body sections.
 Skills: `.claude/skills/<name>/SKILL.md` with YAML frontmatter (`name`, `description`) followed by body sections. Folder name must match `name` field.
 
 Section headings are useful for grouping. Bullet markers, bold labels, and prose paragraphs are not.
