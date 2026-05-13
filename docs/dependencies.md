@@ -82,7 +82,7 @@ The below table explains why certain dependencies are required by the project in
 | Name | Version  |
 | ---- | -------- |
 | node | v22.16.0 |
-| pnpm | 10.12.3  |
+| pnpm | 11.1.1   |
 
 [1]: https://www.npmjs.com/package/@storybook/react
 [2]: https://www.npmjs.com/package/react-scripts

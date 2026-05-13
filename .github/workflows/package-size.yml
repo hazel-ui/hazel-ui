@@ -1,0 +1,24 @@
+name: Package Size
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  size:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.1.1
+
+      - name: Compare package size
+        uses: preactjs/compressed-size-action@v2
+        with:
+          pattern: "./dist/**/*.{js,css}"
+          build-script: "build:package"

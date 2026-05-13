@@ -21,21 +21,25 @@ export interface SearchProps<IsMulti extends boolean>
   noOptionsTitle?: string;
 }
 
-export function Search<IsMulti extends boolean>({
-  floatingLabel = "Search",
-  noOptionsTitle = "Invalid search",
-  autoFocus = false,
-  backspaceRemovesValue = true,
-  captureMenuScroll = false,
-  hideSelectedOptions = true,
-  isClearable = true,
-  isLoading = false,
-  isSearchable = true,
-  noOptionsMessage = () => "No results found for this search",
-  placeholder = "",
-  defaultValue,
-  ...rest
-}: SearchProps<IsMulti>) {
+export function Search<IsMulti extends boolean>(
+  props: SearchProps<IsMulti>
+) {
+  // TODO: replaced in PR 19 — file is deleted and rewritten with React Aria
+  const {
+    floatingLabel = "Search",
+    noOptionsTitle = "Invalid search",
+    autoFocus = false,
+    backspaceRemovesValue = true,
+    captureMenuScroll = false,
+    hideSelectedOptions = true,
+    isClearable = true,
+    isLoading = false,
+    isSearchable = true,
+    noOptionsMessage = () => "No results found for this search",
+    placeholder = "",
+    defaultValue,
+    ...rest
+  } = props as any;
   const [invalidSearch, setInvalidSearch] = useState(false);
   return (
     // @ts-ignore
