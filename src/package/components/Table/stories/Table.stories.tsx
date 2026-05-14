@@ -4,7 +4,7 @@ import { Table } from "../Table.js";
 import type { TableProps } from "../Table.js";
 import type { Meta, Story } from "@storybook/react";
 
-export default {
+const meta = {
   component: Table,
   parameters: {
     componentSubtitle:
@@ -15,7 +15,7 @@ export default {
 
 const Template: Story<TableProps> = (args) => <Table {...args} />;
 
-export const Basic = Template.bind({});
+const Basic = Template.bind({});
 Basic.args = {
   columns: [
     {
@@ -63,7 +63,7 @@ Basic.args = {
   ],
 };
 
-export const CustomCells = Template.bind({});
+const CustomCells = Template.bind({});
 CustomCells.args = {
   columns: [
     {
@@ -88,12 +88,10 @@ CustomCells.args = {
   ],
 };
 
-export const ExpandableRows = Template.bind({});
+const ExpandableRows = Template.bind({});
 ExpandableRows.args = {
   columns: [
     {
-      Header: "Column 1",
-      accessor: "col1", // Accessor is the "key" in the data
       Cell: (props: any) =>
         /* Use the row.canExpand and row.getToggleRowExpandedProps
          * prop getter to build the toggle for expanding a row
@@ -123,6 +121,8 @@ ExpandableRows.args = {
             {props.value}
           </span>
         ),
+      Header: "Column 1",
+      accessor: "col1", // Accessor is the "key" in the data
     },
     {
       Header: "Column 2",
@@ -164,3 +164,6 @@ ExpandableRows.args = {
     },
   ],
 };
+
+export { Basic, CustomCells, ExpandableRows };
+export default meta;

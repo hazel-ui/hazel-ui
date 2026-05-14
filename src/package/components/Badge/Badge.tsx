@@ -8,7 +8,7 @@ import { applyBadgeSize } from "./styles.js";
 import type { BadgeSizeType } from "./types.js";
 import type { ReactNode } from "react";
 
-export interface BadgeProps {
+interface BadgeProps {
   children?: ReactNode;
   size?: BadgeSizeType;
   // Styles
@@ -30,7 +30,7 @@ const StyledBadge = styled.span<BadgeProps>`
   ${(props) => applyBadgeSize(props.size!)};
 `;
 
-export function Badge({
+function Badge({
   size = "s",
   children,
   color = Color.gray1,
@@ -42,3 +42,6 @@ export function Badge({
     </StyledBadge>
   );
 }
+
+export type { BadgeProps };
+export { Badge };

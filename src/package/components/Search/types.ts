@@ -1,12 +1,12 @@
 import type { GroupBase } from "react-select";
 import type {} from "react-select/base";
 
-export interface SearchOptionType {
+interface SearchOptionType {
   label: string;
   value: string;
 }
 
-export type SearchValueType<T> = T | readonly T[] | null;
+type SearchValueType<T> = T | readonly T[] | null;
 
 declare module "react-select/base" {
   // Generics must match the Props signature exactly for module augmentation to work,
@@ -21,3 +21,5 @@ declare module "react-select/base" {
     noOptionsTitle?: string;
   }
 }
+
+export type { SearchOptionType, SearchValueType };

@@ -4,7 +4,7 @@ export function copyToClipboard(newClip: string) {
   navigator.clipboard.writeText(newClip);
 }
 
-export function getContrastColor(hslColor: string = "hsl(0, 0%, 0%)") {
+export function getContrastColor(hslColor = "hsl(0, 0%, 0%)") {
   const lightness = Number(hslColor.split(",")[2].trim().split("%")[0]);
   return lightness > 50 ? Color.gray12 : Color.gray2;
 }

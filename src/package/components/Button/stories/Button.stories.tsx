@@ -10,17 +10,16 @@ const meta: Meta<typeof Button> = {
   component: Button,
 
   parameters: {
-    componentSubtitle: `This component can be used to render a <button> 
+    componentSubtitle: `This component can be used to render a <button>
       or an <a> tag for clickable items and hyperlinks on a page.`,
   },
 
   title: "Components/Button",
 };
 
-export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+const Primary: Story = {
   args: {
     children: "Button",
     onClick: () => alert("Hey, good looking!"),
@@ -29,7 +28,7 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+const Secondary: Story = {
   args: {
     children: "Follow",
     size: "s",
@@ -37,10 +36,13 @@ export const Secondary: Story = {
   },
 };
 
-export const CustomColors: Story = {
+const CustomColors: Story = {
   args: {
     children: "Discord",
     size: "l",
     variantColor: Color.purple9,
   },
 };
+
+export { Primary, Secondary, CustomColors };
+export default meta;

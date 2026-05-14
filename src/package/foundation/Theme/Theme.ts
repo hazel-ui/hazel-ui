@@ -11,11 +11,11 @@ export const Theme = {
       'Segoe UI Emoji'`,
   },
   fontWeight: {
-    light: 300,
-    regular: 400,
-    // medium: 500,
-    semiBold: 600,
     bold: 700,
+    light: 300,
+    // medium: 500,
+    regular: 400,
+    semiBold: 600,
   },
   space: [0, 4, 8, 12, 16, 24, 36, 48, 60, 80, 90, 120, 128],
 };

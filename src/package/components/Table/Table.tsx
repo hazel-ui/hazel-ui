@@ -7,14 +7,14 @@ import { processColumns } from "./utils.js";
 
 import type { Column } from "react-table";
 
-export interface TableProps {
+interface TableProps {
   data: any[];
   columns: Column[];
   enableSorting?: boolean;
   hideHeaders?: boolean;
 }
 
-export function Table(props: TableProps) {
+function Table(props: TableProps) {
   /* It's important that we're using React.useMemo here to ensure
    * that our data isn't recreated on every render. If we didn't use
    * React.useMemo, the table would think it was receiving new data on
@@ -42,37 +42,46 @@ export function Table(props: TableProps) {
         <thead>
           {
             // Loop over the header rows
-            headerGroups.map((headerGroup: any) => (
-              // Apply the header row props
-              <TrHead {...headerGroup.getHeaderGroupProps()}>
-                {
-                  // Loop over the headers in each row
-                  headerGroup.headers.map((column: any) => (
-                    // Apply the header cell props
-                    <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                      {
-                        // Render the header
-                        column.render("Header")
-                      }
-                      {/* Add a sort direction indicator */}
-                      <span>
-                        {props.enableSorting ? (
-                          column.isSorted ? (
-                            column.isSortedDesc ? (
-                              <Icon.SortDown size="1rem" />
-                            ) : (
-                              <Icon.SortUp size="1rem" />
-                            )
-                          ) : (
-                            <Icon.Sort height="1rem" />
-                          )
-                        ) : null}
-                      </span>
-                    </Th>
-                  ))
-                }
-              </TrHead>
-            ))
+            headerGroups.map((headerGroup: any) => {
+              const { key: headerGroupKey, ...headerGroupProps } =
+                headerGroup.getHeaderGroupProps();
+              return (
+                // Apply the header row props
+                <TrHead key={headerGroupKey} {...headerGroupProps}>
+                  {
+                    // Loop over the headers in each row
+                    headerGroup.headers.map((column: any) => {
+                      const { key: columnKey, ...columnProps } = column.getHeaderProps(
+                        column.getSortByToggleProps(),
+                      );
+                      return (
+                        // Apply the header cell props
+                        <Th key={columnKey} {...columnProps}>
+                          {
+                            // Render the header
+                            column.render("Header")
+                          }
+                          {/* Add a sort direction indicator */}
+                          <span>
+                            {props.enableSorting ? (
+                              column.isSorted ? (
+                                column.isSortedDesc ? (
+                                  <Icon.SortDown size="1rem" />
+                                ) : (
+                                  <Icon.SortUp size="1rem" />
+                                )
+                              ) : (
+                                <Icon.Sort height="1rem" />
+                              )
+                            ) : null}
+                          </span>
+                        </Th>
+                      );
+                    })
+                  }
+                </TrHead>
+              );
+            })
           }
         </thead>
       )}
@@ -84,19 +93,23 @@ export function Table(props: TableProps) {
           rows.map((row: any) => {
             // Prepare the row for display
             prepareRow(row);
+            const { key: rowKey, ...rowProps } = row.getRowProps();
             return (
               // Apply the row props
-              <Tr {...row.getRowProps()}>
+              <Tr key={rowKey} {...rowProps}>
                 {
                   // Loop over the rows cells
-                  row.cells.map((cell: any) => (
-                    <Td {...cell.getCellProps()}>
-                      {
-                        // Render the cell contents
-                        cell.render("Cell")
-                      }
-                    </Td>
-                  ))
+                  row.cells.map((cell: any) => {
+                    const { key: cellKey, ...cellProps } = cell.getCellProps();
+                    return (
+                      <Td key={cellKey} {...cellProps}>
+                        {
+                          // Render the cell contents
+                          cell.render("Cell")
+                        }
+                      </Td>
+                    );
+                  })
                 }
               </Tr>
             );
@@ -108,3 +121,6 @@ export function Table(props: TableProps) {
 }
 
 Table.defaultProps = { enableSorting: false, hideHeaders: false };
+
+export type { TableProps };
+export { Table };

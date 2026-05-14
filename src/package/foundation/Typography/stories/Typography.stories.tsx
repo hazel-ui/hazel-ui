@@ -8,36 +8,38 @@ const meta: Meta<typeof Typography> = {
     // TODO: Rewrite description in MDX
     // MDX is broken right now: https://github.com/storybookjs/storybook/issues/20496
     componentSubtitle: `This component can be used to render all text-based elements
-      on a page such as headings, paragraphs, captions, and labels. The rendered text 
-      will adjust size automatically based on screen size. For usage instructions, 
+      on a page such as headings, paragraphs, captions, and labels. The rendered text
+      will adjust size automatically based on screen size. For usage instructions,
       refer: https://m3.material.io/styles/typography/applying-type`,
   },
 
   title: "Foundation/Typography",
 };
 
-export default meta;
 type Story = StoryObj<typeof Typography>;
 
-export const Display: Story = {
+const Display: Story = {
   args: {
     children: "The quick brown fox jumps over the lazy dog.",
     variant: "display",
   },
 };
 
-export const Headline: Story = {
+const Headline: Story = {
   args: { children: Display.args?.children, variant: "headline" },
 };
 
-export const Title: Story = {
+const Title: Story = {
   args: { children: Display.args?.children, variant: "title" },
 };
 
-export const Label: Story = {
+const Label: Story = {
   args: { children: Display.args?.children, variant: "label" },
 };
 
-export const Body: Story = {
+const Body: Story = {
   args: { children: Display.args?.children, variant: "body" },
 };
+
+export { Display, Headline, Title, Label, Body };
+export default meta;

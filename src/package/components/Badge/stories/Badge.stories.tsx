@@ -11,25 +11,24 @@ const meta: Meta<typeof Badge> = {
   component: Badge,
 
   parameters: {
-    componentSubtitle: `This component can be used to render badge like 
-    elements on a page such as labels, categories, and tags. It renders 
+    componentSubtitle: `This component can be used to render badge like
+    elements on a page such as labels, categories, and tags. It renders
     as a <span> tag by default.`,
   },
 
   title: "Components/Badge",
 };
 
-export default meta;
 type Story = StoryObj<typeof Badge>;
 
-export const Small: Story = {
+const Small: Story = {
   args: {
     children: "Small",
     size: "s",
   },
 };
 
-export const Medium: Story = {
+const Medium: Story = {
   args: {
     backgroundColor: Color.blue1,
     children: "Medium",
@@ -38,7 +37,7 @@ export const Medium: Story = {
   },
 };
 
-export const Large: Story = {
+const Large: Story = {
   args: {
     backgroundColor: Color.yellow10,
     children: "Large",
@@ -46,3 +45,6 @@ export const Large: Story = {
     size: "l",
   },
 };
+
+export { Small, Medium, Large };
+export default meta;

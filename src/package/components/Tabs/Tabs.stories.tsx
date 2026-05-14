@@ -41,7 +41,7 @@ export const Controlled: StoryObj = {
             setValue(event.currentTarget.value)
           }
         />
-        <Tabs.Root value={value} onValueChange={(value) => setValue(value)}>
+        <Tabs.Root value={value} onValueChange={(newValue) => setValue(newValue)}>
           <Tabs.List aria-label="tabs">
             <Tabs.Tab value="0">One</Tabs.Tab>
             <Tabs.Tab value="1">Two</Tabs.Tab>

@@ -5,7 +5,7 @@ import { Color } from "../../../foundation/Color/Color.js";
 import { Icon } from "../../../foundation/Icon/Icon.js";
 import { Theme } from "../../../foundation/Theme/Theme.js";
 
-export function Control({ children, ...props }: any) {
+function Control({ children, ...props }: any) {
   const { floatingLabel, invalidSearch } = props.selectProps;
   return (
     <components.Control {...props}>
@@ -48,3 +48,5 @@ const Label = styled.label<{ $isFloating?: boolean; theme: any }>`
   top: ${(props) => (props.$isFloating ? `10%` : `30%`)};
   font-size: ${(props) => (props.$isFloating ? `0.6rem` : `1rem`)};
 `;
+
+export { Control };

@@ -10,18 +10,17 @@ const meta: Meta<typeof Tooltip> = {
   component: Tooltip,
   title: "Atoms/Tooltip",
 };
-export default meta;
 
 type Story = StoryObj<typeof Tooltip>;
 
-export const Default: Story = {
+const Default: Story = {
   args: {
     children: "Hover to see tooltip",
     content: "Tooltip text",
   },
 };
 
-export const Directions: Story = {
+const Directions: Story = {
   render: () => (
     <div
       style={{
@@ -46,3 +45,6 @@ export const Directions: Story = {
     </div>
   ),
 };
+
+export { Default, Directions };
+export default meta;

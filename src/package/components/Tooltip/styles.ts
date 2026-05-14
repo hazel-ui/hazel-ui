@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-import { DirectionType } from "./types.js";
+import type { DirectionType } from "./types.js";
 
 export function applyTooltipDirection(
   arrowSize: string,
@@ -9,7 +9,7 @@ export function applyTooltipDirection(
 ) {
   const tooltipMargin = "2.6rem";
   switch (direction) {
-    case "top":
+    case "top": {
       return css`
         top: calc(${tooltipMargin} * -1);
 
@@ -19,8 +19,9 @@ export function applyTooltipDirection(
           border-top-color: ${tooltipBackground};
         }
       `;
+    }
 
-    case "right":
+    case "right": {
       return css`
         left: calc(100% + ${tooltipMargin} / 2);
         top: 50%;
@@ -34,8 +35,9 @@ export function applyTooltipDirection(
           border-right-color: ${tooltipBackground};
         }
       `;
+    }
 
-    case "bottom":
+    case "bottom": {
       return css`
         bottom: calc(${tooltipMargin} * -1.3);
 
@@ -45,8 +47,9 @@ export function applyTooltipDirection(
           border-bottom-color: ${tooltipBackground};
         }
       `;
+    }
 
-    case "left":
+    case "left": {
       return css`
         left: auto;
         right: calc(100% + ${tooltipMargin} / 2);
@@ -62,8 +65,10 @@ export function applyTooltipDirection(
           border-left-color: ${tooltipBackground};
         }
       `;
+    }
 
-    default:
+    default: {
       return null;
+    }
   }
 }

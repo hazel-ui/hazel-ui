@@ -44,7 +44,7 @@
     "build-storybook": "storybook build -o ./dist-storybook",
     "serve-storybook": "npx http-server ./dist-storybook",
     "clean:css": "cd src/package && cleancss -o static/styles.css foundation/Theme/styles/*.css",
-    "lint": "oxlint -c oxlint.jsonc",
+    "lint": "oxlint -c oxlint.jsonc --deny-warnings",
     "lint:fix": "oxlint -c oxlint.jsonc --fix",
     "formatter": "oxfmt --check src .storybook",
     "formatter:fix": "oxfmt src .storybook",
