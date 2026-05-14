@@ -1,3 +1,4 @@
+/* oxlint-disable max-lines -- vendored ReactToastify CSS */
 import { styled } from "styled-components";
 
 // Import "react-toastify/dist/ReactToastify.css";
