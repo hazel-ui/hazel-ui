@@ -19,20 +19,22 @@ const meta: Meta<typeof Anchor> = {
   title: "Components/Anchor",
 };
 
-export default meta;
 type Story = StoryObj<typeof Anchor>;
 
-export const Basic: Story = {
+const Basic: Story = {
   args: {
     children: "Never gonna give you up",
     href: "https://youtu.be/dQw4w9WgXcQ",
   },
 };
 
-export const CustomColors: Story = {
+const CustomColors: Story = {
   args: {
     backgroundColor: Color.orange4,
     children: Basic.args?.children,
     color: Color.orange11,
   },
 };
+
+export { Basic, CustomColors };
+export default meta;

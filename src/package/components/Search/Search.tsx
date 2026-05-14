@@ -36,7 +36,7 @@ export function Search<IsMulti extends boolean>(props: SearchProps<IsMulti>) {
     isSearchable = true,
     noOptionsMessage = () => "No results found for this search",
     placeholder = "",
-    defaultValue,
+    defaultValue: _defaultValue,
     ...rest
   } = props as any;
   const [invalidSearch, setInvalidSearch] = useState(false);
@@ -60,9 +60,9 @@ export function Search<IsMulti extends boolean>(props: SearchProps<IsMulti>) {
         colors: {
           ...theme.colors,
           neutral0: Color.gray3,
-          neutral5: Color.gray2,
           neutral20: Color.gray9,
           neutral30: Color.gray6,
+          neutral5: Color.gray2,
           neutral50: Color.gray10, // Placeholder text color
           primary: Color.gray2, // Border outline on focus and selected option in pop-up
           primary25: Color.gray4, // Option hover color in pop-up

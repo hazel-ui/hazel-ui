@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["typescript", "react", "unicorn", "import", "jest"],
+  "plugins": ["typescript", "react", "unicorn", "import"],
   "categories": {
     "correctness": "error",
     "suspicious": "warn",
     "style": "warn"
   },
-  "env": { "browser": true, "node": true, "jest": true },
+  "env": { "browser": true, "node": true },
   "rules": {
     /***********************************************************
      * 1. ESLint rules
@@ -31,24 +31,52 @@
     "no-implicit-coercion": "warn",
 
     /**
+     * Opinionated style rule not in original ESLint config.
+     */
+    "func-style": ["warn", "declaration", { "allowArrowFunctions": true }],
+
+    /**
      * Comments don't need to start with a capital letter.
      * @see https://eslint.org/docs/rules/capitalized-comments
      */
     "capitalized-comments": "off",
+
+    /**
+     * Keys are sometimes grouped intentionally (e.g. by category) rather than alphabetically.
+     */
+    "sort-keys": "off",
+
+    /**
+     * Ternaries are idiomatic in JSX render.
+     */
+    "no-ternary": "off",
+    "no-nested-ternary": "off",
+    "unicorn/no-nested-ternary": "off",
+
+    /**
+     * We use null legitimately (e.g. React render returns, exhaustive switch defaults).
+     */
+    "no-null": "off",
+
+    /**
+     * Too many legitimate short identifiers (type params, size enums, callbacks).
+     */
+    "id-length": "off",
+
+    /**
+     * Conflicts with import type convention — type imports and value imports from
+     * the same module are intentionally separate per project style.
+     */
+    "no-duplicate-imports": "off",
 
     /********************************************************************
      * 2. typescript-eslint rules
      ********************************************************************/
 
     /**
-     * Give meaningful names to constant numbers.
-     * Note: oxlint support is partial (🚧) — options may not be fully honoured.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
+     * Too many legitimate numeric constants in design tokens and CSS values.
      */
-    "no-magic-numbers": [
-      "warn",
-      { "ignore": [-1, 0, 1, 2, 60, 1000], "ignoreArrayIndexes": true, "ignoreEnums": true }
-    ],
+    "no-magic-numbers": "off",
 
     /*****************************************************************
      * 3. plugin rules
@@ -61,10 +89,42 @@
     "import/no-default-export": "error",
 
     /**
+     * Warn when JSX nesting exceeds 5 levels to nudge against deeply nested DOM.
+     * @see https://developer.chrome.com/docs/lighthouse/performance/dom-size
+     */
+    "react/jsx-max-depth": ["warn", { "max": 5 }],
+
+    /**
+     * Conflicts with import/no-default-export — we enforce named exports everywhere.
+     */
+    "import/no-named-export": "off",
+
+    /**
+     * Conflicts with import/no-default-export — we enforce named exports everywhere.
+     */
+    "import/prefer-default-export": "off",
+
+    /**
+     * We group type exports separately.
+     */
+    "import/group-exports": "off",
+
+    /**
+     * CSS files and jest-dom setup are legitimate side-effect imports.
+     */
+    "import/no-unassigned-import": "off",
+
+    /**
      * React default import is not needed in new JSX transform.
      * @see https://github.com/airbnb/javascript/issues/2334
      */
     "react/react-in-jsx-scope": "off",
+
+    /**
+     * We spread props intentionally throughout the codebase (e.g. passing rest
+     * props to underlying elements for composability).
+     */
+    "react/jsx-props-no-spreading": "off",
 
     /**
      * File names can follow different case styles to differentiate
@@ -79,6 +139,7 @@
      * @see https://www.typescriptlang.org/docs/handbook/declaration-merging.html
      */
     "import/no-empty-named-blocks": "off",
+    "unicorn/require-module-specifiers": "off",
 
     /**
      * oxfmt owns import ordering via sortImports — disable the oxlint duplicate.
@@ -103,20 +164,36 @@
       }
     },
     {
-      // Disable ts unbound-method in tests.
+      // Scope jest plugin rules to test files only.
       // jest/unbound-method has no oxlint equivalent yet — tracked in feedback-plan.md PR 31.
-      "files": ["**/__tests__/*"],
+      "files": ["**/__tests__/*", "**/*.test.ts", "**/*.test.tsx"],
+      "plugins": ["jest"],
+      "env": { "jest": true },
       "rules": {
         "typescript/unbound-method": "off"
       }
     },
     {
-      // Storybook and config files conventionally use default exports.
-      "files": ["**/*.stories.*", "**/*.config.*", "**/webpack.*.mjs"],
+      // Storybook and config files conventionally use default exports and inline named exports.
+      "files": ["**/*.stories.*", "**/*.config.*", "**/webpack.*.mjs", "**/.storybook/main.js"],
       "rules": {
         "import/no-default-export": "off"
       }
-    }
+    },
+    {
+      // Build and config files legitimately import Node.js built-ins.
+      "files": ["rollup.config.ts", "app/webpack.*.mjs"],
+      "rules": {
+        "import/no-nodejs-modules": "off"
+      }
+    },
+    {
+      // Webpack config files use anonymous default exports by convention.
+      "files": ["app/webpack.*.mjs", "**/.storybook/main.js"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    },
   ],
   "ignorePatterns": ["node_modules", "dist", "build", "dist-storybook", "coverage"]
 }

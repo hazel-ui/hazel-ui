@@ -6,13 +6,17 @@ import type { OptionProps } from "react-select";
 
 export const optionStyles: any = (base: CSSProperties, state: OptionProps<{}, boolean>) => ({
   ...base,
-  color: Color.gray11,
-  fontSize: "1rem",
-  fontFamily: Theme.font.sansSerif,
-  height: "3rem",
+  "&:hover": {
+    boxShadow: `4px 0px 0px 0px ${state.theme.colors.primary25} inset`,
+  },
+  "&:nth-of-type(even)": {
+    backgroundColor: state.theme.colors.neutral5,
+  },
+  "&:nth-of-type(odd)": {
+    backgroundColor: state.theme.colors.neutral0,
+  },
 
   // Vertical center
-  display: "flex",
   alignItems: "center",
 
   // Selected option
@@ -20,17 +24,11 @@ export const optionStyles: any = (base: CSSProperties, state: OptionProps<{}, bo
     state.isFocused || state.isSelected
       ? `4px 0px 0px 0px ${state.theme.colors.primary25} inset`
       : "none",
-  transition: "0.3s ease box-shadow",
-
-  "&:nth-of-type(odd)": {
-    backgroundColor: state.theme.colors.neutral0,
-  },
-  "&:nth-of-type(even)": {
-    backgroundColor: state.theme.colors.neutral5,
-  },
-  "&:hover": {
-    boxShadow: `4px 0px 0px 0px ${state.theme.colors.primary25} inset`,
-  },
-
+  color: Color.gray11,
   cursor: "pointer",
+  display: "flex",
+  fontFamily: Theme.font.sansSerif,
+  fontSize: "1rem",
+  height: "3rem",
+  transition: "0.3s ease box-shadow",
 });

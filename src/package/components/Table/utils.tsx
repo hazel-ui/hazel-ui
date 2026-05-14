@@ -4,7 +4,7 @@
  */
 export function processColumns(columns: any[], data: any[]) {
   let columnIndex = 0;
-  for (const td in data[0]) {
+  for (const td of Object.keys(data[0])) {
     if (typeof data[0][td] === "number" && !("Cell" in columns[columnIndex])) {
       columns[columnIndex]["Cell"] = (props: any) => <>{props.value.toLocaleString("en-IN")}</>;
     }

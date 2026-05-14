@@ -6,17 +6,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta: Meta<typeof Card> = {
   component: Card,
   parameters: {
-    componentSubtitle: `This is a simple container with a shadow that 
+    componentSubtitle: `This is a simple container with a shadow that
       can be used to create card-like elements.`,
   },
 
   title: "Components/Card",
 };
 
-export default meta;
 type Story = StoryObj<typeof Card>;
 
-export const Basic: Story = {
+const Basic: Story = {
   args: {
     children: (
       <>
@@ -41,3 +40,6 @@ export const Basic: Story = {
     width: "200px",
   },
 };
+
+export { Basic };
+export default meta;

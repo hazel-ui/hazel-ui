@@ -16,7 +16,9 @@ const meta: Meta<typeof Divider> = {
   title: "Components/Divider",
 };
 
-export default meta;
 type Story = StoryObj<typeof Divider>;
 
-export const Basic: Story = {};
+const Basic: Story = {};
+
+export { Basic };
+export default meta;

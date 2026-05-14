@@ -3,7 +3,7 @@ import { Search } from "../../Search.js";
 
 import type { SearchOptionType, SearchValueType } from "../../types.js";
 
-export function EgFiltering() {
+function EgFiltering() {
   return (
     <Search
       filterOption={filterOption}
@@ -32,3 +32,5 @@ function filterOption(option: SearchOptionType, inputValue: string) {
   }
   return false;
 }
+
+export { EgFiltering };

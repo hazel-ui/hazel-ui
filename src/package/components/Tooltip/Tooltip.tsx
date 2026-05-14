@@ -7,7 +7,7 @@ import { applyTooltipDirection } from "./styles.js";
 import type { DirectionType, TooltipContentType } from "./types.js";
 import type { ReactNode } from "react";
 
-export interface TooltipProps {
+interface TooltipProps {
   arrowSize?: string;
   children?: ReactNode;
   content?: ReactNode;
@@ -18,7 +18,7 @@ export interface TooltipProps {
   width?: string;
 }
 
-export function Tooltip({
+function Tooltip({
   arrowSize = "0.4rem",
   children,
   content = "",
@@ -95,3 +95,6 @@ const TooltipContent = styled.span<TooltipContentType>`
   ${(props) => props.width && `width: ${props.width};`};
   ${(props) => applyTooltipDirection(props.arrowSize, props.direction, props.tooltipBackground)}
 `;
+
+export type { TooltipProps };
+export { Tooltip };

@@ -3,13 +3,13 @@ import { Icon } from "../../../foundation/Icon/Icon.js";
 export function ClearIndicator(props: any) {
   function clearValue() {
     props.clearValue();
-    props.selectProps.onClear && props.selectProps.onClear();
+    if (props.selectProps.onClear) props.selectProps.onClear();
   }
 
   const {
     children = <Icon.X size="1.3rem" />,
     getStyles,
-    innerProps: { ref, onMouseDown, onTouchEnd, ...restInnerProps },
+    innerProps: { ref, onMouseDown: _onMouseDown, onTouchEnd: _onTouchEnd, ...restInnerProps },
   } = props;
 
   return (

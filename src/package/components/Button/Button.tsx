@@ -6,7 +6,7 @@ import { applyButtonSize, applyButtonVariant } from "./styles.js";
 import type { ButtonSizeType, ButtonType } from "./types.js";
 import type { ReactNode } from "react";
 
-export interface ButtonProps {
+interface ButtonProps {
   children?: ReactNode;
   onClick?: () => void;
   size?: ButtonSizeType;
@@ -32,10 +32,13 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-export function Button({ size = "m", variant = "primary", variantColor, children }: ButtonProps) {
+function Button({ size = "m", variant = "primary", variantColor, children }: ButtonProps) {
   return (
     <StyledButton size={size} variant={variant} as="button" variantColor={variantColor}>
       {children}
     </StyledButton>
   );
 }
+
+export type { ButtonProps };
+export { Button };
