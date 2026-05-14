@@ -1,15 +1,16 @@
 import { variants } from "./Typography.css.js";
-import { TextTag, TypographyType } from "./types.js";
+import { TextTag } from "./types.js";
 
 import type { Color } from "../Color/Color.js";
 import type { SxProps } from "../sx.js";
+import type { TypographyType } from "./types.js";
 import type { ReactNode } from "react";
 
 export interface TypographyProps {
   variant?: TypographyType;
   children?: ReactNode;
   as?: TextTag;
-  // styles
+  // Styles
   color?: Color | string;
   sx?: SxProps;
 }

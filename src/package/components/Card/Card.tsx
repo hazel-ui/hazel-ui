@@ -1,12 +1,11 @@
-import { ReactNode } from "react";
-
 import { card } from "./Card.css.js";
 
 import type { SxProps } from "../../foundation/sx.js";
+import type { ReactNode } from "react";
 
 export interface CardProps {
   children?: ReactNode;
-  // style
+  // Style
   width?: string;
   sx?: SxProps;
 }

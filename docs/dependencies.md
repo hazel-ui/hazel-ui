@@ -26,16 +26,17 @@ The below table explains why certain dependencies are required by the project in
 | @babel/plugin-transform-react-jsx | Required by Storybook to parse jsx    |
 | @changesets/changelog-github      | Adds GitHub metadata to changelog     |
 | @changesets/cli                   | CLI for Changesets                    |
+| @jest/globals                     | Explicit Jest globals (describe, it, expect) |
 | @rollup/plugin-terser             | Minify the npm package                |
 | @rollup/plugin-typescript         | TypeScript support for rollup         |
 | @storybook/addon-docs             | MDX docs support for Storybook        |
 | @storybook/addon-essentials       | storybook official addons             |
 | @storybook/react                  | storybook core                        |
 | @storybook/react-vite             | storybook Vite framework              |
-| @types/jest                       | Required for `expect()` in tests      |
+| @testing-library/dom              | DOM testing utilities                 |
+| @testing-library/jest-dom         | Custom jest matchers for DOM          |
+| @testing-library/react            | React component testing utilities     |
 | @types/node                       | Required by [@storybook/react][1]     |
-| @typescript-eslint/eslint-plugin  | typescript-eslint core                |
-| @typescript-eslint/parser         | typescript-eslint parser              |
 | @vanilla-extract/css              | static styles                         |
 | @vanilla-extract/rollup-plugin    | required by vanilla-extract           |
 | @vanilla-extract/vite-plugin      | vanilla-extract support for Vite      |
@@ -45,29 +46,16 @@ The below table explains why certain dependencies are required by the project in
 | copyfiles                         | Copy static files to `dist`           |
 | css-loader                        | Support importing css files           |
 | dotenv-webpack                    | Required by Storybook for [bugfix][3] |
-| eslint                            | eslint core                           |
-| eslint-config-airbnb-typescript   | opinionated eslint config             |
-| eslint-plugin-eslint-comments     | lint eslint directive comments        |
-| eslint-plugin-import              | lint import ordering                  |
-| eslint-plugin-jest                | lint jest tests                       |
-| eslint-plugin-jest-formatting     | lint jest tests line paddings         |
-| eslint-plugin-jsx-a11y            | lint accessibility                    |
-| eslint-plugin-react               | lint react best practices             |
-| eslint-plugin-react-hooks         | lint hooks best practices             |
-| eslint-plugin-storybook           | lint Storybook story files            |
-| eslint-plugin-unicorn             | lint Todo expiration dates            |
 | html-webpack-plugin               | Provide html template to webpack      |
 | jest                              | Unit & integration tests              |
 | mini-css-extract-plugin           | vanilla-extract webpack integration   |
-| postcss                           | integrates tailwind with webpack      |
-| postcss-loader                    | integrates postcss with webpack       |
-| prettier                          | Code formatter                        |
+| oxfmt                             | Prettier-compatible formatter (replaces Prettier) |
+| oxlint                            | Rust-based linter (replaces ESLint)   |
 | react                             | React core                            |
 | react-dom                         | React core                            |
 | rollup                            | npm package bundler                   |
 | storybook                         | Storybook CLI                         |
 | style-loader                      | Support importing css files           |
-| tailwindcss                       | styling utility                       |
 | ts-loader                         | Required by webpack to parse jsx      |
 | tslib                             | Runtime helpers for TypeScript output |
 | typescript                        | Typescript language support           |
@@ -75,7 +63,6 @@ The below table explains why certain dependencies are required by the project in
 | webpack-cli                       | Required to run webpack commands      |
 | vite                              | Build tool and dev server for Storybook |
 | webpack-dev-server                | Development server                    |
-| windy-radix-palette               | integrate radix colors with tailwind  |
 
 ## Runtime software versions
 

@@ -1,12 +1,13 @@
-import { ReactNode } from "react";
 import { styled } from "styled-components";
 
 import { Shadow } from "../../foundation/Shadow/Shadow.js";
 import { Theme } from "../../foundation/Theme/Theme.js";
 import { applyTooltipDirection } from "./styles.js";
-import { DirectionType, TooltipContentType } from "./types.js";
 
-export type TooltipProps = {
+import type { DirectionType, TooltipContentType } from "./types.js";
+import type { ReactNode } from "react";
+
+export interface TooltipProps {
   arrowSize?: string;
   children?: ReactNode;
   content?: ReactNode;
@@ -15,7 +16,7 @@ export type TooltipProps = {
   tooltipBackground?: string;
   tooltipColor?: string;
   width?: string;
-};
+}
 
 export function Tooltip({
   arrowSize = "0.4rem",

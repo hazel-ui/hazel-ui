@@ -8,7 +8,7 @@ export const controlStyles: any = (base: CSSProperties, state: ControlProps<{}, 
   ...base,
   height: "3.2rem",
 
-  border: `0.1rem solid ${state.theme.colors.neutral30}`, // control border
+  border: `0.1rem solid ${state.theme.colors.neutral30}`, // Control border
   borderRadius: "0.3rem",
   backgroundColor: state.isFocused ? Color.gray5 : state.theme.colors.neutral0,
   boxShadow: state.isFocused ? Shadow.xs : "none",

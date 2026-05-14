@@ -15,7 +15,7 @@ export function Anchor({
   ...rest
 }: AnchorProps) {
   return (
-    <a className={anchor} style={{ color, backgroundColor, borderColor: color }} {...rest}>
+    <a className={anchor} style={{ backgroundColor, borderColor: color, color }} {...rest}>
       {children}
     </a>
   );

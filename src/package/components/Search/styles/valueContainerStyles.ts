@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import type { CSSProperties } from "react";
 
 export const valueContainerStyles: any = (base: CSSProperties) => ({
   ...base,

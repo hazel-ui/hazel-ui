@@ -11,7 +11,7 @@ import {
 import { Circle } from "@styled-icons/boxicons-solid";
 
 export const Icon = {
-  // regular
+  // Regular
   ChevronDown,
   ChevronRight,
   InfoCircle,
@@ -20,6 +20,6 @@ export const Icon = {
   SortDown,
   SortUp,
   X,
-  // solid
+  // Solid
   Circle,
 };

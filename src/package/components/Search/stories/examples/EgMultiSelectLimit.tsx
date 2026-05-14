@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 import { Search } from "../../Search.js";
-import { SearchOptionType, SearchValueType } from "../../types.js";
+
+import type { SearchOptionType, SearchValueType } from "../../types.js";
 
 export function EgMultiSelectLimit() {
   const defaultEntry: SearchOptionType[] = [];
@@ -13,9 +14,9 @@ export function EgMultiSelectLimit() {
         selectedEntry.length > 1
           ? []
           : [
-              { value: "entry1", label: "First Entry" },
-              { value: "entry2", label: "Second Entry" },
-              { value: "entry3", label: "Third Entry" },
+              { label: "First Entry", value: "entry1" },
+              { label: "Second Entry", value: "entry2" },
+              { label: "Third Entry", value: "entry3" },
             ]
       }
       onChange={(selectedOption: SearchValueType<SearchOptionType, true>) => {

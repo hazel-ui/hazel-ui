@@ -12,6 +12,25 @@ const base = style({
  * @see https://m3.material.io/styles/typography/type-scale-tokens
  */
 export const variants = styleVariants({
+  body: [
+    base,
+    {
+      lineHeight: "1.25rem" /** 20px */, // modified
+      fontSize: "0.875rem" /** 14px */, // modified
+      letterSpacing: "0.017857rem" /** tracking: 0.25px */, // modified
+      fontWeight: 400,
+
+      "@media": {
+        [MediaQuery.minWidth.desktop]: {
+          lineHeight: "1.5rem" /** 24px */,
+          fontSize: "1rem" /** 16px */,
+          letterSpacing: "0.03125rem" /** tracking: 0.5px */,
+          fontWeight: 400,
+        },
+      },
+    },
+  ],
+
   display: [
     base,
     {
@@ -64,32 +83,6 @@ export const variants = styleVariants({
     },
   ],
 
-  title: [
-    base,
-    {
-      lineHeight: "1.25rem" /** 20px */,
-      fontSize: "0.875rem" /** 14px */,
-      letterSpacing: "0.007143rem" /** tracking: 0.1px */,
-      fontWeight: 500,
-
-      "@media": {
-        [MediaQuery.minWidth.tablet]: {
-          lineHeight: "1.5rem" /** 24px */,
-          fontSize: "1rem" /** 16px */,
-          letterSpacing: "0.009375rem" /** tracking: 0.15px */,
-          fontWeight: 500,
-        },
-
-        [MediaQuery.minWidth.desktop]: {
-          lineHeight: "1.75rem" /** 28px */,
-          fontSize: "1.375rem" /** 22px */,
-          letterSpacing: 0,
-          fontWeight: 400,
-        },
-      },
-    },
-  ],
-
   label: [
     base,
     {
@@ -116,19 +109,26 @@ export const variants = styleVariants({
     },
   ],
 
-  body: [
+  title: [
     base,
     {
-      lineHeight: "1.25rem" /** 20px */, // modified
-      fontSize: "0.875rem" /** 14px */, // modified
-      letterSpacing: "0.017857rem" /** tracking: 0.25px */, // modified
-      fontWeight: 400,
+      lineHeight: "1.25rem" /** 20px */,
+      fontSize: "0.875rem" /** 14px */,
+      letterSpacing: "0.007143rem" /** tracking: 0.1px */,
+      fontWeight: 500,
 
       "@media": {
-        [MediaQuery.minWidth.desktop]: {
+        [MediaQuery.minWidth.tablet]: {
           lineHeight: "1.5rem" /** 24px */,
           fontSize: "1rem" /** 16px */,
-          letterSpacing: "0.03125rem" /** tracking: 0.5px */,
+          letterSpacing: "0.009375rem" /** tracking: 0.15px */,
+          fontWeight: 500,
+        },
+
+        [MediaQuery.minWidth.desktop]: {
+          lineHeight: "1.75rem" /** 28px */,
+          fontSize: "1.375rem" /** 22px */,
+          letterSpacing: 0,
           fontWeight: 400,
         },
       },

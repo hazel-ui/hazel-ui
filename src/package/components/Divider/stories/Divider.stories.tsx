@@ -3,17 +3,17 @@ import { Divider } from "../Divider.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Divider> = {
-  title: "Components/Divider",
+  argTypes: {
+    color: { control: "color" },
+    height: { control: "text" },
+  },
   component: Divider,
 
   parameters: {
     componentSubtitle: `Component to create dividers/separators.`,
   },
 
-  argTypes: {
-    color: { control: "color" },
-    height: { control: "text" },
-  },
+  title: "Components/Divider",
 };
 
 export default meta;

@@ -3,9 +3,7 @@ import { Typography } from "../Typography.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Typography> = {
-  title: "Foundation/Typography",
   component: Typography,
-
   parameters: {
     // TODO: Rewrite description in MDX
     // MDX is broken right now: https://github.com/storybookjs/storybook/issues/20496
@@ -14,6 +12,8 @@ const meta: Meta<typeof Typography> = {
       will adjust size automatically based on screen size. For usage instructions, 
       refer: https://m3.material.io/styles/typography/applying-type`,
   },
+
+  title: "Foundation/Typography",
 };
 
 export default meta;

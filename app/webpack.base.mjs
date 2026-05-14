@@ -31,7 +31,7 @@ export const baseConfig = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
-        // exclude vanilla extract files:
+        // Exclude vanilla extract files:
         // https://github.com/webpack-contrib/css-loader/issues/672#issuecomment-362480828
         exclude: /\.vanilla\.css$/i,
       },
@@ -50,26 +50,26 @@ export const baseConfig = {
          * Note: This rule is referenced in .storybook/main.js
          * If you change this, change it there too.
          */
+        exclude: /node_modules/,
         test: /\.tsx?$/,
         use: "ts-loader",
-        exclude: /node_modules/,
       },
     ],
   },
 
   // https://webpack.js.org/guides/output-management/
   output: {
-    filename: "[name].bundle.js",
-    path: resolve(__dirnameCustom, "../build"),
     clean: true,
-    hashFunction: "xxhash64", // https://stackoverflow.com/a/73465262/7435656
+    filename: "[name].bundle.js",
+    hashFunction: "xxhash64",
+    path: resolve(__dirnameCustom, "../build"), // https://stackoverflow.com/a/73465262/7435656
   },
 
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".html"],
     extensionAlias: {
       ".js": [".tsx", ".ts", ".js"],
     },
+    extensions: [".tsx", ".ts", ".js", ".html"],
   },
 
   plugins: [

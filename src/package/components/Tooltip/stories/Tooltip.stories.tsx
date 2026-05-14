@@ -3,12 +3,12 @@ import { Tooltip } from "../Tooltip.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Tooltip> = {
-  title: "Atoms/Tooltip",
-  component: Tooltip,
   argTypes: {
     tooltipBackground: { control: "color" },
     tooltipColor: { control: "color" },
   },
+  component: Tooltip,
+  title: "Atoms/Tooltip",
 };
 export default meta;
 

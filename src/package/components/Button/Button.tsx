@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 
 import { Theme } from "../../foundation/Theme/Theme.js";
 import { applyButtonSize, applyButtonVariant } from "./styles.js";
-import { ButtonSizeType, ButtonType } from "./types.js";
 
+import type { ButtonSizeType, ButtonType } from "./types.js";
 import type { ReactNode } from "react";
 
 export interface ButtonProps {

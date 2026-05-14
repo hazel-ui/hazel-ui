@@ -1,7 +1,9 @@
-import RCSlider, { Handle, SliderProps as RCSliderProps } from "rc-slider";
+import RCSlider, { Handle } from "rc-slider";
 import { styled } from "styled-components";
 
 import { Icon } from "../../foundation/Icon/Icon.js";
+
+import type { SliderProps as RCSliderProps } from "rc-slider";
 
 export interface SliderProps extends RCSliderProps {
   width?: string;
@@ -13,27 +15,25 @@ export function Slider({ min = 0, max = 30, width = "100%", ...rest }: SliderPro
       <Container width={width}>
         {/* @ts-ignore */}
         <RCSlider
-          handle={({ dragging, ...restProps }: any) => {
-            return (
-              <Handle dragging={dragging.toString()} {...restProps}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginTop: "10px",
-                  }}
-                >
-                  <Icon.Circle width="8px" />
-                </div>
-              </Handle>
-            );
-          }}
+          handle={({ dragging, ...restProps }: any) => (
+            <Handle dragging={dragging.toString()} {...restProps}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "10px",
+                }}
+              >
+                <Icon.Circle width="8px" />
+              </div>
+            </Handle>
+          )}
           handleStyle={{
             borderColor: "white",
-            height: 32,
-            width: 32,
-            marginTop: -14,
             boxShadow: "0 2px 6px 0 rgba(0, 0, 0, 0.28)",
+            height: 32,
+            marginTop: -14,
+            width: 32,
           }}
           trackStyle={{ backgroundColor: "black" }}
           min={min}
@@ -49,7 +49,7 @@ const Container = styled.div<{ width: string }>`
   width: ${(props) => props.width};
 `;
 
-// import "rc-slider/assets/index.css";
+// Import "rc-slider/assets/index.css";
 const Styles = styled.div`
   .rc-slider {
     position: relative;

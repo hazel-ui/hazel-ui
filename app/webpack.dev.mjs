@@ -8,8 +8,8 @@ export default {
    * https://webpack.js.org/guides/development/#using-webpack-dev-middleware
    */
   devServer: {
-    static: "../build",
-    port: 3000, // https://webpack.js.org/configuration/dev-server/
+    port: 3000,
+    static: "../build", // https://webpack.js.org/configuration/dev-server/
   },
   target: "web", // https://stackoverflow.com/a/65928346/7435656
   devtool: "inline-source-map", // https://webpack.js.org/guides/typescript/#source-maps

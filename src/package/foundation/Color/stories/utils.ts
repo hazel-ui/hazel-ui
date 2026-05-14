@@ -11,9 +11,7 @@ export function getContrastColor(hslColor: string = "hsl(0, 0%, 0%)") {
 
 export function getCssVariableValue(value: Color | undefined) {
   if (!value) return "";
-  return getComputedStyle(document.documentElement).getPropertyValue(
-    value.slice(4, value.length - 1),
-  );
+  return getComputedStyle(document.documentElement).getPropertyValue(value.slice(4, -1));
 }
 
 /**

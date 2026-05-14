@@ -13,7 +13,7 @@ export const menuListStyles: any = (base: CSSProperties, state: any) => ({
     width: "0.6rem",
   },
   "::-webkit-scrollbar-track": {
-    background: "rgba(0, 0, 0, 0)", // transparent
+    background: "rgba(0, 0, 0, 0)", // Transparent
     borderRadius: "1rem",
   },
   "::-webkit-scrollbar-thumb": {

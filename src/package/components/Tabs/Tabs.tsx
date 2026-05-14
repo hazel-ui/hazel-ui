@@ -43,8 +43,8 @@ const Panel = styled(RadixPanel)`
 `;
 
 export const Tabs = {
-  Root,
   List,
-  Tab,
   Panel,
+  Root,
+  Tab,
 };

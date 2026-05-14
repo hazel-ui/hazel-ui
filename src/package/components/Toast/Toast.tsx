@@ -1,10 +1,10 @@
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { styled } from "styled-components";
 
 export function Toast() {
   return (
     <Styles>
-      <ToastContainer autoClose={3000} hideProgressBar={true} position="bottom-center" />
+      <ToastContainer autoClose={3000} hideProgressBar position="bottom-center" />
     </Styles>
   );
 }
@@ -13,7 +13,7 @@ export function showToast(message: string = "No message specified") {
   toast.dark(message);
 }
 
-// import "react-toastify/dist/ReactToastify.css";
+// Import "react-toastify/dist/ReactToastify.css";
 const Styles = styled.div`
   .Toastify__toast-container {
     z-index: 9999;
