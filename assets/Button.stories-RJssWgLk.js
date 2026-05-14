@@ -34,24 +34,24 @@ import{C as y}from"./Color-D8Giav_X.js";import{j as b}from"./jsx-runtime-BTJTZTI
     box-shadow: 0px 4px 20px -2px rgba(18, 22, 33, 0.12);
     transform: scale(1.03);
   }
-`;function x({size:e="m",variant:r="primary",variantColor:h,children:v}){return b.jsx(k,{size:e,variant:r,as:"button",variantColor:h,children:v})}x.__docgenInfo={description:"",methods:[],displayName:"Button",props:{children:{required:!1,tsType:{name:"ReactNode"},description:""},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""},size:{required:!1,tsType:{name:"union",raw:'"s" | "m" | "l"',elements:[{name:"literal",value:'"s"'},{name:"literal",value:'"m"'},{name:"literal",value:'"l"'}]},description:"",defaultValue:{value:'"m"',computed:!1}},variant:{required:!1,tsType:{name:"union",raw:'"primary" | "secondary"',elements:[{name:"literal",value:'"primary"'},{name:"literal",value:'"secondary"'}]},description:"",defaultValue:{value:'"primary"',computed:!1}},variantColor:{required:!1,tsType:{name:"string"},description:""}}};const j={title:"Components/Button",component:x,parameters:{componentSubtitle:`This component can be used to render a <button> 
-      or an <a> tag for clickable items and hyperlinks on a page.`},argTypes:{variantColor:{control:"color"}}},o={args:{children:"Button",variant:"primary",size:"m",onClick:()=>alert("Hey, good looking!")}},n={args:{children:"Follow",variant:"secondary",size:"s"}},t={args:{children:"Discord",variantColor:y.purple9,size:"l"}};var i,l,p;o.parameters={...o.parameters,docs:{...(i=o.parameters)==null?void 0:i.docs,source:{originalSource:`{
+`;function x({size:e="m",variant:r="primary",variantColor:h,children:v}){return b.jsx(k,{size:e,variant:r,as:"button",variantColor:h,children:v})}x.__docgenInfo={description:"",methods:[],displayName:"Button",props:{children:{required:!1,tsType:{name:"ReactNode"},description:""},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""},size:{required:!1,tsType:{name:"union",raw:'"s" | "m" | "l"',elements:[{name:"literal",value:'"s"'},{name:"literal",value:'"m"'},{name:"literal",value:'"l"'}]},description:"",defaultValue:{value:'"m"',computed:!1}},variant:{required:!1,tsType:{name:"union",raw:'"primary" | "secondary"',elements:[{name:"literal",value:'"primary"'},{name:"literal",value:'"secondary"'}]},description:"",defaultValue:{value:'"primary"',computed:!1}},variantColor:{required:!1,tsType:{name:"string"},description:""}}};const j={argTypes:{variantColor:{control:"color"}},component:x,parameters:{componentSubtitle:`This component can be used to render a <button> 
+      or an <a> tag for clickable items and hyperlinks on a page.`},title:"Components/Button"},o={args:{children:"Button",onClick:()=>alert("Hey, good looking!"),size:"m",variant:"primary"}},n={args:{children:"Follow",size:"s",variant:"secondary"}},t={args:{children:"Discord",size:"l",variantColor:y.purple9}};var i,l,p;o.parameters={...o.parameters,docs:{...(i=o.parameters)==null?void 0:i.docs,source:{originalSource:`{
   args: {
     children: "Button",
-    variant: "primary",
+    onClick: () => alert("Hey, good looking!"),
     size: "m",
-    onClick: () => alert("Hey, good looking!")
+    variant: "primary"
   }
 }`,...(p=(l=o.parameters)==null?void 0:l.docs)==null?void 0:p.source}}};var c,d,m;n.parameters={...n.parameters,docs:{...(c=n.parameters)==null?void 0:c.docs,source:{originalSource:`{
   args: {
     children: "Follow",
-    variant: "secondary",
-    size: "s"
+    size: "s",
+    variant: "secondary"
   }
 }`,...(m=(d=n.parameters)==null?void 0:d.docs)==null?void 0:m.source}}};var u,f,g;t.parameters={...t.parameters,docs:{...(u=t.parameters)==null?void 0:u.docs,source:{originalSource:`{
   args: {
     children: "Discord",
-    variantColor: Color.purple9,
-    size: "l"
+    size: "l",
+    variantColor: Color.purple9
   }
 }`,...(g=(f=t.parameters)==null?void 0:f.docs)==null?void 0:g.source}}};const V=["Primary","Secondary","CustomColors"];export{t as CustomColors,o as Primary,n as Secondary,V as __namedExportsOrder,j as default};
