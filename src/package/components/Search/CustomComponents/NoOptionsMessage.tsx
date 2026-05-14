@@ -18,7 +18,7 @@ export function NoOptionsMessage(props: NoticeProps<SearchOptionType>) {
     <>
       <Typography
         variant="label"
-        sx={{ fontWeight: "bold", textAlign: "center", marginTop: "1rem" }}
+        sx={{ fontWeight: "bold", marginTop: "1rem", textAlign: "center" }}
       >
         {noOptionsTitle}
       </Typography>

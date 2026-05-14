@@ -1,16 +1,18 @@
 import { useMemo } from "react";
-import { Column, useExpanded, useSortBy, useTable } from "react-table";
+import { useExpanded, useSortBy, useTable } from "react-table";
 
 import { Icon } from "../../foundation/Icon/Icon.js";
 import { TableContainer, Td, Th, Tr, TrHead } from "./styles.js";
 import { processColumns } from "./utils.js";
 
-export type TableProps = {
-  data: Array<any>;
-  columns: Array<Column>;
+import type { Column } from "react-table";
+
+export interface TableProps {
+  data: any[];
+  columns: Column[];
   enableSorting?: boolean;
   hideHeaders?: boolean;
-};
+}
 
 export function Table(props: TableProps) {
   /* It's important that we're using React.useMemo here to ensure
@@ -34,7 +36,7 @@ export function Table(props: TableProps) {
   );
 
   return (
-    // apply the table props
+    // Apply the table props
     <TableContainer {...getTableProps()}>
       {!props.hideHeaders && (
         <thead>
@@ -87,17 +89,14 @@ export function Table(props: TableProps) {
               <Tr {...row.getRowProps()}>
                 {
                   // Loop over the rows cells
-                  row.cells.map((cell: any) => {
-                    // Apply the cell props
-                    return (
-                      <Td {...cell.getCellProps()}>
-                        {
-                          // Render the cell contents
-                          cell.render("Cell")
-                        }
-                      </Td>
-                    );
-                  })
+                  row.cells.map((cell: any) => (
+                    <Td {...cell.getCellProps()}>
+                      {
+                        // Render the cell contents
+                        cell.render("Cell")
+                      }
+                    </Td>
+                  ))
                 }
               </Tr>
             );

@@ -4,14 +4,14 @@ import { Color } from "../../foundation/Color/Color.js";
 import { Shadow } from "../../foundation/Shadow/Shadow.js";
 import { Theme } from "../../foundation/Theme/Theme.js";
 import { applyBadgeSize } from "./styles.js";
-import { BadgeSizeType } from "./types.js";
 
+import type { BadgeSizeType } from "./types.js";
 import type { ReactNode } from "react";
 
 export interface BadgeProps {
   children?: ReactNode;
   size?: BadgeSizeType;
-  // styles
+  // Styles
   color?: Color | string;
   backgroundColor?: Color | string;
 }
@@ -37,7 +37,7 @@ export function Badge({
   backgroundColor = Color.gray11,
 }: BadgeProps) {
   return (
-    <StyledBadge size={size} as="span" style={{ color, backgroundColor }}>
+    <StyledBadge size={size} as="span" style={{ backgroundColor, color }}>
       {children}
     </StyledBadge>
   );

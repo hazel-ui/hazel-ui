@@ -11,11 +11,11 @@ export const optionStyles: any = (base: CSSProperties, state: OptionProps<{}, bo
   fontFamily: Theme.font.sansSerif,
   height: "3rem",
 
-  // vertical center
+  // Vertical center
   display: "flex",
   alignItems: "center",
 
-  // selected option
+  // Selected option
   boxShadow:
     state.isFocused || state.isSelected
       ? `4px 0px 0px 0px ${state.theme.colors.primary25} inset`

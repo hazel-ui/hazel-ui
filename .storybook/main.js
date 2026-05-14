@@ -3,18 +3,18 @@ import react from "@vitejs/plugin-react";
 import { mergeConfig } from "vite";
 
 export default {
-  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)", "../src/**/*.mdx"],
   addons: ["@storybook/addon-essentials"],
   core: {
     disableTelemetry: true,
+  },
+  docs: {
+    autodocs: true,
   },
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
-  docs: {
-    autodocs: true,
-  },
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)", "../src/**/*.mdx"],
   async viteFinal(config) {
     return mergeConfig(config, {
       plugins: [react(), vanillaExtractPlugin()],

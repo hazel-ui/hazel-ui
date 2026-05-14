@@ -1,15 +1,16 @@
-import { Meta, Story } from "@storybook/react";
-
 import { Icon } from "../../../foundation/Icon/Icon.js";
-import { Table, TableProps } from "../Table.js";
+import { Table } from "../Table.js";
+
+import type { TableProps } from "../Table.js";
+import type { Meta, Story } from "@storybook/react";
 
 export default {
-  title: "Atoms/Table",
   component: Table,
   parameters: {
     componentSubtitle:
       "This component can be used to render a <table> element to display a data table. Optionally, column headers can be hidden and sorting can enabled for each column individually. The render function for each column can be customized and every row can be made expandable to provide additional data.",
   },
+  title: "Atoms/Table",
 } as Meta;
 
 const Template: Story<TableProps> = (args) => <Table {...args} />;
@@ -19,7 +20,7 @@ Basic.args = {
   columns: [
     {
       Header: "Title",
-      accessor: "col0", // accessor is the "key" in the data
+      accessor: "col0", // Accessor is the "key" in the data
     },
     {
       Header: "Header 1",
@@ -57,7 +58,7 @@ Basic.args = {
       col2: 922.3345,
       col3: 22.33,
       col4: 22.335,
-      col5: 123456.33,
+      col5: 123_456.33,
     },
   ],
 };
@@ -67,12 +68,12 @@ CustomCells.args = {
   columns: [
     {
       Header: "Title",
-      accessor: "col0", // accessor is the "key" in the data
+      accessor: "col0", // Accessor is the "key" in the data
     },
     {
+      Cell: (props) => <>$ {props.value}</>,
       Header: "Header 1",
       accessor: "col1",
-      Cell: (props) => <>$ {props.value}</>,
     },
   ],
   data: [
@@ -92,7 +93,7 @@ ExpandableRows.args = {
   columns: [
     {
       Header: "Column 1",
-      accessor: "col1", // accessor is the "key" in the data
+      accessor: "col1", // Accessor is the "key" in the data
       Cell: (props: any) =>
         /* Use the row.canExpand and row.getToggleRowExpandedProps
          * prop getter to build the toggle for expanding a row
@@ -114,8 +115,8 @@ ExpandableRows.args = {
           <span
             style={{
               // We can use the row.depth property
-              // and paddingLeft to indicate the depth
-              // of the row
+              // And paddingLeft to indicate the depth
+              // Of the row
               paddingLeft: `${props.row.depth * 2}rem`,
             }}
           >

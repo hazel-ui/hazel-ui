@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReactSelect, { Props } from "react-select";
+import ReactSelect from "react-select";
 
 import { Color } from "../../foundation/Color/Color.js";
 import { ClearIndicator } from "./CustomComponents/ClearIndicator.js";
@@ -13,7 +13,9 @@ import { noOptionsMessageStyles } from "./styles/noOptionsMessageStyles.js";
 import { optionStyles } from "./styles/optionStyles.js";
 import { placeholderStyles } from "./styles/placeholderStyles.js";
 import { valueContainerStyles } from "./styles/valueContainerStyles.js";
-import { SearchOptionType } from "./types.js";
+
+import type { SearchOptionType } from "./types.js";
+import type { Props } from "react-select";
 
 export interface SearchProps<IsMulti extends boolean> extends Props<SearchOptionType, IsMulti> {
   floatingLabel?: string;
@@ -41,12 +43,12 @@ export function Search<IsMulti extends boolean>(props: SearchProps<IsMulti>) {
   return (
     // @ts-ignore
     <ReactSelect
-      // custom props
+      // Custom props
       floatingLabel={floatingLabel}
       invalidSearch={invalidSearch}
       setInvalidSearch={setInvalidSearch}
       noOptionsTitle={noOptionsTitle}
-      // custom components
+      // Custom components
       components={{
         ClearIndicator,
         Control,
@@ -61,9 +63,9 @@ export function Search<IsMulti extends boolean>(props: SearchProps<IsMulti>) {
           neutral5: Color.gray2,
           neutral20: Color.gray9,
           neutral30: Color.gray6,
-          neutral50: Color.gray10, // placeholder text color
-          primary: Color.gray2, // border outline on focus and selected option in pop-up
-          primary25: Color.gray4, // option hover color in pop-up
+          neutral50: Color.gray10, // Placeholder text color
+          primary: Color.gray2, // Border outline on focus and selected option in pop-up
+          primary25: Color.gray4, // Option hover color in pop-up
         },
       })}
       styles={{
@@ -75,7 +77,7 @@ export function Search<IsMulti extends boolean>(props: SearchProps<IsMulti>) {
         placeholder: placeholderStyles,
         valueContainer: valueContainerStyles,
       }}
-      // in-built props
+      // In-built props
       autoFocus={autoFocus}
       backspaceRemovesValue={backspaceRemovesValue}
       captureMenuScroll={captureMenuScroll}
@@ -85,7 +87,7 @@ export function Search<IsMulti extends boolean>(props: SearchProps<IsMulti>) {
       isSearchable={isSearchable}
       noOptionsMessage={noOptionsMessage}
       placeholder={placeholder}
-      // menuIsOpen={true} // useful for development
+      // MenuIsOpen={true} // useful for development
       {...rest}
     />
   );

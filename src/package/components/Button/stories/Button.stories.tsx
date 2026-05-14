@@ -4,7 +4,9 @@ import { Button } from "../Button.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Button> = {
-  title: "Components/Button",
+  argTypes: {
+    variantColor: { control: "color" },
+  },
   component: Button,
 
   parameters: {
@@ -12,9 +14,7 @@ const meta: Meta<typeof Button> = {
       or an <a> tag for clickable items and hyperlinks on a page.`,
   },
 
-  argTypes: {
-    variantColor: { control: "color" },
-  },
+  title: "Components/Button",
 };
 
 export default meta;
@@ -23,24 +23,24 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     children: "Button",
-    variant: "primary",
-    size: "m",
     onClick: () => alert("Hey, good looking!"),
+    size: "m",
+    variant: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
     children: "Follow",
-    variant: "secondary",
     size: "s",
+    variant: "secondary",
   },
 };
 
 export const CustomColors: Story = {
   args: {
     children: "Discord",
-    variantColor: Color.purple9,
     size: "l",
+    variantColor: Color.purple9,
   },
 };

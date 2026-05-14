@@ -30,6 +30,12 @@
      */
     "no-implicit-coercion": "warn",
 
+    /**
+     * Comments don't need to start with a capital letter.
+     * @see https://eslint.org/docs/rules/capitalized-comments
+     */
+    "capitalized-comments": "off",
+
     /********************************************************************
      * 2. typescript-eslint rules
      ********************************************************************/
@@ -65,7 +71,19 @@
      * types & components (PascalCase) from functions (camelCase).
      * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
      */
-    "unicorn/filename-case": "off"
+    "unicorn/filename-case": "off",
+
+    /**
+     * Empty import specifiers (`import type {} from "..."`) are valid TypeScript
+     * for triggering module augmentation side-effects.
+     * @see https://www.typescriptlang.org/docs/handbook/declaration-merging.html
+     */
+    "import/no-empty-named-blocks": "off",
+
+    /**
+     * oxfmt owns import ordering via sortImports — disable the oxlint duplicate.
+     */
+    "sort-imports": "off"
 
     // Rules handled by oxfmt (formatter, not linter):
     // "@typescript-eslint/quotes"  — oxfmt singleQuote: false (double quotes)
@@ -93,8 +111,8 @@
       }
     },
     {
-      // Storybook requires default exports.
-      "files": ["**/*.stories.*"],
+      // Storybook and config files conventionally use default exports.
+      "files": ["**/*.stories.*", "**/*.config.*", "**/webpack.*.mjs"],
       "rules": {
         "import/no-default-export": "off"
       }

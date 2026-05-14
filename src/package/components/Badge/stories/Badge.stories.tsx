@@ -4,7 +4,10 @@ import { Badge } from "../Badge.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Badge> = {
-  title: "Components/Badge",
+  argTypes: {
+    backgroundColor: { control: "color" },
+    color: { control: "color" },
+  },
   component: Badge,
 
   parameters: {
@@ -13,10 +16,7 @@ const meta: Meta<typeof Badge> = {
     as a <span> tag by default.`,
   },
 
-  argTypes: {
-    color: { control: "color" },
-    backgroundColor: { control: "color" },
-  },
+  title: "Components/Badge",
 };
 
 export default meta;
@@ -31,18 +31,18 @@ export const Small: Story = {
 
 export const Medium: Story = {
   args: {
-    children: "Medium",
-    size: "m",
-    color: Color.blue11,
     backgroundColor: Color.blue1,
+    children: "Medium",
+    color: Color.blue11,
+    size: "m",
   },
 };
 
 export const Large: Story = {
   args: {
-    children: "Large",
-    size: "l",
-    color: Color.yellow1,
     backgroundColor: Color.yellow10,
+    children: "Large",
+    color: Color.yellow1,
+    size: "l",
   },
 };

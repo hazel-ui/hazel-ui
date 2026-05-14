@@ -1,18 +1,19 @@
 import { showToast } from "../../../Toast/Toast.js";
 import { Search } from "../../Search.js";
-import { SearchOptionType, SearchValueType } from "../../types.js";
+
+import type { SearchOptionType, SearchValueType } from "../../types.js";
 
 export function EgFiltering() {
   return (
     <Search
       filterOption={filterOption}
       options={[
-        { value: "entry1", label: "First Entry" },
-        { value: "entry2", label: "Second Entry" },
-        { value: "entry3", label: "Third Entry" },
+        { label: "First Entry", value: "entry1" },
+        { label: "Second Entry", value: "entry2" },
+        { label: "Third Entry", value: "entry3" },
       ]}
       onChange={(selectedOption: SearchValueType<SearchOptionType, false>) => {
-        if (selectedOption) showToast("Selected: " + selectedOption.label);
+        if (selectedOption) showToast(`Selected: ${selectedOption.label}`);
         else showToast("Cleared");
       }}
     />

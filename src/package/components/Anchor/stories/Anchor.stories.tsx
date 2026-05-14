@@ -4,7 +4,10 @@ import { Anchor } from "../Anchor.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Anchor> = {
-  title: "Components/Anchor",
+  argTypes: {
+    backgroundColor: { control: "color" },
+    color: { control: "color" },
+  },
   component: Anchor,
 
   parameters: {
@@ -13,10 +16,7 @@ const meta: Meta<typeof Anchor> = {
       will appear in a different color.`,
   },
 
-  argTypes: {
-    color: { control: "color" },
-    backgroundColor: { control: "color" },
-  },
+  title: "Components/Anchor",
 };
 
 export default meta;
@@ -31,8 +31,8 @@ export const Basic: Story = {
 
 export const CustomColors: Story = {
   args: {
+    backgroundColor: Color.orange4,
     children: Basic.args?.children,
     color: Color.orange11,
-    backgroundColor: Color.orange4,
   },
 };

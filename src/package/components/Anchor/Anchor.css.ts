@@ -6,12 +6,12 @@ export const anchor = style([
   borderB2,
   transitionAll,
   {
-    textDecoration: "none",
+    ":hover": {
+      borderBottomStyle: "solid",
+      cursor: "pointer",
+    },
     borderBottomStyle: "none",
 
-    ":hover": {
-      cursor: "pointer",
-      borderBottomStyle: "solid",
-    },
+    textDecoration: "none",
   },
 ]);

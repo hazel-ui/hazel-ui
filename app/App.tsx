@@ -1,5 +1,5 @@
-// import { Anchor, Typography, Color } from "../dist/index.js";
-import { Anchor, Typography, Color, Card } from "../src/package/index.js";
+// Import { Anchor, Typography, Color } from "../dist/index.js";
+import { Anchor, Card, Color, Typography } from "../src/package/index.js";
 
 export function App(): JSX.Element {
   return (
@@ -12,9 +12,9 @@ export function App(): JSX.Element {
 
       <Card
         sx={{
-          width: "200px",
-          marginTop: "20px",
           backgroundColor: Color.gray11,
+          marginTop: "20px",
+          width: "200px",
         }}
       >
         <Typography color={Color.gray1}>Card</Typography>
