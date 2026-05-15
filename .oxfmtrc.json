@@ -18,7 +18,6 @@
     "build",
     "dist-storybook",
     "coverage",
-    "src/package/static/styles.css",
-    "src/static/styles.css"
+    "src/package/static/styles.css"
   ]
 }

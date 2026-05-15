@@ -42,7 +42,7 @@ Tailwind exposes all design tokens as [CSS theme variables](https://tailwindcss.
 }
 ```
 
-`className` is for **contextual placement** — things the component cannot know about itself: margin, `flex-grow`, `grid-area`, `position`. If you find yourself using `className` to change how a component *looks* rather than where it *sits*, that's a missing CSS variable — [file an issue](https://github.com/hazel-ui/hazel-ui/issues).
+`className` is for **contextual placement** — things the component cannot know about itself: margin, `flex-grow`, `grid-area`, `position`. If you find yourself using `className` to change how a component _looks_ rather than where it _sits_, that's a missing CSS variable — [file an issue](https://github.com/hazel-ui/hazel-ui/issues).
 
 Spacing between siblings belongs to the parent container (`gap`, grid columns), not to the child via margin — this keeps components self-contained and layout-agnostic.
 
@@ -121,35 +121,42 @@ CSS Modules output is not atomic — each component emits its own declarations. 
 ## Inspirations
 
 ### [shadcn/ui](https://ui.shadcn.com/)
+
 "Great defaults, fully configurable" as a philosophy. Consumers own the styling, nothing is a black box. Hazel UI takes this approach to API design while shipping as an npm package.
 
 ### [GitHub Primer](https://primer.style/)
+
 CSS Modules, `className` passthrough on every component, CSS custom properties for theming. Close to the architecture we're building.
 
 ### [Mantine](https://mantine.dev/)
+
 Comprehensive component library with CSS Modules. Good reference for component API surface and variant design.
 
 ### [Radix Themes](https://www.radix-ui.com/themes)
+
 CSS custom properties as the theming API. Clean separation between unstyled primitives (Radix) and opinionated defaults (Themes).
 
 ### [React Spectrum](https://react-spectrum.adobe.com/) _by Adobe_
+
 Enterprise-scale accessibility patterns and component architecture. Strong reference for keyboard navigation, ARIA, and internationalization.
 
 ### [Ariakit](https://ariakit.com/) _(formerly Reakit)_
+
 Accessibility-first, unstyled primitives with optional styling layer. Validated the oxlint + oxfmt toolchain (migrated from Biome). Inspirational for the unstyled/styled layering model.
 
 ### [Fluent UI](https://react.fluentui.dev/) _by Microsoft_
+
 Component API design at scale across Microsoft 365. Useful reference for prop patterns, composition, and how a design system serves many product teams.
 
 ---
 
 ## Styling Decisions — What Got Ruled Out and Why
 
-| Approach | Why we didn't pick it |
-|---|---|
+| Approach                                           | Why we didn't pick it                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Runtime CSS-in-JS** (emotion, styled-components) | Style injection on every render. SSR complexity. No streaming. The industry is moving away from this. See [Why We're Breaking Up with CSS-in-JS](https://dev.to/srmagura/why-were-breaking-up-wiht-css-in-js-4g9b) and the [React RSC docs](https://react.dev/reference/rsc/server-components#using-third-party-packages-and-providers). |
-| **vanilla-extract** | Zero Rolldown/tsdown engagement on GitHub. No major design system uses it. We're betting on Rolldown, and a bundler plugin with no Rolldown maintainer interest is a risk we can't accept. |
-| **StyleX** (Meta) | Compelling, but zero adoption outside Meta multiple years after release. Build-time CSS-in-JS tools (Griffel, Panda, StyleX) are each captive to a single design system — nobody else adopts them. |
-| **Panda CSS** | Requires consumer-side configuration. |
-| **tailwind-variants / CVA** | Couples consumers to Tailwind. CVA is v0 and effectively abandoned. |
-| **Tailwind as consumer requirement** | Forces consumers to install and configure Tailwind. Hazel UI is framework-agnostic — consumers can use Tailwind via `className`, but should never be required to. |
+| **vanilla-extract**                                | Zero Rolldown/tsdown engagement on GitHub. No major design system uses it. We're betting on Rolldown, and a bundler plugin with no Rolldown maintainer interest is a risk we can't accept.                                                                                                                                               |
+| **StyleX** (Meta)                                  | Compelling, but zero adoption outside Meta multiple years after release. Build-time CSS-in-JS tools (Griffel, Panda, StyleX) are each captive to a single design system — nobody else adopts them.                                                                                                                                       |
+| **Panda CSS**                                      | Requires consumer-side configuration.                                                                                                                                                                                                                                                                                                    |
+| **tailwind-variants / CVA**                        | Couples consumers to Tailwind. CVA is v0 and effectively abandoned.                                                                                                                                                                                                                                                                      |
+| **Tailwind as consumer requirement**               | Forces consumers to install and configure Tailwind. Hazel UI is framework-agnostic — consumers can use Tailwind via `className`, but should never be required to.                                                                                                                                                                        |

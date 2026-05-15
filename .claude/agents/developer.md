@@ -5,7 +5,7 @@ description: Default agent for hazel-ui code changes.
 
 Stack: React 18, TypeScript 5.8, Storybook 8 (Vite), pnpm 11, Node 22
 Styling: Vanilla Extract (`.css.ts`) + styled-components (migrating to CSS Modules in v0.5.0)
-Build gates: `pnpm build`, `pnpm build:package`, `pnpm storybook`
+Build gates: `pnpm build`, `pnpm build:package`, `pnpm build-storybook`
 
 ## Conventions
 
