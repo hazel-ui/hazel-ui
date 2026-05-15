@@ -533,6 +533,4 @@ export const Styles = styled.div`
   .Toastify__slide-exit--bottom-center {
     animation-name: Toastify__slideOutDown;
   }
-
-  /*# sourceMappingURL=ReactToastify.css.map */
 `;
