@@ -65,7 +65,7 @@
   "dependencies": {
     "@radix-ui/react-tabs": "0.0.13",
     "@styled-icons/boxicons-regular": "10.23.0",
-    "@styled-icons/boxicons-solid": "10.37.0",
+    "@styled-icons/boxicons-solid": "10.47.0",
     "rc-slider": "9.7.2",
     "react-select": "5.10.2",
     "react-table": "7.5.2",
